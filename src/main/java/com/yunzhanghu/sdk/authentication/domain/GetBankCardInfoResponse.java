@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 银行卡信息查询响应
+// 银行卡信息查询返回
 public class GetBankCardInfoResponse {
     
     // 银行代码

@@ -2,10 +2,7 @@ package com.yunzhanghu.sdk.payment;
 
 import com.google.gson.reflect.TypeToken;
 import com.yunzhanghu.sdk.YzhException;
-import com.yunzhanghu.sdk.base.YzhClient;
-import com.yunzhanghu.sdk.base.YzhConfig;
-import com.yunzhanghu.sdk.base.YzhRequest;
-import com.yunzhanghu.sdk.base.YzhResponse;
+import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.payment.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -53,7 +50,7 @@ public class PaymentClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    // 查询平台企业 VA 账户信息
+    // 查询平台企业汇款信息
     public YzhResponse<GetDealerVARechargeAccountResponse> getDealerVARechargeAccount(YzhRequest<GetDealerVARechargeAccountRequest> req) throws YzhException {
         try {
             return get(req, "/api/payment/v1/va-account", false, new TypeToken<YzhResponse<GetDealerVARechargeAccountResponse>>(){});

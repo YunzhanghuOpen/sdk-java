@@ -3,10 +3,10 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 商户充值记录响应
+// 平台企业预付业务服务费记录返回
 public class ListDealerRechargeRecordV2Response {
     
-    // 充值记录
+    // 预付业务服务费记录
     private RechargeRecordInfo[] data;
     public void setData(RechargeRecordInfo[] data) {
         this.data = data;

@@ -3,13 +3,13 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 银行卡三要素验证请求
+// 银行卡三要素验证返回
 public class BankCardThreeVerifyRequest {
     
     // 银行卡号
     private String cardNo;
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
     // 姓名

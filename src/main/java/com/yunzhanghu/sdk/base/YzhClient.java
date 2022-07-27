@@ -32,9 +32,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @author yunzhanghu1187
- */
 public class YzhClient {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(YzhClient.class);

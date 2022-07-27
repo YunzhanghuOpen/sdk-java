@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.tax.domain;
 
 
 
-// 下载个税扣缴明细表响应
+// 下载个税扣缴明细表返回
 public class GetTaxFileResponse {
     
     // 文件详情

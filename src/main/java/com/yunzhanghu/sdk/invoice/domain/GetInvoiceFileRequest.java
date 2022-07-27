@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-// 下载发票 PDF 请求
+// 下载 PDF 版发票请求
 public class GetInvoiceFileRequest {
     
     // 发票申请编号

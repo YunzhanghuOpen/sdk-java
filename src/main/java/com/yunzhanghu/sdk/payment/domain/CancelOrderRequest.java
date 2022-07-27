@@ -3,13 +3,13 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 取消待支付订单请求
 public class CancelOrderRequest {
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
     // 综合服务平台流水号

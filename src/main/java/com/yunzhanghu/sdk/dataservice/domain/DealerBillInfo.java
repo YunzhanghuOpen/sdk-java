@@ -9,19 +9,19 @@ public class DealerBillInfo {
     // 综合服务主体 ID
     private String brokerId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
     // 资金流水号
     private String ref;
     
-    // 综合服务主体名
+    // 综合服务主体名称
     private String brokerProductName;
     
-    // 商户名
+    // 平台企业名称
     private String dealerProductName;
     
     // 业务订单流水号

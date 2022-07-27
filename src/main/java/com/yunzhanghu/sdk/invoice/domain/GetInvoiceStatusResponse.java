@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-// 查询开票申请状态响应
+// 查询开票申请状态返回
 public class GetInvoiceStatusResponse {
     
     // 申请结果

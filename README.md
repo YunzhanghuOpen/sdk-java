@@ -1,4 +1,4 @@
-# 云账户 SDK For Java
+# 云账户 SDK for Java
 
 ## 功能概述
 
@@ -24,7 +24,7 @@ https://search.maven.org/artifact/com.yunzhanghu.openapi/sdk/1.1-RELEASE/jar
 
 #### 获取 dealer_id、broker_id、3Des Key、App Key       
 
-  根据开户邮件中的账号登录云账户综合服务平台：业务中心->业务管理->对接信息
+  根据开户邮件中的账号登录云账户综合服务平台，选择“业务中心>业务管理>对接信息”
   
 ![获取配置信息](src/main/resources/img/keyconfig.png)
 

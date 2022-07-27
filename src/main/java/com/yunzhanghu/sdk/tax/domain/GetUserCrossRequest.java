@@ -6,16 +6,16 @@ package com.yunzhanghu.sdk.tax.domain;
 // 查询纳税人是否为跨集团用户请求
 public class GetUserCrossRequest {
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
     // 年份
     private String year;
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
-    // 商户签约主体
+    // 平台企业签约主体
     private String entId;
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;

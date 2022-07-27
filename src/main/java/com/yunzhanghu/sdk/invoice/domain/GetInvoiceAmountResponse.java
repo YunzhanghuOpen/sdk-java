@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-// 查询可开票额度和开票信息响应
+// 查询可开票额度和开票信息返回
 public class GetInvoiceAmountResponse {
     
     // 可开票额度

@@ -3,10 +3,10 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 查看用户免验证名单是否存在请求
+// 查看免验证用户名单是否存在请求
 public class UserWhiteCheckRequest {
     
-    // 身份证号
+    // 证件号码
     private String idCard;
     
     // 姓名

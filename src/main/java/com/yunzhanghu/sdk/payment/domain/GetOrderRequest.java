@@ -3,10 +3,10 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 查询单笔订单信息请求
 public class GetOrderRequest {
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
     // 支付路径名，银行卡（默认）、支付宝、微信

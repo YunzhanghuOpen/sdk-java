@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 查询日流水文件响应
+// 查询日流水文件返回
 public class GetDailyBillFileV2Response {
     
     // 下载地址

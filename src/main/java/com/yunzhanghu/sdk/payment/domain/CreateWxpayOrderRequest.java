@@ -3,13 +3,13 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 微信实时下单请求
 public class CreateWxpayOrderRequest {
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
     // 综合服务主体 ID
@@ -21,13 +21,13 @@ public class CreateWxpayOrderRequest {
     // 微信用户 openid
     private String openid;
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
     // 手机号
     private String phoneNo;
     
-    // 打款金额
+    // 支付金额
     private String pay;
     
     // 订单备注
@@ -45,7 +45,7 @@ public class CreateWxpayOrderRequest {
     // 项目标识
     private String projectId;
     
-    // 描述信息
+    // 描述信息，该字段已废弃
     private String notes;
     public void setOrderId(String orderId) {
         this.orderId = orderId;
