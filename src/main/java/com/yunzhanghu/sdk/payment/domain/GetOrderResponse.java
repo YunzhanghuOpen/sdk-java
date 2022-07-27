@@ -3,10 +3,10 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 查询单笔订单信息返回
 public class GetOrderResponse {
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
     // 订单金额
@@ -15,7 +15,7 @@ public class GetOrderResponse {
     // 综合服务主体 ID
     private String brokerId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
     // 姓名
@@ -24,7 +24,7 @@ public class GetOrderResponse {
     // 收款人账号
     private String cardNo;
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
     // 手机号

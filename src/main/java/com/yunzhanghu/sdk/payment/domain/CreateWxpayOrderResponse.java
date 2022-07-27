@@ -3,16 +3,16 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 微信实时下单返回
 public class CreateWxpayOrderResponse {
     
-    // 商户订单号，原值返回
+    // 平台企业订单号
     private String orderId;
     
     // 综合服务平台流水号，唯一
     private String ref;
     
-    // 单位：元，支持小数点后两位
+    // 订单金额
     private String pay;
     public void setOrderId(String orderId) {
         this.orderId = orderId;

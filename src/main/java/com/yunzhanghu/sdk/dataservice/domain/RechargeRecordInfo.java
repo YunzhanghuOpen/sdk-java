@@ -3,19 +3,19 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 充值记录信息
+// 预付业务服务费记录信息
 public class RechargeRecordInfo {
     
-    // 商户ID
+    // 平台企业 ID
     private String dealerId;
     
-    // 综合服务主体ID
+    // 综合服务主体 ID
     private String brokerId;
     
-    // 充值记录ID
+    // 预付业务服务费记录 ID
     private String rechargeId;
     
-    // 充值金额
+    // 预付业务服务费
     private String amount;
     
     // 实际到账金额
@@ -27,10 +27,10 @@ public class RechargeRecordInfo {
     // 资金用途
     private String rechargeChannel;
     
-    // 充值备注
+    // 预付业务服务费备注
     private String remark;
     
-    // 商户付款银行账号
+    // 平台企业付款银行账号
     private String rechargeAccountNo;
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;

@@ -3,13 +3,13 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 银行卡实时下单请求
 public class CreateBankpayOrderRequest {
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
     // 综合服务主体 ID
@@ -21,13 +21,13 @@ public class CreateBankpayOrderRequest {
     // 银行卡号
     private String cardNo;
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
     // 手机号
     private String phoneNo;
     
-    // 打款金额
+    // 支付金额
     private String pay;
     
     // 订单备注

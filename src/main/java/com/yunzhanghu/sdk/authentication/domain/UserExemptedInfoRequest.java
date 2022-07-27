@@ -3,13 +3,13 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 上传用户免验证名单信息请求
+// 上传免验证用户名单信息请求
 public class UserExemptedInfoRequest {
     
     // 证件类型码
     private String cardType;
     
-    // 身份证号
+    // 证件号码
     private String idCard;
     
     // 姓名
@@ -21,7 +21,7 @@ public class UserExemptedInfoRequest {
     // 综合服务主体 ID
     private String brokerId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
     // 人员信息图片

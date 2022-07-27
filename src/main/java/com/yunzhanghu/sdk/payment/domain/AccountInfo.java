@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 账户信息
 public class AccountInfo {
     
     // 综合服务主体 ID

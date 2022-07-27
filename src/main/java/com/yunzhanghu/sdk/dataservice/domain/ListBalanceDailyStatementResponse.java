@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 查询余额日账单数据响应
+// 查询余额日账单数据返回
 public class ListBalanceDailyStatementResponse {
     
     // 条目信息

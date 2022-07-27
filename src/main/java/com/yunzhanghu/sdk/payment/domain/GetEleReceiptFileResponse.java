@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 查询电子回单返回
 public class GetEleReceiptFileResponse {
     
     // 链接失效时间

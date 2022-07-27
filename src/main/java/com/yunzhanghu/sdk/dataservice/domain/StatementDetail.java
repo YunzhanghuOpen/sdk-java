@@ -15,10 +15,10 @@ public class StatementDetail {
     // 综合服务主体 ID
     private String brokerId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
-    // 综合服务主体 名称
+    // 综合服务主体名称
     private String brokerProductName;
     
     // 平台企业名称
@@ -30,16 +30,16 @@ public class StatementDetail {
     // 账单金额
     private String totalMoney;
     
-    // 打款金额
+    // 支付金额
     private String amount;
     
     // 退汇金额
     private String reexAmount;
     
-    // 服务费金额
+    // 加成服务费金额
     private String feeAmount;
     
-    // 服务费抵扣金额
+    // 加成服务费抵扣金额
     private String deductRebateFeeAmount;
     
     // 冲补金额

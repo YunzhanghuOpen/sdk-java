@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 银行卡三要素验证响应
+// 银行卡三要素验证返回
 public class BankCardThreeVerifyResponse {
 
 

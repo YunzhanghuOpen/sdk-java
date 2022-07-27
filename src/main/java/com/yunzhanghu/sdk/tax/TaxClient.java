@@ -2,16 +2,11 @@ package com.yunzhanghu.sdk.tax;
 
 import com.google.gson.reflect.TypeToken;
 import com.yunzhanghu.sdk.YzhException;
-import com.yunzhanghu.sdk.base.YzhClient;
-import com.yunzhanghu.sdk.base.YzhConfig;
-import com.yunzhanghu.sdk.base.YzhRequest;
-import com.yunzhanghu.sdk.base.YzhResponse;
-import com.yunzhanghu.sdk.tax.domain.GetTaxFileRequest;
-import com.yunzhanghu.sdk.tax.domain.GetTaxFileResponse;
-import com.yunzhanghu.sdk.tax.domain.GetUserCrossRequest;
-import com.yunzhanghu.sdk.tax.domain.GetUserCrossResponse;
+import com.yunzhanghu.sdk.base.*;
+import com.yunzhanghu.sdk.tax.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 public class TaxClient extends YzhClient {
 

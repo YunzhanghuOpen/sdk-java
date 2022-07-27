@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 银行卡四要素鉴权响应
+// 银行卡四要素鉴权返回
 public class BankCardFourAuthVerifyResponse {
     
     // 交易凭证

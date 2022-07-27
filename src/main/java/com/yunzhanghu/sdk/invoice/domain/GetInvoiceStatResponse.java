@@ -3,10 +3,10 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-// 查询平台企业已开具和待开具发票金额响应
+// 查询平台企业已开具和待开具发票金额返回
 public class GetInvoiceStatResponse {
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
     // 综合服务主体 ID

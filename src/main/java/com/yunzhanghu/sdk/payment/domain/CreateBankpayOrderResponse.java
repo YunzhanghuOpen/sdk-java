@@ -3,16 +3,16 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 银行卡实时下单返回
 public class CreateBankpayOrderResponse {
     
-    // 商户订单号，原值返回
+    
     private String orderId;
     
-    // 综合服务平台流水号，唯一
+    // 综合服务平台流水号
     private String ref;
     
-    // 单位：元，支持小数点后两位
+    // 支付金额
     private String pay;
     public void setOrderId(String orderId) {
         this.orderId = orderId;

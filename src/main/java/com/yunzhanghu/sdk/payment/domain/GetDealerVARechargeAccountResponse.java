@@ -3,19 +3,19 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 查询平台企业汇款信息返回
 public class GetDealerVARechargeAccountResponse {
     
     // 账户名称
     private String acctName;
     
-    // 账号
+    // 专属账户
     private String acctNo;
     
     // 银行名称
     private String bankName;
     
-    // 商户账户名称
+    // 付款账户
     private String dealerAcctName;
     public void setAcctName(String acctName) {
         this.acctName = acctName;

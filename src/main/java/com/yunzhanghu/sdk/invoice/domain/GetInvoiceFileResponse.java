@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-// 下载发票 PDF 响应
+// 下载 PDF 版发票返回
 public class GetInvoiceFileResponse {
     
     // 下载地址

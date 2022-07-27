@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 import com.google.gson.annotations.SerializedName;
 
 
-// 统支持的货物或应税劳务、服务名称
+// 系统支持的货物或应税劳务、服务名称
 public class GoodsServicesName {
     
     // 货物或应税劳务、服务名称

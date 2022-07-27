@@ -3,16 +3,16 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 商户打款订单信息
+// 平台企业支付订单信息
 public class DealerOrderInfo {
     
     // 综合服务主体 ID
     private String brokerId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
     // 订单流水号
@@ -21,19 +21,19 @@ public class DealerOrderInfo {
     // 批次ID
     private String batchId;
     
-    
+    // 姓名
     private String realName;
     
     // 收款账号
     private String cardNo;
     
-    // 打款金额
+    // 综合服务主体订单金额
     private String brokerAmount;
     
-    // 打款金额
+    // 综合服务主体加成服务费
     private String brokerFee;
     
-    // 渠道流水号
+    // 支付路径流水号
     private String bill;
     
     // 订单状态
@@ -54,7 +54,7 @@ public class DealerOrderInfo {
     // 余额账单号
     private String balStatementId;
     
-    // 支付渠道
+    // 支付路径
     private String channel;
     
     // 创建时间

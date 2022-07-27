@@ -9,7 +9,7 @@ public class GetInvoiceStatRequest {
     // 综合服务主体 ID
     private String brokerId;
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
     // 查询年份

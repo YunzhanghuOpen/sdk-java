@@ -3,10 +3,10 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 身份证实名验证请求
+// 身份证实名验证返回
 public class IDCardVerifyRequest {
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
     // 姓名
