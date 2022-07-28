@@ -27,7 +27,7 @@ public class CreateAlipayOrderRequest {
     // 手机号
     private String phoneNo;
     
-    // 支付金额
+    // 订单金额
     private String pay;
     
     // 订单备注
