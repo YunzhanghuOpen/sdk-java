@@ -12,7 +12,7 @@ public class CreateBankpayOrderResponse {
     // 综合服务平台流水号
     private String ref;
     
-    // 支付金额
+    // 订单金额
     private String pay;
     public void setOrderId(String orderId) {
         this.orderId = orderId;

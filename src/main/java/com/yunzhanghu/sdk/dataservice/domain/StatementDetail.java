@@ -30,7 +30,7 @@ public class StatementDetail {
     // 账单金额
     private String totalMoney;
     
-    // 支付金额
+    // 订单金额
     private String amount;
     
     // 退汇金额
