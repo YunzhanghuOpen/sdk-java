@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-// 身份证实名验证响应
+// 身份证实名验证返回
 public class IDCardVerifyResponse {
 
 

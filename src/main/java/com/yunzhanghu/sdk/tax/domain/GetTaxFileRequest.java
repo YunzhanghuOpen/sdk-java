@@ -6,10 +6,10 @@ package com.yunzhanghu.sdk.tax.domain;
 // 下载个税扣缴明细表请求
 public class GetTaxFileRequest {
     
-    // 商户 ID
+    // 平台企业 ID
     private String dealerId;
     
-    // 商户签约主体
+    // 平台企业签约主体
     private String entId;
     
     // 所属期

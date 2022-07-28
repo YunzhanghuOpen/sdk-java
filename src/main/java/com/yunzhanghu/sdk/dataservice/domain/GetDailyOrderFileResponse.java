@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 查询日订单文件响应
+// 查询日订单文件返回
 public class GetDailyOrderFileResponse {
     
     // 下载地址

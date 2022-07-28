@@ -15,7 +15,7 @@ public class ListDailyBillRequest {
     // 长度
     private int length;
     
-    // 如果为encryption，则对返回的data进行加密
+    // 如果为 encryption，则对返回的 data 进行加密
     private String dataType;
     public void setBillDate(String billDate) {
         this.billDate = billDate;

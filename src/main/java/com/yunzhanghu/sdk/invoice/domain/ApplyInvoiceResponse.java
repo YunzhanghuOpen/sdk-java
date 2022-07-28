@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-// 开票申请响应
+// 开票申请返回
 public class ApplyInvoiceResponse {
     
     // 发票申请单 ID

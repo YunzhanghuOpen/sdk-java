@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 商户充值记录请求
+// 平台企业预付业务服务费记录请求
 public class ListDealerRechargeRecordV2Request {
     
     // 开始时间，格式：yyyy-MM-dd

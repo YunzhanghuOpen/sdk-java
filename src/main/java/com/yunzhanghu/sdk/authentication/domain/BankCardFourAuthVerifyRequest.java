@@ -9,7 +9,7 @@ public class BankCardFourAuthVerifyRequest {
     // 银行卡号
     private String cardNo;
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
     // 姓名

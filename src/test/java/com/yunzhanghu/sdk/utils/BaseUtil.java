@@ -1,14 +1,14 @@
-package com.yunzhanghu.sdk;
+package com.yunzhanghu.sdk.utils;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class BaseTest {
+public class BaseUtil {
 
-    public String getMess() {
+    public static String getMess() {
         return ThreadLocalRandom.current().nextInt(10000000) + "";
     }
 
-    public String getOrderId(String prefix) {
+    public static String getOrderId(String prefix) {
         return prefix + System.currentTimeMillis() + ThreadLocalRandom.current().nextInt(1000);
     }
 }

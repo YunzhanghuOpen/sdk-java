@@ -2,13 +2,11 @@ package com.yunzhanghu.sdk.invoice;
 
 import com.google.gson.reflect.TypeToken;
 import com.yunzhanghu.sdk.YzhException;
-import com.yunzhanghu.sdk.base.YzhClient;
-import com.yunzhanghu.sdk.base.YzhConfig;
-import com.yunzhanghu.sdk.base.YzhRequest;
-import com.yunzhanghu.sdk.base.YzhResponse;
+import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.invoice.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 public class InvoiceClient extends YzhClient {
 
@@ -53,7 +51,7 @@ public class InvoiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    // 下载发票 PDF
+    // 下载 PDF 版发票
     public YzhResponse<GetInvoiceFileResponse> getInvoiceFile(YzhRequest<GetInvoiceFileRequest> req) throws YzhException {
         try {
             return post(req, "/api/invoice/v2/invoice/invoice-pdf", new TypeToken<YzhResponse<GetInvoiceFileResponse>>(){});

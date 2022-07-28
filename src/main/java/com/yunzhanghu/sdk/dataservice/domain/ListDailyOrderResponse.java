@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-// 查询日订单响应
+// 查询日订单返回
 public class ListDailyOrderResponse {
     
     // 总数目

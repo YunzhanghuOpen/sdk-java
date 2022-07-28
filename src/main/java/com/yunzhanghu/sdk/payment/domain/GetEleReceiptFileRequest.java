@@ -3,10 +3,10 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
+// 查询电子回单请求
 public class GetEleReceiptFileRequest {
     
-    // 商户订单号
+    // 平台企业订单号
     private String orderId;
     
     // 综合服务平台流水号

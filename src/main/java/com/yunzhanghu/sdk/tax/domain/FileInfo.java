@@ -9,7 +9,7 @@ public class FileInfo {
     // 文件名称
     private String name;
     
-    // 下载文件临时 url
+    // 下载文件临时 URL
     private String url;
     
     // 文件解压缩密码

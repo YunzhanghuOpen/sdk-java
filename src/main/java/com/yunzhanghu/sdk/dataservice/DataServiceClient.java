@@ -2,10 +2,7 @@ package com.yunzhanghu.sdk.dataservice;
 
 import com.google.gson.reflect.TypeToken;
 import com.yunzhanghu.sdk.YzhException;
-import com.yunzhanghu.sdk.base.YzhClient;
-import com.yunzhanghu.sdk.base.YzhConfig;
-import com.yunzhanghu.sdk.base.YzhRequest;
-import com.yunzhanghu.sdk.base.YzhResponse;
+import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.dataservice.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,9 +26,9 @@ public class DataServiceClient extends YzhClient {
         }
     }
     // 查询日订单文件
-    public YzhResponse<GetOrderDownloadsUrlResponse> getDailyOrderFile(YzhRequest<GetOrderDownloadsUrlRequest> req) throws YzhException {
+    public YzhResponse<GetDailyOrderFileResponse> getDailyOrderFile(YzhRequest<GetDailyOrderFileRequest> req) throws YzhException {
         try {
-            return get(req, "/api/dataservice/v1/order/downloadurl", false, new TypeToken<YzhResponse<GetOrderDownloadsUrlResponse>>(){});
+            return get(req, "/api/dataservice/v1/order/downloadurl", false, new TypeToken<YzhResponse<GetDailyOrderFileResponse>>(){});
         } catch (Exception e){
             LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
             throw new YzhException("msg", e);
