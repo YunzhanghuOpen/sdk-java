@@ -24,7 +24,7 @@ https://search.maven.org/artifact/com.yunzhanghu.openapi/sdk/1.1-RELEASE/jar
 
 #### 获取 dealer_id、broker_id、3Des Key、App Key       
 
-  根据开户邮件中的账号登录云账户综合服务平台，选择“业务中心>业务管理>对接信息”
+  根据开户邮件中的账号登录云账户综合服务平台，选择“业务中心 > 业务管理 > 对接信息”
   
 ![获取配置信息](src/main/resources/img/keyconfig.png)
 
@@ -55,7 +55,9 @@ Openssl-> rsa -in private_key.pem -pubout -out pubkey.pem
 
 ##### 上传平台企业公钥
 
-登录云账户综合服务平台，在业务中心->业务管理->对接信息，点击页面右上角的编辑，配置平台企业公钥。
+登录云账户综合服务平台，选择“业务中心 > 业务管理 > 对接信息”，点击页面右上角的编辑，配置平台企业公钥。
 ![配置平台企业公钥信息](src/main/resources/img/publickeyconfig.png)
 
+### 示例功能
 
+- [实时下单接口](src/test/java/com/yunzhanghu/sdk/Payment.java)
