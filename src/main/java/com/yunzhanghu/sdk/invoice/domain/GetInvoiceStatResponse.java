@@ -17,6 +17,7 @@ public class GetInvoiceStatResponse {
     
     // 待开具发票金额
     private String notInvoiced;
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -24,6 +25,7 @@ public class GetInvoiceStatResponse {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -31,6 +33,7 @@ public class GetInvoiceStatResponse {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setInvoiced(String invoiced) {
         this.invoiced = invoiced;
     }
@@ -38,6 +41,7 @@ public class GetInvoiceStatResponse {
     public String getInvoiced() {
         return invoiced;
     }
+    
     public void setNotInvoiced(String notInvoiced) {
         this.notInvoiced = notInvoiced;
     }
@@ -45,15 +49,14 @@ public class GetInvoiceStatResponse {
     public String getNotInvoiced() {
         return notInvoiced;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetInvoiceStatResponse{" +
-                ", dealerId='" + dealerId + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", invoiced='" + invoiced + '\'' +
-                ", notInvoiced='" + notInvoiced + '\'' +
-                '}';
+             " dealerId='" + dealerId + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", invoiced='" + invoiced + '\'' + 
+             ", notInvoiced='" + notInvoiced + '\'' + 
+              '}';
     }
 }

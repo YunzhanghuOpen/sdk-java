@@ -8,6 +8,7 @@ public class ListAccountResponse {
     
     
     private AccountInfo[] dealerInfos;
+    
     public void setDealerInfos(AccountInfo[] dealerInfos) {
         this.dealerInfos = dealerInfos;
     }
@@ -15,12 +16,11 @@ public class ListAccountResponse {
     public AccountInfo[] getDealerInfos() {
         return dealerInfos;
     }
-
-
+    
     @Override
     public String toString() {
         return "ListAccountResponse{" +
-                ", dealerInfos='" + dealerInfos + '\'' +
-                '}';
+             " dealerInfos='" + dealerInfos + '\'' + 
+              '}';
     }
 }

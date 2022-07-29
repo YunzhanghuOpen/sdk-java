@@ -11,6 +11,7 @@ public class H5UserPresignResponse {
     
     // H5 签约 token
     private String token;
+    
     public void setUid(String uid) {
         this.uid = uid;
     }
@@ -18,6 +19,7 @@ public class H5UserPresignResponse {
     public String getUid() {
         return uid;
     }
+    
     public void setToken(String token) {
         this.token = token;
     }
@@ -25,13 +27,12 @@ public class H5UserPresignResponse {
     public String getToken() {
         return token;
     }
-
-
+    
     @Override
     public String toString() {
         return "H5UserPresignResponse{" +
-                ", uid='" + uid + '\'' +
-                ", token='" + token + '\'' +
-                '}';
+             " uid='" + uid + '\'' + 
+             ", token='" + token + '\'' + 
+              '}';
     }
 }
