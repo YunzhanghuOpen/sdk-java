@@ -32,7 +32,7 @@ public class JsonUtil {
         }
 
         Map<String, String> data = new HashMap<String, String>();
-        for(String element:message.split("&")){
+        for (String element : message.split("&")) {
             String[] eles = element.split("=", 2);
             data.put(eles[0], eles[1]);
         }
@@ -40,14 +40,14 @@ public class JsonUtil {
         return gson.fromJson(toJson(data), clazz);
     }
 
-    public static <T> T fromLowerCasesWithUnderScoresJson(String data, Type t){
+    public static <T> T fromLowerCasesWithUnderScoresJson(String data, Type t) {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
         Gson gson = gsonBuilder.create();
         return gson.fromJson(data, t);
     }
 
-    public static String toLowerCasesWithUnderScoresJson(Object obj){
+    public static String toLowerCasesWithUnderScoresJson(Object obj) {
         GsonBuilder gsonBuilder = new GsonBuilder();
         gsonBuilder.setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES);
         Gson gson = gsonBuilder.create();

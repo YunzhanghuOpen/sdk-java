@@ -75,7 +75,7 @@ public class YzhResponse<T> implements Serializable {
         this.data = data;
     }
 
-    public boolean isSuccess(){
+    public boolean isSuccess() {
         return DataDict.STATUS_200 == httpCode && DataDict.SUCCESS_CODE.equals(code);
     }
 
