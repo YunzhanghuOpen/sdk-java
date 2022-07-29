@@ -8,6 +8,7 @@ public class GetUserCrossResponse {
     
     // 跨集团标识
     private boolean isCross;
+    
     public void setIsCross(boolean isCross) {
         this.isCross = isCross;
     }
@@ -15,12 +16,11 @@ public class GetUserCrossResponse {
     public boolean getIsCross() {
         return isCross;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetUserCrossResponse{" +
-                ", isCross='" + isCross + '\'' +
-                '}';
+             " isCross='" + isCross + '\'' + 
+              '}';
     }
 }

@@ -8,6 +8,7 @@ public class ListDealerRechargeRecordV2Response {
     
     // 预付业务服务费记录
     private RechargeRecordInfo[] data;
+    
     public void setData(RechargeRecordInfo[] data) {
         this.data = data;
     }
@@ -15,12 +16,11 @@ public class ListDealerRechargeRecordV2Response {
     public RechargeRecordInfo[] getData() {
         return data;
     }
-
-
+    
     @Override
     public String toString() {
         return "ListDealerRechargeRecordV2Response{" +
-                ", data='" + data + '\'' +
-                '}';
+             " data='" + data + '\'' + 
+              '}';
     }
 }

@@ -14,6 +14,7 @@ public class BankCardThreeVerifyRequest {
     
     // 姓名
     private String realName;
+    
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
@@ -21,6 +22,7 @@ public class BankCardThreeVerifyRequest {
     public String getCardNo() {
         return cardNo;
     }
+    
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -28,6 +30,7 @@ public class BankCardThreeVerifyRequest {
     public String getIdCard() {
         return idCard;
     }
+    
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -35,14 +38,13 @@ public class BankCardThreeVerifyRequest {
     public String getRealName() {
         return realName;
     }
-
-
+    
     @Override
     public String toString() {
         return "BankCardThreeVerifyRequest{" +
-                ", cardNo='" + cardNo + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", realName='" + realName + '\'' +
-                '}';
+             " cardNo='" + cardNo + '\'' + 
+             ", idCard='" + idCard + '\'' + 
+             ", realName='" + realName + '\'' + 
+              '}';
     }
 }

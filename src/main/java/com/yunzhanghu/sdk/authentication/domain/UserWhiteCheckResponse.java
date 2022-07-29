@@ -8,6 +8,7 @@ public class UserWhiteCheckResponse {
     
     
     private boolean ok;
+    
     public void setOk(boolean ok) {
         this.ok = ok;
     }
@@ -15,12 +16,11 @@ public class UserWhiteCheckResponse {
     public boolean getOk() {
         return ok;
     }
-
-
+    
     @Override
     public String toString() {
         return "UserWhiteCheckResponse{" +
-                ", ok='" + ok + '\'' +
-                '}';
+             " ok='" + ok + '\'' + 
+              '}';
     }
 }

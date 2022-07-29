@@ -11,6 +11,7 @@ public class ListDailyBillResponse {
     
     // 条目信息
     private DealerBillInfo[] bills;
+    
     public void setTotalNum(int totalNum) {
         this.totalNum = totalNum;
     }
@@ -18,6 +19,7 @@ public class ListDailyBillResponse {
     public int getTotalNum() {
         return totalNum;
     }
+    
     public void setBills(DealerBillInfo[] bills) {
         this.bills = bills;
     }
@@ -25,13 +27,12 @@ public class ListDailyBillResponse {
     public DealerBillInfo[] getBills() {
         return bills;
     }
-
-
+    
     @Override
     public String toString() {
         return "ListDailyBillResponse{" +
-                ", totalNum='" + totalNum + '\'' +
-                ", bills='" + bills + '\'' +
-                '}';
+             " totalNum='" + totalNum + '\'' + 
+             ", bills='" + bills + '\'' + 
+              '}';
     }
 }

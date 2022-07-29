@@ -17,6 +17,7 @@ public class GetUserCrossRequest {
     
     // 平台企业签约主体
     private String entId;
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -24,6 +25,7 @@ public class GetUserCrossRequest {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setYear(String year) {
         this.year = year;
     }
@@ -31,6 +33,7 @@ public class GetUserCrossRequest {
     public String getYear() {
         return year;
     }
+    
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -38,6 +41,7 @@ public class GetUserCrossRequest {
     public String getIdCard() {
         return idCard;
     }
+    
     public void setEntId(String entId) {
         this.entId = entId;
     }
@@ -45,15 +49,14 @@ public class GetUserCrossRequest {
     public String getEntId() {
         return entId;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetUserCrossRequest{" +
-                ", dealerId='" + dealerId + '\'' +
-                ", year='" + year + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", entId='" + entId + '\'' +
-                '}';
+             " dealerId='" + dealerId + '\'' + 
+             ", year='" + year + '\'' + 
+             ", idCard='" + idCard + '\'' + 
+             ", entId='" + entId + '\'' + 
+              '}';
     }
 }

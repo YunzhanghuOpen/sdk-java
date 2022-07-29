@@ -23,6 +23,7 @@ public class BankCardFourAuthConfirmRequest {
     
     // 交易凭证
     private String ref;
+    
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
@@ -30,6 +31,7 @@ public class BankCardFourAuthConfirmRequest {
     public String getCardNo() {
         return cardNo;
     }
+    
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -37,6 +39,7 @@ public class BankCardFourAuthConfirmRequest {
     public String getIdCard() {
         return idCard;
     }
+    
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -44,6 +47,7 @@ public class BankCardFourAuthConfirmRequest {
     public String getRealName() {
         return realName;
     }
+    
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
@@ -51,6 +55,7 @@ public class BankCardFourAuthConfirmRequest {
     public String getMobile() {
         return mobile;
     }
+    
     public void setCaptcha(String captcha) {
         this.captcha = captcha;
     }
@@ -58,6 +63,7 @@ public class BankCardFourAuthConfirmRequest {
     public String getCaptcha() {
         return captcha;
     }
+    
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -65,17 +71,16 @@ public class BankCardFourAuthConfirmRequest {
     public String getRef() {
         return ref;
     }
-
-
+    
     @Override
     public String toString() {
         return "BankCardFourAuthConfirmRequest{" +
-                ", cardNo='" + cardNo + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", realName='" + realName + '\'' +
-                ", mobile='" + mobile + '\'' +
-                ", captcha='" + captcha + '\'' +
-                ", ref='" + ref + '\'' +
-                '}';
+             " cardNo='" + cardNo + '\'' + 
+             ", idCard='" + idCard + '\'' + 
+             ", realName='" + realName + '\'' + 
+             ", mobile='" + mobile + '\'' + 
+             ", captcha='" + captcha + '\'' + 
+             ", ref='" + ref + '\'' + 
+              '}';
     }
 }

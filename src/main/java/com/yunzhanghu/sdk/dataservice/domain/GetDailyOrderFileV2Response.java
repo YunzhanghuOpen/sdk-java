@@ -8,6 +8,7 @@ public class GetDailyOrderFileV2Response {
     
     // 下载地址
     private String url;
+    
     public void setUrl(String url) {
         this.url = url;
     }
@@ -15,12 +16,11 @@ public class GetDailyOrderFileV2Response {
     public String getUrl() {
         return url;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetDailyOrderFileV2Response{" +
-                ", url='" + url + '\'' +
-                '}';
+             " url='" + url + '\'' + 
+              '}';
     }
 }

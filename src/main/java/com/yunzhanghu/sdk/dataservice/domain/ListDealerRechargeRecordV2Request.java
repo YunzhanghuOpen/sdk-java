@@ -11,6 +11,7 @@ public class ListDealerRechargeRecordV2Request {
     
     // 结束时间，格式：yyyy-MM-dd
     private String endAt;
+    
     public void setBeginAt(String beginAt) {
         this.beginAt = beginAt;
     }
@@ -18,6 +19,7 @@ public class ListDealerRechargeRecordV2Request {
     public String getBeginAt() {
         return beginAt;
     }
+    
     public void setEndAt(String endAt) {
         this.endAt = endAt;
     }
@@ -25,13 +27,12 @@ public class ListDealerRechargeRecordV2Request {
     public String getEndAt() {
         return endAt;
     }
-
-
+    
     @Override
     public String toString() {
         return "ListDealerRechargeRecordV2Request{" +
-                ", beginAt='" + beginAt + '\'' +
-                ", endAt='" + endAt + '\'' +
-                '}';
+             " beginAt='" + beginAt + '\'' + 
+             ", endAt='" + endAt + '\'' + 
+              '}';
     }
 }

@@ -11,6 +11,7 @@ public class ListDailyOrderResponse {
     
     // 条目信息
     private DealerOrderInfo[] list;
+    
     public void setTotalNum(int totalNum) {
         this.totalNum = totalNum;
     }
@@ -18,6 +19,7 @@ public class ListDailyOrderResponse {
     public int getTotalNum() {
         return totalNum;
     }
+    
     public void setList(DealerOrderInfo[] list) {
         this.list = list;
     }
@@ -25,13 +27,12 @@ public class ListDailyOrderResponse {
     public DealerOrderInfo[] getList() {
         return list;
     }
-
-
+    
     @Override
     public String toString() {
         return "ListDailyOrderResponse{" +
-                ", totalNum='" + totalNum + '\'' +
-                ", list='" + list + '\'' +
-                '}';
+             " totalNum='" + totalNum + '\'' + 
+             ", list='" + list + '\'' + 
+              '}';
     }
 }

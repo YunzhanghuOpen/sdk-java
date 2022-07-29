@@ -17,6 +17,7 @@ public class BankCardFourAuthVerifyRequest {
     
     // 银行预留手机号
     private String mobile;
+    
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
@@ -24,6 +25,7 @@ public class BankCardFourAuthVerifyRequest {
     public String getCardNo() {
         return cardNo;
     }
+    
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -31,6 +33,7 @@ public class BankCardFourAuthVerifyRequest {
     public String getIdCard() {
         return idCard;
     }
+    
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -38,6 +41,7 @@ public class BankCardFourAuthVerifyRequest {
     public String getRealName() {
         return realName;
     }
+    
     public void setMobile(String mobile) {
         this.mobile = mobile;
     }
@@ -45,15 +49,14 @@ public class BankCardFourAuthVerifyRequest {
     public String getMobile() {
         return mobile;
     }
-
-
+    
     @Override
     public String toString() {
         return "BankCardFourAuthVerifyRequest{" +
-                ", cardNo='" + cardNo + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", realName='" + realName + '\'' +
-                ", mobile='" + mobile + '\'' +
-                '}';
+             " cardNo='" + cardNo + '\'' + 
+             ", idCard='" + idCard + '\'' + 
+             ", realName='" + realName + '\'' + 
+             ", mobile='" + mobile + '\'' + 
+              '}';
     }
 }

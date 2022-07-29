@@ -8,6 +8,7 @@ public class H5UserSignResponse {
     
     // H5 签约页面 URL
     private String url;
+    
     public void setUrl(String url) {
         this.url = url;
     }
@@ -15,12 +16,11 @@ public class H5UserSignResponse {
     public String getUrl() {
         return url;
     }
-
-
+    
     @Override
     public String toString() {
         return "H5UserSignResponse{" +
-                ", url='" + url + '\'' +
-                '}';
+             " url='" + url + '\'' + 
+              '}';
     }
 }

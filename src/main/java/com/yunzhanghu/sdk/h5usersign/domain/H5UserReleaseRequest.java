@@ -20,6 +20,7 @@ public class H5UserReleaseRequest {
     
     // 证件类型   0：身份证 2：港澳居民来往内地通行证 3：护照 5：台湾居民来往大陆通行证
     private int certificateType;
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -27,6 +28,7 @@ public class H5UserReleaseRequest {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -34,6 +36,7 @@ public class H5UserReleaseRequest {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -41,6 +44,7 @@ public class H5UserReleaseRequest {
     public String getRealName() {
         return realName;
     }
+    
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -48,6 +52,7 @@ public class H5UserReleaseRequest {
     public String getIdCard() {
         return idCard;
     }
+    
     public void setCertificateType(int certificateType) {
         this.certificateType = certificateType;
     }
@@ -55,16 +60,15 @@ public class H5UserReleaseRequest {
     public int getCertificateType() {
         return certificateType;
     }
-
-
+    
     @Override
     public String toString() {
         return "H5UserReleaseRequest{" +
-                ", brokerId='" + brokerId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                ", realName='" + realName + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", certificateType='" + certificateType + '\'' +
-                '}';
+             " brokerId='" + brokerId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+             ", realName='" + realName + '\'' + 
+             ", idCard='" + idCard + '\'' + 
+             ", certificateType='" + certificateType + '\'' + 
+              '}';
     }
 }

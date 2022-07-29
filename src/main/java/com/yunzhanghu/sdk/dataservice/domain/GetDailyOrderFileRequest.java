@@ -8,6 +8,7 @@ public class GetDailyOrderFileRequest {
     
     // 订单查询日期, 格式：yyyy-MM-dd
     private String orderDate;
+    
     public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
@@ -15,12 +16,11 @@ public class GetDailyOrderFileRequest {
     public String getOrderDate() {
         return orderDate;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetDailyOrderFileRequest{" +
-                ", orderDate='" + orderDate + '\'' +
-                '}';
+             " orderDate='" + orderDate + '\'' + 
+              '}';
     }
 }

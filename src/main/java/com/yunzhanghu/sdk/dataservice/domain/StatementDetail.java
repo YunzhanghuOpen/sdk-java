@@ -56,6 +56,7 @@ public class StatementDetail {
     
     // 项目名称
     private String projectName;
+    
     public void setStatementId(String statementId) {
         this.statementId = statementId;
     }
@@ -63,6 +64,7 @@ public class StatementDetail {
     public String getStatementId() {
         return statementId;
     }
+    
     public void setStatementDate(String statementDate) {
         this.statementDate = statementDate;
     }
@@ -70,6 +72,7 @@ public class StatementDetail {
     public String getStatementDate() {
         return statementDate;
     }
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -77,6 +80,7 @@ public class StatementDetail {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -84,6 +88,7 @@ public class StatementDetail {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setBrokerProductName(String brokerProductName) {
         this.brokerProductName = brokerProductName;
     }
@@ -91,6 +96,7 @@ public class StatementDetail {
     public String getBrokerProductName() {
         return brokerProductName;
     }
+    
     public void setDealerProductName(String dealerProductName) {
         this.dealerProductName = dealerProductName;
     }
@@ -98,6 +104,7 @@ public class StatementDetail {
     public String getDealerProductName() {
         return dealerProductName;
     }
+    
     public void setBizType(String bizType) {
         this.bizType = bizType;
     }
@@ -105,6 +112,7 @@ public class StatementDetail {
     public String getBizType() {
         return bizType;
     }
+    
     public void setTotalMoney(String totalMoney) {
         this.totalMoney = totalMoney;
     }
@@ -112,6 +120,7 @@ public class StatementDetail {
     public String getTotalMoney() {
         return totalMoney;
     }
+    
     public void setAmount(String amount) {
         this.amount = amount;
     }
@@ -119,6 +128,7 @@ public class StatementDetail {
     public String getAmount() {
         return amount;
     }
+    
     public void setReexAmount(String reexAmount) {
         this.reexAmount = reexAmount;
     }
@@ -126,6 +136,7 @@ public class StatementDetail {
     public String getReexAmount() {
         return reexAmount;
     }
+    
     public void setFeeAmount(String feeAmount) {
         this.feeAmount = feeAmount;
     }
@@ -133,6 +144,7 @@ public class StatementDetail {
     public String getFeeAmount() {
         return feeAmount;
     }
+    
     public void setDeductRebateFeeAmount(String deductRebateFeeAmount) {
         this.deductRebateFeeAmount = deductRebateFeeAmount;
     }
@@ -140,6 +152,7 @@ public class StatementDetail {
     public String getDeductRebateFeeAmount() {
         return deductRebateFeeAmount;
     }
+    
     public void setMoneyAdjust(String moneyAdjust) {
         this.moneyAdjust = moneyAdjust;
     }
@@ -147,6 +160,7 @@ public class StatementDetail {
     public String getMoneyAdjust() {
         return moneyAdjust;
     }
+    
     public void setStatus(String status) {
         this.status = status;
     }
@@ -154,6 +168,7 @@ public class StatementDetail {
     public String getStatus() {
         return status;
     }
+    
     public void setInvoiceStatus(String invoiceStatus) {
         this.invoiceStatus = invoiceStatus;
     }
@@ -161,6 +176,7 @@ public class StatementDetail {
     public String getInvoiceStatus() {
         return invoiceStatus;
     }
+    
     public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
@@ -168,6 +184,7 @@ public class StatementDetail {
     public String getProjectId() {
         return projectId;
     }
+    
     public void setProjectName(String projectName) {
         this.projectName = projectName;
     }
@@ -175,28 +192,27 @@ public class StatementDetail {
     public String getProjectName() {
         return projectName;
     }
-
-
+    
     @Override
     public String toString() {
         return "StatementDetail{" +
-                ", statementId='" + statementId + '\'' +
-                ", statementDate='" + statementDate + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                ", brokerProductName='" + brokerProductName + '\'' +
-                ", dealerProductName='" + dealerProductName + '\'' +
-                ", bizType='" + bizType + '\'' +
-                ", totalMoney='" + totalMoney + '\'' +
-                ", amount='" + amount + '\'' +
-                ", reexAmount='" + reexAmount + '\'' +
-                ", feeAmount='" + feeAmount + '\'' +
-                ", deductRebateFeeAmount='" + deductRebateFeeAmount + '\'' +
-                ", moneyAdjust='" + moneyAdjust + '\'' +
-                ", status='" + status + '\'' +
-                ", invoiceStatus='" + invoiceStatus + '\'' +
-                ", projectId='" + projectId + '\'' +
-                ", projectName='" + projectName + '\'' +
-                '}';
+             " statementId='" + statementId + '\'' + 
+             ", statementDate='" + statementDate + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+             ", brokerProductName='" + brokerProductName + '\'' + 
+             ", dealerProductName='" + dealerProductName + '\'' + 
+             ", bizType='" + bizType + '\'' + 
+             ", totalMoney='" + totalMoney + '\'' + 
+             ", amount='" + amount + '\'' + 
+             ", reexAmount='" + reexAmount + '\'' + 
+             ", feeAmount='" + feeAmount + '\'' + 
+             ", deductRebateFeeAmount='" + deductRebateFeeAmount + '\'' + 
+             ", moneyAdjust='" + moneyAdjust + '\'' + 
+             ", status='" + status + '\'' + 
+             ", invoiceStatus='" + invoiceStatus + '\'' + 
+             ", projectId='" + projectId + '\'' + 
+             ", projectName='" + projectName + '\'' + 
+              '}';
     }
 }

@@ -11,6 +11,7 @@ public class ApiUseSignContractResponse {
     
     // 协议名称
     private String title;
+    
     public void setUrl(String url) {
         this.url = url;
     }
@@ -18,6 +19,7 @@ public class ApiUseSignContractResponse {
     public String getUrl() {
         return url;
     }
+    
     public void setTitle(String title) {
         this.title = title;
     }
@@ -25,13 +27,12 @@ public class ApiUseSignContractResponse {
     public String getTitle() {
         return title;
     }
-
-
+    
     @Override
     public String toString() {
         return "ApiUseSignContractResponse{" +
-                ", url='" + url + '\'' +
-                ", title='" + title + '\'' +
-                '}';
+             " url='" + url + '\'' + 
+             ", title='" + title + '\'' + 
+              '}';
     }
 }

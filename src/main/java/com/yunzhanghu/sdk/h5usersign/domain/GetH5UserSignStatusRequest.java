@@ -17,6 +17,7 @@ public class GetH5UserSignStatusRequest {
     
     // 证件号码
     private String idCard;
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -24,6 +25,7 @@ public class GetH5UserSignStatusRequest {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -31,6 +33,7 @@ public class GetH5UserSignStatusRequest {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -38,6 +41,7 @@ public class GetH5UserSignStatusRequest {
     public String getRealName() {
         return realName;
     }
+    
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -45,15 +49,14 @@ public class GetH5UserSignStatusRequest {
     public String getIdCard() {
         return idCard;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetH5UserSignStatusRequest{" +
-                ", dealerId='" + dealerId + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", realName='" + realName + '\'' +
-                ", idCard='" + idCard + '\'' +
-                '}';
+             " dealerId='" + dealerId + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", realName='" + realName + '\'' + 
+             ", idCard='" + idCard + '\'' + 
+              '}';
     }
 }

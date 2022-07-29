@@ -14,6 +14,7 @@ public class FileInfo {
     
     // 文件解压缩密码
     private String pwd;
+    
     public void setName(String name) {
         this.name = name;
     }
@@ -21,6 +22,7 @@ public class FileInfo {
     public String getName() {
         return name;
     }
+    
     public void setUrl(String url) {
         this.url = url;
     }
@@ -28,6 +30,7 @@ public class FileInfo {
     public String getUrl() {
         return url;
     }
+    
     public void setPwd(String pwd) {
         this.pwd = pwd;
     }
@@ -35,14 +38,13 @@ public class FileInfo {
     public String getPwd() {
         return pwd;
     }
-
-
+    
     @Override
     public String toString() {
         return "FileInfo{" +
-                ", name='" + name + '\'' +
-                ", url='" + url + '\'' +
-                ", pwd='" + pwd + '\'' +
-                '}';
+             " name='" + name + '\'' + 
+             ", url='" + url + '\'' + 
+             ", pwd='" + pwd + '\'' + 
+              '}';
     }
 }
