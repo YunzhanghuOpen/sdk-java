@@ -228,15 +228,12 @@ public class YzhConfig {
     }
 
     public enum SignType {
-        /**
-         * RSA
-         **/
-        RSA("RSA"),
 
-        /**
-         * hmac
-         **/
-        SHA256("SHA256");
+         // RSA
+         RSA("RSA"),
+
+         // hmac
+         SHA256("SHA256");
 
         private final String value;
 
