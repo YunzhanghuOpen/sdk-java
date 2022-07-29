@@ -32,7 +32,7 @@ public class GoodsServicesName {
     public String toString() {
         return "GoodsServicesName{" +
              " item='" + item + '\'' + 
-             ", default='" + default + '\'' + 
+             ", _default='" + _default + '\'' + 
               '}';
     }
 }
