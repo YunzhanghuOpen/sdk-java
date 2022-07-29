@@ -56,24 +56,24 @@ public abstract class YzhSign {
     public class SignedData {
 
 
-         // 时间戳，精确到秒
-         private int timestamp;
+        // 时间戳，精确到秒
+        private int timestamp;
 
 
-         // 签名
-         private String sign;
+        // 签名
+        private String sign;
 
 
-         // 签名方式，固定值 rsa
-         private String signType;
+        // 签名方式，固定值 rsa
+        private String signType;
 
 
-         // 随机数，用于签名
-         private String mess;
+        // 随机数，用于签名
+        private String mess;
 
 
-         // 经过加密后的具体数据
-         private String data;
+        // 经过加密后的具体数据
+        private String data;
 
         public int getTimestamp() {
             return timestamp;
