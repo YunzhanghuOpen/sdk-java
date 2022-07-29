@@ -59,13 +59,13 @@ public class Payment {
      */
     private static YzhConfig getYzhConfig() {
     	YzhConfig config = new YzhConfig();
-    	//方式一：从配置文件获取
-    	//签名方式：sha256
+    	// 方式一：从配置文件获取
+    	// 签名方式：sha256
 //		config = YzhConfig.loadYaml("yzh-sha256.yaml");
-		//签名方式：rsa
+		// 签名方式：rsa
 //		config = YzhConfig.loadConfig("yzh.properties");
     	
-    	//方式二：自定义配置
+    	// 方式二：自定义配置
     	config.setDealerId("");
     	config.setSignType(SignType.RSA);
     	config.setYzh3DesKey("");
