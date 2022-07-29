@@ -6,7 +6,7 @@
 
     <groupId>com.yunzhanghu.openapi</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.4.1-RELEASE</version>
+    <version>1.4.2-RELEASE</version>
     <name>yzh-sdk</name>
     <description>yzh sdk</description>
     <url>https://github.com/YunzhanghuOpen/sdk-java</url>
