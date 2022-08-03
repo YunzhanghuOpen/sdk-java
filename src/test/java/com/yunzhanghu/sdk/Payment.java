@@ -19,7 +19,6 @@ public class Payment {
     public void bankCardOrder() {
         try {
             YzhConfig config = getYzhConfig();
-
             PaymentClient client = new PaymentClient(config);
 
             CreateBankpayOrderRequest request = new CreateBankpayOrderRequest();
@@ -45,8 +44,9 @@ public class Payment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
-    
+
     // 获取基础配置
     private static YzhConfig getYzhConfig() {
         YzhConfig config = new YzhConfig();
@@ -66,5 +66,4 @@ public class Payment {
         config.setYzhUrl("https://api-service.yunzhanghu.com");
         return config;
     }
-
 }
