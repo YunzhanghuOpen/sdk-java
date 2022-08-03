@@ -11,38 +11,10 @@ import com.yunzhanghu.sdk.utils.BaseUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * 接口调用示例
- */
+// 接口调用示例
 public class Payment {
 
-    /**
-     * 获取基础配置
-     *
-     * @return
-     */
-    private static YzhConfig getYzhConfig() {
-        YzhConfig config = new YzhConfig();
-        // 方式一：从配置文件获取
-        // 签名方式：sha256
-		// config = YzhConfig.loadYaml("yzh-sha256.yaml");
-        // 签名方式：rsa
-		// config = YzhConfig.loadConfig("yzh.properties");
-
-        // 方式二：自定义配置
-        config.setDealerId("");
-        config.setSignType(SignType.RSA);
-        config.setYzh3DesKey("");
-        config.setYzhAppKey("");
-        config.setYzhRsaPrivateKey("");
-        config.setYzhRsaPublicKey("");
-        config.setYzhUrl("https://api-service.yunzhanghu.com");
-        return config;
-    }
-
-    /**
-     * 银行卡实时下单接口
-     */
+    // 银行卡实时下单接口
     @Test
     public void bankCardOrder() {
         try {
@@ -73,7 +45,26 @@ public class Payment {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    
+    // 获取基础配置
+    private static YzhConfig getYzhConfig() {
+        YzhConfig config = new YzhConfig();
+        // 方式一：从配置文件获取
+        // 签名方式：sha256
+		// config = YzhConfig.loadYaml("yzh-sha256.yaml");
+        // 签名方式：rsa
+		// config = YzhConfig.loadConfig("yzh.properties");
 
+        // 方式二：自定义配置
+        config.setDealerId("");
+        config.setSignType(SignType.RSA);
+        config.setYzh3DesKey("");
+        config.setYzhAppKey("");
+        config.setYzhRsaPrivateKey("");
+        config.setYzhRsaPublicKey("");
+        config.setYzhUrl("https://api-service.yunzhanghu.com");
+        return config;
     }
 
 }
