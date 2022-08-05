@@ -81,7 +81,7 @@ public class GetOrderResponse {
     // 项目标识
     private String projectId;
     
-    // 主播 ID，该字段已废弃
+    // 新就业形态劳动者 ID，该字段已废弃
     private String anchorId;
     
     // 描述信息，该字段已废弃
