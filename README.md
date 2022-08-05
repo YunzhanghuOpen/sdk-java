@@ -39,7 +39,7 @@ Openssl-> rsa -in private_key.pem -pubout -out pubkey.pem
 
 #### 3、配置密钥
 
-登录【云账户综合服务平台】，选择“业务中心 > 业务管理 > 对接信息”，单击页面右上角的“编辑”，配置平台企业公钥。
+登录【[云账户综合服务平台](https://service.yunzhanghu.com/user/login)】，选择“业务中心 > 业务管理 > 对接信息”，单击页面右上角的“编辑”，配置平台企业公钥。
 ![配置平台企业公钥信息](src/main/resources/img/publickeyconfig.png)
 
 ### 安装Java SDK
