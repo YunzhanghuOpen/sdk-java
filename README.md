@@ -21,9 +21,9 @@
 - 方式一：使用 OpenSSL 生成 RSA 公私钥
 
 ```
-① ⽣成私钥 private_key.pem，建议密钥⻓度⾄少为 2048
+① ⽣成私钥 private_key.pem
 
-Openssl-> genrsa -out private_key.pem 2048 # 
+Openssl-> genrsa -out private_key.pem 2048 // 建议密钥⻓度⾄少为 2048
 
 OpenSSL-> pkcs8 -topk8 -inform PEM -in private_key.pem -outform PEM -nocrypt -out private_key_pkcs8.pem
 
