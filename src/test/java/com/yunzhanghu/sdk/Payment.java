@@ -7,7 +7,6 @@ import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.payment.PaymentClient;
 import com.yunzhanghu.sdk.payment.domain.CreateBankpayOrderRequest;
 import com.yunzhanghu.sdk.payment.domain.CreateBankpayOrderResponse;
-import com.yunzhanghu.sdk.utils.BaseUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -22,7 +21,7 @@ public class Payment {
             PaymentClient client = new PaymentClient(config);
 
             CreateBankpayOrderRequest request = new CreateBankpayOrderRequest();
-            request.setOrderId(BaseUtil.getOrderId("bank"));
+            request.setOrderId("");
             request.setDealerId("");
             request.setBrokerId("");
             request.setRealName("");
