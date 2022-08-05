@@ -9,30 +9,21 @@ public class YzhResponse<T> implements Serializable {
 
     private static final long serialVersionUID = 6552432864952557996L;
 
-    /**
-     * http返回码
-     **/
+
+    // http 返回码
     private int httpCode;
 
-    /**
-     * 返回码
-     **/
+    // 返回码
     private String code;
 
-    /**
-     * 返回描述
-     **/
+    // 返回描述
     private String message;
 
-    /**
-     * 返回码
-     **/
+    // 返回码
     @SerializedName(value = "request_id", alternate = "requestID")
     private String requestId;
 
-    /**
-     * 业务数据
-     **/
+    // 业务数据
     private T data;
 
     public int getHttpCode() {
@@ -75,7 +66,7 @@ public class YzhResponse<T> implements Serializable {
         this.data = data;
     }
 
-    public boolean isSuccess(){
+    public boolean isSuccess() {
         return DataDict.STATUS_200 == httpCode && DataDict.SUCCESS_CODE.equals(code);
     }
 

@@ -1,7 +1,7 @@
-yzh: 
-  dealer_id: 
-  3des_key: 
-  app_key: 
+yzh:
+  dealer_id:
+  3des_key:
+  app_key:
   sign_type: SHA256
   url: https://api-service.yunzhanghu.com
   rsa_private_key:

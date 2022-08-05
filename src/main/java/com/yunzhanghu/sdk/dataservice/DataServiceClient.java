@@ -6,7 +6,6 @@ import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.dataservice.domain.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
 public class DataServiceClient extends YzhClient {
@@ -16,6 +15,7 @@ public class DataServiceClient extends YzhClient {
     public DataServiceClient(YzhConfig yzhConfig) {
         super(yzhConfig);
     }
+    
     // 查询日订单数据
     public YzhResponse<ListDailyOrderResponse> listDailyOrder(YzhRequest<ListDailyOrderRequest> req) throws YzhException {
         try {
@@ -25,6 +25,7 @@ public class DataServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 查询日订单文件
     public YzhResponse<GetDailyOrderFileResponse> getDailyOrderFile(YzhRequest<GetDailyOrderFileRequest> req) throws YzhException {
         try {
@@ -34,6 +35,7 @@ public class DataServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 查询日订单文件（支付和退款订单）
     public YzhResponse<GetDailyOrderFileV2Response> getDailyOrderFileV2(YzhRequest<GetDailyOrderFileV2Request> req) throws YzhException {
         try {
@@ -43,6 +45,7 @@ public class DataServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 查询日流水数据
     public YzhResponse<ListDailyBillResponse> listDailyBill(YzhRequest<ListDailyBillRequest> req) throws YzhException {
         try {
@@ -52,6 +55,7 @@ public class DataServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 查询日流水文件
     public YzhResponse<GetDailyBillFileV2Response> getDailyBillFileV2(YzhRequest<GetDailyBillFileV2Request> req) throws YzhException {
         try {
@@ -61,6 +65,7 @@ public class DataServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 查询平台企业预付业务服务费记录
     public YzhResponse<List<RechargeRecordInfo>> listDealerRechargeRecordV2(YzhRequest<ListDealerRechargeRecordV2Request> req) throws YzhException {
         try {
@@ -70,6 +75,7 @@ public class DataServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 获取余额日账单
     public YzhResponse<ListBalanceDailyStatementResponse> listBalanceDailyStatement(YzhRequest<ListBalanceDailyStatementRequest> req) throws YzhException {
         try {

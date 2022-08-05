@@ -11,6 +11,7 @@ public class GetApiUserSignStatusResponse {
     
     // 用户签约状态
     private int status;
+    
     public void setSignedAt(String signedAt) {
         this.signedAt = signedAt;
     }
@@ -18,6 +19,7 @@ public class GetApiUserSignStatusResponse {
     public String getSignedAt() {
         return signedAt;
     }
+    
     public void setStatus(int status) {
         this.status = status;
     }
@@ -25,13 +27,12 @@ public class GetApiUserSignStatusResponse {
     public int getStatus() {
         return status;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetApiUserSignStatusResponse{" +
-                ", signedAt='" + signedAt + '\'' +
-                ", status='" + status + '\'' +
-                '}';
+             " signedAt='" + signedAt + '\'' + 
+             ", status='" + status + '\'' + 
+              '}';
     }
 }

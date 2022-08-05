@@ -11,10 +11,10 @@ import java.nio.charset.Charset;
 public class DESUtil {
 
     /**
-     *  3DES加密
+     * 3DES加密
      *
      * @param yzh3DesKey 密钥
-     * @param data 数据
+     * @param data       数据
      * @return String 加密后数据
      * @throws Exception 通用异常
      */
@@ -28,14 +28,14 @@ public class DESUtil {
     }
 
     /**
-     *  3DES解密
-     *
+     * 3DES解密
+     * <p>
      * 解密报错 javax.crypto.IllegalBlockSizeException: Input length must be multiple of 8 when decrypting with padded cipher
      * 不需要进行urldecode，使用如下解密代码
      * byte[] dec64 = Base64.decodeBase64(notifyResponse.getData());
      *
      * @param yzh3DesKey 密钥
-     * @param data 加密数据
+     * @param data       加密数据
      * @return String 解密后数据
      * @throws Exception 通用异常
      */

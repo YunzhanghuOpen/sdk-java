@@ -14,6 +14,7 @@ public class AuthenticationClient extends YzhClient {
     public AuthenticationClient(YzhConfig yzhConfig) {
         super(yzhConfig);
     }
+    
     // 银行卡四要素鉴权请求（下发短信验证码）
     public YzhResponse<BankCardFourAuthVerifyResponse> bankCardFourAuthVerify(YzhRequest<BankCardFourAuthVerifyRequest> req) throws YzhException {
         try {
@@ -23,6 +24,7 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 银行卡四要素确认鉴权（上传短信验证码）
     public YzhResponse<BankCardFourAuthConfirmResponse> bankCardFourAuthConfirm(YzhRequest<BankCardFourAuthConfirmRequest> req) throws YzhException {
         try {
@@ -32,6 +34,7 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 银行卡四要素验证
     public YzhResponse<BankCardFourVerifyResponse> bankCardFourVerify(YzhRequest<BankCardFourVerifyRequest> req) throws YzhException {
         try {
@@ -41,6 +44,7 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 银行卡三要素验证
     public YzhResponse<BankCardThreeVerifyResponse> bankCardThreeVerify(YzhRequest<BankCardThreeVerifyRequest> req) throws YzhException {
         try {
@@ -50,6 +54,7 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 身份证实名验证
     public YzhResponse<IDCardVerifyResponse> iDCardVerify(YzhRequest<IDCardVerifyRequest> req) throws YzhException {
         try {
@@ -59,6 +64,7 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 上传免验证用户名单信息
     public YzhResponse<UserExemptedInfoResponse> userExemptedInfo(YzhRequest<UserExemptedInfoRequest> req) throws YzhException {
         try {
@@ -68,6 +74,7 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 查看免验证用户名单是否存在
     public YzhResponse<UserWhiteCheckResponse> userWhiteCheck(YzhRequest<UserWhiteCheckRequest> req) throws YzhException {
         try {
@@ -77,6 +84,7 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // 银行卡信息查询接口
     public YzhResponse<GetBankCardInfoResponse> getBankCardInfo(YzhRequest<GetBankCardInfoRequest> req) throws YzhException {
         try {

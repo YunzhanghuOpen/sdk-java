@@ -29,6 +29,7 @@ public class ApplyInvoiceRequest {
     
     // 发票备注
     private String remark;
+    
     public void setInvoiceApplyId(String invoiceApplyId) {
         this.invoiceApplyId = invoiceApplyId;
     }
@@ -36,6 +37,7 @@ public class ApplyInvoiceRequest {
     public String getInvoiceApplyId() {
         return invoiceApplyId;
     }
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -43,6 +45,7 @@ public class ApplyInvoiceRequest {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -50,6 +53,7 @@ public class ApplyInvoiceRequest {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setAmount(String amount) {
         this.amount = amount;
     }
@@ -57,6 +61,7 @@ public class ApplyInvoiceRequest {
     public String getAmount() {
         return amount;
     }
+    
     public void setInvoiceType(String invoiceType) {
         this.invoiceType = invoiceType;
     }
@@ -64,6 +69,7 @@ public class ApplyInvoiceRequest {
     public String getInvoiceType() {
         return invoiceType;
     }
+    
     public void setBankNameAccount(String bankNameAccount) {
         this.bankNameAccount = bankNameAccount;
     }
@@ -71,6 +77,7 @@ public class ApplyInvoiceRequest {
     public String getBankNameAccount() {
         return bankNameAccount;
     }
+    
     public void setGoodsServicesName(String goodsServicesName) {
         this.goodsServicesName = goodsServicesName;
     }
@@ -78,6 +85,7 @@ public class ApplyInvoiceRequest {
     public String getGoodsServicesName() {
         return goodsServicesName;
     }
+    
     public void setRemark(String remark) {
         this.remark = remark;
     }
@@ -85,19 +93,18 @@ public class ApplyInvoiceRequest {
     public String getRemark() {
         return remark;
     }
-
-
+    
     @Override
     public String toString() {
         return "ApplyInvoiceRequest{" +
-                ", invoiceApplyId='" + invoiceApplyId + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                ", amount='" + amount + '\'' +
-                ", invoiceType='" + invoiceType + '\'' +
-                ", bankNameAccount='" + bankNameAccount + '\'' +
-                ", goodsServicesName='" + goodsServicesName + '\'' +
-                ", remark='" + remark + '\'' +
-                '}';
+             " invoiceApplyId='" + invoiceApplyId + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+             ", amount='" + amount + '\'' + 
+             ", invoiceType='" + invoiceType + '\'' + 
+             ", bankNameAccount='" + bankNameAccount + '\'' + 
+             ", goodsServicesName='" + goodsServicesName + '\'' + 
+             ", remark='" + remark + '\'' + 
+              '}';
     }
 }

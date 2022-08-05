@@ -15,6 +15,7 @@ public class TaxClient extends YzhClient {
     public TaxClient(YzhConfig yzhConfig) {
         super(yzhConfig);
     }
+    
     // 下载个税扣缴明细表
     public YzhResponse<GetTaxFileResponse> getTaxFile(YzhRequest<GetTaxFileRequest> req) throws YzhException {
         try {
@@ -24,6 +25,7 @@ public class TaxClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // GetUserCross 查询纳税人是否为跨集团用户
     public YzhResponse<GetUserCrossResponse> getUserCross(YzhRequest<GetUserCrossRequest> req) throws YzhException {
         try {

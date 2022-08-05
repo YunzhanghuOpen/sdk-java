@@ -16,11 +16,11 @@ public abstract class YzhSign {
         setYzhConfig(yzhConfig);
     }
 
-    protected SignedData sign(Object request) throws Exception{
+    protected SignedData sign(Object request) throws Exception {
         SignedData signedData = new SignedData();
         signedData.setSignType(getYzhConfig().getSignType().getValue());
-        signedData.setMess(ThreadLocalRandom.current().nextInt(1000)+"");
-        signedData.setTimestamp(Integer.parseInt(String.valueOf(System.currentTimeMillis()/1000)));
+        signedData.setMess(ThreadLocalRandom.current().nextInt(1000) + "");
+        signedData.setTimestamp(Integer.parseInt(String.valueOf(System.currentTimeMillis() / 1000)));
         signedData.setData(encData(request));
 
         String plain = new StringBuilder("data=")
@@ -41,7 +41,7 @@ public abstract class YzhSign {
 
     protected abstract String encData(Object request) throws Exception;
 
-    public String decrypt(String data) throws Exception{
+    public String decrypt(String data) throws Exception {
         return DESUtil.decode(yzhConfig.getYzh3DesKey(), data, StandardCharsets.UTF_8);
     }
 
@@ -55,29 +55,24 @@ public abstract class YzhSign {
 
     public class SignedData {
 
-        /**
-         * 时间戳，精确到秒
-         **/
+
+        // 时间戳，精确到秒
         private int timestamp;
 
-        /**
-         * 签名
-         **/
+
+        // 签名
         private String sign;
 
-        /**
-         * 签名方式，固定值rsa
-         **/
+
+        // 签名方式，固定值 rsa
         private String signType;
 
-        /**
-         * 随机数，用于签名
-         **/
+
+        // 随机数，用于签名
         private String mess;
 
-        /**
-         * 经过加密后的具体数据
-         **/
+
+        // 经过加密后的具体数据
         private String data;
 
         public int getTimestamp() {
@@ -86,10 +81,6 @@ public abstract class YzhSign {
 
         public void setTimestamp(int timestamp) {
             this.timestamp = timestamp;
-        }
-
-        public void setSign(String sign) {
-            this.sign = sign;
         }
 
         public String getSignType() {
@@ -119,6 +110,10 @@ public abstract class YzhSign {
         // 获取签名
         public String getSign() {
             return sign;
+        }
+
+        public void setSign(String sign) {
+            this.sign = sign;
         }
 
         // 获取get请求明文串

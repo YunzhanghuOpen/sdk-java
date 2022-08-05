@@ -11,6 +11,7 @@ public class GetInvoiceAmountRequest {
     
     // 平台企业 ID
     private String dealerId;
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -18,6 +19,7 @@ public class GetInvoiceAmountRequest {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -25,13 +27,12 @@ public class GetInvoiceAmountRequest {
     public String getDealerId() {
         return dealerId;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetInvoiceAmountRequest{" +
-                ", brokerId='" + brokerId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                '}';
+             " brokerId='" + brokerId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+              '}';
     }
 }

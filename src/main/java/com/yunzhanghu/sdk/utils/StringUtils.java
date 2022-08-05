@@ -20,7 +20,7 @@ public class StringUtils {
         return "".equals(trim(object));
     }
 
-    public static String getRequestId(){
+    public static String getRequestId() {
         return UUID.randomUUID().toString().replace("-", "");
     }
 
