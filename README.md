@@ -1,19 +1,19 @@
-# <div align="center"><h1>云账户 SDK for Java</h1></div>
+# 云账户 SDK for Java
 
-欢迎使用云账户 SDK for Java 。
-云账户是一家专注为平台企业和新就业形态劳动者提供高质量灵活就业服务的新时代企业。云账户 SDK 对云账户综合服务平台 API 接口进行封装，让您不必关心过多参数请求，帮助您快速接入到云账户综合服务平台。云账户 SDK for Java 为您提供签约、下单、回调、数据查询等功能，帮助您完成与云账户综合服务平台的接口对接及业务开发。
-如果您在使用过程中遇到任何问题，欢迎在当前 GitHub 提交 Issues，或发送邮件至技术支持组 techsupport@yunzhanghu.com。
+欢迎使用云账户 SDK for Java。  
+云账户是一家专注为平台企业和新就业形态劳动者提供高质量灵活就业服务的新时代企业。云账户 SDK 对云账户综合服务平台 API 接口进行封装，让您不必关心过多参数请求，帮助您快速接入到云账户综合服务平台。云账户 SDK for Java 为您提供签约、下单、回调、数据查询等功能，帮助您完成与云账户综合服务平台的接口对接及业务开发。  
+如果您在使用过程中遇到任何问题，欢迎在当前 GitHub 提交 Issues，或发送邮件至技术支持组 [techsupport@yunzhanghu.com](mailto:techsupport@yunzhanghu.com)。
 
 ### 环境要求
+
 云账户 SDK for Java 支持 Java JDK 1.8 及其以上版本。
 
 ### 配置密钥
 
 #### 1、获取配置
-使用云账户 SDK for Java 前，您需先获取 dealer_id、broker_id、3DES Key、App Key 信息。    
 
-获取方式：使用开户邮件中的账号登录【云账户综合服务平台】，选择“业务中心 > 业务管理 > 对接信息”，查看并获取以上配置信息。
-  
+使用云账户 SDK for Java 前，您需先获取 dealer_id、broker_id、3DES Key、App Key 信息。    
+获取方式：使用开户邮件中的账号登录【[云账户综合服务平台](https://service.yunzhanghu.com/user/login)】，选择“业务中心 > 业务管理 > 对接信息”，查看并获取以上配置信息。  
 ![获取配置信息](src/main/resources/img/keyconfig.png)
 
 #### 2、生成密钥
@@ -23,9 +23,9 @@
 ```
 ① ⽣成私钥 private_key.pem
 
-Openssl-> genrsa -out private_key.pem 2048 // 建议密钥⻓度⾄少为 2048
+Openssl-> genrsa -out private_key.pem 2048 位  // 建议密钥⻓度⾄少为 2048
 
-OpenSSL-> pkcs8 -topk8 -inform PEM -in private_key.pem -outform PEM -nocrypt -out private_key_pkcs8.pem
+OpenSSL-> pkcs8 -topk8 -inform PEM -in private_key.pem -outform PEM -nocrypt -out private_key_pkcs8.pem  // 将私钥转为 PKCS8 格式 
 
 ② ⽣成公钥⽂件 pubkey.pem
 
@@ -43,8 +43,8 @@ Openssl-> rsa -in private_key.pem -pubout -out pubkey.pem
 ![配置平台企业公钥信息](src/main/resources/img/publickeyconfig.png)
 
 ### 安装Java SDK
-1、maven 依赖请参考 https://search.maven.org/artifact/com.yunzhanghu.openapi/sdk/
 
+1、maven 依赖请参考 https://search.maven.org/artifact/com.yunzhanghu.openapi/sdk/  
 如有特殊需求需要源码，请联系云账户技术支持。
 
 ### 快速使用
