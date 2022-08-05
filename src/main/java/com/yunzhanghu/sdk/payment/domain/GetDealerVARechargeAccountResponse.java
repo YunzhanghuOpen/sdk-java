@@ -17,6 +17,7 @@ public class GetDealerVARechargeAccountResponse {
     
     // 付款账户
     private String dealerAcctName;
+    
     public void setAcctName(String acctName) {
         this.acctName = acctName;
     }
@@ -24,6 +25,7 @@ public class GetDealerVARechargeAccountResponse {
     public String getAcctName() {
         return acctName;
     }
+    
     public void setAcctNo(String acctNo) {
         this.acctNo = acctNo;
     }
@@ -31,6 +33,7 @@ public class GetDealerVARechargeAccountResponse {
     public String getAcctNo() {
         return acctNo;
     }
+    
     public void setBankName(String bankName) {
         this.bankName = bankName;
     }
@@ -38,6 +41,7 @@ public class GetDealerVARechargeAccountResponse {
     public String getBankName() {
         return bankName;
     }
+    
     public void setDealerAcctName(String dealerAcctName) {
         this.dealerAcctName = dealerAcctName;
     }
@@ -45,15 +49,14 @@ public class GetDealerVARechargeAccountResponse {
     public String getDealerAcctName() {
         return dealerAcctName;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetDealerVARechargeAccountResponse{" +
-                ", acctName='" + acctName + '\'' +
-                ", acctNo='" + acctNo + '\'' +
-                ", bankName='" + bankName + '\'' +
-                ", dealerAcctName='" + dealerAcctName + '\'' +
-                '}';
+             " acctName='" + acctName + '\'' + 
+             ", acctNo='" + acctNo + '\'' + 
+             ", bankName='" + bankName + '\'' + 
+             ", dealerAcctName='" + dealerAcctName + '\'' + 
+              '}';
     }
 }

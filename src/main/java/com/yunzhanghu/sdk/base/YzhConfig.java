@@ -26,36 +26,109 @@ public class YzhConfig {
     public static String YZH_APP_KEY = "app_key";
     public static String YZH_RSA_PRIVATE_KEY = "rsa_private_key";
     public static String YZH_RSA_PUBLIC_KEY = "rsa_public_key";
+    private SignType signType;
+    private String dealerId;
+    private String yzh3DesKey;
+    private String yzhAppKey;
+    private String yzhRsaPublicKey;
+    private String yzhRsaPrivateKey;
+    private String yzhUrl;
 
-    public enum SignType {
-        /**
-         * RSA
-         * **/
-        RSA("RSA"),
+    public static YzhConfig loadConfig(String fileName) throws Exception {
+        fileName = StringUtils.trim(fileName);
 
-        /**
-         * hmac
-         * **/
-        SHA256("SHA256");
-
-        private final String value;
-
-        SignType(String value){
-            this.value = value;
+        if (fileName.endsWith("yaml") || fileName.endsWith("yml")) {
+            return loadYaml(fileName);
         }
 
-        public String getValue() {
-            return value;
-        }
+        return loadProperties(fileName);
     }
 
-    private SignType signType ;
-    private String dealerId ;
-    private String yzh3DesKey ;
-    private String yzhAppKey ;
-    private String yzhRsaPublicKey ;
-    private String yzhRsaPrivateKey ;
-    private String yzhUrl ;
+    public static YzhConfig loadProperties(String fileName) throws Exception {
+        InputStream inputStream = null;
+        YzhConfig config = new YzhConfig();
+        try {
+            inputStream = YzhConfig.class.getClassLoader().getResourceAsStream(fileName);
+            if (inputStream == null) {
+                throw new FileNotFoundException("property file '" + fileName + "' not found in the classpath");
+            }
+
+            Properties properties = new Properties();
+            properties.load(inputStream);
+            SignType signType = SignType.valueOf(properties.getProperty(YZH_PRE + YZH_SIGN_TYPE));
+
+            config.setSignType(signType);
+            config.setYzh3DesKey(properties.getProperty(YZH_PRE + YZH_3DES_KEY));
+            config.setDealerId(properties.getProperty(YZH_PRE + YZH_DEALER_ID));
+            config.setYzhAppKey(properties.getProperty(YZH_PRE + YZH_APP_KEY));
+            config.setYzhRsaPrivateKey(properties.getProperty(YZH_PRE + YZH_RSA_PRIVATE_KEY));
+            config.setYzhRsaPublicKey(properties.getProperty(YZH_PRE + YZH_RSA_PUBLIC_KEY));
+            config.setYzhUrl(properties.getProperty(YZH_PRE + YZH_URL));
+
+            config.checkConfig();
+        } catch (Exception e) {
+            LOGGER.error("LoadConfig error", e);
+            throw e;
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException io) {
+                    LOGGER.error("inputStream close error", io);
+                }
+            }
+        }
+
+        // 检查配置文件
+        return config;
+    }
+
+    public static YzhConfig loadYaml(String fileName) throws Exception {
+        InputStream inputStream = null;
+        YzhConfig config = new YzhConfig();
+        try {
+            inputStream = YzhConfig.class.getClassLoader().getResourceAsStream(fileName);
+            if (inputStream == null) {
+                throw new FileNotFoundException("yaml file '" + fileName + "' not found in the classpath");
+            }
+
+            Yaml yaml = new Yaml();
+            Map<String, Object> map = yaml.load(inputStream);
+            if (map.get(YZH) != null) {
+                Map<String, Object> properties = (Map<String, Object>) map.get(YZH);
+                SignType signType = SignType.valueOf(StringUtils.trim(properties.get(YZH_SIGN_TYPE)));
+
+                config.setSignType(signType);
+                config.setYzh3DesKey(StringUtils.trim(properties.get(YZH_3DES_KEY)));
+                config.setDealerId(StringUtils.trim(properties.get(YZH_DEALER_ID)));
+                config.setYzhAppKey(StringUtils.trim(properties.get(YZH_APP_KEY)));
+                config.setYzhRsaPrivateKey(StringUtils.trim(properties.get(YZH_RSA_PRIVATE_KEY)));
+                config.setYzhRsaPublicKey(StringUtils.trim(properties.get(YZH_RSA_PUBLIC_KEY)));
+                config.setYzhUrl(StringUtils.trim(properties.get(YZH_URL)));
+
+                config.checkConfig();
+            } else {
+                throw new YzhException("key yzh not found in config file");
+            }
+        } catch (ClassCastException cce) {
+            LOGGER.error("LoadConfig error", cce);
+            throw new YzhException("yzh config is illegal");
+        } catch (Exception e) {
+            LOGGER.error("LoadConfig error", e);
+            throw e;
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException io) {
+                    LOGGER.error("inputStream close error", io);
+                }
+            }
+        }
+
+        // 检查配置文件
+        return config;
+    }
 
     public String getYzhUrl() {
         return yzhUrl;
@@ -113,102 +186,6 @@ public class YzhConfig {
         this.dealerId = dealerId;
     }
 
-    public static YzhConfig loadConfig(String fileName) throws Exception{
-        fileName = StringUtils.trim(fileName);
-
-        if (fileName.endsWith("yaml") || fileName.endsWith("yml")) {
-            return loadYaml(fileName);
-        }
-
-        return loadProperties(fileName);
-    }
-
-    public static YzhConfig loadProperties(String fileName) throws Exception{
-        InputStream inputStream = null;
-        YzhConfig config = new YzhConfig();
-        try {
-            inputStream = YzhConfig.class.getClassLoader().getResourceAsStream(fileName);
-            if (inputStream == null) {
-                throw new FileNotFoundException("property file '" + fileName + "' not found in the classpath");
-            }
-
-            Properties properties = new Properties();
-            properties.load(inputStream);
-            SignType signType = SignType.valueOf(properties.getProperty(YZH_PRE + YZH_SIGN_TYPE));
-
-            config.setSignType(signType);
-            config.setYzh3DesKey(properties.getProperty(YZH_PRE + YZH_3DES_KEY));
-            config.setDealerId(properties.getProperty(YZH_PRE + YZH_DEALER_ID));
-            config.setYzhAppKey(properties.getProperty(YZH_PRE + YZH_APP_KEY));
-            config.setYzhRsaPrivateKey(properties.getProperty(YZH_PRE + YZH_RSA_PRIVATE_KEY));
-            config.setYzhRsaPublicKey(properties.getProperty(YZH_PRE + YZH_RSA_PUBLIC_KEY));
-            config.setYzhUrl(properties.getProperty(YZH_PRE + YZH_URL));
-
-            config.checkConfig();
-        } catch (Exception e) {
-            LOGGER.error("LoadConfig error", e);
-            throw e;
-        } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                }catch (IOException io){
-                    LOGGER.error("inputStream close error", io);
-                }
-            }
-        }
-
-        // 检查配置文件
-        return config;
-    }
-
-    public static YzhConfig loadYaml(String fileName) throws Exception{
-        InputStream inputStream = null;
-        YzhConfig config = new YzhConfig();
-        try {
-            inputStream = YzhConfig.class.getClassLoader().getResourceAsStream(fileName);
-            if (inputStream == null) {
-                throw new FileNotFoundException("yaml file '" + fileName + "' not found in the classpath");
-            }
-
-            Yaml yaml = new Yaml();
-            Map<String,Object> map = yaml.load(inputStream);
-            if (map.get(YZH) != null) {
-                Map<String, Object> properties = (Map<String,Object>)map.get(YZH);
-                SignType signType = SignType.valueOf(StringUtils.trim(properties.get(YZH_SIGN_TYPE)));
-
-                config.setSignType(signType);
-                config.setYzh3DesKey(StringUtils.trim(properties.get(YZH_3DES_KEY)));
-                config.setDealerId(StringUtils.trim(properties.get(YZH_DEALER_ID)));
-                config.setYzhAppKey(StringUtils.trim(properties.get(YZH_APP_KEY)));
-                config.setYzhRsaPrivateKey(StringUtils.trim(properties.get(YZH_RSA_PRIVATE_KEY)));
-                config.setYzhRsaPublicKey(StringUtils.trim(properties.get(YZH_RSA_PUBLIC_KEY)));
-                config.setYzhUrl(StringUtils.trim(properties.get(YZH_URL)));
-
-                config.checkConfig();
-            }else {
-                throw new YzhException("key yzh not found in config file");
-            }
-        } catch (ClassCastException cce) {
-            LOGGER.error("LoadConfig error", cce);
-            throw new YzhException("yzh config is illegal");
-        } catch (Exception e) {
-            LOGGER.error("LoadConfig error", e);
-            throw e;
-        } finally {
-            if (inputStream != null) {
-                try {
-                    inputStream.close();
-                }catch (IOException io){
-                    LOGGER.error("inputStream close error", io);
-                }
-            }
-        }
-
-        // 检查配置文件
-        return config;
-    }
-
     private void checkConfig() throws YzhException {
         if (StringUtils.isNull(getDealerId())) {
             throw new YzhException("dealer_id is empty");
@@ -248,5 +225,24 @@ public class YzhConfig {
                 ", yzhRsaPrivateKey='" + yzhRsaPrivateKey + '\'' +
                 ", yzhUrl='" + yzhUrl + '\'' +
                 '}';
+    }
+
+    public enum SignType {
+
+         // RSA
+         RSA("RSA"),
+
+         // hmac
+         SHA256("SHA256");
+
+        private final String value;
+
+        SignType(String value) {
+            this.value = value;
+        }
+
+        public String getValue() {
+            return value;
+        }
     }
 }

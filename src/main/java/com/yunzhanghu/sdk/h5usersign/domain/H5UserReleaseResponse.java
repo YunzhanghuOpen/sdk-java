@@ -8,6 +8,7 @@ public class H5UserReleaseResponse {
     
     // 是否解约成功
     private String status;
+    
     public void setStatus(String status) {
         this.status = status;
     }
@@ -15,12 +16,11 @@ public class H5UserReleaseResponse {
     public String getStatus() {
         return status;
     }
-
-
+    
     @Override
     public String toString() {
         return "H5UserReleaseResponse{" +
-                ", status='" + status + '\'' +
-                '}';
+             " status='" + status + '\'' + 
+              '}';
     }
 }

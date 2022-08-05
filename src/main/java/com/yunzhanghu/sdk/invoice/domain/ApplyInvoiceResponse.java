@@ -11,6 +11,7 @@ public class ApplyInvoiceResponse {
     
     // 发票张数
     private long count;
+    
     public void setApplicationId(String applicationId) {
         this.applicationId = applicationId;
     }
@@ -18,6 +19,7 @@ public class ApplyInvoiceResponse {
     public String getApplicationId() {
         return applicationId;
     }
+    
     public void setCount(long count) {
         this.count = count;
     }
@@ -25,13 +27,12 @@ public class ApplyInvoiceResponse {
     public long getCount() {
         return count;
     }
-
-
+    
     @Override
     public String toString() {
         return "ApplyInvoiceResponse{" +
-                ", applicationId='" + applicationId + '\'' +
-                ", count='" + count + '\'' +
-                '}';
+             " applicationId='" + applicationId + '\'' + 
+             ", count='" + count + '\'' + 
+              '}';
     }
 }

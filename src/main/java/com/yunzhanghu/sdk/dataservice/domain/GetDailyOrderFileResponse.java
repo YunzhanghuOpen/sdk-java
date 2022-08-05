@@ -8,6 +8,7 @@ public class GetDailyOrderFileResponse {
     
     // 下载地址
     private String orderDownloadUrl;
+    
     public void setOrderDownloadUrl(String orderDownloadUrl) {
         this.orderDownloadUrl = orderDownloadUrl;
     }
@@ -15,12 +16,11 @@ public class GetDailyOrderFileResponse {
     public String getOrderDownloadUrl() {
         return orderDownloadUrl;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetDailyOrderFileResponse{" +
-                ", orderDownloadUrl='" + orderDownloadUrl + '\'' +
-                '}';
+             " orderDownloadUrl='" + orderDownloadUrl + '\'' + 
+              '}';
     }
 }

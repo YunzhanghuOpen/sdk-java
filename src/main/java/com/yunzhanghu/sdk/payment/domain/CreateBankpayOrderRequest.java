@@ -38,6 +38,7 @@ public class CreateBankpayOrderRequest {
     
     // 项目标识
     private String projectId;
+    
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -45,6 +46,7 @@ public class CreateBankpayOrderRequest {
     public String getOrderId() {
         return orderId;
     }
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -52,6 +54,7 @@ public class CreateBankpayOrderRequest {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -59,6 +62,7 @@ public class CreateBankpayOrderRequest {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -66,6 +70,7 @@ public class CreateBankpayOrderRequest {
     public String getRealName() {
         return realName;
     }
+    
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
@@ -73,6 +78,7 @@ public class CreateBankpayOrderRequest {
     public String getCardNo() {
         return cardNo;
     }
+    
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -80,6 +86,7 @@ public class CreateBankpayOrderRequest {
     public String getIdCard() {
         return idCard;
     }
+    
     public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
@@ -87,6 +94,7 @@ public class CreateBankpayOrderRequest {
     public String getPhoneNo() {
         return phoneNo;
     }
+    
     public void setPay(String pay) {
         this.pay = pay;
     }
@@ -94,6 +102,7 @@ public class CreateBankpayOrderRequest {
     public String getPay() {
         return pay;
     }
+    
     public void setPayRemark(String payRemark) {
         this.payRemark = payRemark;
     }
@@ -101,6 +110,7 @@ public class CreateBankpayOrderRequest {
     public String getPayRemark() {
         return payRemark;
     }
+    
     public void setNotifyUrl(String notifyUrl) {
         this.notifyUrl = notifyUrl;
     }
@@ -108,6 +118,7 @@ public class CreateBankpayOrderRequest {
     public String getNotifyUrl() {
         return notifyUrl;
     }
+    
     public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
@@ -115,22 +126,21 @@ public class CreateBankpayOrderRequest {
     public String getProjectId() {
         return projectId;
     }
-
-
+    
     @Override
     public String toString() {
         return "CreateBankpayOrderRequest{" +
-                ", orderId='" + orderId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", realName='" + realName + '\'' +
-                ", cardNo='" + cardNo + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", pay='" + pay + '\'' +
-                ", payRemark='" + payRemark + '\'' +
-                ", notifyUrl='" + notifyUrl + '\'' +
-                ", projectId='" + projectId + '\'' +
-                '}';
+             " orderId='" + orderId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", realName='" + realName + '\'' + 
+             ", cardNo='" + cardNo + '\'' + 
+             ", idCard='" + idCard + '\'' + 
+             ", phoneNo='" + phoneNo + '\'' + 
+             ", pay='" + pay + '\'' + 
+             ", payRemark='" + payRemark + '\'' + 
+             ", notifyUrl='" + notifyUrl + '\'' + 
+             ", projectId='" + projectId + '\'' + 
+              '}';
     }
 }

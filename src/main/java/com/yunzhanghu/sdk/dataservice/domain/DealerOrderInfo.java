@@ -62,6 +62,7 @@ public class DealerOrderInfo {
     
     // 完成时间
     private String finishedTime;
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -69,6 +70,7 @@ public class DealerOrderInfo {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -76,6 +78,7 @@ public class DealerOrderInfo {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -83,6 +86,7 @@ public class DealerOrderInfo {
     public String getOrderId() {
         return orderId;
     }
+    
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -90,6 +94,7 @@ public class DealerOrderInfo {
     public String getRef() {
         return ref;
     }
+    
     public void setBatchId(String batchId) {
         this.batchId = batchId;
     }
@@ -97,6 +102,7 @@ public class DealerOrderInfo {
     public String getBatchId() {
         return batchId;
     }
+    
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -104,6 +110,7 @@ public class DealerOrderInfo {
     public String getRealName() {
         return realName;
     }
+    
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
@@ -111,6 +118,7 @@ public class DealerOrderInfo {
     public String getCardNo() {
         return cardNo;
     }
+    
     public void setBrokerAmount(String brokerAmount) {
         this.brokerAmount = brokerAmount;
     }
@@ -118,6 +126,7 @@ public class DealerOrderInfo {
     public String getBrokerAmount() {
         return brokerAmount;
     }
+    
     public void setBrokerFee(String brokerFee) {
         this.brokerFee = brokerFee;
     }
@@ -125,6 +134,7 @@ public class DealerOrderInfo {
     public String getBrokerFee() {
         return brokerFee;
     }
+    
     public void setBill(String bill) {
         this.bill = bill;
     }
@@ -132,6 +142,7 @@ public class DealerOrderInfo {
     public String getBill() {
         return bill;
     }
+    
     public void setStatus(String status) {
         this.status = status;
     }
@@ -139,6 +150,7 @@ public class DealerOrderInfo {
     public String getStatus() {
         return status;
     }
+    
     public void setStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
     }
@@ -146,6 +158,7 @@ public class DealerOrderInfo {
     public String getStatusDetail() {
         return statusDetail;
     }
+    
     public void setStatusDetailMessage(String statusDetailMessage) {
         this.statusDetailMessage = statusDetailMessage;
     }
@@ -153,6 +166,7 @@ public class DealerOrderInfo {
     public String getStatusDetailMessage() {
         return statusDetailMessage;
     }
+    
     public void setStatementId(String statementId) {
         this.statementId = statementId;
     }
@@ -160,6 +174,7 @@ public class DealerOrderInfo {
     public String getStatementId() {
         return statementId;
     }
+    
     public void setFeeStatementId(String feeStatementId) {
         this.feeStatementId = feeStatementId;
     }
@@ -167,6 +182,7 @@ public class DealerOrderInfo {
     public String getFeeStatementId() {
         return feeStatementId;
     }
+    
     public void setBalStatementId(String balStatementId) {
         this.balStatementId = balStatementId;
     }
@@ -174,6 +190,7 @@ public class DealerOrderInfo {
     public String getBalStatementId() {
         return balStatementId;
     }
+    
     public void setChannel(String channel) {
         this.channel = channel;
     }
@@ -181,6 +198,7 @@ public class DealerOrderInfo {
     public String getChannel() {
         return channel;
     }
+    
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
@@ -188,6 +206,7 @@ public class DealerOrderInfo {
     public String getCreatedAt() {
         return createdAt;
     }
+    
     public void setFinishedTime(String finishedTime) {
         this.finishedTime = finishedTime;
     }
@@ -195,30 +214,29 @@ public class DealerOrderInfo {
     public String getFinishedTime() {
         return finishedTime;
     }
-
-
+    
     @Override
     public String toString() {
         return "DealerOrderInfo{" +
-                ", brokerId='" + brokerId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                ", orderId='" + orderId + '\'' +
-                ", ref='" + ref + '\'' +
-                ", batchId='" + batchId + '\'' +
-                ", realName='" + realName + '\'' +
-                ", cardNo='" + cardNo + '\'' +
-                ", brokerAmount='" + brokerAmount + '\'' +
-                ", brokerFee='" + brokerFee + '\'' +
-                ", bill='" + bill + '\'' +
-                ", status='" + status + '\'' +
-                ", statusDetail='" + statusDetail + '\'' +
-                ", statusDetailMessage='" + statusDetailMessage + '\'' +
-                ", statementId='" + statementId + '\'' +
-                ", feeStatementId='" + feeStatementId + '\'' +
-                ", balStatementId='" + balStatementId + '\'' +
-                ", channel='" + channel + '\'' +
-                ", createdAt='" + createdAt + '\'' +
-                ", finishedTime='" + finishedTime + '\'' +
-                '}';
+             " brokerId='" + brokerId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+             ", orderId='" + orderId + '\'' + 
+             ", ref='" + ref + '\'' + 
+             ", batchId='" + batchId + '\'' + 
+             ", realName='" + realName + '\'' + 
+             ", cardNo='" + cardNo + '\'' + 
+             ", brokerAmount='" + brokerAmount + '\'' + 
+             ", brokerFee='" + brokerFee + '\'' + 
+             ", bill='" + bill + '\'' + 
+             ", status='" + status + '\'' + 
+             ", statusDetail='" + statusDetail + '\'' + 
+             ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+             ", statementId='" + statementId + '\'' + 
+             ", feeStatementId='" + feeStatementId + '\'' + 
+             ", balStatementId='" + balStatementId + '\'' + 
+             ", channel='" + channel + '\'' + 
+             ", createdAt='" + createdAt + '\'' + 
+             ", finishedTime='" + finishedTime + '\'' + 
+              '}';
     }
 }

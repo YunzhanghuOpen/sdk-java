@@ -8,6 +8,7 @@ public class ListBalanceDailyStatementRequest {
     
     // 账单查询日期 格式：yyyy-MM-dd
     private String statementDate;
+    
     public void setStatementDate(String statementDate) {
         this.statementDate = statementDate;
     }
@@ -15,12 +16,11 @@ public class ListBalanceDailyStatementRequest {
     public String getStatementDate() {
         return statementDate;
     }
-
-
+    
     @Override
     public String toString() {
         return "ListBalanceDailyStatementRequest{" +
-                ", statementDate='" + statementDate + '\'' +
-                '}';
+             " statementDate='" + statementDate + '\'' + 
+              '}';
     }
 }

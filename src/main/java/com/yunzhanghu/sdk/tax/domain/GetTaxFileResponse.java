@@ -8,6 +8,7 @@ public class GetTaxFileResponse {
     
     // 文件详情
     private FileInfo[] fileInfo;
+    
     public void setFileInfo(FileInfo[] fileInfo) {
         this.fileInfo = fileInfo;
     }
@@ -15,12 +16,11 @@ public class GetTaxFileResponse {
     public FileInfo[] getFileInfo() {
         return fileInfo;
     }
-
-
+    
     @Override
     public String toString() {
         return "GetTaxFileResponse{" +
-                ", fileInfo='" + fileInfo + '\'' +
-                '}';
+             " fileInfo='" + fileInfo + '\'' + 
+              '}';
     }
 }

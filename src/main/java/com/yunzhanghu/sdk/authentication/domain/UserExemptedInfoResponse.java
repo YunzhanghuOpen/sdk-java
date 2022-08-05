@@ -8,6 +8,7 @@ public class UserExemptedInfoResponse {
     
     // 是否上传成功
     private String ok;
+    
     public void setOk(String ok) {
         this.ok = ok;
     }
@@ -15,12 +16,11 @@ public class UserExemptedInfoResponse {
     public String getOk() {
         return ok;
     }
-
-
+    
     @Override
     public String toString() {
         return "UserExemptedInfoResponse{" +
-                ", ok='" + ok + '\'' +
-                '}';
+             " ok='" + ok + '\'' + 
+              '}';
     }
 }

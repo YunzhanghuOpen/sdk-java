@@ -32,6 +32,7 @@ public class RechargeRecordInfo {
     
     // 平台企业付款银行账号
     private String rechargeAccountNo;
+    
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -39,6 +40,7 @@ public class RechargeRecordInfo {
     public String getDealerId() {
         return dealerId;
     }
+    
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -46,6 +48,7 @@ public class RechargeRecordInfo {
     public String getBrokerId() {
         return brokerId;
     }
+    
     public void setRechargeId(String rechargeId) {
         this.rechargeId = rechargeId;
     }
@@ -53,6 +56,7 @@ public class RechargeRecordInfo {
     public String getRechargeId() {
         return rechargeId;
     }
+    
     public void setAmount(String amount) {
         this.amount = amount;
     }
@@ -60,6 +64,7 @@ public class RechargeRecordInfo {
     public String getAmount() {
         return amount;
     }
+    
     public void setActualAmount(String actualAmount) {
         this.actualAmount = actualAmount;
     }
@@ -67,6 +72,7 @@ public class RechargeRecordInfo {
     public String getActualAmount() {
         return actualAmount;
     }
+    
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
@@ -74,6 +80,7 @@ public class RechargeRecordInfo {
     public String getCreatedAt() {
         return createdAt;
     }
+    
     public void setRechargeChannel(String rechargeChannel) {
         this.rechargeChannel = rechargeChannel;
     }
@@ -81,6 +88,7 @@ public class RechargeRecordInfo {
     public String getRechargeChannel() {
         return rechargeChannel;
     }
+    
     public void setRemark(String remark) {
         this.remark = remark;
     }
@@ -88,6 +96,7 @@ public class RechargeRecordInfo {
     public String getRemark() {
         return remark;
     }
+    
     public void setRechargeAccountNo(String rechargeAccountNo) {
         this.rechargeAccountNo = rechargeAccountNo;
     }
@@ -95,20 +104,19 @@ public class RechargeRecordInfo {
     public String getRechargeAccountNo() {
         return rechargeAccountNo;
     }
-
-
+    
     @Override
     public String toString() {
         return "RechargeRecordInfo{" +
-                ", dealerId='" + dealerId + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", rechargeId='" + rechargeId + '\'' +
-                ", amount='" + amount + '\'' +
-                ", actualAmount='" + actualAmount + '\'' +
-                ", createdAt='" + createdAt + '\'' +
-                ", rechargeChannel='" + rechargeChannel + '\'' +
-                ", remark='" + remark + '\'' +
-                ", rechargeAccountNo='" + rechargeAccountNo + '\'' +
-                '}';
+             " dealerId='" + dealerId + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", rechargeId='" + rechargeId + '\'' + 
+             ", amount='" + amount + '\'' + 
+             ", actualAmount='" + actualAmount + '\'' + 
+             ", createdAt='" + createdAt + '\'' + 
+             ", rechargeChannel='" + rechargeChannel + '\'' + 
+             ", remark='" + remark + '\'' + 
+             ", rechargeAccountNo='" + rechargeAccountNo + '\'' + 
+              '}';
     }
 }

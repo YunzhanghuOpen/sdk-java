@@ -15,6 +15,7 @@ public class H5UserSignServiceClient extends YzhClient {
     public H5UserSignServiceClient(YzhConfig yzhConfig) {
         super(yzhConfig);
     }
+    
     // H5 预申请签约接口
     public YzhResponse<H5UserPresignResponse> h5UserPresign(YzhRequest<H5UserPresignRequest> req) throws YzhException {
         try {
@@ -24,6 +25,7 @@ public class H5UserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // H5 签约接口
     public YzhResponse<H5UserSignResponse> h5UserSign(YzhRequest<H5UserSignRequest> req) throws YzhException {
         try {
@@ -33,6 +35,7 @@ public class H5UserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // H5 获取用户签约状态
     public YzhResponse<GetH5UserSignStatusResponse> getH5UserSignStatus(YzhRequest<GetH5UserSignStatusRequest> req) throws YzhException {
         try {
@@ -42,6 +45,7 @@ public class H5UserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
     // H5 对接测试解约接口
     public YzhResponse<H5UserReleaseResponse> h5UserRelease(YzhRequest<H5UserReleaseRequest> req) throws YzhException {
         try {

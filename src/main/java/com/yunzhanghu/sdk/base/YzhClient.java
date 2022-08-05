@@ -52,6 +52,10 @@ public class YzhClient {
         }
     }
 
+    private static <T> YzhResponse<T> fromJsonResult(String data, Type t) {
+        return JsonUtil.fromLowerCasesWithUnderScoresJson(data, t);
+    }
+
     protected YzhSign.SignedData sign(Object request) throws Exception {
         return yzhSign.sign(request);
     }
@@ -70,11 +74,6 @@ public class YzhClient {
 
     public void setYzhConfig(YzhConfig yzhConfig) {
         this.yzhConfig = yzhConfig;
-    }
-
-
-    private static <T> YzhResponse<T> fromJsonResult(String data, Type t) {
-        return JsonUtil.fromLowerCasesWithUnderScoresJson(data, t);
     }
 
     /**
@@ -127,10 +126,10 @@ public class YzhClient {
             httpPost.setEntity(new UrlEncodedFormEntity(params, "UTF-8"));
             httpResponse = httpClient.execute(httpPost);
             int statusCode = httpResponse.getStatusLine().getStatusCode();
-            String result = getResponse(httpPost,httpResponse, statusCode);
+            String result = getResponse(httpPost, httpResponse, statusCode);
             // 优先判定返回code，如果非成功code，则直接返回
-            response =  JsonUtil.fromLowerCasesWithUnderScoresJson(result, YzhResponse.class);
-            if (!DataDict.SUCCESS_CODE.equals(response.getCode())){
+            response = JsonUtil.fromLowerCasesWithUnderScoresJson(result, YzhResponse.class);
+            if (!DataDict.SUCCESS_CODE.equals(response.getCode())) {
                 response.setHttpCode(statusCode);
                 response.setData(null);
                 return response;
@@ -198,8 +197,8 @@ public class YzhClient {
             int statusCode = httpResponse.getStatusLine().getStatusCode();
             String result = getResponse(httpget, httpResponse, statusCode);
             // 优先判定返回code，如果非成功code，则直接返回
-            response =  JsonUtil.fromLowerCasesWithUnderScoresJson(result, YzhResponse.class);
-            if (!DataDict.SUCCESS_CODE.equals(response.getCode())){
+            response = JsonUtil.fromLowerCasesWithUnderScoresJson(result, YzhResponse.class);
+            if (!DataDict.SUCCESS_CODE.equals(response.getCode())) {
                 response.setHttpCode(statusCode);
                 response.setData(null);
                 return response;
@@ -218,7 +217,7 @@ public class YzhClient {
                     response.setMessage(StringUtils.trim(map.get("message")));
                     response.setRequestId(StringUtils.trim(map.get("requestId")));
                     // 兼容
-                    if (StringUtils.isNull(response.getRequestId())){
+                    if (StringUtils.isNull(response.getRequestId())) {
                         response.setRequestId(StringUtils.trim(map.get("requestID")));
                     }
                     response.setHttpCode(statusCode);
@@ -257,9 +256,10 @@ public class YzhClient {
 
     /**
      * 获取通用response
-     * @param httpRequest 请求 request
+     *
+     * @param httpRequest  请求 request
      * @param httpResponse 通用 response
-     * @param statusCode 状态码
+     * @param statusCode   状态码
      * @return string
      * @throws IOException 通用异常
      */
