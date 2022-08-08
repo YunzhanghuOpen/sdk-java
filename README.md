@@ -14,7 +14,7 @@
 
 使用云账户 SDK for Java 前，您需先获取 dealer_id、broker_id、3DES Key、App Key 信息。    
 获取方式：使用开户邮件中的账号登录【[云账户综合服务平台](https://service.yunzhanghu.com/user/login)】，选择“业务中心 > 业务管理 > 对接信息”，查看并获取以上配置信息。  
-![获取配置信息](src/main/resources/img/keyconfig.png)
+![获取配置信息](https://infra-engineering-yos-prod.obs.cn-north-1.myhuaweicloud.com/3edacfcb8f2f689d3ee6e9e7aba983139a8ec869-duijiexinxi.png)
 
 #### 2、生成密钥
 
@@ -40,7 +40,7 @@ Openssl-> rsa -in private_key.pem -pubout -out pubkey.pem
 #### 3、配置密钥
 
 登录【[云账户综合服务平台](https://service.yunzhanghu.com/user/login)】，选择“业务中心 > 业务管理 > 对接信息”，单击页面右上角的“编辑”，配置平台企业公钥。
-![配置平台企业公钥信息](src/main/resources/img/publickeyconfig.png)
+![配置平台企业公钥信息](https://infra-engineering-yos-prod.obs.cn-north-1.myhuaweicloud.com/6cfd4c1c6560b7ae99d5c3cb358aea23b9433c58-dujiexinxi-2.png)
 
 ### 安装Java SDK
 
