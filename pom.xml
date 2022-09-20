@@ -6,7 +6,7 @@
 
     <groupId>com.yunzhanghu.openapi</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.4.3-RELEASE</version>
+    <version>1.4.4-RELEASE</version>
     <name>yzh-sdk</name>
     <description>yzh sdk</description>
     <url>https://github.com/YunzhanghuOpen/sdk-java</url>
@@ -37,6 +37,7 @@
     <properties>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+        <sdk-version>1.0.0-RELEASE</sdk-version>
     </properties>
 
     <dependencies>
@@ -92,7 +93,7 @@
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
-            <version>1.26</version>
+            <version>1.31</version>
         </dependency>
 
         <dependency>
