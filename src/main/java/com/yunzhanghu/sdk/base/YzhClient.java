@@ -6,6 +6,7 @@ import com.yunzhanghu.sdk.constants.XmlData;
 import com.yunzhanghu.sdk.utils.JsonUtil;
 import com.yunzhanghu.sdk.utils.StringUtils;
 import org.apache.http.HttpEntity;
+import org.apache.http.HttpHeaders;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
@@ -111,6 +112,7 @@ public class YzhClient {
         httpPost.setHeader(HTTP.CONTENT_TYPE, XmlData.CONTENT_TYPE_JSON);
         httpPost.setHeader(XmlData.DEALER_ID, yzhConfig.getDealerId());
         httpPost.setHeader(XmlData.REQUEST_ID, yzhRequest.getRequestId());
+        httpPost.setHeader(HttpHeaders.USER_AGENT,StringUtils.getUA());
 
         List<NameValuePair> params = new ArrayList<>();
         params.add(new BasicNameValuePair(XmlData.MESS, signedData.getMess()));
