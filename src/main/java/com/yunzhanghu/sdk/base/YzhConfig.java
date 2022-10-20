@@ -55,7 +55,7 @@ public class YzhConfig {
 
             Properties properties = new Properties();
             properties.load(inputStream);
-            SignType signType = SignType.valueOf(properties.getProperty(YZH_PRE + YZH_SIGN_TYPE));
+            SignType signType = SignType.valueOf(properties.getProperty(YZH_PRE + YZH_SIGN_TYPE).toUpperCase());
 
             config.setSignType(signType);
             config.setYzh3DesKey(properties.getProperty(YZH_PRE + YZH_3DES_KEY));
@@ -96,7 +96,7 @@ public class YzhConfig {
             Map<String, Object> map = yaml.load(inputStream);
             if (map.get(YZH) != null) {
                 Map<String, Object> properties = (Map<String, Object>) map.get(YZH);
-                SignType signType = SignType.valueOf(StringUtils.trim(properties.get(YZH_SIGN_TYPE)));
+                SignType signType = SignType.valueOf(StringUtils.trim(properties.get(YZH_SIGN_TYPE)).toUpperCase());
 
                 config.setSignType(signType);
                 config.setYzh3DesKey(StringUtils.trim(properties.get(YZH_3DES_KEY)));
@@ -230,10 +230,10 @@ public class YzhConfig {
     public enum SignType {
 
          // RSA
-         RSA("RSA"),
+         RSA("rsa"),
 
          // hmac
-         SHA256("SHA256");
+         SHA256("sha256");
 
         private final String value;
 
