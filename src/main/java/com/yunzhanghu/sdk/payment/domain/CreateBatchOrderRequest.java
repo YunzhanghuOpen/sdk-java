@@ -6,28 +6,28 @@ import java.util.List;
 
 // 批量下单请求
 public class CreateBatchOrderRequest {
-
+    
     // 平台企业批次号
     private String batchId;
-
-    // 平台企业ID
+    
+    // 平台企业 ID
     private String dealerId;
-
-    // 综合服务主体ID
+    
+    // 综合服务主体 ID
     private String brokerId;
-
+    
     // 支付路径
     private String channel;
-
-    // 平台企业的微信AppID
+    
+    // 平台企业的微信 AppID
     private String wxAppId;
-
+    
     // 订单总金额
     private String totalPay;
-
+    
     // 总笔数
     private String totalCount;
-
+    
     // 订单列表
     private List<BatchOrderInfo> orderList;
     public void setBatchId(String batchId) {
@@ -90,14 +90,14 @@ public class CreateBatchOrderRequest {
     @Override
     public String toString() {
         return "CreateBatchOrderRequest{" +
-                " batchId='" + batchId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", channel='" + channel + '\'' +
-                ", wxAppId='" + wxAppId + '\'' +
-                ", totalPay='" + totalPay + '\'' +
-                ", totalCount='" + totalCount + '\'' +
-                ", orderList='" + orderList + '\'' +
-                '}';
+             " batchId='" + batchId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", channel='" + channel + '\'' + 
+             ", wxAppId='" + wxAppId + '\'' + 
+             ", totalPay='" + totalPay + '\'' + 
+             ", totalCount='" + totalCount + '\'' + 
+             ", orderList='" + orderList + '\'' + 
+           '}';
     }
 }

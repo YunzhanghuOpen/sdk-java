@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
 // 批量下单订单信息
 public class BatchOrderInfo {
 
@@ -18,7 +17,7 @@ public class BatchOrderInfo {
     // 收款账号
     private String cardNo;
 
-    // 微信用户openid
+    // 微信用户 openid
     private String openid;
 
     // 手机号
@@ -109,16 +108,16 @@ public class BatchOrderInfo {
     @Override
     public String toString() {
         return "BatchOrderInfo{" +
-                " orderId='" + orderId + '\'' +
-                ", realName='" + realName + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", cardNo='" + cardNo + '\'' +
-                ", openid='" + openid + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", projectId='" + projectId + '\'' +
-                ", pay='" + pay + '\'' +
-                ", payRemark='" + payRemark + '\'' +
-                ", notifyUrl='" + notifyUrl + '\'' +
-                '}';
+             " orderId='" + orderId + '\'' +
+             ", realName='" + realName + '\'' +
+             ", idCard='" + idCard + '\'' +
+             ", cardNo='" + cardNo + '\'' +
+             ", openid='" + openid + '\'' +
+             ", phoneNo='" + phoneNo + '\'' +
+             ", projectId='" + projectId + '\'' +
+             ", pay='" + pay + '\'' +
+             ", payRemark='" + payRemark + '\'' +
+             ", notifyUrl='" + notifyUrl + '\'' +
+           '}';
     }
 }
