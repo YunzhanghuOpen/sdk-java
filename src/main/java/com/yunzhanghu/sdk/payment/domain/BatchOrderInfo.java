@@ -4,6 +4,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 // 批量下单订单信息
+import java.util.List;
 public class BatchOrderInfo {
     
     // 平台企业订单号
@@ -12,7 +13,7 @@ public class BatchOrderInfo {
     // 姓名
     private String realName;
     
-    // 身份证号
+    // 身份证号码
     private String idCard;
     
     // 收款账号
@@ -33,7 +34,7 @@ public class BatchOrderInfo {
     // 订单备注
     private String payRemark;
     
-    // 回掉地址
+    // 回调地址
     private String notifyUrl;
     public void setOrderId(String orderId) {
         this.orderId = orderId;
