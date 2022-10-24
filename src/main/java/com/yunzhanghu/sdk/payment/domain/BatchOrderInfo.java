@@ -4,36 +4,35 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 // 批量下单订单信息
-import java.util.List;
 public class BatchOrderInfo {
-    
+
     // 平台企业订单号
     private String orderId;
-    
+
     // 姓名
     private String realName;
-    
+
     // 身份证号码
     private String idCard;
-    
+
     // 收款账号
     private String cardNo;
-    
+
     // 微信用户openid
     private String openid;
-    
+
     // 手机号
     private String phoneNo;
-    
+
     // 项目标识
     private String projectId;
-    
+
     // 订单金额
     private String pay;
-    
+
     // 订单备注
     private String payRemark;
-    
+
     // 回调地址
     private String notifyUrl;
     public void setOrderId(String orderId) {
@@ -110,7 +109,7 @@ public class BatchOrderInfo {
     @Override
     public String toString() {
         return "BatchOrderInfo{" +
-                ", orderId='" + orderId + '\'' +
+                " orderId='" + orderId + '\'' +
                 ", realName='" + realName + '\'' +
                 ", idCard='" + idCard + '\'' +
                 ", cardNo='" + cardNo + '\'' +

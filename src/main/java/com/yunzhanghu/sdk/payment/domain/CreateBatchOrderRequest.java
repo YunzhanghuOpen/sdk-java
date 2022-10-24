@@ -2,32 +2,32 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
+import java.util.List;
 
 // 批量下单请求
-import java.util.List;
 public class CreateBatchOrderRequest {
-    
+
     // 平台企业批次号
     private String batchId;
-    
+
     // 平台企业ID
     private String dealerId;
-    
+
     // 综合服务主体ID
     private String brokerId;
-    
+
     // 支付路径
     private String channel;
-    
+
     // 平台企业的微信AppID
     private String wxAppId;
-    
+
     // 订单总金额
     private String totalPay;
-    
+
     // 总笔数
     private String totalCount;
-    
+
     // 订单列表
     private List<BatchOrderInfo> orderList;
     public void setBatchId(String batchId) {
@@ -90,7 +90,7 @@ public class CreateBatchOrderRequest {
     @Override
     public String toString() {
         return "CreateBatchOrderRequest{" +
-                ", batchId='" + batchId + '\'' +
+                " batchId='" + batchId + '\'' +
                 ", dealerId='" + dealerId + '\'' +
                 ", brokerId='" + brokerId + '\'' +
                 ", channel='" + channel + '\'' +

@@ -2,14 +2,14 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
+import java.util.List;
 
 // 批量下单返回
-import java.util.List;
 public class CreateBatchOrderResponse {
-    
+
     // 平台企业批次号
     private String batchId;
-    
+
     // 订单结果列表
     private List<BatchOrderResult> resultList;
     public void setBatchId(String batchId) {
@@ -30,7 +30,7 @@ public class CreateBatchOrderResponse {
     @Override
     public String toString() {
         return "CreateBatchOrderResponse{" +
-                ", batchId='" + batchId + '\'' +
+                " batchId='" + batchId + '\'' +
                 ", resultList='" + resultList + '\'' +
                 '}';
     }
