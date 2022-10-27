@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-import java.util.List;
 
 // 批量下单请求
 public class CreateBatchOrderRequest {
@@ -29,7 +28,7 @@ public class CreateBatchOrderRequest {
     private String totalCount;
     
     // 订单列表
-    private List<BatchOrderInfo> orderList;
+    private BatchOrderInfo[] orderList;
     public void setBatchId(String batchId) {
         this.batchId = batchId;
     }
@@ -79,25 +78,26 @@ public class CreateBatchOrderRequest {
     public String getTotalCount() {
         return totalCount;
     }
-    public void setOrderList(List<BatchOrderInfo> orderList) {
+    public void setOrderList(BatchOrderInfo[] orderList) {
         this.orderList = orderList;
     }
 
-    public List<BatchOrderInfo> getOrderList() {
+    public BatchOrderInfo[] getOrderList() {
         return orderList;
     }
 
+
     @Override
-    public String toString() {
-        return "CreateBatchOrderRequest{" +
-             " batchId='" + batchId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", channel='" + channel + '\'' + 
-             ", wxAppId='" + wxAppId + '\'' + 
-             ", totalPay='" + totalPay + '\'' + 
-             ", totalCount='" + totalCount + '\'' + 
-             ", orderList='" + orderList + '\'' + 
-           '}';
-    }
+  public String toString() {
+      return "CreateBatchOrderRequest{" +
+           " batchId='" + batchId + '\'' + 
+           ", dealerId='" + dealerId + '\'' + 
+           ", brokerId='" + brokerId + '\'' + 
+           ", channel='" + channel + '\'' + 
+           ", wxAppId='" + wxAppId + '\'' + 
+           ", totalPay='" + totalPay + '\'' + 
+           ", totalCount='" + totalCount + '\'' + 
+           ", orderList='" + orderList + '\'' + 
+         '}';
+  }
 }
