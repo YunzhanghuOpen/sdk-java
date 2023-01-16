@@ -47,7 +47,7 @@ public class H5APIEcoCityAicNotifyRequest {
     private String realName;
     
     // 回调类型
-    private String type;
+    private int type;
 
     public void setOpenId(String openId) {
         this.openId = openId;
@@ -153,11 +153,11 @@ public class H5APIEcoCityAicNotifyRequest {
         return realName;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
