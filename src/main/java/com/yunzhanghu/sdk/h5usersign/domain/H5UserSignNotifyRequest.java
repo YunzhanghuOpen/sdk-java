@@ -21,6 +21,7 @@ public class H5UserSignNotifyRequest {
     
     // 预签约手机号
     private String phone;
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -28,6 +29,7 @@ public class H5UserSignNotifyRequest {
     public String getDealerId() {
         return dealerId;
     }
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -35,6 +37,7 @@ public class H5UserSignNotifyRequest {
     public String getBrokerId() {
         return brokerId;
     }
+
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -42,6 +45,7 @@ public class H5UserSignNotifyRequest {
     public String getRealName() {
         return realName;
     }
+
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -49,6 +53,7 @@ public class H5UserSignNotifyRequest {
     public String getIdCard() {
         return idCard;
     }
+
     public void setPhone(String phone) {
         this.phone = phone;
     }

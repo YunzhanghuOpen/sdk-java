@@ -27,6 +27,7 @@ public class UserExemptedInfoNotifyRequest {
     
     // 审核信息
     private String comment;
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -34,6 +35,7 @@ public class UserExemptedInfoNotifyRequest {
     public String getBrokerId() {
         return brokerId;
     }
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -41,6 +43,7 @@ public class UserExemptedInfoNotifyRequest {
     public String getDealerId() {
         return dealerId;
     }
+
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -48,6 +51,7 @@ public class UserExemptedInfoNotifyRequest {
     public String getRealName() {
         return realName;
     }
+
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -55,6 +59,7 @@ public class UserExemptedInfoNotifyRequest {
     public String getIdCard() {
         return idCard;
     }
+
     public void setStatus(String status) {
         this.status = status;
     }
@@ -62,6 +67,7 @@ public class UserExemptedInfoNotifyRequest {
     public String getStatus() {
         return status;
     }
+
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -69,6 +75,7 @@ public class UserExemptedInfoNotifyRequest {
     public String getRef() {
         return ref;
     }
+
     public void setComment(String comment) {
         this.comment = comment;
     }

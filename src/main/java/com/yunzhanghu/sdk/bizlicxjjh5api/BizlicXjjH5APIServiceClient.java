@@ -14,6 +14,7 @@ public class BizlicXjjH5APIServiceClient extends YzhClient {
     public BizlicXjjH5APIServiceClient(YzhConfig yzhConfig) {
         super(yzhConfig);
     }
+
     // 工商实名信息录入
     public YzhResponse<H5PreCollectBizlicMsgResponse> h5PreCollectBizlicMsg(YzhRequest<H5PreCollectBizlicMsgRequest> req) throws YzhException {
         try {
@@ -23,6 +24,7 @@ public class BizlicXjjH5APIServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
     // 预启动
     public YzhResponse<H5APIGetStartUrlResponse> h5APIGetStartUrl(YzhRequest<H5APIGetStartUrlRequest> req) throws YzhException {
         try {
@@ -32,6 +34,7 @@ public class BizlicXjjH5APIServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
     // 查询个体工商户状态
     public YzhResponse<H5APIEcoCityAicStatusResponse> h5APIEcoCityAicStatus(YzhRequest<H5APIEcoCityAicStatusRequest> req) throws YzhException {
         try {

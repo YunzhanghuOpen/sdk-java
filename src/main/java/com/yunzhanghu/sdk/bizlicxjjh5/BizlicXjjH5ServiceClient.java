@@ -14,6 +14,7 @@ public class BizlicXjjH5ServiceClient extends YzhClient {
     public BizlicXjjH5ServiceClient(YzhConfig yzhConfig) {
         super(yzhConfig);
     }
+
     // 预启动
     public YzhResponse<H5GetStartUrlResponse> h5GetStartUrl(YzhRequest<H5GetStartUrlRequest> req) throws YzhException {
         try {
@@ -23,6 +24,7 @@ public class BizlicXjjH5ServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
     // 查询个体工商户状态
     public YzhResponse<H5EcoCityAicStatusResponse> h5EcoCityAicStatus(YzhRequest<H5EcoCityAicStatusRequest> req) throws YzhException {
         try {
