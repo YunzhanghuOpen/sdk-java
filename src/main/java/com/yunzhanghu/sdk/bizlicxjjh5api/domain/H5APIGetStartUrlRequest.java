@@ -22,7 +22,7 @@ public class H5APIGetStartUrlRequest {
     // 异步通知 URL
     private String notifyUrl;
     
-    // H5 页面主体颜色
+    // H5 页面主题颜色
     private String color;
     
     // 跳转 URL

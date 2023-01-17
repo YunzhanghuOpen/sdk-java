@@ -4,8 +4,8 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 import java.util.List;
 
-// 上传免验证用户名单信息审核结果通知请求
-public class UserExemptedInfoNotifyRequest {
+// 上传免验证用户名单信息审核结果通知
+public class NotifyUserExemptedInfoRequest {
     
     // 综合服务主体 ID
     private String brokerId;
@@ -86,7 +86,7 @@ public class UserExemptedInfoNotifyRequest {
 
     @Override
     public String toString() {
-        return "UserExemptedInfoNotifyRequest{" +
+        return "NotifyUserExemptedInfoRequest{" +
              " brokerId='" + brokerId + '\'' + 
              ", dealerId='" + dealerId + '\'' + 
              ", realName='" + realName + '\'' + 

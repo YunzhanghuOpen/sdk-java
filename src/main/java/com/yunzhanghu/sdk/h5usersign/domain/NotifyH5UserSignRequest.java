@@ -4,8 +4,8 @@ package com.yunzhanghu.sdk.h5usersign.domain;
 
 import java.util.List;
 
-// H5 签约回调请求
-public class H5UserSignNotifyRequest {
+// H5 签约回调
+public class NotifyH5UserSignRequest {
     
     // 平台企业 ID
     private String dealerId;
@@ -64,7 +64,7 @@ public class H5UserSignNotifyRequest {
 
     @Override
     public String toString() {
-        return "H5UserSignNotifyRequest{" +
+        return "NotifyH5UserSignRequest{" +
              " dealerId='" + dealerId + '\'' + 
              ", brokerId='" + brokerId + '\'' + 
              ", realName='" + realName + '\'' + 

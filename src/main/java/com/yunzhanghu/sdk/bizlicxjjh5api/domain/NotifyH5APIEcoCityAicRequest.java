@@ -1,11 +1,11 @@
-package com.yunzhanghu.sdk.bizlicxjjh5.domain;
+package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
 
 
 import java.util.List;
 
-// H5 个体工商户注册状态回调
-public class H5EcoCityAicNotifyRequest {
+// H5+API 个体工商户注册状态回调
+public class NotifyH5APIEcoCityAicRequest {
     
     // 用户唯一标识
     private String openId;
@@ -163,7 +163,7 @@ public class H5EcoCityAicNotifyRequest {
 
     @Override
     public String toString() {
-        return "H5EcoCityAicNotifyRequest{" +
+        return "NotifyH5APIEcoCityAicRequest{" +
              " openId='" + openId + '\'' + 
              ", dealerUserId='" + dealerUserId + '\'' + 
              ", submitAt='" + submitAt + '\'' + 
