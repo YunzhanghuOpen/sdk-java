@@ -35,7 +35,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 
 - 方式二：使用工具生成
 
-请联系云账户技术支持获取 RSA 密钥生成工具
+登录【[云账户开放平台](https://open.yunzhanghu.com/)】，选择“开发工具下载 > 开发助手 > 工具下载”，下载安装“云账户开放平台开发助手”
 
 #### 3、配置密钥
 
@@ -45,7 +45,6 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 ### 安装Java SDK
 
 1、maven 依赖请参考 https://search.maven.org/artifact/com.yunzhanghu.openapi/sdk/  
-如有特殊需求需要源码，请联系云账户技术支持。
 
 ### 快速使用
 
