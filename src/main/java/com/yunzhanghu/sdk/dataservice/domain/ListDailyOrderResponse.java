@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-
-// 查询日订单返回
+// 查询日订单数据返回
 public class ListDailyOrderResponse {
     
     // 总数目
@@ -11,7 +10,7 @@ public class ListDailyOrderResponse {
     
     // 条目信息
     private DealerOrderInfo[] list;
-    
+
     public void setTotalNum(int totalNum) {
         this.totalNum = totalNum;
     }
@@ -19,7 +18,7 @@ public class ListDailyOrderResponse {
     public int getTotalNum() {
         return totalNum;
     }
-    
+
     public void setList(DealerOrderInfo[] list) {
         this.list = list;
     }
@@ -27,12 +26,12 @@ public class ListDailyOrderResponse {
     public DealerOrderInfo[] getList() {
         return list;
     }
-    
+
     @Override
     public String toString() {
         return "ListDailyOrderResponse{" +
              " totalNum='" + totalNum + '\'' + 
              ", list='" + list + '\'' + 
-              '}';
+           '}';
     }
 }

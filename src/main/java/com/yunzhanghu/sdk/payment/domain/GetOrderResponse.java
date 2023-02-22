@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
 // 查询单笔订单信息返回
 public class GetOrderResponse {
     
@@ -95,7 +94,7 @@ public class GetOrderResponse {
     
     // 系统支付费用，该字段已废弃
     private String sysFee;
-    
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -103,7 +102,7 @@ public class GetOrderResponse {
     public String getOrderId() {
         return orderId;
     }
-    
+
     public void setPay(String pay) {
         this.pay = pay;
     }
@@ -111,7 +110,7 @@ public class GetOrderResponse {
     public String getPay() {
         return pay;
     }
-    
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -119,7 +118,7 @@ public class GetOrderResponse {
     public String getBrokerId() {
         return brokerId;
     }
-    
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -127,7 +126,7 @@ public class GetOrderResponse {
     public String getDealerId() {
         return dealerId;
     }
-    
+
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -135,7 +134,7 @@ public class GetOrderResponse {
     public String getRealName() {
         return realName;
     }
-    
+
     public void setCardNo(String cardNo) {
         this.cardNo = cardNo;
     }
@@ -143,7 +142,7 @@ public class GetOrderResponse {
     public String getCardNo() {
         return cardNo;
     }
-    
+
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -151,7 +150,7 @@ public class GetOrderResponse {
     public String getIdCard() {
         return idCard;
     }
-    
+
     public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
@@ -159,7 +158,7 @@ public class GetOrderResponse {
     public String getPhoneNo() {
         return phoneNo;
     }
-    
+
     public void setStatus(String status) {
         this.status = status;
     }
@@ -167,7 +166,7 @@ public class GetOrderResponse {
     public String getStatus() {
         return status;
     }
-    
+
     public void setStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
     }
@@ -175,7 +174,7 @@ public class GetOrderResponse {
     public String getStatusDetail() {
         return statusDetail;
     }
-    
+
     public void setStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
     }
@@ -183,7 +182,7 @@ public class GetOrderResponse {
     public String getStatusMessage() {
         return statusMessage;
     }
-    
+
     public void setStatusDetailMessage(String statusDetailMessage) {
         this.statusDetailMessage = statusDetailMessage;
     }
@@ -191,7 +190,7 @@ public class GetOrderResponse {
     public String getStatusDetailMessage() {
         return statusDetailMessage;
     }
-    
+
     public void setBrokerAmount(String brokerAmount) {
         this.brokerAmount = brokerAmount;
     }
@@ -199,7 +198,7 @@ public class GetOrderResponse {
     public String getBrokerAmount() {
         return brokerAmount;
     }
-    
+
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -207,7 +206,7 @@ public class GetOrderResponse {
     public String getRef() {
         return ref;
     }
-    
+
     public void setBrokerBankBill(String brokerBankBill) {
         this.brokerBankBill = brokerBankBill;
     }
@@ -215,7 +214,7 @@ public class GetOrderResponse {
     public String getBrokerBankBill() {
         return brokerBankBill;
     }
-    
+
     public void setWithdrawPlatform(String withdrawPlatform) {
         this.withdrawPlatform = withdrawPlatform;
     }
@@ -223,7 +222,7 @@ public class GetOrderResponse {
     public String getWithdrawPlatform() {
         return withdrawPlatform;
     }
-    
+
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
@@ -231,7 +230,7 @@ public class GetOrderResponse {
     public String getCreatedAt() {
         return createdAt;
     }
-    
+
     public void setFinishedTime(String finishedTime) {
         this.finishedTime = finishedTime;
     }
@@ -239,7 +238,7 @@ public class GetOrderResponse {
     public String getFinishedTime() {
         return finishedTime;
     }
-    
+
     public void setBrokerFee(String brokerFee) {
         this.brokerFee = brokerFee;
     }
@@ -247,7 +246,7 @@ public class GetOrderResponse {
     public String getBrokerFee() {
         return brokerFee;
     }
-    
+
     public void setBrokerRealFee(String brokerRealFee) {
         this.brokerRealFee = brokerRealFee;
     }
@@ -255,7 +254,7 @@ public class GetOrderResponse {
     public String getBrokerRealFee() {
         return brokerRealFee;
     }
-    
+
     public void setBrokerDeductFee(String brokerDeductFee) {
         this.brokerDeductFee = brokerDeductFee;
     }
@@ -263,7 +262,7 @@ public class GetOrderResponse {
     public String getBrokerDeductFee() {
         return brokerDeductFee;
     }
-    
+
     public void setPayRemark(String payRemark) {
         this.payRemark = payRemark;
     }
@@ -271,7 +270,7 @@ public class GetOrderResponse {
     public String getPayRemark() {
         return payRemark;
     }
-    
+
     public void setUserFee(String userFee) {
         this.userFee = userFee;
     }
@@ -279,7 +278,7 @@ public class GetOrderResponse {
     public String getUserFee() {
         return userFee;
     }
-    
+
     public void setBankName(String bankName) {
         this.bankName = bankName;
     }
@@ -287,7 +286,7 @@ public class GetOrderResponse {
     public String getBankName() {
         return bankName;
     }
-    
+
     public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
@@ -295,7 +294,7 @@ public class GetOrderResponse {
     public String getProjectId() {
         return projectId;
     }
-    
+
     public void setAnchorId(String anchorId) {
         this.anchorId = anchorId;
     }
@@ -303,7 +302,7 @@ public class GetOrderResponse {
     public String getAnchorId() {
         return anchorId;
     }
-    
+
     public void setNotes(String notes) {
         this.notes = notes;
     }
@@ -311,7 +310,7 @@ public class GetOrderResponse {
     public String getNotes() {
         return notes;
     }
-    
+
     public void setSysAmount(String sysAmount) {
         this.sysAmount = sysAmount;
     }
@@ -319,7 +318,7 @@ public class GetOrderResponse {
     public String getSysAmount() {
         return sysAmount;
     }
-    
+
     public void setTax(String tax) {
         this.tax = tax;
     }
@@ -327,7 +326,7 @@ public class GetOrderResponse {
     public String getTax() {
         return tax;
     }
-    
+
     public void setSysFee(String sysFee) {
         this.sysFee = sysFee;
     }
@@ -335,7 +334,7 @@ public class GetOrderResponse {
     public String getSysFee() {
         return sysFee;
     }
-    
+
     @Override
     public String toString() {
         return "GetOrderResponse{" +
@@ -369,6 +368,6 @@ public class GetOrderResponse {
              ", sysAmount='" + sysAmount + '\'' + 
              ", tax='" + tax + '\'' + 
              ", sysFee='" + sysFee + '\'' + 
-              '}';
+           '}';
     }
 }

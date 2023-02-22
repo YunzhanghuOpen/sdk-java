@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
-// 微信实时下单请求
+// 微信实时支付请求
 public class CreateWxpayOrderRequest {
     
     // 平台企业订单号
@@ -47,7 +46,7 @@ public class CreateWxpayOrderRequest {
     
     // 描述信息，该字段已废弃
     private String notes;
-    
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -55,7 +54,7 @@ public class CreateWxpayOrderRequest {
     public String getOrderId() {
         return orderId;
     }
-    
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -63,7 +62,7 @@ public class CreateWxpayOrderRequest {
     public String getDealerId() {
         return dealerId;
     }
-    
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -71,7 +70,7 @@ public class CreateWxpayOrderRequest {
     public String getBrokerId() {
         return brokerId;
     }
-    
+
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -79,7 +78,7 @@ public class CreateWxpayOrderRequest {
     public String getRealName() {
         return realName;
     }
-    
+
     public void setOpenid(String openid) {
         this.openid = openid;
     }
@@ -87,7 +86,7 @@ public class CreateWxpayOrderRequest {
     public String getOpenid() {
         return openid;
     }
-    
+
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -95,7 +94,7 @@ public class CreateWxpayOrderRequest {
     public String getIdCard() {
         return idCard;
     }
-    
+
     public void setPhoneNo(String phoneNo) {
         this.phoneNo = phoneNo;
     }
@@ -103,7 +102,7 @@ public class CreateWxpayOrderRequest {
     public String getPhoneNo() {
         return phoneNo;
     }
-    
+
     public void setPay(String pay) {
         this.pay = pay;
     }
@@ -111,7 +110,7 @@ public class CreateWxpayOrderRequest {
     public String getPay() {
         return pay;
     }
-    
+
     public void setPayRemark(String payRemark) {
         this.payRemark = payRemark;
     }
@@ -119,7 +118,7 @@ public class CreateWxpayOrderRequest {
     public String getPayRemark() {
         return payRemark;
     }
-    
+
     public void setNotifyUrl(String notifyUrl) {
         this.notifyUrl = notifyUrl;
     }
@@ -127,7 +126,7 @@ public class CreateWxpayOrderRequest {
     public String getNotifyUrl() {
         return notifyUrl;
     }
-    
+
     public void setWxAppId(String wxAppId) {
         this.wxAppId = wxAppId;
     }
@@ -135,7 +134,7 @@ public class CreateWxpayOrderRequest {
     public String getWxAppId() {
         return wxAppId;
     }
-    
+
     public void setWxpayMode(String wxpayMode) {
         this.wxpayMode = wxpayMode;
     }
@@ -143,7 +142,7 @@ public class CreateWxpayOrderRequest {
     public String getWxpayMode() {
         return wxpayMode;
     }
-    
+
     public void setProjectId(String projectId) {
         this.projectId = projectId;
     }
@@ -151,7 +150,7 @@ public class CreateWxpayOrderRequest {
     public String getProjectId() {
         return projectId;
     }
-    
+
     public void setNotes(String notes) {
         this.notes = notes;
     }
@@ -159,7 +158,7 @@ public class CreateWxpayOrderRequest {
     public String getNotes() {
         return notes;
     }
-    
+
     @Override
     public String toString() {
         return "CreateWxpayOrderRequest{" +
@@ -177,6 +176,6 @@ public class CreateWxpayOrderRequest {
              ", wxpayMode='" + wxpayMode + '\'' + 
              ", projectId='" + projectId + '\'' + 
              ", notes='" + notes + '\'' + 
-              '}';
+           '}';
     }
 }

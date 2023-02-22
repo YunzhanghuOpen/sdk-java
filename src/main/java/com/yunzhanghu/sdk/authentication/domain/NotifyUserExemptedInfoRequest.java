@@ -2,8 +2,6 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-import java.util.List;
-
 // 上传免验证用户名单信息审核结果通知
 public class NotifyUserExemptedInfoRequest {
     

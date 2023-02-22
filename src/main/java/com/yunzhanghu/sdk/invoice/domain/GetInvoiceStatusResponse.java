@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-
-// 查询开票申请状态返回
+// 查询发票开具申请状态返回
 public class GetInvoiceStatusResponse {
     
     // 申请结果
@@ -47,7 +46,7 @@ public class GetInvoiceStatusResponse {
     
     // 快递单号
     private String[] waybillNumber;
-    
+
     public void setStatus(String status) {
         this.status = status;
     }
@@ -55,7 +54,7 @@ public class GetInvoiceStatusResponse {
     public String getStatus() {
         return status;
     }
-    
+
     public void setCount(long count) {
         this.count = count;
     }
@@ -63,7 +62,7 @@ public class GetInvoiceStatusResponse {
     public long getCount() {
         return count;
     }
-    
+
     public void setPriceTaxAmount(String priceTaxAmount) {
         this.priceTaxAmount = priceTaxAmount;
     }
@@ -71,7 +70,7 @@ public class GetInvoiceStatusResponse {
     public String getPriceTaxAmount() {
         return priceTaxAmount;
     }
-    
+
     public void setPriceAmount(String priceAmount) {
         this.priceAmount = priceAmount;
     }
@@ -79,7 +78,7 @@ public class GetInvoiceStatusResponse {
     public String getPriceAmount() {
         return priceAmount;
     }
-    
+
     public void setTaxAmount(String taxAmount) {
         this.taxAmount = taxAmount;
     }
@@ -87,7 +86,7 @@ public class GetInvoiceStatusResponse {
     public String getTaxAmount() {
         return taxAmount;
     }
-    
+
     public void setInvoiceType(String invoiceType) {
         this.invoiceType = invoiceType;
     }
@@ -95,7 +94,7 @@ public class GetInvoiceStatusResponse {
     public String getInvoiceType() {
         return invoiceType;
     }
-    
+
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
@@ -103,7 +102,7 @@ public class GetInvoiceStatusResponse {
     public String getCustomerName() {
         return customerName;
     }
-    
+
     public void setCustomerTaxNum(String customerTaxNum) {
         this.customerTaxNum = customerTaxNum;
     }
@@ -111,7 +110,7 @@ public class GetInvoiceStatusResponse {
     public String getCustomerTaxNum() {
         return customerTaxNum;
     }
-    
+
     public void setCustomerAddressTel(String customerAddressTel) {
         this.customerAddressTel = customerAddressTel;
     }
@@ -119,7 +118,7 @@ public class GetInvoiceStatusResponse {
     public String getCustomerAddressTel() {
         return customerAddressTel;
     }
-    
+
     public void setBankNameAccount(String bankNameAccount) {
         this.bankNameAccount = bankNameAccount;
     }
@@ -127,7 +126,7 @@ public class GetInvoiceStatusResponse {
     public String getBankNameAccount() {
         return bankNameAccount;
     }
-    
+
     public void setGoodsServicesName(String goodsServicesName) {
         this.goodsServicesName = goodsServicesName;
     }
@@ -135,7 +134,7 @@ public class GetInvoiceStatusResponse {
     public String getGoodsServicesName() {
         return goodsServicesName;
     }
-    
+
     public void setRemark(String remark) {
         this.remark = remark;
     }
@@ -143,7 +142,7 @@ public class GetInvoiceStatusResponse {
     public String getRemark() {
         return remark;
     }
-    
+
     public void setPostType(String postType) {
         this.postType = postType;
     }
@@ -151,7 +150,7 @@ public class GetInvoiceStatusResponse {
     public String getPostType() {
         return postType;
     }
-    
+
     public void setWaybillNumber(String[] waybillNumber) {
         this.waybillNumber = waybillNumber;
     }
@@ -159,7 +158,7 @@ public class GetInvoiceStatusResponse {
     public String[] getWaybillNumber() {
         return waybillNumber;
     }
-    
+
     @Override
     public String toString() {
         return "GetInvoiceStatusResponse{" +
@@ -177,6 +176,6 @@ public class GetInvoiceStatusResponse {
              ", remark='" + remark + '\'' + 
              ", postType='" + postType + '\'' + 
              ", waybillNumber='" + waybillNumber + '\'' + 
-              '}';
+           '}';
     }
 }

@@ -2,9 +2,7 @@ package com.yunzhanghu.sdk.h5usersign.domain;
 
 
 
-import java.util.List;
-
-// H5 签约回调
+// 签约回调
 public class NotifyH5UserSignRequest {
     
     // 平台企业 ID

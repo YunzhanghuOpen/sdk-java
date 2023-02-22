@@ -2,8 +2,6 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-import java.util.List;
-
 // 发票开具完成通知
 public class NotifyInvoiceDoneRequest {
     
