@@ -2,8 +2,6 @@ package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
 
 
-import java.util.List;
-
 // 工商实名信息录入请求
 public class H5PreCollectBizlicMsgRequest {
     

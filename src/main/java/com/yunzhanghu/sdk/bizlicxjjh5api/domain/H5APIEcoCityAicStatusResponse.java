@@ -2,8 +2,6 @@ package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
 
 
-import java.util.List;
-
 // 查询个体工商户状态返回
 public class H5APIEcoCityAicStatusResponse {
     

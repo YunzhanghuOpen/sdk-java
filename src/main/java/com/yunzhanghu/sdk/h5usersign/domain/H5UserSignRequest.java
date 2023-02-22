@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.h5usersign.domain;
 
 
 
-
-// H5 签约接口请求
+// 申请签约请求
 public class H5UserSignRequest {
     
     // H5 签约 token
@@ -17,7 +16,7 @@ public class H5UserSignRequest {
     
     // 跳转 URL
     private String redirectUrl;
-    
+
     public void setToken(String token) {
         this.token = token;
     }
@@ -25,7 +24,7 @@ public class H5UserSignRequest {
     public String getToken() {
         return token;
     }
-    
+
     public void setColor(String color) {
         this.color = color;
     }
@@ -33,7 +32,7 @@ public class H5UserSignRequest {
     public String getColor() {
         return color;
     }
-    
+
     public void setUrl(String url) {
         this.url = url;
     }
@@ -41,7 +40,7 @@ public class H5UserSignRequest {
     public String getUrl() {
         return url;
     }
-    
+
     public void setRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
     }
@@ -49,7 +48,7 @@ public class H5UserSignRequest {
     public String getRedirectUrl() {
         return redirectUrl;
     }
-    
+
     @Override
     public String toString() {
         return "H5UserSignRequest{" +
@@ -57,6 +56,6 @@ public class H5UserSignRequest {
              ", color='" + color + '\'' + 
              ", url='" + url + '\'' + 
              ", redirectUrl='" + redirectUrl + '\'' + 
-              '}';
+           '}';
     }
 }

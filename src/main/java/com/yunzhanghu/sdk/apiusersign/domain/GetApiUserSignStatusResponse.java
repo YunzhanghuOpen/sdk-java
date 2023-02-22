@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.apiusersign.domain;
 
 
 
-
 // 获取用户签约状态返回
 public class GetApiUserSignStatusResponse {
     
@@ -10,8 +9,8 @@ public class GetApiUserSignStatusResponse {
     private String signedAt;
     
     // 用户签约状态
-    private int status;
-    
+    private String status;
+
     public void setSignedAt(String signedAt) {
         this.signedAt = signedAt;
     }
@@ -19,20 +18,20 @@ public class GetApiUserSignStatusResponse {
     public String getSignedAt() {
         return signedAt;
     }
-    
-    public void setStatus(int status) {
+
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public int getStatus() {
+    public String getStatus() {
         return status;
     }
-    
+
     @Override
     public String toString() {
         return "GetApiUserSignStatusResponse{" +
              " signedAt='" + signedAt + '\'' + 
              ", status='" + status + '\'' + 
-              '}';
+           '}';
     }
 }

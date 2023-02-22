@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-
 // 发送发票扫描件压缩包下载链接邮件请求
 public class SendReminderEmailRequest {
     
@@ -11,7 +10,7 @@ public class SendReminderEmailRequest {
     
     // 发票申请单 ID
     private String applicationId;
-    
+
     public void setInvoiceApplyId(String invoiceApplyId) {
         this.invoiceApplyId = invoiceApplyId;
     }
@@ -19,7 +18,7 @@ public class SendReminderEmailRequest {
     public String getInvoiceApplyId() {
         return invoiceApplyId;
     }
-    
+
     public void setApplicationId(String applicationId) {
         this.applicationId = applicationId;
     }
@@ -27,12 +26,12 @@ public class SendReminderEmailRequest {
     public String getApplicationId() {
         return applicationId;
     }
-    
+
     @Override
     public String toString() {
         return "SendReminderEmailRequest{" +
              " invoiceApplyId='" + invoiceApplyId + '\'' + 
              ", applicationId='" + applicationId + '\'' + 
-              '}';
+           '}';
     }
 }

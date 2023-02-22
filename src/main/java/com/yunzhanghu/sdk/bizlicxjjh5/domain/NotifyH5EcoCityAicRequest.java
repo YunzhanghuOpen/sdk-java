@@ -2,9 +2,7 @@ package com.yunzhanghu.sdk.bizlicxjjh5.domain;
 
 
 
-import java.util.List;
-
-// H5 个体工商户注册状态回调
+// 结果回调
 public class NotifyH5EcoCityAicRequest {
     
     // 用户唯一标识

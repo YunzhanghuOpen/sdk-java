@@ -2,8 +2,6 @@ package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
 
 
-import java.util.List;
-
 // 预启动返回
 public class H5APIGetStartUrlResponse {
     
