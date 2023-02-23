@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
 // 批量下单请求
 public class CreateBatchOrderRequest {
     
@@ -29,6 +28,7 @@ public class CreateBatchOrderRequest {
     
     // 订单列表
     private BatchOrderInfo[] orderList;
+
     public void setBatchId(String batchId) {
         this.batchId = batchId;
     }
@@ -36,6 +36,7 @@ public class CreateBatchOrderRequest {
     public String getBatchId() {
         return batchId;
     }
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -43,6 +44,7 @@ public class CreateBatchOrderRequest {
     public String getDealerId() {
         return dealerId;
     }
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -50,6 +52,7 @@ public class CreateBatchOrderRequest {
     public String getBrokerId() {
         return brokerId;
     }
+
     public void setChannel(String channel) {
         this.channel = channel;
     }
@@ -57,6 +60,7 @@ public class CreateBatchOrderRequest {
     public String getChannel() {
         return channel;
     }
+
     public void setWxAppId(String wxAppId) {
         this.wxAppId = wxAppId;
     }
@@ -64,6 +68,7 @@ public class CreateBatchOrderRequest {
     public String getWxAppId() {
         return wxAppId;
     }
+
     public void setTotalPay(String totalPay) {
         this.totalPay = totalPay;
     }
@@ -71,6 +76,7 @@ public class CreateBatchOrderRequest {
     public String getTotalPay() {
         return totalPay;
     }
+
     public void setTotalCount(String totalCount) {
         this.totalCount = totalCount;
     }
@@ -78,6 +84,7 @@ public class CreateBatchOrderRequest {
     public String getTotalCount() {
         return totalCount;
     }
+
     public void setOrderList(BatchOrderInfo[] orderList) {
         this.orderList = orderList;
     }
@@ -86,18 +93,17 @@ public class CreateBatchOrderRequest {
         return orderList;
     }
 
-
     @Override
-  public String toString() {
-      return "CreateBatchOrderRequest{" +
-           " batchId='" + batchId + '\'' + 
-           ", dealerId='" + dealerId + '\'' + 
-           ", brokerId='" + brokerId + '\'' + 
-           ", channel='" + channel + '\'' + 
-           ", wxAppId='" + wxAppId + '\'' + 
-           ", totalPay='" + totalPay + '\'' + 
-           ", totalCount='" + totalCount + '\'' + 
-           ", orderList='" + orderList + '\'' + 
-         '}';
-  }
+    public String toString() {
+        return "CreateBatchOrderRequest{" +
+             " batchId='" + batchId + '\'' + 
+             ", dealerId='" + dealerId + '\'' + 
+             ", brokerId='" + brokerId + '\'' + 
+             ", channel='" + channel + '\'' + 
+             ", wxAppId='" + wxAppId + '\'' + 
+             ", totalPay='" + totalPay + '\'' + 
+             ", totalCount='" + totalCount + '\'' + 
+             ", orderList='" + orderList + '\'' + 
+           '}';
+    }
 }

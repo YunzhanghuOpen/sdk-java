@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-
 // 流水详情
 public class DealerBillInfo {
     
@@ -50,7 +49,7 @@ public class DealerBillInfo {
     
     // 备注
     private String remark;
-    
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -58,7 +57,7 @@ public class DealerBillInfo {
     public String getBrokerId() {
         return brokerId;
     }
-    
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -66,7 +65,7 @@ public class DealerBillInfo {
     public String getDealerId() {
         return dealerId;
     }
-    
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -74,7 +73,7 @@ public class DealerBillInfo {
     public String getOrderId() {
         return orderId;
     }
-    
+
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -82,7 +81,7 @@ public class DealerBillInfo {
     public String getRef() {
         return ref;
     }
-    
+
     public void setBrokerProductName(String brokerProductName) {
         this.brokerProductName = brokerProductName;
     }
@@ -90,7 +89,7 @@ public class DealerBillInfo {
     public String getBrokerProductName() {
         return brokerProductName;
     }
-    
+
     public void setDealerProductName(String dealerProductName) {
         this.dealerProductName = dealerProductName;
     }
@@ -98,7 +97,7 @@ public class DealerBillInfo {
     public String getDealerProductName() {
         return dealerProductName;
     }
-    
+
     public void setBizRef(String bizRef) {
         this.bizRef = bizRef;
     }
@@ -106,7 +105,7 @@ public class DealerBillInfo {
     public String getBizRef() {
         return bizRef;
     }
-    
+
     public void setAcctType(String acctType) {
         this.acctType = acctType;
     }
@@ -114,7 +113,7 @@ public class DealerBillInfo {
     public String getAcctType() {
         return acctType;
     }
-    
+
     public void setAmount(String amount) {
         this.amount = amount;
     }
@@ -122,7 +121,7 @@ public class DealerBillInfo {
     public String getAmount() {
         return amount;
     }
-    
+
     public void setBalance(String balance) {
         this.balance = balance;
     }
@@ -130,7 +129,7 @@ public class DealerBillInfo {
     public String getBalance() {
         return balance;
     }
-    
+
     public void setBusinessCategory(String businessCategory) {
         this.businessCategory = businessCategory;
     }
@@ -138,7 +137,7 @@ public class DealerBillInfo {
     public String getBusinessCategory() {
         return businessCategory;
     }
-    
+
     public void setBusinessType(String businessType) {
         this.businessType = businessType;
     }
@@ -146,7 +145,7 @@ public class DealerBillInfo {
     public String getBusinessType() {
         return businessType;
     }
-    
+
     public void setConsumptionType(String consumptionType) {
         this.consumptionType = consumptionType;
     }
@@ -154,7 +153,7 @@ public class DealerBillInfo {
     public String getConsumptionType() {
         return consumptionType;
     }
-    
+
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
     }
@@ -162,7 +161,7 @@ public class DealerBillInfo {
     public String getCreatedAt() {
         return createdAt;
     }
-    
+
     public void setRemark(String remark) {
         this.remark = remark;
     }
@@ -170,7 +169,7 @@ public class DealerBillInfo {
     public String getRemark() {
         return remark;
     }
-    
+
     @Override
     public String toString() {
         return "DealerBillInfo{" +
@@ -189,6 +188,6 @@ public class DealerBillInfo {
              ", consumptionType='" + consumptionType + '\'' + 
              ", createdAt='" + createdAt + '\'' + 
              ", remark='" + remark + '\'' + 
-              '}';
+           '}';
     }
 }

@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-
 // 查询日流水数据请求
 public class ListDailyBillRequest {
     
@@ -17,7 +16,7 @@ public class ListDailyBillRequest {
     
     // 如果为 encryption，则对返回的 data 进行加密
     private String dataType;
-    
+
     public void setBillDate(String billDate) {
         this.billDate = billDate;
     }
@@ -25,7 +24,7 @@ public class ListDailyBillRequest {
     public String getBillDate() {
         return billDate;
     }
-    
+
     public void setOffset(int offset) {
         this.offset = offset;
     }
@@ -33,7 +32,7 @@ public class ListDailyBillRequest {
     public int getOffset() {
         return offset;
     }
-    
+
     public void setLength(int length) {
         this.length = length;
     }
@@ -41,7 +40,7 @@ public class ListDailyBillRequest {
     public int getLength() {
         return length;
     }
-    
+
     public void setDataType(String dataType) {
         this.dataType = dataType;
     }
@@ -49,7 +48,7 @@ public class ListDailyBillRequest {
     public String getDataType() {
         return dataType;
     }
-    
+
     @Override
     public String toString() {
         return "ListDailyBillRequest{" +
@@ -57,6 +56,6 @@ public class ListDailyBillRequest {
              ", offset='" + offset + '\'' + 
              ", length='" + length + '\'' + 
              ", dataType='" + dataType + '\'' + 
-              '}';
+           '}';
     }
 }

@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 
 
-
 // 身份证实名验证请求
 public class IDCardVerifyRequest {
     
@@ -11,7 +10,7 @@ public class IDCardVerifyRequest {
     
     // 姓名
     private String realName;
-    
+
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -19,7 +18,7 @@ public class IDCardVerifyRequest {
     public String getIdCard() {
         return idCard;
     }
-    
+
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -27,12 +26,12 @@ public class IDCardVerifyRequest {
     public String getRealName() {
         return realName;
     }
-    
+
     @Override
     public String toString() {
         return "IDCardVerifyRequest{" +
              " idCard='" + idCard + '\'' + 
              ", realName='" + realName + '\'' + 
-              '}';
+           '}';
     }
 }

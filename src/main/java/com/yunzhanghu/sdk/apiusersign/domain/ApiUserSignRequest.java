@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.apiusersign.domain;
 
 
 
-
 // 用户签约请求
 public class ApiUserSignRequest {
     
@@ -18,9 +17,9 @@ public class ApiUserSignRequest {
     // 证件号码
     private String idCard;
     
-    // 证件类型 idcard：身份证 mtphkm：港澳居民来往内地通行证 passport：护照 mtpt：台湾居民往来大陆通行证
+    // 证件类型 idcard：身份证 passport：护照 mtphkm：港澳居民来往内地通行证  mtpt：台湾居民往来大陆通行证 rphkm：中华人民共和国港澳居民居住证 rpt：中华人民共和国台湾居民居住证 fpr：外国人永久居留身份证 ffwp：中华人民共和国外国人就业许可证书
     private String cardType;
-    
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -28,7 +27,7 @@ public class ApiUserSignRequest {
     public String getBrokerId() {
         return brokerId;
     }
-    
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -36,7 +35,7 @@ public class ApiUserSignRequest {
     public String getDealerId() {
         return dealerId;
     }
-    
+
     public void setRealName(String realName) {
         this.realName = realName;
     }
@@ -44,7 +43,7 @@ public class ApiUserSignRequest {
     public String getRealName() {
         return realName;
     }
-    
+
     public void setIdCard(String idCard) {
         this.idCard = idCard;
     }
@@ -52,7 +51,7 @@ public class ApiUserSignRequest {
     public String getIdCard() {
         return idCard;
     }
-    
+
     public void setCardType(String cardType) {
         this.cardType = cardType;
     }
@@ -60,7 +59,7 @@ public class ApiUserSignRequest {
     public String getCardType() {
         return cardType;
     }
-    
+
     @Override
     public String toString() {
         return "ApiUserSignRequest{" +
@@ -69,6 +68,6 @@ public class ApiUserSignRequest {
              ", realName='" + realName + '\'' + 
              ", idCard='" + idCard + '\'' + 
              ", cardType='" + cardType + '\'' + 
-              '}';
+           '}';
     }
 }

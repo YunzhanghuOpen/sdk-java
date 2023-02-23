@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
 // 批量下单返回
 public class CreateBatchOrderResponse {
     
@@ -11,6 +10,7 @@ public class CreateBatchOrderResponse {
     
     // 订单结果列表
     private BatchOrderResult[] resultList;
+
     public void setBatchId(String batchId) {
         this.batchId = batchId;
     }
@@ -18,6 +18,7 @@ public class CreateBatchOrderResponse {
     public String getBatchId() {
         return batchId;
     }
+
     public void setResultList(BatchOrderResult[] resultList) {
         this.resultList = resultList;
     }
@@ -26,12 +27,11 @@ public class CreateBatchOrderResponse {
         return resultList;
     }
 
-
     @Override
-  public String toString() {
-      return "CreateBatchOrderResponse{" +
-           " batchId='" + batchId + '\'' + 
-           ", resultList='" + resultList + '\'' + 
-         '}';
-  }
+    public String toString() {
+        return "CreateBatchOrderResponse{" +
+             " batchId='" + batchId + '\'' + 
+             ", resultList='" + resultList + '\'' + 
+           '}';
+    }
 }

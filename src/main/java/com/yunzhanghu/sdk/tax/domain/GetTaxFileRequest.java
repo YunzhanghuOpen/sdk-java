@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.tax.domain;
 
 
 
-
-// 下载个税扣缴明细表请求
+// 下载个人所得税扣缴明细表请求
 public class GetTaxFileRequest {
     
     // 平台企业 ID
@@ -14,7 +13,7 @@ public class GetTaxFileRequest {
     
     // 所属期
     private String yearMonth;
-    
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -22,7 +21,7 @@ public class GetTaxFileRequest {
     public String getDealerId() {
         return dealerId;
     }
-    
+
     public void setEntId(String entId) {
         this.entId = entId;
     }
@@ -30,7 +29,7 @@ public class GetTaxFileRequest {
     public String getEntId() {
         return entId;
     }
-    
+
     public void setYearMonth(String yearMonth) {
         this.yearMonth = yearMonth;
     }
@@ -38,13 +37,13 @@ public class GetTaxFileRequest {
     public String getYearMonth() {
         return yearMonth;
     }
-    
+
     @Override
     public String toString() {
         return "GetTaxFileRequest{" +
              " dealerId='" + dealerId + '\'' + 
              ", entId='" + entId + '\'' + 
              ", yearMonth='" + yearMonth + '\'' + 
-              '}';
+           '}';
     }
 }

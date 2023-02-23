@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
-// 支付宝实时下单返回
+// 支付宝实时支付返回
 public class CreateAlipayOrderResponse {
     
     // 平台企业订单号
@@ -14,7 +13,7 @@ public class CreateAlipayOrderResponse {
     
     // 订单金额
     private String pay;
-    
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -22,7 +21,7 @@ public class CreateAlipayOrderResponse {
     public String getOrderId() {
         return orderId;
     }
-    
+
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -30,7 +29,7 @@ public class CreateAlipayOrderResponse {
     public String getRef() {
         return ref;
     }
-    
+
     public void setPay(String pay) {
         this.pay = pay;
     }
@@ -38,13 +37,13 @@ public class CreateAlipayOrderResponse {
     public String getPay() {
         return pay;
     }
-    
+
     @Override
     public String toString() {
         return "CreateAlipayOrderResponse{" +
              " orderId='" + orderId + '\'' + 
              ", ref='" + ref + '\'' + 
              ", pay='" + pay + '\'' + 
-              '}';
+           '}';
     }
 }

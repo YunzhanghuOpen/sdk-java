@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-
-// 查询日订单请求
+// 查询日订单数据请求
 public class ListDailyOrderRequest {
     
     // 订单查询日期, 格式：yyyy-MM-dd格式：yyyy-MM-dd
@@ -20,7 +19,7 @@ public class ListDailyOrderRequest {
     
     // 如果为 encryption，则对返回的 data 进行加密
     private String dataType;
-    
+
     public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
@@ -28,7 +27,7 @@ public class ListDailyOrderRequest {
     public String getOrderDate() {
         return orderDate;
     }
-    
+
     public void setOffset(int offset) {
         this.offset = offset;
     }
@@ -36,7 +35,7 @@ public class ListDailyOrderRequest {
     public int getOffset() {
         return offset;
     }
-    
+
     public void setLength(int length) {
         this.length = length;
     }
@@ -44,7 +43,7 @@ public class ListDailyOrderRequest {
     public int getLength() {
         return length;
     }
-    
+
     public void setChannel(String channel) {
         this.channel = channel;
     }
@@ -52,7 +51,7 @@ public class ListDailyOrderRequest {
     public String getChannel() {
         return channel;
     }
-    
+
     public void setDataType(String dataType) {
         this.dataType = dataType;
     }
@@ -60,7 +59,7 @@ public class ListDailyOrderRequest {
     public String getDataType() {
         return dataType;
     }
-    
+
     @Override
     public String toString() {
         return "ListDailyOrderRequest{" +
@@ -69,6 +68,6 @@ public class ListDailyOrderRequest {
              ", length='" + length + '\'' + 
              ", channel='" + channel + '\'' + 
              ", dataType='" + dataType + '\'' + 
-              '}';
+           '}';
     }
 }
