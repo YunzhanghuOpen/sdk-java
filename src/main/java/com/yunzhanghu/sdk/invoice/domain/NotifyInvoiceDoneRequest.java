@@ -2,11 +2,10 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-
-// 开票完成通知
+// 发票开具完成通知
 public class NotifyInvoiceDoneRequest {
     
-    // 发票申请编号
+    // 发票申请单 ID
     private String applicationId;
     
     // 发票申请编号
@@ -16,7 +15,7 @@ public class NotifyInvoiceDoneRequest {
     private String status;
     
     // 发票张数
-    private long count;
+    private int count;
     
     // 价税合计
     private String priceTaxAmount;
@@ -56,7 +55,7 @@ public class NotifyInvoiceDoneRequest {
     
     // 驳回原因
     private String rejectReason;
-    
+
     public void setApplicationId(String applicationId) {
         this.applicationId = applicationId;
     }
@@ -64,7 +63,7 @@ public class NotifyInvoiceDoneRequest {
     public String getApplicationId() {
         return applicationId;
     }
-    
+
     public void setInvoiceApplyId(String invoiceApplyId) {
         this.invoiceApplyId = invoiceApplyId;
     }
@@ -72,7 +71,7 @@ public class NotifyInvoiceDoneRequest {
     public String getInvoiceApplyId() {
         return invoiceApplyId;
     }
-    
+
     public void setStatus(String status) {
         this.status = status;
     }
@@ -80,15 +79,15 @@ public class NotifyInvoiceDoneRequest {
     public String getStatus() {
         return status;
     }
-    
-    public void setCount(long count) {
+
+    public void setCount(int count) {
         this.count = count;
     }
 
-    public long getCount() {
+    public int getCount() {
         return count;
     }
-    
+
     public void setPriceTaxAmount(String priceTaxAmount) {
         this.priceTaxAmount = priceTaxAmount;
     }
@@ -96,7 +95,7 @@ public class NotifyInvoiceDoneRequest {
     public String getPriceTaxAmount() {
         return priceTaxAmount;
     }
-    
+
     public void setPriceAmount(String priceAmount) {
         this.priceAmount = priceAmount;
     }
@@ -104,7 +103,7 @@ public class NotifyInvoiceDoneRequest {
     public String getPriceAmount() {
         return priceAmount;
     }
-    
+
     public void setTaxAmount(String taxAmount) {
         this.taxAmount = taxAmount;
     }
@@ -112,7 +111,7 @@ public class NotifyInvoiceDoneRequest {
     public String getTaxAmount() {
         return taxAmount;
     }
-    
+
     public void setInvoiceType(String invoiceType) {
         this.invoiceType = invoiceType;
     }
@@ -120,7 +119,7 @@ public class NotifyInvoiceDoneRequest {
     public String getInvoiceType() {
         return invoiceType;
     }
-    
+
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
     }
@@ -128,7 +127,7 @@ public class NotifyInvoiceDoneRequest {
     public String getCustomerName() {
         return customerName;
     }
-    
+
     public void setCustomerTaxNum(String customerTaxNum) {
         this.customerTaxNum = customerTaxNum;
     }
@@ -136,7 +135,7 @@ public class NotifyInvoiceDoneRequest {
     public String getCustomerTaxNum() {
         return customerTaxNum;
     }
-    
+
     public void setCustomerAddressTel(String customerAddressTel) {
         this.customerAddressTel = customerAddressTel;
     }
@@ -144,7 +143,7 @@ public class NotifyInvoiceDoneRequest {
     public String getCustomerAddressTel() {
         return customerAddressTel;
     }
-    
+
     public void setBankNameAccount(String bankNameAccount) {
         this.bankNameAccount = bankNameAccount;
     }
@@ -152,7 +151,7 @@ public class NotifyInvoiceDoneRequest {
     public String getBankNameAccount() {
         return bankNameAccount;
     }
-    
+
     public void setGoodsServicesName(String goodsServicesName) {
         this.goodsServicesName = goodsServicesName;
     }
@@ -160,7 +159,7 @@ public class NotifyInvoiceDoneRequest {
     public String getGoodsServicesName() {
         return goodsServicesName;
     }
-    
+
     public void setRemark(String remark) {
         this.remark = remark;
     }
@@ -168,7 +167,7 @@ public class NotifyInvoiceDoneRequest {
     public String getRemark() {
         return remark;
     }
-    
+
     public void setPostType(String postType) {
         this.postType = postType;
     }
@@ -176,7 +175,7 @@ public class NotifyInvoiceDoneRequest {
     public String getPostType() {
         return postType;
     }
-    
+
     public void setWaybillNumber(String[] waybillNumber) {
         this.waybillNumber = waybillNumber;
     }
@@ -184,7 +183,7 @@ public class NotifyInvoiceDoneRequest {
     public String[] getWaybillNumber() {
         return waybillNumber;
     }
-    
+
     public void setRejectReason(String rejectReason) {
         this.rejectReason = rejectReason;
     }
@@ -192,7 +191,7 @@ public class NotifyInvoiceDoneRequest {
     public String getRejectReason() {
         return rejectReason;
     }
-    
+
     @Override
     public String toString() {
         return "NotifyInvoiceDoneRequest{" +
@@ -213,6 +212,6 @@ public class NotifyInvoiceDoneRequest {
              ", postType='" + postType + '\'' + 
              ", waybillNumber='" + waybillNumber + '\'' + 
              ", rejectReason='" + rejectReason + '\'' + 
-              '}';
+           '}';
     }
 }

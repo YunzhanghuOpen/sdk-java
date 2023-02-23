@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-
 // 下载 PDF 版发票请求
 public class GetInvoiceFileRequest {
     
@@ -11,7 +10,7 @@ public class GetInvoiceFileRequest {
     
     // 发票申请单 ID
     private String applicationId;
-    
+
     public void setInvoiceApplyId(String invoiceApplyId) {
         this.invoiceApplyId = invoiceApplyId;
     }
@@ -19,7 +18,7 @@ public class GetInvoiceFileRequest {
     public String getInvoiceApplyId() {
         return invoiceApplyId;
     }
-    
+
     public void setApplicationId(String applicationId) {
         this.applicationId = applicationId;
     }
@@ -27,12 +26,12 @@ public class GetInvoiceFileRequest {
     public String getApplicationId() {
         return applicationId;
     }
-    
+
     @Override
     public String toString() {
         return "GetInvoiceFileRequest{" +
              " invoiceApplyId='" + invoiceApplyId + '\'' + 
              ", applicationId='" + applicationId + '\'' + 
-              '}';
+           '}';
     }
 }

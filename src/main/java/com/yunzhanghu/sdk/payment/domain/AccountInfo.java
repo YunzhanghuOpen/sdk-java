@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
 // 账户信息
 public class AccountInfo {
     
@@ -35,7 +34,7 @@ public class AccountInfo {
     
     // 总余额
     private String totalBalance;
-    
+
     public void setBrokerId(String brokerId) {
         this.brokerId = brokerId;
     }
@@ -43,7 +42,7 @@ public class AccountInfo {
     public String getBrokerId() {
         return brokerId;
     }
-    
+
     public void setBankCardBalance(String bankCardBalance) {
         this.bankCardBalance = bankCardBalance;
     }
@@ -51,7 +50,7 @@ public class AccountInfo {
     public String getBankCardBalance() {
         return bankCardBalance;
     }
-    
+
     public void setIsBankCard(boolean isBankCard) {
         this.isBankCard = isBankCard;
     }
@@ -59,7 +58,7 @@ public class AccountInfo {
     public boolean getIsBankCard() {
         return isBankCard;
     }
-    
+
     public void setAlipayBalance(String alipayBalance) {
         this.alipayBalance = alipayBalance;
     }
@@ -67,7 +66,7 @@ public class AccountInfo {
     public String getAlipayBalance() {
         return alipayBalance;
     }
-    
+
     public void setIsAlipay(boolean isAlipay) {
         this.isAlipay = isAlipay;
     }
@@ -75,7 +74,7 @@ public class AccountInfo {
     public boolean getIsAlipay() {
         return isAlipay;
     }
-    
+
     public void setWxpayBalance(String wxpayBalance) {
         this.wxpayBalance = wxpayBalance;
     }
@@ -83,7 +82,7 @@ public class AccountInfo {
     public String getWxpayBalance() {
         return wxpayBalance;
     }
-    
+
     public void setIsWxpay(boolean isWxpay) {
         this.isWxpay = isWxpay;
     }
@@ -91,7 +90,7 @@ public class AccountInfo {
     public boolean getIsWxpay() {
         return isWxpay;
     }
-    
+
     public void setRebateFeeBalance(String rebateFeeBalance) {
         this.rebateFeeBalance = rebateFeeBalance;
     }
@@ -99,7 +98,7 @@ public class AccountInfo {
     public String getRebateFeeBalance() {
         return rebateFeeBalance;
     }
-    
+
     public void setAcctBalance(String acctBalance) {
         this.acctBalance = acctBalance;
     }
@@ -107,7 +106,7 @@ public class AccountInfo {
     public String getAcctBalance() {
         return acctBalance;
     }
-    
+
     public void setTotalBalance(String totalBalance) {
         this.totalBalance = totalBalance;
     }
@@ -115,7 +114,7 @@ public class AccountInfo {
     public String getTotalBalance() {
         return totalBalance;
     }
-    
+
     @Override
     public String toString() {
         return "AccountInfo{" +
@@ -129,6 +128,6 @@ public class AccountInfo {
              ", rebateFeeBalance='" + rebateFeeBalance + '\'' + 
              ", acctBalance='" + acctBalance + '\'' + 
              ", totalBalance='" + totalBalance + '\'' + 
-              '}';
+           '}';
     }
 }

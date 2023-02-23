@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
 // 查询电子回单返回
 public class GetEleReceiptFileResponse {
     
@@ -14,7 +13,7 @@ public class GetEleReceiptFileResponse {
     
     // 下载链接
     private String url;
-    
+
     public void setExpireTime(String expireTime) {
         this.expireTime = expireTime;
     }
@@ -22,7 +21,7 @@ public class GetEleReceiptFileResponse {
     public String getExpireTime() {
         return expireTime;
     }
-    
+
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
@@ -30,7 +29,7 @@ public class GetEleReceiptFileResponse {
     public String getFileName() {
         return fileName;
     }
-    
+
     public void setUrl(String url) {
         this.url = url;
     }
@@ -38,13 +37,13 @@ public class GetEleReceiptFileResponse {
     public String getUrl() {
         return url;
     }
-    
+
     @Override
     public String toString() {
         return "GetEleReceiptFileResponse{" +
              " expireTime='" + expireTime + '\'' + 
              ", fileName='" + fileName + '\'' + 
              ", url='" + url + '\'' + 
-              '}';
+           '}';
     }
 }

@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
 // 取消待支付订单请求
 public class CancelOrderRequest {
     
@@ -17,7 +16,7 @@ public class CancelOrderRequest {
     
     // 支付路径名，银行卡（默认）、支付宝、微信
     private String channel;
-    
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -25,7 +24,7 @@ public class CancelOrderRequest {
     public String getDealerId() {
         return dealerId;
     }
-    
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -33,7 +32,7 @@ public class CancelOrderRequest {
     public String getOrderId() {
         return orderId;
     }
-    
+
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -41,7 +40,7 @@ public class CancelOrderRequest {
     public String getRef() {
         return ref;
     }
-    
+
     public void setChannel(String channel) {
         this.channel = channel;
     }
@@ -49,7 +48,7 @@ public class CancelOrderRequest {
     public String getChannel() {
         return channel;
     }
-    
+
     @Override
     public String toString() {
         return "CancelOrderRequest{" +
@@ -57,6 +56,6 @@ public class CancelOrderRequest {
              ", orderId='" + orderId + '\'' + 
              ", ref='" + ref + '\'' + 
              ", channel='" + channel + '\'' + 
-              '}';
+           '}';
     }
 }

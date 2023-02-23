@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-
-// 开票申请返回
+// 发票开具申请返回
 public class ApplyInvoiceResponse {
     
     // 发票申请单 ID
@@ -11,7 +10,7 @@ public class ApplyInvoiceResponse {
     
     // 发票张数
     private long count;
-    
+
     public void setApplicationId(String applicationId) {
         this.applicationId = applicationId;
     }
@@ -19,7 +18,7 @@ public class ApplyInvoiceResponse {
     public String getApplicationId() {
         return applicationId;
     }
-    
+
     public void setCount(long count) {
         this.count = count;
     }
@@ -27,12 +26,12 @@ public class ApplyInvoiceResponse {
     public long getCount() {
         return count;
     }
-    
+
     @Override
     public String toString() {
         return "ApplyInvoiceResponse{" +
              " applicationId='" + applicationId + '\'' + 
              ", count='" + count + '\'' + 
-              '}';
+           '}';
     }
 }

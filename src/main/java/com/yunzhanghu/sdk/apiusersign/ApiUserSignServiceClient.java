@@ -5,8 +5,7 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.apiusersign.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import org.slf4j.LoggerFactory;    
 
 public class ApiUserSignServiceClient extends YzhClient {
 
@@ -25,7 +24,7 @@ public class ApiUserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    
+
     // 用户签约
     public YzhResponse<ApiUserSignResponse> apiUserSign(YzhRequest<ApiUserSignRequest> req) throws YzhException {
         try {
@@ -35,7 +34,7 @@ public class ApiUserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    
+
     // 获取用户签约状态
     public YzhResponse<GetApiUserSignStatusResponse> getApiUserSignStatus(YzhRequest<GetApiUserSignStatusRequest> req) throws YzhException {
         try {
@@ -45,7 +44,7 @@ public class ApiUserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    
+
     // 用户解约（测试账号专用接口）
     public YzhResponse<ApiUserSignReleaseResponse> apiUserSignRelease(YzhRequest<ApiUserSignReleaseRequest> req) throws YzhException {
         try {

@@ -2,7 +2,6 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
-
 // 查询日流水数据返回
 public class ListDailyBillResponse {
     
@@ -10,8 +9,8 @@ public class ListDailyBillResponse {
     private int totalNum;
     
     // 条目信息
-    private DealerBillInfo[] bills;
-    
+    private DealerBillInfo[] list;
+
     public void setTotalNum(int totalNum) {
         this.totalNum = totalNum;
     }
@@ -19,20 +18,20 @@ public class ListDailyBillResponse {
     public int getTotalNum() {
         return totalNum;
     }
-    
-    public void setBills(DealerBillInfo[] bills) {
-        this.bills = bills;
+
+    public void setList(DealerBillInfo[] list) {
+        this.list = list;
     }
 
-    public DealerBillInfo[] getBills() {
-        return bills;
+    public DealerBillInfo[] getList() {
+        return list;
     }
-    
+
     @Override
     public String toString() {
         return "ListDailyBillResponse{" +
              " totalNum='" + totalNum + '\'' + 
-             ", bills='" + bills + '\'' + 
-              '}';
+             ", list='" + list + '\'' + 
+           '}';
     }
 }

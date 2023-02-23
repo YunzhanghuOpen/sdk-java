@@ -5,8 +5,7 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.h5usersign.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
+import org.slf4j.LoggerFactory;    
 
 public class H5UserSignServiceClient extends YzhClient {
 
@@ -15,8 +14,8 @@ public class H5UserSignServiceClient extends YzhClient {
     public H5UserSignServiceClient(YzhConfig yzhConfig) {
         super(yzhConfig);
     }
-    
-    // H5 预申请签约接口
+
+    // 预申请签约
     public YzhResponse<H5UserPresignResponse> h5UserPresign(YzhRequest<H5UserPresignRequest> req) throws YzhException {
         try {
             return post(req, "/api/sdk/v1/presign", new TypeToken<YzhResponse<H5UserPresignResponse>>(){});
@@ -25,8 +24,8 @@ public class H5UserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    
-    // H5 签约接口
+
+    // 申请签约
     public YzhResponse<H5UserSignResponse> h5UserSign(YzhRequest<H5UserSignRequest> req) throws YzhException {
         try {
             return get(req, "/api/sdk/v1/sign/h5", false, new TypeToken<YzhResponse<H5UserSignResponse>>(){});
@@ -35,8 +34,8 @@ public class H5UserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    
-    // H5 获取用户签约状态
+
+    // 获取用户签约状态
     public YzhResponse<GetH5UserSignStatusResponse> getH5UserSignStatus(YzhRequest<GetH5UserSignStatusRequest> req) throws YzhException {
         try {
             return get(req, "/api/sdk/v1/sign/user/status", false, new TypeToken<YzhResponse<GetH5UserSignStatusResponse>>(){});
@@ -45,8 +44,8 @@ public class H5UserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    
-    // H5 对接测试解约接口
+
+    // 用户解约（测试账号专用接口）
     public YzhResponse<H5UserReleaseResponse> h5UserRelease(YzhRequest<H5UserReleaseRequest> req) throws YzhException {
         try {
             return post(req, "/api/sdk/v1/sign/release", new TypeToken<YzhResponse<H5UserReleaseResponse>>(){});

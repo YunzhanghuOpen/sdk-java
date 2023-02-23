@@ -24,7 +24,7 @@ public class NotifyClient extends YzhClient {
 	}
 
 	// 异步回调验签和解密
-	public NotifyResponse verfyAndDescrypt(NotifyRequest request) {
+	public NotifyResponse notifyDecoder(NotifyRequest request) {
 		NotifyResponse response = new NotifyResponse();
 		if (YzhConfig.SignType.RSA.equals(getYzhConfig().getSignType())) {
 			response = verifyAndDescryptRSA(request);

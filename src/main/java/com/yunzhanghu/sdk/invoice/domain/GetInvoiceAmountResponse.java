@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 
 
-
-// 查询可开票额度和开票信息返回
+// 查询可开具发票额度和发票开具信息返回
 public class GetInvoiceAmountResponse {
     
     // 可开票额度
@@ -14,7 +13,7 @@ public class GetInvoiceAmountResponse {
     
     // 系统支持的货物或应税劳务、服务名称
     private GoodsServicesName[] goodsServicesName;
-    
+
     public void setAmount(String amount) {
         this.amount = amount;
     }
@@ -22,7 +21,7 @@ public class GetInvoiceAmountResponse {
     public String getAmount() {
         return amount;
     }
-    
+
     public void setBankNameAccount(BankNameAccount[] bankNameAccount) {
         this.bankNameAccount = bankNameAccount;
     }
@@ -30,7 +29,7 @@ public class GetInvoiceAmountResponse {
     public BankNameAccount[] getBankNameAccount() {
         return bankNameAccount;
     }
-    
+
     public void setGoodsServicesName(GoodsServicesName[] goodsServicesName) {
         this.goodsServicesName = goodsServicesName;
     }
@@ -38,13 +37,13 @@ public class GetInvoiceAmountResponse {
     public GoodsServicesName[] getGoodsServicesName() {
         return goodsServicesName;
     }
-    
+
     @Override
     public String toString() {
         return "GetInvoiceAmountResponse{" +
              " amount='" + amount + '\'' + 
              ", bankNameAccount='" + bankNameAccount + '\'' + 
              ", goodsServicesName='" + goodsServicesName + '\'' + 
-              '}';
+           '}';
     }
 }

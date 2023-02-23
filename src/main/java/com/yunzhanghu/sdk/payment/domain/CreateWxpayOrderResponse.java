@@ -2,8 +2,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-
-// 微信实时下单返回
+// 微信实时支付返回
 public class CreateWxpayOrderResponse {
     
     // 平台企业订单号
@@ -14,7 +13,7 @@ public class CreateWxpayOrderResponse {
     
     // 订单金额
     private String pay;
-    
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -22,7 +21,7 @@ public class CreateWxpayOrderResponse {
     public String getOrderId() {
         return orderId;
     }
-    
+
     public void setRef(String ref) {
         this.ref = ref;
     }
@@ -30,7 +29,7 @@ public class CreateWxpayOrderResponse {
     public String getRef() {
         return ref;
     }
-    
+
     public void setPay(String pay) {
         this.pay = pay;
     }
@@ -38,13 +37,13 @@ public class CreateWxpayOrderResponse {
     public String getPay() {
         return pay;
     }
-    
+
     @Override
     public String toString() {
         return "CreateWxpayOrderResponse{" +
              " orderId='" + orderId + '\'' + 
              ", ref='" + ref + '\'' + 
              ", pay='" + pay + '\'' + 
-              '}';
+           '}';
     }
 }
