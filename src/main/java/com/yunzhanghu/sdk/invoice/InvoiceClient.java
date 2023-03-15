@@ -58,7 +58,7 @@ public class InvoiceClient extends YzhClient {
     // 查询发票信息
     public YzhResponse<GetInvoiceInformationResponse> getInvoiceInformation(YzhRequest<GetInvoiceInformationRequest> req) throws YzhException {
         try {
-            return post(req, "/api/invoice/v2/invoice-information", new TypeToken<YzhResponse<GetInvoiceInformationResponse>>(){});
+            return post(req, "/api/invoice/v2/invoice-face-information", new TypeToken<YzhResponse<GetInvoiceInformationResponse>>(){});
         } catch (Exception e){
             LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
             throw new YzhException("msg", e);
