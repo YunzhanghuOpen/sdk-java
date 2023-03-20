@@ -5,7 +5,7 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.invoice.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;      
+import org.slf4j.LoggerFactory;       
 
 public class InvoiceClient extends YzhClient {
 
@@ -49,6 +49,16 @@ public class InvoiceClient extends YzhClient {
     public YzhResponse<GetInvoiceStatusResponse> getInvoiceStatus(YzhRequest<GetInvoiceStatusRequest> req) throws YzhException {
         try {
             return post(req, "/api/invoice/v2/invoice/invoice-status", new TypeToken<YzhResponse<GetInvoiceStatusResponse>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
+
+    // 查询发票信息
+    public YzhResponse<GetInvoiceInformationResponse> getInvoiceInformation(YzhRequest<GetInvoiceInformationRequest> req) throws YzhException {
+        try {
+            return post(req, "/api/invoice/v2/invoice-face-information", new TypeToken<YzhResponse<GetInvoiceInformationResponse>>(){});
         } catch (Exception e){
             LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
             throw new YzhException("msg", e);
