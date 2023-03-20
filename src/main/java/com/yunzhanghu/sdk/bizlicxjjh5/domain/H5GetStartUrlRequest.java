@@ -27,7 +27,7 @@ public class H5GetStartUrlRequest {
     private String returnUrl;
     
     // H5 页面 Title
-    private int customTitle;
+    private int customerTitle;
 
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
@@ -85,12 +85,12 @@ public class H5GetStartUrlRequest {
         return returnUrl;
     }
 
-    public void setCustomTitle(int customTitle) {
-        this.customTitle = customTitle;
+    public void setCustomerTitle(int customerTitle) {
+        this.customerTitle = customerTitle;
     }
 
-    public int getCustomTitle() {
-        return customTitle;
+    public int getCustomerTitle() {
+        return customerTitle;
     }
 
     @Override
@@ -103,7 +103,7 @@ public class H5GetStartUrlRequest {
              ", notifyUrl='" + notifyUrl + '\'' + 
              ", color='" + color + '\'' + 
              ", returnUrl='" + returnUrl + '\'' + 
-             ", customTitle='" + customTitle + '\'' + 
+             ", customerTitle='" + customerTitle + '\'' + 
            '}';
     }
 }
