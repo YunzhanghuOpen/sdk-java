@@ -3,11 +3,11 @@ package com.yunzhanghu.sdk.apiusersign.domain;
 
 
 // 获取协议预览 URL 返回
-public class ApiUseSignContractResponse {
-    
+public class ApiUserSignContractResponse {
+
     // 预览跳转 URL
     private String url;
-    
+
     // 协议名称
     private String title;
 
@@ -29,9 +29,9 @@ public class ApiUseSignContractResponse {
 
     @Override
     public String toString() {
-        return "ApiUseSignContractResponse{" +
-             " url='" + url + '\'' + 
-             ", title='" + title + '\'' + 
+        return "ApiUserSignContractResponse{" +
+             " url='" + url + '\'' +
+             ", title='" + title + '\'' +
            '}';
     }
 }

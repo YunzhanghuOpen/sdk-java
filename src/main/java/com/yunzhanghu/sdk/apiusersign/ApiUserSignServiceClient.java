@@ -16,9 +16,9 @@ public class ApiUserSignServiceClient extends YzhClient {
     }
 
     // 获取协议预览 URL
-    public YzhResponse<ApiUseSignContractResponse> apiUseSignContract(YzhRequest<ApiUseSignContractRequest> req) throws YzhException {
+    public YzhResponse<ApiUserSignContractResponse> apiUserSignContract(YzhRequest<ApiUserSignContractRequest> req) throws YzhException {
         try {
-            return get(req, "/api/sign/v1/user/contract", false, new TypeToken<YzhResponse<ApiUseSignContractResponse>>(){});
+            return get(req, "/api/sign/v1/user/contract", false, new TypeToken<YzhResponse<ApiUserSignContractResponse>>(){});
         } catch (Exception e){
             LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
             throw new YzhException("msg", e);
