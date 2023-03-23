@@ -5,7 +5,7 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.apiusersign.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;    
+import org.slf4j.LoggerFactory;     
 
 public class ApiUserSignServiceClient extends YzhClient {
 
@@ -16,6 +16,16 @@ public class ApiUserSignServiceClient extends YzhClient {
     }
 
     // 获取协议预览 URL
+    public YzhResponse<ApiUseSignContractResponse> apiUseSignContract(YzhRequest<ApiUseSignContractRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/sign/v1/user/contract", false, new TypeToken<YzhResponse<ApiUseSignContractResponse>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
+
+    // 获取协议预览 URL v2
     public YzhResponse<ApiUserSignContractResponse> apiUserSignContract(YzhRequest<ApiUserSignContractRequest> req) throws YzhException {
         try {
             return get(req, "/api/sign/v1/user/contract", false, new TypeToken<YzhResponse<ApiUserSignContractResponse>>(){});

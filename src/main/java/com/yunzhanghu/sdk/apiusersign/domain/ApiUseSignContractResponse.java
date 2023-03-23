@@ -4,8 +4,8 @@ package com.yunzhanghu.sdk.apiusersign.domain;
 
 import java.util.List;
 
-// 获取协议预览 URL 返回v2
-public class ApiUserSignContractResponse {
+// 获取协议预览 URL 返回
+public class ApiUseSignContractResponse {
     
     // 预览跳转 URL
     private String url;
@@ -31,7 +31,7 @@ public class ApiUserSignContractResponse {
 
     @Override
     public String toString() {
-        return "ApiUserSignContractResponse{" +
+        return "ApiUseSignContractResponse{" +
              " url='" + url + '\'' + 
              ", title='" + title + '\'' + 
            '}';
