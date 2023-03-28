@@ -2,7 +2,7 @@ package com.yunzhanghu.sdk.apiusersign.domain;
 
 
 
-// 获取协议预览 URL 请求v2
+// 获取协议预览 URL 请求 V2
 public class ApiUserSignContractRequest {
 
     // 平台企业 ID
