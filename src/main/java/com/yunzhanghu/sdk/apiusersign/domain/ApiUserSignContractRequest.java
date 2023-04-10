@@ -2,14 +2,12 @@ package com.yunzhanghu.sdk.apiusersign.domain;
 
 
 
-import java.util.List;
+// 获取协议预览 URL 请求 V2
+public class ApiUserSignContractRequest {
 
-// 获取协议预览 URL 请求
-public class ApiUseSignContractRequest {
-    
     // 平台企业 ID
     private String dealerId;
-    
+
     // 综合服务主体 ID
     private String brokerId;
 
@@ -31,9 +29,9 @@ public class ApiUseSignContractRequest {
 
     @Override
     public String toString() {
-        return "ApiUseSignContractRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
+        return "ApiUserSignContractRequest{" +
+             " dealerId='" + dealerId + '\'' +
+             ", brokerId='" + brokerId + '\'' +
            '}';
     }
 }
