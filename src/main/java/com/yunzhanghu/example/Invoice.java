@@ -87,12 +87,12 @@ public class Invoice {
 	// 发票开具申请
 	private static void applyInvoice() {
 		ApplyInvoiceRequest request = new ApplyInvoiceRequest();
-		request.setInvoiceApplyId("12345678");
-        request.setDealerId("25331815");
-        request.setBrokerId("27532644");
-        request.setAmount("1000000.00");
+		request.setInvoiceApplyId("");
+        request.setDealerId("");
+        request.setBrokerId("");
+        request.setAmount("");
         request.setInvoiceType("1");
-        request.setBankNameAccount(null);
+        request.setBankNameAccount("");
         request.setGoodsServicesName("");
         request.setRemark(null);
         YzhResponse<ApplyInvoiceResponse> response = null;

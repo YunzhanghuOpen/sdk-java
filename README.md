@@ -48,6 +48,16 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 
 ### 快速使用
 
+#### 示例功能列表
+
+- [用户信息验证](src/main/java/com/yunzhanghu/example/Authentication.java) 
+- [H5 签约](src/main/java/com/yunzhanghu/example/H5UserSign.java) or [API 签约](src/main/java/com/yunzhanghu/example/ApiUserSign.java)
+- [实时支付](src/main/java/com/yunzhanghu/example/Payment.java)
+- [异步回调](src/main/java/com/yunzhanghu/example/Notify.java) 
+- [对账文件获取](src/main/java/com/yunzhanghu/example/DataService.java)
+- [发票开具](src/main/java/com/yunzhanghu/example/Invoice.java)
+- [个人所得税扣缴明细表](src/main/java/com/yunzhanghu/example/Tax.java)
+
 #### 示例
 
 ```

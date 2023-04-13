@@ -37,10 +37,10 @@ public class BizLicXjjH5Api {
 	 */
 	private static void h5PreCollectBizlicMsg(String dealerUserId) {
 		H5PreCollectBizlicMsgRequest request = new H5PreCollectBizlicMsgRequest();
-		request.setDealerId(config.getDealerId());
-		request.setBrokerId("xjjtest");
+		request.setDealerId("");
+		request.setBrokerId("");
 		request.setDealerUserId(dealerUserId);
-		request.setPhoneNo("15922991664");
+		request.setPhoneNo("");
 		request.setIdCard("");
 		request.setRealName("");
 		request.setIdCardAddress("");
@@ -71,13 +71,13 @@ public class BizLicXjjH5Api {
 	 */
 	private static void h5GetStartUrl(String dealerUserId) {
 		H5APIGetStartUrlRequest request = new H5APIGetStartUrlRequest();
-		request.setDealerId(config.getDealerId());
-		request.setBrokerId("xjjtest");
+		request.setDealerId("");
+		request.setBrokerId("");
 		request.setDealerUserId(dealerUserId);
 		request.setClientType(2);
 		request.setNotifyUrl("");
-		request.setColor(null);
-		request.setReturnUrl(null);
+		request.setColor("");
+		request.setReturnUrl("");
 		request.setCustomTitle(1);
 		YzhResponse<H5APIGetStartUrlResponse> response = null;
 		try {
@@ -102,11 +102,11 @@ public class BizLicXjjH5Api {
 	 */
 	private static void h5EcoCityAicStatus(String dealerUserId) {
 		H5APIEcoCityAicStatusRequest request = new H5APIEcoCityAicStatusRequest();
-		request.setDealerId(config.getDealerId());
-		request.setBrokerId("xjjtest");
-		request.setOpenId(null);
-		request.setRealName(null);
-		request.setIdCard(null);
+		request.setDealerId("");
+		request.setBrokerId("");
+		request.setOpenId("");
+		request.setRealName("");
+		request.setIdCard("");
 		request.setDealerUserId(dealerUserId);
 		YzhResponse<H5APIEcoCityAicStatusResponse> response = null;
 		try {

@@ -28,10 +28,10 @@ public class H5UserSign {
 	// 预申请签约
 	private static void h5UserPresign() {
 		H5UserPresignRequest request = new H5UserPresignRequest();
-		request.setDealerId("25331815");
-		request.setBrokerId("27532644");
-		request.setRealName("吴克润");
-		request.setIdCard("500224199312203335");
+		request.setDealerId("");
+		request.setBrokerId("");
+		request.setRealName("");
+		request.setIdCard("");
 		request.setCertificateType(0);
 		YzhResponse<H5UserPresignResponse> response = null;
 		try {
