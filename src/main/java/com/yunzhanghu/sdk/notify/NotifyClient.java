@@ -11,6 +11,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.notify.domain.NotifyRequest;
 import com.yunzhanghu.sdk.notify.domain.NotifyResponse;
 import com.yunzhanghu.sdk.utils.DESUtil;
+import com.yunzhanghu.sdk.utils.JsonUtil;
 import com.yunzhanghu.sdk.utils.RSAUtil;
 import com.yunzhanghu.sdk.utils.Sha256Util;
 
@@ -24,21 +25,21 @@ public class NotifyClient extends YzhClient {
 	}
 
 	// 异步回调验签和解密
-	public NotifyResponse notifyDecoder(NotifyRequest request) {
-		NotifyResponse response = new NotifyResponse();
+	public <T> NotifyResponse<T> notifyDecoder(NotifyRequest request, Class<?> clazz) {
+		NotifyResponse<T> response = new NotifyResponse<T>();
 		if (YzhConfig.SignType.RSA.equals(getYzhConfig().getSignType())) {
-			response = verifyAndDescryptRSA(request);
+			response = verifyAndDescryptRSA(request, clazz);
 		} else if (YzhConfig.SignType.SHA256.equals(getYzhConfig().getSignType())) {
-			response = verifyAndDescryptSha256(request);
+			response = verifyAndDescryptSha256(request, clazz);
 		} else {
 			throw new RuntimeException("signType error! signType must be rsa or sha256!");
 		}
 		return response;
 	}
 
-	// RSA异步回调验签和解密
-	private NotifyResponse verifyAndDescryptRSA(NotifyRequest request) {
-		NotifyResponse response = new NotifyResponse();
+	// RSA 异步回调验签和解密
+	private <T> NotifyResponse<T> verifyAndDescryptRSA(NotifyRequest request, Class<?> clazz) {
+		NotifyResponse<T> response = new NotifyResponse<T>();
 		if (!verifyRSA(request)) {
 			response.setSignRes(false);
 			return response;
@@ -50,13 +51,13 @@ public class NotifyClient extends YzhClient {
 			return response;
 		}
 		response.setDescryptRes(true);
-		response.setData(descryptRes);
+		response.setData(JsonUtil.fromLowerCasesWithUnderScoresJson(descryptRes, clazz));
 		return response;
 	}
 
-	// Sha256异步回调验签和解密
-	private NotifyResponse verifyAndDescryptSha256(NotifyRequest request) {
-		NotifyResponse response = new NotifyResponse();
+	// Sha256 异步回调验签和解密
+	private <T> NotifyResponse<T> verifyAndDescryptSha256(NotifyRequest request, Class<?> clazz) {
+		NotifyResponse<T> response = new NotifyResponse<T>();
 		if (!verifySha256(request)) {
 			response.setSignRes(false);
 			return response;
@@ -68,7 +69,7 @@ public class NotifyClient extends YzhClient {
 			return response;
 		}
 		response.setDescryptRes(true);
-		response.setData(descryptRes);
+		response.setData(JsonUtil.fromLowerCasesWithUnderScoresJson(descryptRes, clazz));
 		return response;
 	}
 

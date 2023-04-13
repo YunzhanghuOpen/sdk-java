@@ -1,6 +1,6 @@
 package com.yunzhanghu.sdk.notify.domain;
 
-public class NotifyResponse {
+public class NotifyResponse<T> {
 	
 	// 验签结果
 	private Boolean signRes;
@@ -9,8 +9,8 @@ public class NotifyResponse {
 	private Boolean descryptRes;
 	
 	// 解密后的内容
-	private String data;
-
+	private T data;
+	
 	public Boolean getSignRes() {
 		return signRes;
 	}
@@ -27,14 +27,14 @@ public class NotifyResponse {
 		this.descryptRes = descryptRes;
 	}
 
-	public String getData() {
+	public T getData() {
 		return data;
 	}
 
-	public void setData(String data) {
+	public void setData(T data) {
 		this.data = data;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "NotifyResponse{" +
