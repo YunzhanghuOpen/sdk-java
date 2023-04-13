@@ -39,7 +39,7 @@ public class BizLicXjjH5 {
 		request.setNotifyUrl("");
 		request.setColor("red");
 		request.setReturnUrl("");
-		request.setCustomTitle(1);
+		request.setCustomerTitle(1);
 		YzhResponse<H5GetStartUrlResponse> response = null;
 		try {
 			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成

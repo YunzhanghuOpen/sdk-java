@@ -12,6 +12,8 @@ import com.yunzhanghu.sdk.invoice.domain.GetInvoiceAmountRequest;
 import com.yunzhanghu.sdk.invoice.domain.GetInvoiceAmountResponse;
 import com.yunzhanghu.sdk.invoice.domain.GetInvoiceFileRequest;
 import com.yunzhanghu.sdk.invoice.domain.GetInvoiceFileResponse;
+import com.yunzhanghu.sdk.invoice.domain.GetInvoiceInformationRequest;
+import com.yunzhanghu.sdk.invoice.domain.GetInvoiceInformationResponse;
 import com.yunzhanghu.sdk.invoice.domain.GetInvoiceStatRequest;
 import com.yunzhanghu.sdk.invoice.domain.GetInvoiceStatResponse;
 import com.yunzhanghu.sdk.invoice.domain.GetInvoiceStatusRequest;
@@ -34,6 +36,8 @@ public class Invoice {
 		applyInvoice();
 		// 查询发票开具申请状态
 		getInvoiceStatus();
+		// 查询发票信息
+		getInvoiceInformation();
 		// 下载 PDF 版发票
 		getInvoiceFile();
 		// 发送发票扫描件压缩包下载链接邮件
@@ -131,6 +135,28 @@ public class Invoice {
 			e.printStackTrace();
 		}
 	}
+	
+	// 查询发票信息
+	private static void getInvoiceInformation() {
+		GetInvoiceInformationRequest request = new GetInvoiceInformationRequest();
+		request.setInvoiceApplyId("");
+		request.setApplicationId("");
+		YzhResponse<GetInvoiceInformationResponse> response = null;
+        try {
+        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	response = client.getInvoiceInformation(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+        	if (response.isSuccess()) {// 请求成功
+        		GetInvoiceInformationResponse data = response.getData();
+        		System.out.println("请求成功：" + data);
+			}else {
+				System.out.println("HTTP Status Code：" + response.getHttpCode());
+				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	// 下载 PDF 版发票
 	private static void getInvoiceFile() {
