@@ -66,7 +66,6 @@ public class Invoice {
 		}
 	}
 
-
 	// 查询可开具发票额度和发票开具信息
 	private static void getInvoiceAmount() {
 		GetInvoiceAmountRequest request = new GetInvoiceAmountRequest();
@@ -156,7 +155,6 @@ public class Invoice {
 			e.printStackTrace();
 		}
 	}
-	
 	
 	// 下载 PDF 版发票
 	private static void getInvoiceFile() {

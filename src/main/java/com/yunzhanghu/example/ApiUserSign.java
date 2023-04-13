@@ -45,7 +45,6 @@ public class ApiUserSign {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	// 用户签约

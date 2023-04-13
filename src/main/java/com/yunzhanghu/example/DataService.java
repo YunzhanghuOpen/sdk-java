@@ -47,7 +47,6 @@ public class DataService {
 		listDailyBill();
 		// 查询余额日账单数据
 		listBalanceDailyStatement();
-
 	}
 
 	// 查询日订单文件

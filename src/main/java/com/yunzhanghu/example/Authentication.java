@@ -52,7 +52,6 @@ public class Authentication {
 		userWhiteCheck();
 		// 银行卡信息查询
 		getBankCardInfo();
-
 	}
 
 	// 银行卡四要素鉴权请求（下发短信验证码）

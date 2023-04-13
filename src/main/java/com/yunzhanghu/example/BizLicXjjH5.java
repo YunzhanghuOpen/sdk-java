@@ -49,7 +49,7 @@ public class BizLicXjjH5 {
 				System.out.println("请求成功：" + data);
 			} else {
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + "-" + response.getMessage());
+				System.out.println("发生异常：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -78,7 +78,7 @@ public class BizLicXjjH5 {
 				System.out.println("请求成功：" + data);
 			} else {
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + "-" + response.getMessage());
+				System.out.println("发生异常：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

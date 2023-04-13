@@ -180,7 +180,6 @@ public class Payment {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 	// 批次确认
