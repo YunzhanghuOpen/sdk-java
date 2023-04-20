@@ -2,33 +2,12 @@ package com.yunzhanghu.example;
 
 import com.yunzhanghu.example.config.Config;
 import com.yunzhanghu.example.utils.BaseUtil;
+import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.payment.PaymentClient;
-import com.yunzhanghu.sdk.payment.domain.AccountInfo;
-import com.yunzhanghu.sdk.payment.domain.BatchOrderInfo;
-import com.yunzhanghu.sdk.payment.domain.BatchOrderResult;
-import com.yunzhanghu.sdk.payment.domain.CancelOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CancelOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.ConfirmBatchOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.ConfirmBatchOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateAlipayOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateAlipayOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateBankpayOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateBankpayOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateBatchOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateBatchOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateWxpayOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateWxpayOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.GetDealerVARechargeAccountRequest;
-import com.yunzhanghu.sdk.payment.domain.GetDealerVARechargeAccountResponse;
-import com.yunzhanghu.sdk.payment.domain.GetEleReceiptFileRequest;
-import com.yunzhanghu.sdk.payment.domain.GetEleReceiptFileResponse;
-import com.yunzhanghu.sdk.payment.domain.GetOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.GetOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.ListAccountRequest;
-import com.yunzhanghu.sdk.payment.domain.ListAccountResponse;
+import com.yunzhanghu.sdk.payment.domain.*;
 
 // 实时支付
 public class Payment {
@@ -57,6 +36,8 @@ public class Payment {
 		cancelOrder();
 		// 查询平台企业汇款信息
 		getDealerVARechargeAccount();
+		// 查询银行卡信息
+		findBankInfo();
 	}
 
 	// 银行卡实时支付
@@ -344,6 +325,20 @@ public class Payment {
 		infoArry[0] = info1;
 		infoArry[1] = info2;
 		return infoArry;
+	}
+
+	private static void  findBankInfo() {
+		try {
+			YzhRequest<GetBankInfoRequest> request = new YzhRequest<>();
+			GetBankInfoRequest getBankInfoRequest = new GetBankInfoRequest();
+			getBankInfoRequest.setCardNo("5124122980267365");
+			request.setRequest(getBankInfoRequest);
+			YzhResponse<BankInfoResponse> bankInfoResponseYzhResponse = client.selectBankInfo(request);
+			System.out.println(bankInfoResponseYzhResponse.getData().getBankCode());
+		} catch (YzhException e) {
+			throw new RuntimeException(e);
+		}
+
 	}
 
 }
