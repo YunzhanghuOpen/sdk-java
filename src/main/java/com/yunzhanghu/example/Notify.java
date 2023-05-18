@@ -12,6 +12,7 @@ import com.yunzhanghu.sdk.notify.domain.NotifyRequest;
 import com.yunzhanghu.sdk.notify.domain.NotifyResponse;
 import com.yunzhanghu.sdk.payment.domain.NotifyOrderData;
 import com.yunzhanghu.sdk.payment.domain.NotifyOrderRequest;
+import com.yunzhanghu.sdk.uploadusersign.domain.NotifyUploadUserSignRequest;
 
 // 	异步通知
 public class Notify {
@@ -51,6 +52,10 @@ public class Notify {
 			// 发票开具完成通知
 //			NotifyResponse<NotifyInvoiceDoneRequest> response = client.notifyDecoder(request, NotifyInvoiceDoneRequest.class);
 //			NotifyInvoiceDoneRequest notifyRequest = response.getData();
+			
+			// 签约成功状态回调通知
+//			NotifyResponse<NotifyUploadUserSignRequest> response = client.notifyDecoder(request, NotifyOrderRequest.class);
+//			NotifyUploadUserSignRequest notifyRequest = response.getData();
 			
 			System.out.println("签名验证结果：" + response.getSignRes());
 			System.out.println("数据解密结果：" + response.getDescryptRes());
