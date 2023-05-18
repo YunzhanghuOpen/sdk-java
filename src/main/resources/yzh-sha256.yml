@@ -1,6 +1,6 @@
 yzh: 
   # 平台企业 ID。为防止读取参数结果为 int 类型导致读取结果异常，需要配置字符串格式参数，在参数首尾加上""
-  dealer_id: “25***15”
+  dealer_id: "25***15"
   # 3DES 密钥。
   3des_key: 0gyU3F***k516E
   # App Key。
