@@ -32,7 +32,9 @@ public class Tax {
         request.setYearMonth("2022-04");
         YzhResponse<GetTaxFileResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.getTaxFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetTaxFileResponse data = response.getData();
@@ -55,7 +57,9 @@ public class Tax {
         request.setEntId("");
         YzhResponse<GetUserCrossResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.getUserCross(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetUserCrossResponse data = response.getData();

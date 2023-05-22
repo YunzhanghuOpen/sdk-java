@@ -63,7 +63,9 @@ public class Authentication {
 		request.setMobile("");
 		YzhResponse<BankCardFourAuthVerifyResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.bankCardFourAuthVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardFourAuthVerifyResponse data = response.getData();
@@ -88,7 +90,9 @@ public class Authentication {
 		request.setRef("");
 		YzhResponse<BankCardFourAuthConfirmResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.bankCardFourAuthConfirm(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardFourAuthConfirmResponse data = response.getData();
@@ -111,7 +115,9 @@ public class Authentication {
 		request.setMobile("");
 		YzhResponse<BankCardFourVerifyResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.bankCardFourVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardFourVerifyResponse data = response.getData();
@@ -133,7 +139,9 @@ public class Authentication {
 		request.setRealName("");
 		YzhResponse<BankCardThreeVerifyResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.bankCardThreeVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardThreeVerifyResponse data = response.getData();
@@ -154,7 +162,9 @@ public class Authentication {
 		request.setRealName("");
 		YzhResponse<IDCardVerifyResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.iDCardVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				IDCardVerifyResponse data = response.getData();
@@ -189,7 +199,9 @@ public class Authentication {
 		request.setRef("");
 		YzhResponse<UserExemptedInfoResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.userExemptedInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				UserExemptedInfoResponse data = response.getData();
@@ -210,7 +222,9 @@ public class Authentication {
 		request.setIdCard("");
 		YzhResponse<UserWhiteCheckResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.userWhiteCheck(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				UserWhiteCheckResponse data = response.getData();
@@ -231,7 +245,9 @@ public class Authentication {
 		request.setBankName("");
 		YzhResponse<GetBankCardInfoResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.getBankCardInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetBankCardInfoResponse data = response.getData();
