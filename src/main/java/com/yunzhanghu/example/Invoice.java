@@ -54,7 +54,7 @@ public class Invoice {
         try {
         	// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
         	response = client.getInvoiceStat(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceStatResponse data = response.getData();
@@ -77,7 +77,7 @@ public class Invoice {
         try {
         	// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
         	response = client.getInvoiceAmount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceAmountResponse data = response.getData();
@@ -106,7 +106,7 @@ public class Invoice {
         try {
         	// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
         	response = client.applyInvoice(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		ApplyInvoiceResponse data = response.getData();
@@ -129,7 +129,7 @@ public class Invoice {
         try {
         	// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
         	response = client.getInvoiceStatus(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceStatusResponse data = response.getData();
@@ -152,7 +152,7 @@ public class Invoice {
         try {
         	// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
         	response = client.getInvoiceInformation(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceInformationResponse data = response.getData();
@@ -175,7 +175,7 @@ public class Invoice {
         try {
         	// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
         	response = client.getInvoiceFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceFileResponse data = response.getData();
@@ -198,7 +198,7 @@ public class Invoice {
         try {
         	// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
         	response = client.sendReminderEmail(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		SendReminderEmailResponse data = response.getData();
