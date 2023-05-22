@@ -76,7 +76,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createBankpayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateBankpayOrderResponse data = response.getData();
@@ -108,7 +108,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createAlipayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateAlipayOrderResponse data = response.getData();
@@ -141,7 +141,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createWxpayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateWxpayOrderResponse data = response.getData();
@@ -171,7 +171,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateBatchOrderResponse data = response.getData();
@@ -202,7 +202,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.confirmBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				ConfirmBatchOrderResponse data = response.getData();
@@ -226,7 +226,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.getOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetOrderResponse data = response.getData();
@@ -248,7 +248,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.listAccount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				ListAccountResponse data = response.getData();
@@ -273,7 +273,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.getEleReceiptFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetEleReceiptFileResponse data = response.getData();
@@ -298,7 +298,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.cancelOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CancelOrderResponse data = response.getData();
@@ -321,7 +321,7 @@ public class Payment {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.getDealerVARechargeAccount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetDealerVARechargeAccountResponse data = response.getData();

@@ -37,7 +37,7 @@ public class H5UserSign {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.h5UserPresign(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5UserPresignResponse data = response.getData();
@@ -62,7 +62,7 @@ public class H5UserSign {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.h5UserSign(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5UserSignResponse data = response.getData();
@@ -87,7 +87,7 @@ public class H5UserSign {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.getH5UserSignStatus(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetH5UserSignStatusResponse data = response.getData();
@@ -113,7 +113,7 @@ public class H5UserSign {
 		try {
 			// request-id：每次请求的唯一标识
 		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.h5UserRelease(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5UserReleaseResponse data = response.getData();
