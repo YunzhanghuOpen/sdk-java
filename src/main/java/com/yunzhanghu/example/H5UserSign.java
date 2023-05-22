@@ -35,7 +35,9 @@ public class H5UserSign {
 		request.setCertificateType(0);
 		YzhResponse<H5UserPresignResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.h5UserPresign(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5UserPresignResponse data = response.getData();
@@ -58,7 +60,9 @@ public class H5UserSign {
 		request.setRedirectUrl("");
 		YzhResponse<H5UserSignResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.h5UserSign(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5UserSignResponse data = response.getData();
@@ -81,7 +85,9 @@ public class H5UserSign {
 		request.setIdCard("");
 		YzhResponse<GetH5UserSignStatusResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.getH5UserSignStatus(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetH5UserSignStatusResponse data = response.getData();
@@ -105,7 +111,9 @@ public class H5UserSign {
 		request.setCertificateType(0);
 		YzhResponse<H5UserReleaseResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
 			response = client.h5UserRelease(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5UserReleaseResponse data = response.getData();

@@ -40,7 +40,7 @@ public class StringUtils {
             u = "";
         }
 
-        return "yunzhanghu-sdk-java/1.0.0/" + u + "/1.4.7-RELEASE";
+        return "yunzhanghu-sdk-java/1.0.0/" + u + "/1.4.8-RELEASE";
     }
 
 }

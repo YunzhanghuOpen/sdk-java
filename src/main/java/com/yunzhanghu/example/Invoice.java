@@ -52,7 +52,9 @@ public class Invoice {
         request.setYear(2022);
         YzhResponse<GetInvoiceStatResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.getInvoiceStat(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceStatResponse data = response.getData();
@@ -73,7 +75,9 @@ public class Invoice {
         request.setBrokerId("");
         YzhResponse<GetInvoiceAmountResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.getInvoiceAmount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceAmountResponse data = response.getData();
@@ -100,7 +104,9 @@ public class Invoice {
         request.setRemark(null);
         YzhResponse<ApplyInvoiceResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.applyInvoice(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		ApplyInvoiceResponse data = response.getData();
@@ -121,7 +127,9 @@ public class Invoice {
         request.setApplicationId("");
         YzhResponse<GetInvoiceStatusResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.getInvoiceStatus(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceStatusResponse data = response.getData();
@@ -142,7 +150,9 @@ public class Invoice {
 		request.setApplicationId("");
 		YzhResponse<GetInvoiceInformationResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.getInvoiceInformation(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceInformationResponse data = response.getData();
@@ -163,7 +173,9 @@ public class Invoice {
         request.setApplicationId("");
         YzhResponse<GetInvoiceFileResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.getInvoiceFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		GetInvoiceFileResponse data = response.getData();
@@ -184,7 +196,9 @@ public class Invoice {
         request.setApplicationId("");
         YzhResponse<SendReminderEmailResponse> response = null;
         try {
-        	// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+        	// request-id：每次请求的唯一标识
+		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成
         	response = client.sendReminderEmail(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
         	if (response.isSuccess()) {// 请求成功
         		SendReminderEmailResponse data = response.getData();
