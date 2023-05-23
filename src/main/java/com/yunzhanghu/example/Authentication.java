@@ -64,8 +64,8 @@ public class Authentication {
 		YzhResponse<BankCardFourAuthVerifyResponse> response = null;
 		try {
 			// request-id：每次请求的唯一标识
-		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.bankCardFourAuthVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardFourAuthVerifyResponse data = response.getData();
@@ -91,8 +91,8 @@ public class Authentication {
 		YzhResponse<BankCardFourAuthConfirmResponse> response = null;
 		try {
 			// request-id：每次请求的唯一标识
-		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.bankCardFourAuthConfirm(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardFourAuthConfirmResponse data = response.getData();
@@ -116,8 +116,8 @@ public class Authentication {
 		YzhResponse<BankCardFourVerifyResponse> response = null;
 		try {
 			// request-id：每次请求的唯一标识
-		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.bankCardFourVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardFourVerifyResponse data = response.getData();
@@ -140,8 +140,8 @@ public class Authentication {
 		YzhResponse<BankCardThreeVerifyResponse> response = null;
 		try {
 			// request-id：每次请求的唯一标识
-		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.bankCardThreeVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				BankCardThreeVerifyResponse data = response.getData();
@@ -163,8 +163,8 @@ public class Authentication {
 		YzhResponse<IDCardVerifyResponse> response = null;
 		try {
 			// request-id：每次请求的唯一标识
-		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.iDCardVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				IDCardVerifyResponse data = response.getData();
@@ -183,7 +183,7 @@ public class Authentication {
 		String imgFile = "xxxxx/xxx.jpeg";
 		String[] imgarr = new String[1];
 		imgarr[0] = getImgStr(imgFile);
-		
+
 		UserExemptedInfoRequest request = new UserExemptedInfoRequest();
 		request.setIdCard("");
 		request.setCardType("");
@@ -200,8 +200,8 @@ public class Authentication {
 		YzhResponse<UserExemptedInfoResponse> response = null;
 		try {
 			// request-id：每次请求的唯一标识
-		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.userExemptedInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				UserExemptedInfoResponse data = response.getData();
@@ -223,8 +223,8 @@ public class Authentication {
 		YzhResponse<UserWhiteCheckResponse> response = null;
 		try {
 			// request-id：每次请求的唯一标识
-		    // 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-		    // 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.userWhiteCheck(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				UserWhiteCheckResponse data = response.getData();
