@@ -35,7 +35,7 @@ public class Payment {
 
 	private static YzhConfig config = Config.getYzhConfig();
 	private static PaymentClient client = new PaymentClient(config);
-	
+
 	public static void main(String[] args) {
 		// 银行卡实时支付
 		createBankpayOrder();
@@ -74,7 +74,9 @@ public class Payment {
 		request.setNotifyUrl("");
 		YzhResponse<CreateBankpayOrderResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createBankpayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateBankpayOrderResponse data = response.getData();
@@ -104,7 +106,9 @@ public class Payment {
 		request.setCheckName("Check");
 		YzhResponse<CreateAlipayOrderResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createAlipayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateAlipayOrderResponse data = response.getData();
@@ -135,7 +139,9 @@ public class Payment {
 		request.setWxpayMode("transfer");
 		YzhResponse<CreateWxpayOrderResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createWxpayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateWxpayOrderResponse data = response.getData();
@@ -163,7 +169,9 @@ public class Payment {
 
 		YzhResponse<CreateBatchOrderResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.createBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CreateBatchOrderResponse data = response.getData();
@@ -192,7 +200,9 @@ public class Payment {
 
 		YzhResponse<ConfirmBatchOrderResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.confirmBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				ConfirmBatchOrderResponse data = response.getData();
@@ -214,7 +224,9 @@ public class Payment {
 		request.setDataType("");
 		YzhResponse<GetOrderResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.getOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetOrderResponse data = response.getData();
@@ -234,7 +246,9 @@ public class Payment {
 		request.setDealerId("");
 		YzhResponse<ListAccountResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.listAccount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				ListAccountResponse data = response.getData();
@@ -257,7 +271,9 @@ public class Payment {
 		request.setRef("");
 		YzhResponse<GetEleReceiptFileResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.getEleReceiptFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetEleReceiptFileResponse data = response.getData();
@@ -280,7 +296,9 @@ public class Payment {
 		request.setChannel("");
 		YzhResponse<CancelOrderResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.cancelOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				CancelOrderResponse data = response.getData();
@@ -301,7 +319,9 @@ public class Payment {
 		request.setBrokerId("");
 		YzhResponse<GetDealerVARechargeAccountResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.getDealerVARechargeAccount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				GetDealerVARechargeAccountResponse data = response.getData();
@@ -314,7 +334,7 @@ public class Payment {
 			e.printStackTrace();
 		}
 	}
-	
+
 	private static BatchOrderInfo[] getBatchOrderInfoList() {
 		BatchOrderInfo info1 = new BatchOrderInfo();
 		info1.setOrderId("order-1");

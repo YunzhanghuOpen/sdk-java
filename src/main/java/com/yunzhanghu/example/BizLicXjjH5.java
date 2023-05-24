@@ -42,7 +42,9 @@ public class BizLicXjjH5 {
 		request.setCustomerTitle(1);
 		YzhResponse<H5GetStartUrlResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.h5GetStartUrl(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5GetStartUrlResponse data = response.getData();
@@ -71,7 +73,9 @@ public class BizLicXjjH5 {
 		request.setDealerUserId(dealerUserId);
 		YzhResponse<H5EcoCityAicStatusResponse> response = null;
 		try {
-			// 强烈建议平台企业自定义 requestId 并记录在日志中，如遇异常请求，方便定位异常原因。如未自定义则使用 SDK 中的 GUID 方法自动生成
+			// request-id：每次请求的唯一标识
+			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
+			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
 			response = client.h5EcoCityAicStatus(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {// 请求成功
 				H5EcoCityAicStatusResponse data = response.getData();

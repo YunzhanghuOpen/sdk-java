@@ -2,6 +2,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
+
 // 批量下单请求
 public class CreateBatchOrderRequest {
     
@@ -25,6 +26,9 @@ public class CreateBatchOrderRequest {
     
     // 总笔数
     private String totalCount;
+    
+    // 支付模式
+    private String mode;
     
     // 订单列表
     private BatchOrderInfo[] orderList;
@@ -85,6 +89,14 @@ public class CreateBatchOrderRequest {
         return totalCount;
     }
 
+    public void setMode(String mode) {
+        this.mode = mode;
+    }
+
+    public String getMode() {
+        return mode;
+    }
+
     public void setOrderList(BatchOrderInfo[] orderList) {
         this.orderList = orderList;
     }
@@ -96,14 +108,15 @@ public class CreateBatchOrderRequest {
     @Override
     public String toString() {
         return "CreateBatchOrderRequest{" +
-             " batchId='" + batchId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", channel='" + channel + '\'' + 
-             ", wxAppId='" + wxAppId + '\'' + 
-             ", totalPay='" + totalPay + '\'' + 
-             ", totalCount='" + totalCount + '\'' + 
-             ", orderList='" + orderList + '\'' + 
-           '}';
+                " batchId='" + batchId + '\'' +
+                ", dealerId='" + dealerId + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", channel='" + channel + '\'' +
+                ", wxAppId='" + wxAppId + '\'' +
+                ", totalPay='" + totalPay + '\'' +
+                ", totalCount='" + totalCount + '\'' +
+                ", mode='" + mode + '\'' +
+                ", orderList='" + orderList + '\'' +
+                '}';
     }
 }
