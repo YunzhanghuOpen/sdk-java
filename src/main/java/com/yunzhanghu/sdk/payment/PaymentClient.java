@@ -114,4 +114,14 @@ public class PaymentClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
+    // 查询银行卡信息
+    public YzhResponse<BankInfoResponse> selectBankInfo(YzhRequest<GetBankInfoRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/payment/v1/card",false, new TypeToken<YzhResponse<BankInfoResponse>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
 }
