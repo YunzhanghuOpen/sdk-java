@@ -37,7 +37,7 @@ public class NotifyClient extends YzhClient {
 		return response;
 	}
 
-	// RSA 异步回调验签和解密
+	// RSA 签名算法异步回调验签和解密
 	private <T> NotifyResponse<T> verifyAndDescryptRSA(NotifyRequest request, Class<?> clazz) {
 		NotifyResponse<T> response = new NotifyResponse<T>();
 		if (!verifyRSA(request)) {
@@ -55,7 +55,7 @@ public class NotifyClient extends YzhClient {
 		return response;
 	}
 
-	// Sha256 异步回调验签和解密
+	// HMAC 签名算法异步回调验签和解密
 	private <T> NotifyResponse<T> verifyAndDescryptSha256(NotifyRequest request, Class<?> clazz) {
 		NotifyResponse<T> response = new NotifyResponse<T>();
 		if (!verifySha256(request)) {
