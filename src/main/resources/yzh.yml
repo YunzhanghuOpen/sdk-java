@@ -5,7 +5,7 @@ yzh:
   3des_key: 0gyU3F***k516E
   # App Key。
   app_key: Isg2W***zx6iP
-  # 签名算法为 RSA，参数固定为：rsa。
+  # 签名方式为 RSA，参数固定为：rsa。
   sign_type: rsa
   # 请求基础地址。
   url: https://api-service.yunzhanghu.com
