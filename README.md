@@ -42,9 +42,17 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 登录【[云账户综合服务平台](https://service.yunzhanghu.com)】，选择“业务中心 > 业务管理 > 对接信息”，单击页面右上角的“编辑”，配置平台企业公钥。
 ![配置平台企业公钥信息](https://yos.yunzhanghu.com/getobject/dujiexinxi-2.png?isAttachment=false&fileID=84e3cd1684a61c1e32eb0e7b7f43390cd053206b&signature=mqW8Zbk7h3gYXfzjR99pK%2B0pgVLcLly3VjBB2KsqDvQ%3D)
 
-### 安装Java SDK
+## 安装Java SDK
 
-1、maven 依赖请参考 https://search.maven.org/artifact/com.yunzhanghu.openapi/sdk/  
+### maven 依赖：
+
+```
+<dependency>
+    <groupId>com.yunzhanghu.openapi</groupId>
+    <artifactId>sdk</artifactId>
+    <version>1.4.9-RELEASE</version>
+</dependency>
+```
 
 ### 快速使用
 
