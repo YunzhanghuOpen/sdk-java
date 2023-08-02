@@ -64,7 +64,7 @@ public abstract class YzhSign {
         private String sign;
 
 
-        // 签名算法为 RSA，参数固定为：rsa
+        // 签名算法
         private String signType;
 
 
