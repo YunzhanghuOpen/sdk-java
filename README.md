@@ -12,7 +12,7 @@
 
 #### 1、获取配置
 
-使用云账户 SDK for Java 前，您需先获取 dealer_id、broker_id、3DES Key、App Key 信息。    
+使用云账户 SDK for .Net 前，您需先获取 dealer_id、broker_id、3DES Key、App Key、云账户公钥。  
 获取方式：使用开户邮件中的账号登录【[云账户综合服务平台](https://service.yunzhanghu.com)】，选择“业务中心 > 业务管理 > 对接信息”，查看并获取以上配置信息。  
 ![获取配置信息](https://yos.yunzhanghu.com/getobject/duijiexinxi.png?isAttachment=false&fileID=9487bd54b93a5abf49003c2b8ce7e069bfa24220&signature=X%2BR7PocQgPqSpR2xM1TgYU6lAapr%2FB9p3aFof03Gcfw%3D)
 
@@ -60,6 +60,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 
 - [用户信息验证](src/main/java/com/yunzhanghu/example/Authentication.java) 
 - [H5 签约](src/main/java/com/yunzhanghu/example/H5UserSign.java) or [API 签约](src/main/java/com/yunzhanghu/example/ApiUserSign.java)
+- [个体工商户注册（云账户新经济 H5）](src/main/java/com/yunzhanghu/example/BizLicXjjH5.java) or [个体工商户注册（云账户新经济H5+API）](src/main/java/com/yunzhanghu/example/BizLicXjjH5Api.java) 
 - [实时支付](src/main/java/com/yunzhanghu/example/Payment.java)
 - [异步回调](src/main/java/com/yunzhanghu/example/Notify.java) 
 - [对账文件获取](src/main/java/com/yunzhanghu/example/DataService.java)
