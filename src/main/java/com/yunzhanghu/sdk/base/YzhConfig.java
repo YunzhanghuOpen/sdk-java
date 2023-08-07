@@ -232,7 +232,7 @@ public class YzhConfig {
          // RSA
          RSA("rsa"),
 
-         // hmac
+         // HMAC
          SHA256("sha256");
 
         private final String value;

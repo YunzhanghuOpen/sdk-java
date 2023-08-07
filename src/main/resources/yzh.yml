@@ -5,8 +5,8 @@ yzh:
   3des_key: 0gyU3F***k516E
   # App Key。
   app_key: Isg2W***zx6iP
-  # 签名类型。
-  sign_type: sha256
+  # 签名方式为 RSA，参数固定为：rsa。
+  sign_type: rsa
   # 请求基础地址。
   url: https://api-service.yunzhanghu.com
   # 平台企业私钥。暂不支持以 -----BEGIN PRIVATE KEY----- 开头和以 -----END PRIVATE KEY----- 结尾的 PEM 格式。如密钥为 PEM 格式，需先删除头部的 -----BEGIN PRIVATE KEY-----、尾部的 -----END PRIVATE KEY----- 和密钥中的换行符

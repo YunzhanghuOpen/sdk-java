@@ -12,7 +12,7 @@
 
 #### 1、获取配置
 
-使用云账户 SDK for Java 前，您需先获取 dealer_id、broker_id、3DES Key、App Key 信息。    
+使用云账户 SDK for .Net 前，您需先获取 dealer_id、broker_id、3DES Key、App Key、云账户公钥。  
 获取方式：使用开户邮件中的账号登录【[云账户综合服务平台](https://service.yunzhanghu.com)】，选择“业务中心 > 业务管理 > 对接信息”，查看并获取以上配置信息。  
 ![获取配置信息](https://yos.yunzhanghu.com/getobject/duijiexinxi.png?isAttachment=false&fileID=9487bd54b93a5abf49003c2b8ce7e069bfa24220&signature=X%2BR7PocQgPqSpR2xM1TgYU6lAapr%2FB9p3aFof03Gcfw%3D)
 
@@ -42,9 +42,17 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 登录【[云账户综合服务平台](https://service.yunzhanghu.com)】，选择“业务中心 > 业务管理 > 对接信息”，单击页面右上角的“编辑”，配置平台企业公钥。
 ![配置平台企业公钥信息](https://yos.yunzhanghu.com/getobject/dujiexinxi-2.png?isAttachment=false&fileID=84e3cd1684a61c1e32eb0e7b7f43390cd053206b&signature=mqW8Zbk7h3gYXfzjR99pK%2B0pgVLcLly3VjBB2KsqDvQ%3D)
 
-### 安装Java SDK
+## 安装Java SDK
 
-1、maven 依赖请参考 https://search.maven.org/artifact/com.yunzhanghu.openapi/sdk/  
+### maven 依赖：
+
+```
+<dependency>
+    <groupId>com.yunzhanghu.openapi</groupId>
+    <artifactId>sdk</artifactId>
+    <version>1.4.9-RELEASE</version>
+</dependency>
+```
 
 ### 快速使用
 
@@ -52,6 +60,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 
 - [用户信息验证](src/main/java/com/yunzhanghu/example/Authentication.java) 
 - [H5 签约](src/main/java/com/yunzhanghu/example/H5UserSign.java) or [API 签约](src/main/java/com/yunzhanghu/example/ApiUserSign.java)
+- [个体工商户注册（云账户新经济 H5）](src/main/java/com/yunzhanghu/example/BizLicXjjH5.java) or [个体工商户注册（云账户新经济H5+API）](src/main/java/com/yunzhanghu/example/BizLicXjjH5Api.java) 
 - [实时支付](src/main/java/com/yunzhanghu/example/Payment.java)
 - [异步回调](src/main/java/com/yunzhanghu/example/Notify.java) 
 - [对账文件获取](src/main/java/com/yunzhanghu/example/DataService.java)
@@ -112,10 +121,7 @@ public class Payment {
     private static YzhConfig getYzhConfig() {
         YzhConfig config = new YzhConfig();
         // 方式一：从配置文件获取
-        // 签名方式：sha256
-		// config = YzhConfig.loadYaml("yzh-sha256.yaml");
-        // 签名方式：rsa
-		// config = YzhConfig.loadConfig("yzh.properties");
+        // config = YzhConfig.loadConfig("yzh.properties");
 
         // 方式二：自定义配置
         config.setDealerId("");
