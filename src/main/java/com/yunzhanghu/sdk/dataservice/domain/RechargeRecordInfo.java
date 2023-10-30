@@ -2,6 +2,7 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 
 
+
 // 预付业务服务费记录信息
 public class RechargeRecordInfo {
     
@@ -12,13 +13,13 @@ public class RechargeRecordInfo {
     private String brokerId;
     
     // 预付业务服务费记录 ID
-    private String rechargeId;
+    private long rechargeId;
     
     // 预付业务服务费
-    private String amount;
+    private double amount;
     
     // 实际到账金额
-    private String actualAmount;
+    private double actualAmount;
     
     // 创建时间
     private String createdAt;
@@ -48,27 +49,27 @@ public class RechargeRecordInfo {
         return brokerId;
     }
 
-    public void setRechargeId(String rechargeId) {
+    public void setRechargeId(long rechargeId) {
         this.rechargeId = rechargeId;
     }
 
-    public String getRechargeId() {
+    public long getRechargeId() {
         return rechargeId;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(double amount) {
         this.amount = amount;
     }
 
-    public String getAmount() {
+    public double getAmount() {
         return amount;
     }
 
-    public void setActualAmount(String actualAmount) {
+    public void setActualAmount(double actualAmount) {
         this.actualAmount = actualAmount;
     }
 
-    public String getActualAmount() {
+    public double getActualAmount() {
         return actualAmount;
     }
 
@@ -107,15 +108,15 @@ public class RechargeRecordInfo {
     @Override
     public String toString() {
         return "RechargeRecordInfo{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", rechargeId='" + rechargeId + '\'' + 
-             ", amount='" + amount + '\'' + 
-             ", actualAmount='" + actualAmount + '\'' + 
-             ", createdAt='" + createdAt + '\'' + 
-             ", rechargeChannel='" + rechargeChannel + '\'' + 
-             ", remark='" + remark + '\'' + 
-             ", rechargeAccountNo='" + rechargeAccountNo + '\'' + 
-           '}';
+                       " dealerId='" + dealerId + '\'' + 
+                       ", brokerId='" + brokerId + '\'' + 
+                       ", rechargeId='" + rechargeId + '\'' + 
+                       ", amount='" + amount + '\'' + 
+                       ", actualAmount='" + actualAmount + '\'' + 
+                       ", createdAt='" + createdAt + '\'' + 
+                       ", rechargeChannel='" + rechargeChannel + '\'' + 
+                       ", remark='" + remark + '\'' + 
+                       ", rechargeAccountNo='" + rechargeAccountNo + '\'' + 
+                     '}';
     }
 }

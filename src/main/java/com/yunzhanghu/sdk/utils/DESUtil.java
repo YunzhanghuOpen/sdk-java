@@ -24,7 +24,7 @@ public class DESUtil {
 
         byte[] enc = tripleDesEncrypt(content, key);
         byte[] enc64 = Base64.encodeBase64(enc);
-        return new String(enc64);
+        return new String(enc64, charset);
     }
 
     /**
@@ -42,7 +42,7 @@ public class DESUtil {
     public static String decode(String yzh3DesKey, String data, Charset charset) throws Exception {
         byte[] dec64 = Base64.decodeBase64(data);
         byte[] dec = tripleDesDecrypt(dec64, yzh3DesKey.getBytes(charset));
-        return new String(dec);
+        return new String(dec, charset);
     }
 
     public static byte[] tripleDesEncrypt(byte[] content, byte[] key) throws Exception {

@@ -16,7 +16,6 @@ public class Sha256Util {
 		return sign.equals(data);
 	}
 	
-	
 	private static String getSign(String content, String key, Charset charset) {
 		try {
 			Mac sha256Hmac = Mac.getInstance("HmacSHA256");

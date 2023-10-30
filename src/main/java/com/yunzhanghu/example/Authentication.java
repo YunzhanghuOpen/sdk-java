@@ -57,24 +57,27 @@ public class Authentication {
 	// 银行卡四要素鉴权请求（下发短信验证码）
 	private static void bankCardFourAuthVerify() {
 		BankCardFourAuthVerifyRequest request = new BankCardFourAuthVerifyRequest();
-		request.setCardNo("");
-		request.setIdCard("");
-		request.setRealName("");
-		request.setMobile("");
+		request.setCardNo("8888888888888888888");
+		request.setIdCard("110121202202222222");
+		request.setRealName("张三");
+		request.setMobile("188****8888");
 		YzhResponse<BankCardFourAuthVerifyResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.bankCardFourAuthVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				BankCardFourAuthVerifyResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -82,26 +85,29 @@ public class Authentication {
 	// 银行卡四要素确认请求（上传短信验证码）
 	private static void bankCardFourAuthConfirm() {
 		BankCardFourAuthConfirmRequest request = new BankCardFourAuthConfirmRequest();
-		request.setCardNo("");
-		request.setIdCard("");
-		request.setRealName("");
-		request.setMobile("");
-		request.setCaptcha("");
-		request.setRef("");
+		request.setCardNo("8888888888888888888");
+		request.setIdCard("110121202202222222");
+		request.setRealName("张三");
+		request.setMobile("188****8888");
+		request.setCaptcha("861134");
+		request.setRef("rx0g4iiLWoWA==");
 		YzhResponse<BankCardFourAuthConfirmResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.bankCardFourAuthConfirm(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				BankCardFourAuthConfirmResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -109,24 +115,27 @@ public class Authentication {
 	// 银行卡四要素验证
 	private static void bankCardFourVerify() {
 		BankCardFourVerifyRequest request = new BankCardFourVerifyRequest();
-		request.setCardNo("");
-		request.setIdCard("");
-		request.setRealName("");
-		request.setMobile("");
+		request.setCardNo("8888888888888888888");
+		request.setIdCard("110121202202222222");
+		request.setRealName("张三");
+		request.setMobile("188****8888");
 		YzhResponse<BankCardFourVerifyResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.bankCardFourVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				BankCardFourVerifyResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -134,23 +143,26 @@ public class Authentication {
 	// 银行卡三要素验证
 	private static void bankCardThreeVerify() {
 		BankCardThreeVerifyRequest request = new BankCardThreeVerifyRequest();
-		request.setCardNo("");
-		request.setIdCard("");
-		request.setRealName("");
+		request.setCardNo("8888888888888888888");
+		request.setIdCard("110121202202222222");
+		request.setRealName("张三");
 		YzhResponse<BankCardThreeVerifyResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.bankCardThreeVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				BankCardThreeVerifyResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -158,22 +170,25 @@ public class Authentication {
 	// 身份证实名验证
 	private static void iDCardVerify() {
 		IDCardVerifyRequest request = new IDCardVerifyRequest();
-		request.setIdCard("");
-		request.setRealName("");
+		request.setRealName("张三");
+		request.setIdCard("110121202202222222");
 		YzhResponse<IDCardVerifyResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.iDCardVerify(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				IDCardVerifyResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -185,32 +200,35 @@ public class Authentication {
 		imgarr[0] = getImgStr(imgFile);
 
 		UserExemptedInfoRequest request = new UserExemptedInfoRequest();
-		request.setIdCard("");
-		request.setCardType("");
-		request.setRealName("");
-		request.setCommentApply("");
-		request.setBrokerId("");
-		request.setDealerId("");
+		request.setIdCard("EA3456789");
+		request.setCardType("passport");
+		request.setRealName("张三");
+		request.setCommentApply("一条记录");
+		request.setBrokerId(config.getBrokerId());
+		request.setDealerId(config.getDealerId());
 		request.setUserImages(imgarr);
-		request.setCountry("");
-		request.setBirthday("");
-		request.setGender("");
-		request.setNotifyUrl("");
-		request.setRef("");
+		request.setCountry("CHN");
+		request.setBirthday("20010809");
+		request.setGender("男");
+		request.setNotifyUrl("https://www.example.com");
+		request.setRef("1234qwer");
 		YzhResponse<UserExemptedInfoResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.userExemptedInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				UserExemptedInfoResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -218,22 +236,25 @@ public class Authentication {
 	// 查看用户免验证名单是否存在
 	private static void userWhiteCheck() {
 		UserWhiteCheckRequest request = new UserWhiteCheckRequest();
-		request.setRealName("");
-		request.setIdCard("");
+		request.setRealName("张三");
+		request.setIdCard("EA3456789");
 		YzhResponse<UserWhiteCheckResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.userWhiteCheck(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				UserWhiteCheckResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -241,22 +262,25 @@ public class Authentication {
 	// 银行卡信息查询
 	private static void getBankCardInfo() {
 		GetBankCardInfoRequest request = new GetBankCardInfoRequest();
-		request.setCardNo("");
-		request.setBankName("");
+		request.setCardNo("8888888888888888888");
+		request.setBankName("中国邮政储蓄银行");
 		YzhResponse<GetBankCardInfoResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.getBankCardInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				GetBankCardInfoResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}

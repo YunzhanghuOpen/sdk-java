@@ -52,21 +52,24 @@ public class DataService {
 	// 查询日订单文件
 	private static void getDailyOrderFile() {
 		GetDailyOrderFileRequest request = new GetDailyOrderFileRequest();
-		request.setOrderDate("2022-04-15");
+		request.setOrderDate("2020-11-11");
 		YzhResponse<GetDailyOrderFileResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.getDailyOrderFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				GetDailyOrderFileResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -74,21 +77,24 @@ public class DataService {
 	// 查询日流水文件
 	private static void getDailyBillFileV2() {
 		GetDailyBillFileV2Request request = new GetDailyBillFileV2Request();
-		request.setBillDate("2022-04-17");
+		request.setBillDate("2020-11-11");
 		YzhResponse<GetDailyBillFileV2Response> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.getDailyBillFileV2(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				GetDailyBillFileV2Response data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -96,26 +102,29 @@ public class DataService {
 	// 查询平台企业预付业务服务费记录
 	private static void listDealerRechargeRecordV2() {
 		ListDealerRechargeRecordV2Request request = new ListDealerRechargeRecordV2Request();
-		request.setBeginAt("2022-04-01");
-		request.setEndAt("2022-04-11");
+		request.setBeginAt("2020-01-02");
+		request.setEndAt("2020-01-31");
 		YzhResponse<List<RechargeRecordInfo>> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.listDealerRechargeRecordV2(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				List<RechargeRecordInfo> data = response.getData();
-				System.out.println("请求成功返回条数 ：" + data.size());
+				System.out.println("操作成功返回条数 ：" + data.size());
 				data.forEach(info -> {
 					System.out.println("---------");
-					System.out.println("请求成功：" + info);
+					System.out.println("操作成功：" + info);
 				});
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -123,29 +132,32 @@ public class DataService {
 	// 查询日订单数据
 	private static void listDailyOrder() {
 		ListDailyOrderRequest request = new ListDailyOrderRequest();
-		request.setOrderDate("2022-04-17");
+		request.setOrderDate("2020-03-25");
 		request.setOffset(0);
-		request.setLength(20);
-		request.setChannel("");
-		request.setDataType("");
+		request.setLength(200);
+		request.setChannel("支付宝");
+		request.setDataType("encryption");
 		YzhResponse<ListDailyOrderResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.listDailyOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				ListDailyOrderResponse data = response.getData();
-				System.out.println("请求成功返回条数：" + data.getTotalNum());
+				System.out.println("操作成功返回条数：" + data.getTotalNum());
 				for (DealerOrderInfo info : data.getList()) {
 					System.out.println("---------");
 					System.out.println(info);
 				}
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -153,21 +165,24 @@ public class DataService {
 	// 查询日订单文件（支付和退款订单）
 	private static void getDailyOrderFileV2() {
 		GetDailyOrderFileV2Request request = new GetDailyOrderFileV2Request();
-		request.setOrderDate("2022-04-17");
+		request.setOrderDate("2020-11-11");
 		YzhResponse<GetDailyOrderFileV2Response> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.getDailyOrderFileV2(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				GetDailyOrderFileV2Response data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -175,28 +190,31 @@ public class DataService {
 	// 查询日流水数据
 	private static void listDailyBill() {
 		ListDailyBillRequest request = new ListDailyBillRequest();
-		request.setBillDate("2022-04-17");
+		request.setBillDate("2020-03-25");
 		request.setOffset(0);
-		request.setLength(20);
+		request.setLength(200);
 		request.setDataType("encryption");
 		YzhResponse<ListDailyBillResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.listDailyBill(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				ListDailyBillResponse data = response.getData();
-				System.out.println("请求成功返回条数：" + data.getTotalNum());
+				System.out.println("操作成功返回条数：" + data.getTotalNum());
 				for (DealerBillInfo bill : data.getList()) {
 					System.out.println("---------");
 					System.out.println(bill);
 				}
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -204,25 +222,28 @@ public class DataService {
 	// 查询余额日账单数据
 	private static void listBalanceDailyStatement() {
 		ListBalanceDailyStatementRequest request = new ListBalanceDailyStatementRequest();
-		request.setStatementDate("2022-04-17");
+		request.setStatementDate("2021-03-25");
 		YzhResponse<ListBalanceDailyStatementResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.listBalanceDailyStatement(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				ListBalanceDailyStatementResponse data = response.getData();
-				System.out.println("请求成功返回条数：" + data.getList().length);
+				System.out.println("操作成功返回条数：" + data.getList().length);
 				for (StatementDetail info : data.getList()) {
 					System.out.println("---------");
 					System.out.println(info);
 				}
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}

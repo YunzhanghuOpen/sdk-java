@@ -5,7 +5,7 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.bizlicxjjh5.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;  
+import org.slf4j.LoggerFactory;
 
 public class BizlicXjjH5ServiceClient extends YzhClient {
 
