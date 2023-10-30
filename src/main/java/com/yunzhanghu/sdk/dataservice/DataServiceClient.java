@@ -5,7 +5,7 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.dataservice.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;       
+import org.slf4j.LoggerFactory;
 import java.util.List;
 
 

@@ -28,25 +28,28 @@ public class H5UserSign {
 	// 预申请签约
 	private static void h5UserPresign() {
 		H5UserPresignRequest request = new H5UserPresignRequest();
-		request.setDealerId("");
-		request.setBrokerId("");
-		request.setRealName("");
-		request.setIdCard("");
+		request.setDealerId(config.getDealerId());
+		request.setBrokerId(config.getBrokerId());
+		request.setRealName("张三");
+		request.setIdCard("110121202202222222");
 		request.setCertificateType(0);
 		YzhResponse<H5UserPresignResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.h5UserPresign(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				H5UserPresignResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -54,24 +57,27 @@ public class H5UserSign {
 	// 申请签约
 	private static void h5UserSign() {
 		H5UserSignRequest request = new H5UserSignRequest();
-		request.setToken("");
-		request.setColor("");
-		request.setUrl("");
-		request.setRedirectUrl("");
+		request.setToken("X06603X195");
+		request.setColor("#8171ff");
+		request.setUrl("https://www.example.com");
+		request.setRedirectUrl("https://www.example.com");
 		YzhResponse<H5UserSignResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.h5UserSign(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				H5UserSignResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -79,24 +85,27 @@ public class H5UserSign {
 	// 获取用户签约状态
 	private static void geH5UserSignStatus() {
 		GetH5UserSignStatusRequest request = new GetH5UserSignStatusRequest();
-		request.setDealerId("");
-		request.setBrokerId("");
-		request.setRealName("");
-		request.setIdCard("");
+		request.setDealerId(config.getDealerId());
+		request.setBrokerId(config.getBrokerId());
+		request.setRealName("张三");
+		request.setIdCard("110121202202222222");
 		YzhResponse<GetH5UserSignStatusResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.getH5UserSignStatus(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				GetH5UserSignStatusResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}
@@ -104,25 +113,28 @@ public class H5UserSign {
 	// 用户解约（测试账号专用接口）
 	private static void h5UserRelease() {
 		H5UserReleaseRequest request = new H5UserReleaseRequest();
-		request.setDealerId("");
-		request.setBrokerId("");
-		request.setRealName("");
-		request.setIdCard("");
+		request.setDealerId(config.getDealerId());
+		request.setBrokerId(config.getBrokerId());
+		request.setRealName("张三");
+		request.setIdCard("110121202202222222");
 		request.setCertificateType(0);
 		YzhResponse<H5UserReleaseResponse> response = null;
 		try {
-			// request-id：每次请求的唯一标识
-			// 强烈建议平台企业自定义 request-id 并记录在日志中，如遇异常请求，便于使用 request-id 追踪问题
-			// 如未自定义则使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法不能保证全局唯一，可能会出现 ID 重复，推荐自行实现全局唯一 ID
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
 			response = client.h5UserRelease(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-			if (response.isSuccess()) {// 请求成功
+			if (response.isSuccess()) {
+				// 操作成功
 				H5UserReleaseResponse data = response.getData();
-				System.out.println("请求成功：" + data);
+				System.out.println("操作成功：" + data);
 			} else {
+				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("发生异常：" + response.getCode() + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
 			}
 		} catch (Exception e) {
+			// 发生异常
 			e.printStackTrace();
 		}
 	}

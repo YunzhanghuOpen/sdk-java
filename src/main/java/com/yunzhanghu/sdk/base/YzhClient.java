@@ -40,6 +40,7 @@ public class YzhClient {
 
     private YzhSign yzhSign;
     private YzhConfig yzhConfig;
+    private int socketTimeout;
 
     public YzhClient(YzhConfig yzhConfig) {
         setYzhConfig(yzhConfig);
@@ -77,7 +78,15 @@ public class YzhClient {
         this.yzhConfig = yzhConfig;
     }
 
-    /**
+    public int getSocketTimeout() {
+		return socketTimeout == 0 ? DataDict.SOCKET_TIMEOUT : socketTimeout;
+	}
+
+	public void setSocketTimeout(int socketTimeout) {
+		this.socketTimeout = socketTimeout;
+	}
+
+	/**
      * post 请求
      *
      * @param yzhRequest 请求内容
@@ -101,7 +110,7 @@ public class YzhClient {
         YzhSign.SignedData signedData = sign(yzhRequest.getRequest());
 
         RequestConfig config = RequestConfig.custom().setConnectTimeout(DataDict.CONNECT_TIMEOUT)
-                .setSocketTimeout(DataDict.SOCKET_TIMEOUT).build();
+                .setSocketTimeout(this.getSocketTimeout()).build();
         SSLConnectionSocketFactory sslConnectionSocketFactory = new SSLConnectionSocketFactory(SSLContexts.custom()
                 .loadTrustMaterial(null, new TrustSelfSignedStrategy())
                 .build(), NoopHostnameVerifier.INSTANCE);
@@ -153,7 +162,6 @@ public class YzhClient {
         return response;
     }
 
-
     /**
      * GET请求
      *
@@ -178,7 +186,7 @@ public class YzhClient {
      */
     private <K, T> YzhResponse<T> getMethod(String url, YzhRequest<K> yzhRequest, boolean isEncrypt, TypeToken<YzhResponse<T>> typeToken) throws Exception {
         RequestConfig config = RequestConfig.custom().setConnectTimeout(DataDict.CONNECT_TIMEOUT)
-                .setSocketTimeout(DataDict.SOCKET_TIMEOUT).build();
+                .setSocketTimeout(this.getSocketTimeout()).build();
         SSLConnectionSocketFactory sslConnectionSocketFactory = new SSLConnectionSocketFactory(SSLContexts.custom()
                 .loadTrustMaterial(null, new TrustSelfSignedStrategy())
                 .build(), NoopHostnameVerifier.INSTANCE);

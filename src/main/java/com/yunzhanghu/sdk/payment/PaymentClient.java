@@ -5,7 +5,7 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.payment.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;          
+import org.slf4j.LoggerFactory;
 
 public class PaymentClient extends YzhClient {
 
@@ -109,6 +109,16 @@ public class PaymentClient extends YzhClient {
     public YzhResponse<ConfirmBatchOrderResponse> confirmBatchOrder(YzhRequest<ConfirmBatchOrderRequest> req) throws YzhException {
         try {
             return post(req, "/api/payment/v1/confirm-batch", new TypeToken<YzhResponse<ConfirmBatchOrderResponse>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
+
+    // 批次撤销
+    public YzhResponse<CancelBatchOrderResponse> cancelBatchOrder(YzhRequest<CancelBatchOrderRequest> req) throws YzhException {
+        try {
+            return post(req, "/api/payment/v1/cancel-batch", new TypeToken<YzhResponse<CancelBatchOrderResponse>>(){});
         } catch (Exception e){
             LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
             throw new YzhException("msg", e);

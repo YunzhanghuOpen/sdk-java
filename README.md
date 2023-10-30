@@ -50,7 +50,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 <dependency>
     <groupId>com.yunzhanghu.openapi</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.4.9-RELEASE</version>
+    <version>1.4.10-RELEASE</version>
 </dependency>
 ```
 
@@ -59,8 +59,13 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 #### 示例功能列表
 
 - [用户信息验证](src/main/java/com/yunzhanghu/example/Authentication.java) 
-- [H5 签约](src/main/java/com/yunzhanghu/example/H5UserSign.java) or [API 签约](src/main/java/com/yunzhanghu/example/ApiUserSign.java)
-- [个体工商户注册（云账户新经济 H5）](src/main/java/com/yunzhanghu/example/BizLicXjjH5.java) or [个体工商户注册（云账户新经济H5+API）](src/main/java/com/yunzhanghu/example/BizLicXjjH5Api.java) 
+- 用户签约
+   - [H5 签约](src/main/java/com/yunzhanghu/example/H5UserSign.java)
+   - [API 签约](src/main/java/com/yunzhanghu/example/ApiUserSign.java)
+   - [签约信息上传](src/main/java/com/yunzhanghu/example/UploadUserSign.java)
+- 个体工商户注册
+   - [云账户新经济 H5](src/main/java/com/yunzhanghu/example/BizLicXjjH5.java)
+   - [云账户新经济 H5+API](src/main/java/com/yunzhanghu/example/BizLicXjjH5Api.java) 
 - [实时支付](src/main/java/com/yunzhanghu/example/Payment.java)
 - [异步回调](src/main/java/com/yunzhanghu/example/Notify.java) 
 - [对账文件获取](src/main/java/com/yunzhanghu/example/DataService.java)
@@ -90,6 +95,8 @@ public class Payment {
         try {
             YzhConfig config = getYzhConfig();
             PaymentClient client = new PaymentClient(config);
+            // 设置连接超时时间，默认 30S
+            client.setSocketTimeout(30*1000);// 单位：毫秒
 
             CreateBankpayOrderRequest request = new CreateBankpayOrderRequest();
             request.setOrderId("");
@@ -125,6 +132,7 @@ public class Payment {
 
         // 方式二：自定义配置
         config.setDealerId("");
+        config.setBrokerId("");
         config.setSignType(SignType.RSA);
         config.setYzh3DesKey("");
         config.setYzhAppKey("");

@@ -22,12 +22,14 @@ public class YzhConfig {
     public static String YZH_URL = "url";
     public static String YZH_SIGN_TYPE = "sign_type";
     public static String YZH_DEALER_ID = "dealer_id";
+    public static String YZH_BROKER_ID = "broker_id";
     public static String YZH_3DES_KEY = "3des_key";
     public static String YZH_APP_KEY = "app_key";
     public static String YZH_RSA_PRIVATE_KEY = "rsa_private_key";
     public static String YZH_RSA_PUBLIC_KEY = "rsa_public_key";
     private SignType signType;
     private String dealerId;
+    private String brokerId;
     private String yzh3DesKey;
     private String yzhAppKey;
     private String yzhRsaPublicKey;
@@ -60,6 +62,7 @@ public class YzhConfig {
             config.setSignType(signType);
             config.setYzh3DesKey(properties.getProperty(YZH_PRE + YZH_3DES_KEY));
             config.setDealerId(properties.getProperty(YZH_PRE + YZH_DEALER_ID));
+            config.setBrokerId(properties.getProperty(YZH_PRE + YZH_BROKER_ID));
             config.setYzhAppKey(properties.getProperty(YZH_PRE + YZH_APP_KEY));
             config.setYzhRsaPrivateKey(properties.getProperty(YZH_PRE + YZH_RSA_PRIVATE_KEY));
             config.setYzhRsaPublicKey(properties.getProperty(YZH_PRE + YZH_RSA_PUBLIC_KEY));
@@ -101,6 +104,7 @@ public class YzhConfig {
                 config.setSignType(signType);
                 config.setYzh3DesKey(StringUtils.trim(properties.get(YZH_3DES_KEY)));
                 config.setDealerId(StringUtils.trim(properties.get(YZH_DEALER_ID)));
+                config.setBrokerId(StringUtils.trim(properties.get(YZH_BROKER_ID)));
                 config.setYzhAppKey(StringUtils.trim(properties.get(YZH_APP_KEY)));
                 config.setYzhRsaPrivateKey(StringUtils.trim(properties.get(YZH_RSA_PRIVATE_KEY)));
                 config.setYzhRsaPublicKey(StringUtils.trim(properties.get(YZH_RSA_PUBLIC_KEY)));
@@ -167,7 +171,13 @@ public class YzhConfig {
     }
 
     public void setYzhRsaPublicKey(String yzhRsaPublicKey) {
-        this.yzhRsaPublicKey = yzhRsaPublicKey;
+    	this.yzhRsaPublicKey = yzhRsaPublicKey
+    			.replace("-----BEGIN PUBLIC KEY-----", "")
+        		.replace("-----END PUBLIC KEY-----", "")
+        		.replace("\r\n", "")
+        		.replace("\r", "")
+        		.replace("\n", "")
+        		.replaceAll("\\s*", "");
     }
 
     public String getYzhRsaPrivateKey() {
@@ -175,7 +185,13 @@ public class YzhConfig {
     }
 
     public void setYzhRsaPrivateKey(String yzhRsaPrivateKey) {
-        this.yzhRsaPrivateKey = yzhRsaPrivateKey;
+    	this.yzhRsaPrivateKey = yzhRsaPrivateKey
+    			.replace("-----BEGIN PRIVATE KEY-----", "")
+        		.replace("-----END PRIVATE KEY-----", "")
+        		.replace("\r\n", "")
+        		.replace("\r", "")
+        		.replace("\n", "")
+        		.replaceAll("\\s*", "");
     }
 
     public String getDealerId() {
@@ -186,7 +202,15 @@ public class YzhConfig {
         this.dealerId = dealerId;
     }
 
-    private void checkConfig() throws YzhException {
+    public String getBrokerId() {
+		return brokerId;
+	}
+
+	public void setBrokerId(String brokerId) {
+		this.brokerId = brokerId;
+	}
+
+	private void checkConfig() throws YzhException {
         if (StringUtils.isNull(getDealerId())) {
             throw new YzhException("dealer_id is empty");
         }
@@ -218,7 +242,9 @@ public class YzhConfig {
     @Override
     public String toString() {
         return "YzhConfig{" +
-                "signType=" + signType +
+        		"dealerId=" + dealerId +
+        		", brokerId=" + brokerId +
+                ", signType=" + signType +
                 ", yzh3DesKey='" + yzh3DesKey + '\'' +
                 ", yzhAppKey='" + yzhAppKey + '\'' +
                 ", yzhRsaPublicKey='" + yzhRsaPublicKey + '\'' +
