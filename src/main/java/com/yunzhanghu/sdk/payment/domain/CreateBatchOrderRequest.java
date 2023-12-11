@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-// 批量下单请求
+// 批次下单请求
 public class CreateBatchOrderRequest {
     
     // 平台企业批次号

@@ -2,7 +2,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-// 批量下单订单信息
+// 批次下单订单信息
 public class BatchOrderInfo {
     
     // 平台企业订单号

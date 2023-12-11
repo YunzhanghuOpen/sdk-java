@@ -57,7 +57,7 @@ public class DataService {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.getDailyOrderFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -82,7 +82,7 @@ public class DataService {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.getDailyBillFileV2(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -108,7 +108,7 @@ public class DataService {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.listDealerRechargeRecordV2(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -141,7 +141,7 @@ public class DataService {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.listDailyOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -170,7 +170,7 @@ public class DataService {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.getDailyOrderFileV2(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -198,7 +198,7 @@ public class DataService {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.listDailyBill(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -227,7 +227,7 @@ public class DataService {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.listBalanceDailyStatement(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
