@@ -114,6 +114,16 @@ public class PaymentClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
+    // 查询批次订单信息
+    public YzhResponse<QueryBatchOrderResponse> queryBatchOrder(YzhRequest<QueryBatchOrderRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/payment/v1/query-batch", false, new TypeToken<YzhResponse<QueryBatchOrderResponse>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
 
     // 批次撤销
     public YzhResponse<CancelBatchOrderResponse> cancelBatchOrder(YzhRequest<CancelBatchOrderRequest> req) throws YzhException {

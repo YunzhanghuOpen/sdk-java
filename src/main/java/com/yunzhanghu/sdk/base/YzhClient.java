@@ -138,13 +138,7 @@ public class YzhClient {
             httpResponse = httpClient.execute(httpPost);
             int statusCode = httpResponse.getStatusLine().getStatusCode();
             String result = getResponse(httpPost, httpResponse, statusCode);
-            // 优先判定返回code，如果非成功code，则直接返回
             response = JsonUtil.fromLowerCasesWithUnderScoresJson(result, YzhResponse.class);
-            if (!DataDict.SUCCESS_CODE.equals(response.getCode())) {
-                response.setHttpCode(statusCode);
-                response.setData(null);
-                return response;
-            }
             response = fromJsonResult(result, typeToken.getType());
             response.setHttpCode(statusCode);
         } catch (Exception e) {

@@ -6,7 +6,7 @@
 
     <groupId>com.yunzhanghu.openapi</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.4.10-RELEASE</version>
+    <version>1.4.11-RELEASE</version>
     <name>yzh-sdk</name>
     <description>云账户综合服务平台官方 SDK for Java，支持 Java JDK 1.8 及以上版本 
         Copyright © 2013 - 2023 云账户技术（天津）有限公司

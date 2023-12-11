@@ -2,7 +2,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-// 批量下单返回
+// 批次下单返回
 public class CreateBatchOrderResponse {
     
     // 平台企业批次号

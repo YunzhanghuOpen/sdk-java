@@ -2,7 +2,7 @@ package com.yunzhanghu.sdk.payment.domain;
 
 
 
-// 批量下单返回订单信息
+// 批次下单返回订单信息
 public class BatchOrderResult {
     
     // 平台企业订单号
@@ -13,6 +13,12 @@ public class BatchOrderResult {
     
     // 订单金额
     private String pay;
+    
+    // 下单状态
+    private String status;
+    
+    // 下单失败原因
+    private BatchOrderErrorReasons[] errorReasons;
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -38,12 +44,30 @@ public class BatchOrderResult {
         return pay;
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setErrorReasons(BatchOrderErrorReasons[] errorReasons) {
+        this.errorReasons = errorReasons;
+    }
+
+    public BatchOrderErrorReasons[] getErrorReasons() {
+        return errorReasons;
+    }
+
     @Override
     public String toString() {
         return "BatchOrderResult{" +
-             " orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", pay='" + pay + '\'' + 
-           '}';
+                   " orderId='" + orderId + '\'' + 
+                   ", ref='" + ref + '\'' + 
+                   ", pay='" + pay + '\'' + 
+                   ", status='" + status + '\'' + 
+                   ", errorReasons='" + errorReasons + '\'' + 
+                 '}';
     }
 }

@@ -31,6 +31,9 @@ import com.yunzhanghu.sdk.payment.domain.GetOrderRequest;
 import com.yunzhanghu.sdk.payment.domain.GetOrderResponse;
 import com.yunzhanghu.sdk.payment.domain.ListAccountRequest;
 import com.yunzhanghu.sdk.payment.domain.ListAccountResponse;
+import com.yunzhanghu.sdk.payment.domain.QueryBatchOrderRequest;
+import com.yunzhanghu.sdk.payment.domain.QueryBatchOrderResponse;
+import com.yunzhanghu.sdk.utils.JsonUtil;
 
 // 实时支付
 public class Payment {
@@ -49,6 +52,8 @@ public class Payment {
 		createBatchOrder();
 		// 批次确认
 		confirmBatchOrder();
+		// 查询批次订单信息
+		queryBatchOrder();
 		// 批次撤销
 		cancelBatchOrder();
 		// 查询单笔订单信息
@@ -81,7 +86,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.createBankpayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -117,7 +122,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.createAlipayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -154,7 +159,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.createWxpayOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -187,7 +192,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.createBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -201,7 +206,7 @@ public class Payment {
 			} else {
 				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
-				System.out.println("失败返回：" + response.getCode() + "-" + response.getMessage());
+				System.out.println("失败返回：" + response.getCode() + "-" + response.getMessage() + "-" + JsonUtil.toJson(response.getData()));
 			}
 		} catch (Exception e) {
 			// 发生异常
@@ -221,7 +226,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.confirmBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -237,7 +242,33 @@ public class Payment {
 			e.printStackTrace();
 		}
 	}
-	
+
+	// 查询批次订单信息
+	private static void queryBatchOrder() {
+		QueryBatchOrderRequest request = new QueryBatchOrderRequest();
+		request.setBatchId("batch2032934858483");
+		request.setDealerId(config.getDealerId());
+		YzhResponse<QueryBatchOrderResponse> response = null;
+		try {
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+			response = client.queryBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+			if (response.isSuccess()) {
+				// 操作成功
+				QueryBatchOrderResponse data = response.getData();
+				System.out.println("操作成功：" + data);
+			} else {
+				// 失败返回
+				System.out.println("HTTP Status Code：" + response.getHttpCode());
+				System.out.println("失败返回：" + response.getCode() + "-" + response.getMessage());
+			}
+		} catch (Exception e) {
+			// 发生异常
+			e.printStackTrace();
+		}
+	}
+
 	// 批次撤销
 	public static void cancelBatchOrder() {
 		CancelBatchOrderRequest request = new CancelBatchOrderRequest();
@@ -248,7 +279,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.cancelBatchOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -275,7 +306,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.getOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -300,7 +331,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.listAccount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -328,7 +359,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.getEleReceiptFile(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -356,7 +387,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.cancelOrder(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
@@ -382,7 +413,7 @@ public class Payment {
 		try {
 			// request-id：请求 ID，请求的唯一标识
 			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-			// 如平台企业未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成，注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
 			response = client.getDealerVARechargeAccount(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
