@@ -3,6 +3,7 @@ package com.yunzhanghu.example;
 import com.yunzhanghu.example.config.Config;
 import com.yunzhanghu.sdk.authentication.domain.NotifyUserExemptedInfoRequest;
 import com.yunzhanghu.sdk.base.YzhConfig;
+import com.yunzhanghu.sdk.bizlicgxh5api.domain.NotifyGxH5APIEcoCityAicRequest;
 import com.yunzhanghu.sdk.bizlicxjjh5.domain.NotifyH5EcoCityAicRequest;
 import com.yunzhanghu.sdk.h5usersign.domain.NotifyH5UserSignRequest;
 import com.yunzhanghu.sdk.invoice.domain.NotifyInvoiceDoneRequest;
@@ -44,9 +45,13 @@ public class Notify {
 //			NotifyResponse<NotifyUserExemptedInfoRequest> response = client.notifyDecoder(request, NotifyUserExemptedInfoRequest.class);
 //			NotifyUserExemptedInfoRequest notifyRequest = response.getData();
 
-			// 个体工商户注册结果回调
+			// 新经济个体工商户注册结果回调
 //			NotifyResponse<NotifyH5EcoCityAicRequest> response = client.notifyDecoder(request, NotifyH5EcoCityAicRequest.class);
 //			NotifyH5EcoCityAicRequest notifyRequest = response.getData();
+			
+			// 共享大额（H5+API）个体工商户注册结果回调
+//			NotifyResponse<NotifyGxH5APIEcoCityAicRequest> response = client.notifyDecoder(request, NotifyGxH5APIEcoCityAicRequest.class);
+//			NotifyGxH5APIEcoCityAicRequest notifyRequest = response.getData();
 
 			// 发票开具完成通知
 //			NotifyResponse<NotifyInvoiceDoneRequest> response = client.notifyDecoder(request, NotifyInvoiceDoneRequest.class);
