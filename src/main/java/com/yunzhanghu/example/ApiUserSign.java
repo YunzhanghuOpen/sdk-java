@@ -57,7 +57,7 @@ public class ApiUserSign {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setCardType("idcard");
 		YzhResponse<ApiUserSignResponse> response = null;
 		try {
@@ -86,7 +86,7 @@ public class ApiUserSign {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		YzhResponse<GetApiUserSignStatusResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -114,7 +114,7 @@ public class ApiUserSign {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setCardType("idcard");
 		YzhResponse<ApiUserSignReleaseResponse> response = null;
 		try {

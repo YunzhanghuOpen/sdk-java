@@ -66,7 +66,7 @@ public class YzhCustom {
         request.setRealName("张三");
         request.setCardNo("6228888888888888888");
         request.setPhoneNo("188****8888");
-        request.setIdCard("11010519891231002X");
+        request.setIdCard("11010519491231002X");
         request.setPay("100.00");
         request.setPayRemark("");
         request.setNotifyUrl("https://www.example.com");

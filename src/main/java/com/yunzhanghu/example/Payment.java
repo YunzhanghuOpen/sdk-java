@@ -75,9 +75,9 @@ public class Payment {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setCardNo("8888888888888888888");
+		request.setCardNo("6228888888888888888");
 		request.setPhoneNo("188****8888");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setPay("100.00");
 		request.setPayRemark("");
 		request.setNotifyUrl("https://www.example.com");
@@ -110,8 +110,8 @@ public class Payment {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setCardNo("username@example.com");
-		request.setIdCard("110121202202222222");
+		request.setCardNo("188****8888");
+		request.setIdCard("11010519491231002X");
 		request.setPhoneNo("188****8888");
 		request.setPay("1.00");
 		request.setPayRemark("");
@@ -146,8 +146,8 @@ public class Payment {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
-		request.setOpenid("wx1234567890");
+		request.setIdCard("11010519491231002X");
+		request.setOpenid("o4GgauInH_RCEdvrrNGrntXDuXXX");
 		request.setPhoneNo("188****8888");
 		request.setPay("1.00");
 		request.setPayRemark("");
@@ -434,8 +434,8 @@ public class Payment {
 		BatchOrderInfo info1 = new BatchOrderInfo();
 		info1.setOrderId("202009010016562012987");
 		info1.setRealName("张三");
-		info1.setIdCard("120101198511111111");
-		info1.setOpenid("wx12345678901");
+		info1.setIdCard("440524188001010014");
+		info1.setOpenid("o4GgauInH_RCEdvrrNGrntXDuXXX1");
 		info1.setPhoneNo("188****8888");
 		info1.setProjectId("testproject1");
 		info1.setPay("1.00");
@@ -445,8 +445,8 @@ public class Payment {
 		BatchOrderInfo info2 = new BatchOrderInfo();
 		info2.setOrderId("202009010016562012988");
 		info2.setRealName("李四");
-		info2.setIdCard("110121202202222222");
-		info2.setOpenid("wx12345678902");
+		info2.setIdCard("11010519491231002X");
+		info2.setOpenid("o4GgauInH_RCEdvrrNGrntXDuXXX2");
 		info2.setPhoneNo("188****8888");
 		info2.setProjectId("testproject2");
 		info2.setPay("2.30");

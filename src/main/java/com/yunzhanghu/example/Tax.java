@@ -56,7 +56,7 @@ public class Tax {
 		GetUserCrossRequest request = new GetUserCrossRequest();
 		request.setDealerId(config.getDealerId());
 		request.setYear("2020");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setEntId("accumulus_tj");
 		YzhResponse<GetUserCrossResponse> response = null;
 		try {

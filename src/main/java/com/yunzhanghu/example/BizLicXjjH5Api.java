@@ -35,7 +35,7 @@ public class BizLicXjjH5Api {
 		request.setBrokerId(config.getBrokerId());
 		request.setDealerUserId("user1234567890");
 		request.setPhoneNo("+86-188****8888");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setRealName("张三");
 		request.setIdCardAddress("省级行政区名称区县级行政区名称具体住宿地址");
 		request.setIdCardAgency("区县公安局名称");
@@ -102,7 +102,7 @@ public class BizLicXjjH5Api {
 		request.setBrokerId(config.getBrokerId());
 		request.setOpenId("open1234567890");
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setDealerUserId("user1234567890");
 		YzhResponse<H5APIEcoCityAicStatusResponse> response = null;
 		try {
