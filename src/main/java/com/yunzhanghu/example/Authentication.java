@@ -57,8 +57,8 @@ public class Authentication {
 	// 银行卡四要素鉴权请求（下发短信验证码）
 	private static void bankCardFourAuthVerify() {
 		BankCardFourAuthVerifyRequest request = new BankCardFourAuthVerifyRequest();
-		request.setCardNo("8888888888888888888");
-		request.setIdCard("110121202202222222");
+		request.setCardNo("6228888888888888888");
+		request.setIdCard("11010519491231002X");
 		request.setRealName("张三");
 		request.setMobile("188****8888");
 		YzhResponse<BankCardFourAuthVerifyResponse> response = null;
@@ -85,8 +85,8 @@ public class Authentication {
 	// 银行卡四要素确认请求（上传短信验证码）
 	private static void bankCardFourAuthConfirm() {
 		BankCardFourAuthConfirmRequest request = new BankCardFourAuthConfirmRequest();
-		request.setCardNo("8888888888888888888");
-		request.setIdCard("110121202202222222");
+		request.setCardNo("6228888888888888888");
+		request.setIdCard("11010519491231002X");
 		request.setRealName("张三");
 		request.setMobile("188****8888");
 		request.setCaptcha("861134");
@@ -115,8 +115,8 @@ public class Authentication {
 	// 银行卡四要素验证
 	private static void bankCardFourVerify() {
 		BankCardFourVerifyRequest request = new BankCardFourVerifyRequest();
-		request.setCardNo("8888888888888888888");
-		request.setIdCard("110121202202222222");
+		request.setCardNo("6228888888888888888");
+		request.setIdCard("11010519491231002X");
 		request.setRealName("张三");
 		request.setMobile("188****8888");
 		YzhResponse<BankCardFourVerifyResponse> response = null;
@@ -143,8 +143,8 @@ public class Authentication {
 	// 银行卡三要素验证
 	private static void bankCardThreeVerify() {
 		BankCardThreeVerifyRequest request = new BankCardThreeVerifyRequest();
-		request.setCardNo("8888888888888888888");
-		request.setIdCard("110121202202222222");
+		request.setCardNo("6228888888888888888");
+		request.setIdCard("11010519491231002X");
 		request.setRealName("张三");
 		YzhResponse<BankCardThreeVerifyResponse> response = null;
 		try {
@@ -171,7 +171,7 @@ public class Authentication {
 	private static void iDCardVerify() {
 		IDCardVerifyRequest request = new IDCardVerifyRequest();
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		YzhResponse<IDCardVerifyResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -262,7 +262,7 @@ public class Authentication {
 	// 银行卡信息查询
 	private static void getBankCardInfo() {
 		GetBankCardInfoRequest request = new GetBankCardInfoRequest();
-		request.setCardNo("8888888888888888888");
+		request.setCardNo("6228888888888888888");
 		request.setBankName("中国邮政储蓄银行");
 		YzhResponse<GetBankCardInfoResponse> response = null;
 		try {

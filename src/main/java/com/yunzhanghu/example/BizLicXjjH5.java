@@ -63,7 +63,7 @@ public class BizLicXjjH5 {
 		request.setBrokerId(config.getBrokerId());
 		request.setOpenId("open1234567890");
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setDealerUserId("user1234567890");
 		YzhResponse<H5EcoCityAicStatusResponse> response = null;
 		try {

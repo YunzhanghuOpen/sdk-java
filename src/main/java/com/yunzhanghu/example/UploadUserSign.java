@@ -30,7 +30,7 @@ public class UploadUserSign {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setPhone("188****8888");
 		request.setIsAbroad(false);
 		request.setNotifyUrl("https://www.example.com");
@@ -61,7 +61,7 @@ public class UploadUserSign {
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		YzhResponse<GetUploadUserSignStatusResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
