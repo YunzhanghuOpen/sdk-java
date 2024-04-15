@@ -3,6 +3,7 @@ package com.yunzhanghu.example;
 import com.yunzhanghu.example.config.Config;
 import com.yunzhanghu.sdk.authentication.domain.NotifyUserExemptedInfoRequest;
 import com.yunzhanghu.sdk.base.YzhConfig;
+import com.yunzhanghu.sdk.bizlicgxh5.domain.NotifyGxH5EcoCityAicRequest;
 import com.yunzhanghu.sdk.bizlicgxh5api.domain.NotifyGxH5APIEcoCityAicRequest;
 import com.yunzhanghu.sdk.bizlicxjjh5.domain.NotifyH5EcoCityAicRequest;
 import com.yunzhanghu.sdk.h5usersign.domain.NotifyH5UserSignRequest;
@@ -48,6 +49,10 @@ public class Notify {
 			// 新经济个体工商户注册结果回调
 //			NotifyResponse<NotifyH5EcoCityAicRequest> response = client.notifyDecoder(request, NotifyH5EcoCityAicRequest.class);
 //			NotifyH5EcoCityAicRequest notifyRequest = response.getData();
+			
+			// 共享大额（H5）个体工商户注册结果回调
+//          NotifyResponse<NotifyGxH5EcoCityAicRequest> response = client.notifyDecoder(request, NotifyGxH5EcoCityAicRequest.class);
+//          NotifyGxH5EcoCityAicRequest notifyRequest = response.getData();
 			
 			// 共享大额（H5+API）个体工商户注册结果回调
 //			NotifyResponse<NotifyGxH5APIEcoCityAicRequest> response = client.notifyDecoder(request, NotifyGxH5APIEcoCityAicRequest.class);

@@ -13,6 +13,7 @@ import com.yunzhanghu.sdk.bizlicgxh5api.domain.GxH5APIGetStartUrlResponse;
 import com.yunzhanghu.sdk.bizlicgxh5api.domain.GxH5APIPreCollectBizlicMsgRequest;
 import com.yunzhanghu.sdk.bizlicgxh5api.domain.GxH5APIPreCollectBizlicMsgResponse;
 
+// 个体工商户注册（云账户共享大额 H5+API）
 public class BizlicGxH5Api {
 
 	private static YzhConfig config = Config.getYzhConfig();
@@ -20,15 +21,15 @@ public class BizlicGxH5Api {
 
 	public static void main(String[] args) {
 		// 工商实名信息录入
-		h5PreCollectBizlicMsg();
+		gxH5ApiPreCollectBizlicMsg();
 		// 预启动
-		h5GetStartUrl();
+		gxH5ApiGetStartUrl();
 		// 查询个体工商户状态
-		h5EcoCityAicStatus();
+		gxH5ApiEcoCityAicStatus();
 	}
 
 	// 工商实名信息录入
-	private static void h5PreCollectBizlicMsg() {
+	private static void gxH5ApiPreCollectBizlicMsg() {
 		GxH5APIPreCollectBizlicMsgRequest request = new GxH5APIPreCollectBizlicMsgRequest();
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
@@ -63,7 +64,7 @@ public class BizlicGxH5Api {
 	}
 
 	// 预启动
-	private static void h5GetStartUrl() {
+	private static void gxH5ApiGetStartUrl() {
 		GxH5APIGetStartUrlRequest request = new GxH5APIGetStartUrlRequest();
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
@@ -95,7 +96,7 @@ public class BizlicGxH5Api {
 	}
 
 	// 查询个体工商户状态
-	private static void h5EcoCityAicStatus() {
+	private static void gxH5ApiEcoCityAicStatus() {
 		GxH5APIEcoCityAicStatusRequest request = new GxH5APIEcoCityAicStatusRequest();
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());

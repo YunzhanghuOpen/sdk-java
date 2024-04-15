@@ -26,7 +26,7 @@ public class StringUtils {
 
     public static String getUA(){
     	// yunzhanghu-sdk-{{开发语言}}/{{sdk版本}}/{{语言版本}} 
-        return "yunzhanghu-sdk-java/1.4.12-RELEASE/1.8/";
+        return "yunzhanghu-sdk-java/1.4.11-RELEASE/1.8/";
     }
 
 }
