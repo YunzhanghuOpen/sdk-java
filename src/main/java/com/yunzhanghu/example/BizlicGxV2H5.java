@@ -12,7 +12,7 @@ import com.yunzhanghu.sdk.bizlicgxv2h5.domain.GxV2H5GetStartUrlRequest;
 import com.yunzhanghu.sdk.bizlicgxv2h5.domain.GxV2H5GetStartUrlResponse;
 
 // 个体工商户注册（云账户共享大额 H5）
-public class BizlicGxH5 {
+public class BizlicGxV2H5 {
 
     private static YzhConfig config = Config.getYzhConfig();
     private static BizlicGxV2H5ServiceClient client = new BizlicGxV2H5ServiceClient(config);

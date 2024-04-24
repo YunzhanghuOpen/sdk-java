@@ -14,7 +14,7 @@ import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIPreCollectBizlicMsgReq
 import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIPreCollectBizlicMsgResponse;
 
 // 个体工商户注册（云账户共享大额 H5+API）
-public class BizlicGxH5Api {
+public class BizlicGxV2H5Api {
 
 	private static YzhConfig config = Config.getYzhConfig();
 	private static BizlicGxV2H5APIServiceClient client = new BizlicGxV2H5APIServiceClient(config);
