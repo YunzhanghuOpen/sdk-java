@@ -1,10 +1,10 @@
-package com.yunzhanghu.sdk.bizlicgxh5.domain;
+package com.yunzhanghu.sdk.bizlicgxv2h5.domain;
 
 
 
 
 // 预启动请求
-public class GxH5GetStartUrlRequest {
+public class GxV2H5GetStartUrlRequest {
     
     // 平台企业 ID
     private String dealerId;
@@ -96,7 +96,7 @@ public class GxH5GetStartUrlRequest {
 
     @Override
     public String toString() {
-        return "GxH5GetStartUrlRequest{" +
+        return "GxV2H5GetStartUrlRequest{" +
                        " dealerId='" + dealerId + '\'' + 
                        ", brokerId='" + brokerId + '\'' + 
                        ", dealerUserId='" + dealerUserId + '\'' + 

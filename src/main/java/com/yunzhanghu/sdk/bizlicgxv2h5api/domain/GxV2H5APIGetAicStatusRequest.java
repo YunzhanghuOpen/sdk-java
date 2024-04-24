@@ -1,10 +1,10 @@
-package com.yunzhanghu.sdk.bizlicgxh5api.domain;
+package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
 
 
 
 // 查询个体工商户状态请求
-public class GxH5APIEcoCityAicStatusRequest {
+public class GxV2H5APIGetAicStatusRequest {
     
     // 平台企业 ID
     private String dealerId;
@@ -74,7 +74,7 @@ public class GxH5APIEcoCityAicStatusRequest {
 
     @Override
     public String toString() {
-        return "GxH5APIEcoCityAicStatusRequest{" +
+        return "GxV2H5APIGetAicStatusRequest{" +
                        " dealerId='" + dealerId + '\'' + 
                        ", brokerId='" + brokerId + '\'' + 
                        ", openId='" + openId + '\'' + 

@@ -1,10 +1,10 @@
-package com.yunzhanghu.sdk.bizlicgxh5.domain;
+package com.yunzhanghu.sdk.bizlicgxv2h5.domain;
 
 
 
 
 // 个体工商户注册结果回调通知
-public class NotifyGxH5EcoCityAicRequest {
+public class NotifyGxV2H5AicRequest {
     
     // 用户唯一标识
     private String openId;
@@ -162,7 +162,7 @@ public class NotifyGxH5EcoCityAicRequest {
 
     @Override
     public String toString() {
-        return "NotifyGxH5EcoCityAicRequest{" +
+        return "NotifyGxV2H5AicRequest{" +
                        " openId='" + openId + '\'' + 
                        ", dealerUserId='" + dealerUserId + '\'' + 
                        ", submitAt='" + submitAt + '\'' + 

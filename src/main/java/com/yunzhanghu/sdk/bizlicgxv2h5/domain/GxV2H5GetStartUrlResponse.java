@@ -1,10 +1,10 @@
-package com.yunzhanghu.sdk.bizlicgxh5.domain;
+package com.yunzhanghu.sdk.bizlicgxv2h5.domain;
 
 
 
 
 // 预启动返回
-public class GxH5GetStartUrlResponse {
+public class GxV2H5GetStartUrlResponse {
     
     // 跳转 URL
     private String h5Url;
@@ -19,7 +19,7 @@ public class GxH5GetStartUrlResponse {
 
     @Override
     public String toString() {
-        return "GxH5GetStartUrlResponse{" +
+        return "GxV2H5GetStartUrlResponse{" +
                        " h5Url='" + h5Url + '\'' + 
                      '}';
     }

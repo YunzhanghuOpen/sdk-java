@@ -1,10 +1,10 @@
-package com.yunzhanghu.sdk.bizlicgxh5.domain;
+package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
 
 
 
 // 查询个体工商户状态返回
-public class GxH5EcoCityAicStatusResponse {
+public class GxV2H5APIGetAicStatusResponse {
     
     // 用户签约状态
     private int status;
@@ -107,7 +107,7 @@ public class GxH5EcoCityAicStatusResponse {
 
     @Override
     public String toString() {
-        return "GxH5EcoCityAicStatusResponse{" +
+        return "GxV2H5APIGetAicStatusResponse{" +
                        " status='" + status + '\'' + 
                        ", statusMessage='" + statusMessage + '\'' + 
                        ", statusDetail='" + statusDetail + '\'' + 

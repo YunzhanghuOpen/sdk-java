@@ -1,10 +1,10 @@
-package com.yunzhanghu.sdk.bizlicgxh5api.domain;
+package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
 
 
 
 // 工商实名信息录入请求
-public class GxH5APIPreCollectBizlicMsgRequest {
+public class GxV2H5APIPreCollectBizlicMsgRequest {
     
     // 平台企业 ID
     private String dealerId;
@@ -129,7 +129,7 @@ public class GxH5APIPreCollectBizlicMsgRequest {
 
     @Override
     public String toString() {
-        return "GxH5APIPreCollectBizlicMsgRequest{" +
+        return "GxV2H5APIPreCollectBizlicMsgRequest{" +
                        " dealerId='" + dealerId + '\'' + 
                        ", brokerId='" + brokerId + '\'' + 
                        ", dealerUserId='" + dealerUserId + '\'' + 

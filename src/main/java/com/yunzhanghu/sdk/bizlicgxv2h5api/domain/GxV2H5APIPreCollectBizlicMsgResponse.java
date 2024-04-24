@@ -1,10 +1,10 @@
-package com.yunzhanghu.sdk.bizlicgxh5api.domain;
+package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
 
 
 
 // 工商实名信息录入返回
-public class GxH5APIPreCollectBizlicMsgResponse {
+public class GxV2H5APIPreCollectBizlicMsgResponse {
     
     // 平台企业端的用户 ID
     private String dealerUserId;
@@ -19,7 +19,7 @@ public class GxH5APIPreCollectBizlicMsgResponse {
 
     @Override
     public String toString() {
-        return "GxH5APIPreCollectBizlicMsgResponse{" +
+        return "GxV2H5APIPreCollectBizlicMsgResponse{" +
                        " dealerUserId='" + dealerUserId + '\'' + 
                      '}';
     }
