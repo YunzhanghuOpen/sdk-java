@@ -102,7 +102,7 @@ public class BizlicGxV2H5Api {
 		request.setBrokerId(config.getBrokerId());
 		request.setOpenId("openId1234567890");
 		request.setRealName("张三");
-		request.setIdCard("110121202202222222");
+		request.setIdCard("11010519491231002X");
 		request.setDealerUserId("userId1234567890");
 		YzhResponse<GxV2H5APIGetAicStatusResponse> response = null;
 		try {
