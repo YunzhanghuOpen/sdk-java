@@ -20,7 +20,7 @@ public class GxV2H5APIGetStartUrlResponse {
     @Override
     public String toString() {
         return "GxV2H5APIGetStartUrlResponse{" +
-                       " h5Url='" + h5Url + '\'' + 
-                     '}';
+                " h5Url='" + h5Url + '\'' + 
+               '}';
     }
 }

@@ -108,15 +108,15 @@ public class GxV2H5APIGetAicStatusResponse {
     @Override
     public String toString() {
         return "GxV2H5APIGetAicStatusResponse{" +
-                       " status='" + status + '\'' + 
-                       ", statusMessage='" + statusMessage + '\'' + 
-                       ", statusDetail='" + statusDetail + '\'' + 
-                       ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-                       ", applyedAt='" + applyedAt + '\'' + 
-                       ", registedAt='" + registedAt + '\'' + 
-                       ", uscc='" + uscc + '\'' + 
-                       ", idCard='" + idCard + '\'' + 
-                       ", realName='" + realName + '\'' + 
-                     '}';
+                " status='" + status + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", applyedAt='" + applyedAt + '\'' + 
+                ", registedAt='" + registedAt + '\'' + 
+                ", uscc='" + uscc + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+               '}';
     }
 }

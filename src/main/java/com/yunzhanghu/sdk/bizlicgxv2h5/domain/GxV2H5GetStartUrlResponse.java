@@ -20,7 +20,7 @@ public class GxV2H5GetStartUrlResponse {
     @Override
     public String toString() {
         return "GxV2H5GetStartUrlResponse{" +
-                       " h5Url='" + h5Url + '\'' + 
-                     '}';
+                " h5Url='" + h5Url + '\'' + 
+               '}';
     }
 }

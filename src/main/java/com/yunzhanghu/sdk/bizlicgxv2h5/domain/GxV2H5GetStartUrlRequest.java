@@ -97,14 +97,14 @@ public class GxV2H5GetStartUrlRequest {
     @Override
     public String toString() {
         return "GxV2H5GetStartUrlRequest{" +
-                       " dealerId='" + dealerId + '\'' + 
-                       ", brokerId='" + brokerId + '\'' + 
-                       ", dealerUserId='" + dealerUserId + '\'' + 
-                       ", clientType='" + clientType + '\'' + 
-                       ", notifyUrl='" + notifyUrl + '\'' + 
-                       ", color='" + color + '\'' + 
-                       ", returnUrl='" + returnUrl + '\'' + 
-                       ", customerTitle='" + customerTitle + '\'' + 
-                     '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+                ", clientType='" + clientType + '\'' + 
+                ", notifyUrl='" + notifyUrl + '\'' + 
+                ", color='" + color + '\'' + 
+                ", returnUrl='" + returnUrl + '\'' + 
+                ", customerTitle='" + customerTitle + '\'' + 
+               '}';
     }
 }

@@ -75,12 +75,12 @@ public class GxV2H5GetAicStatusRequest {
     @Override
     public String toString() {
         return "GxV2H5GetAicStatusRequest{" +
-                       " dealerId='" + dealerId + '\'' + 
-                       ", brokerId='" + brokerId + '\'' + 
-                       ", openId='" + openId + '\'' + 
-                       ", realName='" + realName + '\'' + 
-                       ", idCard='" + idCard + '\'' + 
-                       ", dealerUserId='" + dealerUserId + '\'' + 
-                     '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", openId='" + openId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+               '}';
     }
 }

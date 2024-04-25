@@ -20,7 +20,7 @@ public class GxV2H5APIPreCollectBizlicMsgResponse {
     @Override
     public String toString() {
         return "GxV2H5APIPreCollectBizlicMsgResponse{" +
-                       " dealerUserId='" + dealerUserId + '\'' + 
-                     '}';
+                " dealerUserId='" + dealerUserId + '\'' + 
+               '}';
     }
 }

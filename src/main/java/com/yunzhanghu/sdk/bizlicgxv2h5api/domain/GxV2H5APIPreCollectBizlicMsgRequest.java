@@ -130,17 +130,17 @@ public class GxV2H5APIPreCollectBizlicMsgRequest {
     @Override
     public String toString() {
         return "GxV2H5APIPreCollectBizlicMsgRequest{" +
-                       " dealerId='" + dealerId + '\'' + 
-                       ", brokerId='" + brokerId + '\'' + 
-                       ", dealerUserId='" + dealerUserId + '\'' + 
-                       ", phoneNo='" + phoneNo + '\'' + 
-                       ", idCard='" + idCard + '\'' + 
-                       ", realName='" + realName + '\'' + 
-                       ", idCardAddress='" + idCardAddress + '\'' + 
-                       ", idCardAgency='" + idCardAgency + '\'' + 
-                       ", idCardNation='" + idCardNation + '\'' + 
-                       ", idCardValidityStart='" + idCardValidityStart + '\'' + 
-                       ", idCardValidityEnd='" + idCardValidityEnd + '\'' + 
-                     '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCardAddress='" + idCardAddress + '\'' + 
+                ", idCardAgency='" + idCardAgency + '\'' + 
+                ", idCardNation='" + idCardNation + '\'' + 
+                ", idCardValidityStart='" + idCardValidityStart + '\'' + 
+                ", idCardValidityEnd='" + idCardValidityEnd + '\'' + 
+               '}';
     }
 }

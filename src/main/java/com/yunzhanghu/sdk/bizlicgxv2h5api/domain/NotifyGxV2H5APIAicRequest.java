@@ -163,20 +163,20 @@ public class NotifyGxV2H5APIAicRequest {
     @Override
     public String toString() {
         return "NotifyGxV2H5APIAicRequest{" +
-                       " openId='" + openId + '\'' + 
-                       ", dealerUserId='" + dealerUserId + '\'' + 
-                       ", submitAt='" + submitAt + '\'' + 
-                       ", registedAt='" + registedAt + '\'' + 
-                       ", status='" + status + '\'' + 
-                       ", statusMessage='" + statusMessage + '\'' + 
-                       ", statusDetail='" + statusDetail + '\'' + 
-                       ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-                       ", dealerId='" + dealerId + '\'' + 
-                       ", brokerId='" + brokerId + '\'' + 
-                       ", uscc='" + uscc + '\'' + 
-                       ", idCard='" + idCard + '\'' + 
-                       ", realName='" + realName + '\'' + 
-                       ", type='" + type + '\'' + 
-                     '}';
+                " openId='" + openId + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+                ", submitAt='" + submitAt + '\'' + 
+                ", registedAt='" + registedAt + '\'' + 
+                ", status='" + status + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", uscc='" + uscc + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", type='" + type + '\'' + 
+               '}';
     }
 }

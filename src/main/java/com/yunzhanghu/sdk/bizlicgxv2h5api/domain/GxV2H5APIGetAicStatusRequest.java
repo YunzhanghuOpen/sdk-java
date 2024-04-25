@@ -75,12 +75,12 @@ public class GxV2H5APIGetAicStatusRequest {
     @Override
     public String toString() {
         return "GxV2H5APIGetAicStatusRequest{" +
-                       " dealerId='" + dealerId + '\'' + 
-                       ", brokerId='" + brokerId + '\'' + 
-                       ", openId='" + openId + '\'' + 
-                       ", realName='" + realName + '\'' + 
-                       ", idCard='" + idCard + '\'' + 
-                       ", dealerUserId='" + dealerUserId + '\'' + 
-                     '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", openId='" + openId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+               '}';
     }
 }
