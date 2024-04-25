@@ -21,7 +21,7 @@ public class BizlicGxV2H5 {
         // 预启动
         gxV2H5GetStartUrl();
         // 查询个体工商户状态
-        gxV2H5EcoCityAicStatus();
+        gxV2H5GetAicStatus();
     }
 
     // 预启动
@@ -57,7 +57,7 @@ public class BizlicGxV2H5 {
     }
 
     // 查询个体工商户状态
-    private static void gxV2H5EcoCityAicStatus() {
+    private static void gxV2H5GetAicStatus() {
         GxV2H5GetAicStatusRequest request = new GxV2H5GetAicStatusRequest();
         request.setDealerId(config.getDealerId());
         request.setBrokerId(config.getBrokerId());
