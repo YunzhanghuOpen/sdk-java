@@ -41,7 +41,7 @@ public class BizlicGxV2H5Api {
 		request.setIdCardAgency("区县公安局名称");
 		request.setIdCardNation("20");
 		request.setIdCardValidityStart("2022-02-22");
-		request.setIdCardValidityEnd("2042-01-01");
+		request.setIdCardValidityEnd("2042-02-22");
 		YzhResponse<GxV2H5APIPreCollectBizlicMsgResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识

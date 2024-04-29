@@ -3,7 +3,7 @@ package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
 
 
-// 个体工商户注册结果回调通知
+// 个体工商户注册/注销结果回调通知
 public class NotifyGxV2H5APIAicRequest {
     
     // 用户唯一标识
@@ -18,16 +18,16 @@ public class NotifyGxV2H5APIAicRequest {
     // 注册/注销完成时间
     private String registedAt;
     
-    // 用户签约状态
+    // 用户注册/注销状态
     private int status;
     
-    // 注册状态描述
+    // 注册/注销状态描述
     private String statusMessage;
     
-    // 注册详情状态码
+    // 注册/注销详情状态码
     private int statusDetail;
     
-    // 注册详情状态码描述
+    // 注册/注销详情状态码描述
     private String statusDetailMessage;
     
     // 平台企业 ID

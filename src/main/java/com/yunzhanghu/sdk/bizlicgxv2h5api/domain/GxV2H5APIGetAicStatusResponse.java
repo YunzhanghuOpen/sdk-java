@@ -6,7 +6,7 @@ package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 // 查询个体工商户状态返回
 public class GxV2H5APIGetAicStatusResponse {
     
-    // 用户签约状态
+    // 用户注册状态
     private int status;
     
     // 注册状态描述
