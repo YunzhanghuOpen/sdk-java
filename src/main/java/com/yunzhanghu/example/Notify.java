@@ -50,11 +50,11 @@ public class Notify {
 //			NotifyResponse<NotifyH5EcoCityAicRequest> response = client.notifyDecoder(request, NotifyH5EcoCityAicRequest.class);
 //			NotifyH5EcoCityAicRequest notifyRequest = response.getData();
 			
-			// 共享大额（H5）个体工商户注册结果回调
+			// 共享大额（H5）个体工商户注册/注销结果回调
 //			NotifyResponse<NotifyGxV2H5AicRequest> response = client.notifyDecoder(request, NotifyGxV2H5AicRequest.class);
 //			NotifyGxV2H5AicRequest notifyRequest = response.getData();
 			
-			// 共享大额（H5+API）个体工商户注册结果回调
+			// 共享大额（H5+API）个体工商户注册/注销结果回调
 //			NotifyResponse<NotifyGxV2H5APIAicRequest> response = client.notifyDecoder(request, NotifyGxV2H5APIAicRequest.class);
 //			NotifyGxV2H5APIAicRequest notifyRequest = response.getData();
 
