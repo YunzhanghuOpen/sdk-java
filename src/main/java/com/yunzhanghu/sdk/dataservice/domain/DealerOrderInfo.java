@@ -47,6 +47,9 @@ public class DealerOrderInfo {
     // 订单详细状态码描述
     private String statusDetailMessage;
     
+    // 订单状态补充信息
+    private String supplementalDetailMessage;
+    
     // 短周期授信账单号
     private String statementId;
     
@@ -177,6 +180,14 @@ public class DealerOrderInfo {
         return statusDetailMessage;
     }
 
+    public void setSupplementalDetailMessage(String supplementalDetailMessage) {
+        this.supplementalDetailMessage = supplementalDetailMessage;
+    }
+
+    public String getSupplementalDetailMessage() {
+        return supplementalDetailMessage;
+    }
+
     public void setStatementId(String statementId) {
         this.statementId = statementId;
     }
@@ -228,26 +239,27 @@ public class DealerOrderInfo {
     @Override
     public String toString() {
         return "DealerOrderInfo{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", batchId='" + batchId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", cardNo='" + cardNo + '\'' + 
-             ", brokerAmount='" + brokerAmount + '\'' + 
-             ", brokerFee='" + brokerFee + '\'' + 
-             ", bill='" + bill + '\'' + 
-             ", status='" + status + '\'' + 
-             ", statusMessage='" + statusMessage + '\'' + 
-             ", statusDetail='" + statusDetail + '\'' + 
-             ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-             ", statementId='" + statementId + '\'' + 
-             ", feeStatementId='" + feeStatementId + '\'' + 
-             ", balStatementId='" + balStatementId + '\'' + 
-             ", channel='" + channel + '\'' + 
-             ", createdAt='" + createdAt + '\'' + 
-             ", finishedTime='" + finishedTime + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", batchId='" + batchId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", cardNo='" + cardNo + '\'' + 
+                ", brokerAmount='" + brokerAmount + '\'' + 
+                ", brokerFee='" + brokerFee + '\'' + 
+                ", bill='" + bill + '\'' + 
+                ", status='" + status + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", supplementalDetailMessage='" + supplementalDetailMessage + '\'' + 
+                ", statementId='" + statementId + '\'' + 
+                ", feeStatementId='" + feeStatementId + '\'' + 
+                ", balStatementId='" + balStatementId + '\'' + 
+                ", channel='" + channel + '\'' + 
+                ", createdAt='" + createdAt + '\'' + 
+                ", finishedTime='" + finishedTime + '\'' + 
+               '}';
     }
 }
