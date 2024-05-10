@@ -9,8 +9,13 @@ yzh:
   app_key: Isg2W***zx6iP
   # 签名方式为 RSA，参数固定为：rsa。
   sign_type: rsa
-  # 请求基础地址。
+  # 请求域名。
+  # 生产环境请求域名
   url: https://api-service.yunzhanghu.com
+  # 沙箱环境请求域名
+  # url: https://api-service.yunzhanghu.com/sandbox
+  # 个体工商户注册请求域名
+  # url: https://api-aic.yunzhanghu.com
   # 平台企业私钥。
   rsa_private_key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDACZcSLLFF8KX2***SbuWiGzRX/nNUsg+/RKCR56
   # 云账户公钥。
