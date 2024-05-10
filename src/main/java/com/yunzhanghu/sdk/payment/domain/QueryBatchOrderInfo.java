@@ -42,6 +42,9 @@ public class QueryBatchOrderInfo {
     // 订单详情状态码描述
     private String statusDetailMessage;
     
+    // 订单状态补充信息
+    private String supplementalDetailMessage;
+    
     // 综合服务主体支付金额
     private String brokerAmount;
     
@@ -177,6 +180,14 @@ public class QueryBatchOrderInfo {
         return statusDetailMessage;
     }
 
+    public void setSupplementalDetailMessage(String supplementalDetailMessage) {
+        this.supplementalDetailMessage = supplementalDetailMessage;
+    }
+
+    public String getSupplementalDetailMessage() {
+        return supplementalDetailMessage;
+    }
+
     public void setBrokerAmount(String brokerAmount) {
         this.brokerAmount = brokerAmount;
     }
@@ -284,31 +295,32 @@ public class QueryBatchOrderInfo {
     @Override
     public String toString() {
         return "QueryBatchOrderInfo{" +
-                   " orderId='" + orderId + '\'' + 
-                   ", pay='" + pay + '\'' + 
-                   ", brokerId='" + brokerId + '\'' + 
-                   ", dealerId='" + dealerId + '\'' + 
-                   ", realName='" + realName + '\'' + 
-                   ", cardNo='" + cardNo + '\'' + 
-                   ", idCard='" + idCard + '\'' + 
-                   ", phoneNo='" + phoneNo + '\'' + 
-                   ", status='" + status + '\'' + 
-                   ", statusDetail='" + statusDetail + '\'' + 
-                   ", statusMessage='" + statusMessage + '\'' + 
-                   ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-                   ", brokerAmount='" + brokerAmount + '\'' + 
-                   ", ref='" + ref + '\'' + 
-                   ", brokerBankBill='" + brokerBankBill + '\'' + 
-                   ", withdrawPlatform='" + withdrawPlatform + '\'' + 
-                   ", createdAt='" + createdAt + '\'' + 
-                   ", finishedTime='" + finishedTime + '\'' + 
-                   ", brokerFee='" + brokerFee + '\'' + 
-                   ", brokerRealFee='" + brokerRealFee + '\'' + 
-                   ", brokerDeductFee='" + brokerDeductFee + '\'' + 
-                   ", payRemark='" + payRemark + '\'' + 
-                   ", userFee='" + userFee + '\'' + 
-                   ", bankName='" + bankName + '\'' + 
-                   ", projectId='" + projectId + '\'' + 
-                 '}';
+                " orderId='" + orderId + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", status='" + status + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", supplementalDetailMessage='" + supplementalDetailMessage + '\'' + 
+                ", brokerAmount='" + brokerAmount + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", brokerBankBill='" + brokerBankBill + '\'' + 
+                ", withdrawPlatform='" + withdrawPlatform + '\'' + 
+                ", createdAt='" + createdAt + '\'' + 
+                ", finishedTime='" + finishedTime + '\'' + 
+                ", brokerFee='" + brokerFee + '\'' + 
+                ", brokerRealFee='" + brokerRealFee + '\'' + 
+                ", brokerDeductFee='" + brokerDeductFee + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
+                ", userFee='" + userFee + '\'' + 
+                ", bankName='" + bankName + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+               '}';
     }
 }

@@ -41,6 +41,9 @@ public class GetOrderResponse {
     // 订单详细状态码描述
     private String statusDetailMessage;
     
+    // 订单状态补充信息
+    private String supplementalDetailMessage;
+    
     // 综合服务主体支付金额
     private String brokerAmount;
     
@@ -191,6 +194,14 @@ public class GetOrderResponse {
         return statusDetailMessage;
     }
 
+    public void setSupplementalDetailMessage(String supplementalDetailMessage) {
+        this.supplementalDetailMessage = supplementalDetailMessage;
+    }
+
+    public String getSupplementalDetailMessage() {
+        return supplementalDetailMessage;
+    }
+
     public void setBrokerAmount(String brokerAmount) {
         this.brokerAmount = brokerAmount;
     }
@@ -338,36 +349,37 @@ public class GetOrderResponse {
     @Override
     public String toString() {
         return "GetOrderResponse{" +
-             " orderId='" + orderId + '\'' + 
-             ", pay='" + pay + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", cardNo='" + cardNo + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", phoneNo='" + phoneNo + '\'' + 
-             ", status='" + status + '\'' + 
-             ", statusDetail='" + statusDetail + '\'' + 
-             ", statusMessage='" + statusMessage + '\'' + 
-             ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-             ", brokerAmount='" + brokerAmount + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", brokerBankBill='" + brokerBankBill + '\'' + 
-             ", withdrawPlatform='" + withdrawPlatform + '\'' + 
-             ", createdAt='" + createdAt + '\'' + 
-             ", finishedTime='" + finishedTime + '\'' + 
-             ", brokerFee='" + brokerFee + '\'' + 
-             ", brokerRealFee='" + brokerRealFee + '\'' + 
-             ", brokerDeductFee='" + brokerDeductFee + '\'' + 
-             ", payRemark='" + payRemark + '\'' + 
-             ", userFee='" + userFee + '\'' + 
-             ", bankName='" + bankName + '\'' + 
-             ", projectId='" + projectId + '\'' + 
-             ", anchorId='" + anchorId + '\'' + 
-             ", notes='" + notes + '\'' + 
-             ", sysAmount='" + sysAmount + '\'' + 
-             ", tax='" + tax + '\'' + 
-             ", sysFee='" + sysFee + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", status='" + status + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", supplementalDetailMessage='" + supplementalDetailMessage + '\'' + 
+                ", brokerAmount='" + brokerAmount + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", brokerBankBill='" + brokerBankBill + '\'' + 
+                ", withdrawPlatform='" + withdrawPlatform + '\'' + 
+                ", createdAt='" + createdAt + '\'' + 
+                ", finishedTime='" + finishedTime + '\'' + 
+                ", brokerFee='" + brokerFee + '\'' + 
+                ", brokerRealFee='" + brokerRealFee + '\'' + 
+                ", brokerDeductFee='" + brokerDeductFee + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
+                ", userFee='" + userFee + '\'' + 
+                ", bankName='" + bankName + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+                ", anchorId='" + anchorId + '\'' + 
+                ", notes='" + notes + '\'' + 
+                ", sysAmount='" + sysAmount + '\'' + 
+                ", tax='" + tax + '\'' + 
+                ", sysFee='" + sysFee + '\'' + 
+               '}';
     }
 }
