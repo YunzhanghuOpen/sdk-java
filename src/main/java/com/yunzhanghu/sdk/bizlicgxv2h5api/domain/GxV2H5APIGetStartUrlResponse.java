@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
-
-
-
 // 预启动返回
 public class GxV2H5APIGetStartUrlResponse {
     

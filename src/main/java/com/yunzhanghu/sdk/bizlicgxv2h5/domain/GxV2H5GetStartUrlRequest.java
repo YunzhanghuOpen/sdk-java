@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.bizlicgxv2h5.domain;
 
-
-
-
 // 预启动请求
 public class GxV2H5GetStartUrlRequest {
     

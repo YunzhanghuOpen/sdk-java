@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
-
-
-
 // 工商实名信息录入请求
 public class GxV2H5APIPreCollectBizlicMsgRequest {
     

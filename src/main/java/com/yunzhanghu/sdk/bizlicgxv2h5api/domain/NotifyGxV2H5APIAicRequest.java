@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
-
-
-
 // 个体工商户注册/注销结果回调通知
 public class NotifyGxV2H5APIAicRequest {
     

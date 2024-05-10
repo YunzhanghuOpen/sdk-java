@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.bizlicgxv2h5api.domain;
 
-
-
-
 // 查询个体工商户状态请求
 public class GxV2H5APIGetAicStatusRequest {
     
