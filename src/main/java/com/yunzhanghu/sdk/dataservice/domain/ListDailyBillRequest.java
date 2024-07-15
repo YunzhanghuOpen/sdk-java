@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日流水数据请求
 public class ListDailyBillRequest {
     
@@ -52,10 +50,10 @@ public class ListDailyBillRequest {
     @Override
     public String toString() {
         return "ListDailyBillRequest{" +
-             " billDate='" + billDate + '\'' + 
-             ", offset='" + offset + '\'' + 
-             ", length='" + length + '\'' + 
-             ", dataType='" + dataType + '\'' + 
-           '}';
+                " billDate='" + billDate + '\'' + 
+                ", offset='" + offset + '\'' + 
+                ", length='" + length + '\'' + 
+                ", dataType='" + dataType + '\'' + 
+               "}";
     }
 }

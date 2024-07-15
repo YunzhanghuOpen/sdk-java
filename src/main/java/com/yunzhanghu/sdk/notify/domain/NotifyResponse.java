@@ -38,10 +38,10 @@ public class NotifyResponse<T> {
 	@Override
 	public String toString() {
 		return "NotifyResponse{" +
-              " signRes='" + signRes + '\'' + 
-              ", descryptRes='" + descryptRes + '\'' + 
-              ", data='" + data + '\'' + 
-               '}';
+                " signRes='" + signRes + '\'' + 
+                ", descryptRes='" + descryptRes + '\'' + 
+                ", data='" + data + '\'' + 
+               "}";
 	}
 
 }

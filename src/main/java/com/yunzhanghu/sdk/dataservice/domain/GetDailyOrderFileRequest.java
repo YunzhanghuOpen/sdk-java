@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日订单文件请求
 public class GetDailyOrderFileRequest {
     
@@ -19,7 +17,7 @@ public class GetDailyOrderFileRequest {
     @Override
     public String toString() {
         return "GetDailyOrderFileRequest{" +
-             " orderDate='" + orderDate + '\'' + 
-           '}';
+                " orderDate='" + orderDate + '\'' + 
+               "}";
     }
 }

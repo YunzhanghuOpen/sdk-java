@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询可开具发票额度和发票开具信息返回
 public class GetInvoiceAmountResponse {
     
@@ -41,9 +39,9 @@ public class GetInvoiceAmountResponse {
     @Override
     public String toString() {
         return "GetInvoiceAmountResponse{" +
-             " amount='" + amount + '\'' + 
-             ", bankNameAccount='" + bankNameAccount + '\'' + 
-             ", goodsServicesName='" + goodsServicesName + '\'' + 
-           '}';
+                " amount='" + amount + '\'' + 
+                ", bankNameAccount='" + bankNameAccount + '\'' + 
+                ", goodsServicesName='" + goodsServicesName + '\'' + 
+               "}";
     }
 }

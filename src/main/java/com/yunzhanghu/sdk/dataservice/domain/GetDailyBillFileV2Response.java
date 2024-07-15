@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日流水文件返回
 public class GetDailyBillFileV2Response {
     
@@ -19,7 +17,7 @@ public class GetDailyBillFileV2Response {
     @Override
     public String toString() {
         return "GetDailyBillFileV2Response{" +
-             " billDownloadUrl='" + billDownloadUrl + '\'' + 
-           '}';
+                " billDownloadUrl='" + billDownloadUrl + '\'' + 
+               "}";
     }
 }

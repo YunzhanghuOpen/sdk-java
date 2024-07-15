@@ -5,7 +5,6 @@ import com.yunzhanghu.sdk.utils.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.yaml.snakeyaml.Yaml;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,7 +14,6 @@ import java.util.Properties;
 public class YzhConfig {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(YzhConfig.class);
-
 
     public static String YZH = "yzh";
     public static String YZH_PRE = "yzh.";
@@ -250,7 +248,7 @@ public class YzhConfig {
                 ", yzhRsaPublicKey='" + yzhRsaPublicKey + '\'' +
                 ", yzhRsaPrivateKey='" + yzhRsaPrivateKey + '\'' +
                 ", yzhUrl='" + yzhUrl + '\'' +
-                '}';
+               "}";
     }
 
     public enum SignType {

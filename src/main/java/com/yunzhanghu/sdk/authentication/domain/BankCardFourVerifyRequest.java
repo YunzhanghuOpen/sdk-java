@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 银行卡四要素验证请求
 public class BankCardFourVerifyRequest {
     
@@ -52,10 +50,10 @@ public class BankCardFourVerifyRequest {
     @Override
     public String toString() {
         return "BankCardFourVerifyRequest{" +
-             " cardNo='" + cardNo + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", mobile='" + mobile + '\'' + 
-           '}';
+                " cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", mobile='" + mobile + '\'' + 
+               "}";
     }
 }

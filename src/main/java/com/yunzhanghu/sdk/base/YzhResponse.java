@@ -2,13 +2,11 @@ package com.yunzhanghu.sdk.base;
 
 import com.google.gson.annotations.SerializedName;
 import com.yunzhanghu.sdk.constants.DataDict;
-
 import java.io.Serializable;
 
 public class YzhResponse<T> implements Serializable {
 
     private static final long serialVersionUID = 6552432864952557996L;
-
 
     // http 返回码
     private int httpCode;
@@ -78,6 +76,6 @@ public class YzhResponse<T> implements Serializable {
                 ", message='" + message + '\'' +
                 ", requestId='" + requestId + '\'' +
                 ", data=" + data +
-                '}';
+               "}";
     }
 }

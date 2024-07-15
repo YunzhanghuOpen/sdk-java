@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 流水详情
 public class DealerBillInfo {
     
@@ -173,21 +171,21 @@ public class DealerBillInfo {
     @Override
     public String toString() {
         return "DealerBillInfo{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", brokerProductName='" + brokerProductName + '\'' + 
-             ", dealerProductName='" + dealerProductName + '\'' + 
-             ", bizRef='" + bizRef + '\'' + 
-             ", acctType='" + acctType + '\'' + 
-             ", amount='" + amount + '\'' + 
-             ", balance='" + balance + '\'' + 
-             ", businessCategory='" + businessCategory + '\'' + 
-             ", businessType='" + businessType + '\'' + 
-             ", consumptionType='" + consumptionType + '\'' + 
-             ", createdAt='" + createdAt + '\'' + 
-             ", remark='" + remark + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", brokerProductName='" + brokerProductName + '\'' + 
+                ", dealerProductName='" + dealerProductName + '\'' + 
+                ", bizRef='" + bizRef + '\'' + 
+                ", acctType='" + acctType + '\'' + 
+                ", amount='" + amount + '\'' + 
+                ", balance='" + balance + '\'' + 
+                ", businessCategory='" + businessCategory + '\'' + 
+                ", businessType='" + businessType + '\'' + 
+                ", consumptionType='" + consumptionType + '\'' + 
+                ", createdAt='" + createdAt + '\'' + 
+                ", remark='" + remark + '\'' + 
+               "}";
     }
 }

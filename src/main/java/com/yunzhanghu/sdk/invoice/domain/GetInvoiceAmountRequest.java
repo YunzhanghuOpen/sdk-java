@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询可开具发票额度和发票开具信息请求
 public class GetInvoiceAmountRequest {
     
@@ -30,8 +28,8 @@ public class GetInvoiceAmountRequest {
     @Override
     public String toString() {
         return "GetInvoiceAmountRequest{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 下载 PDF 版发票请求
 public class GetInvoiceFileRequest {
     
@@ -30,8 +28,8 @@ public class GetInvoiceFileRequest {
     @Override
     public String toString() {
         return "GetInvoiceFileRequest{" +
-             " invoiceApplyId='" + invoiceApplyId + '\'' + 
-             ", applicationId='" + applicationId + '\'' + 
-           '}';
+                " invoiceApplyId='" + invoiceApplyId + '\'' + 
+                ", applicationId='" + applicationId + '\'' + 
+               "}";
     }
 }

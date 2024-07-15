@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 银行卡三要素验证请求
 public class BankCardThreeVerifyRequest {
     
@@ -41,9 +39,9 @@ public class BankCardThreeVerifyRequest {
     @Override
     public String toString() {
         return "BankCardThreeVerifyRequest{" +
-             " cardNo='" + cardNo + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-           '}';
+                " cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+               "}";
     }
 }

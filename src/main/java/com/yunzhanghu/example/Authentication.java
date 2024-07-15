@@ -3,9 +3,7 @@ package com.yunzhanghu.example;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
-
 import org.apache.commons.codec.binary.Base64;
-
 import com.yunzhanghu.example.config.Config;
 import com.yunzhanghu.example.utils.BaseUtil;
 import com.yunzhanghu.sdk.authentication.AuthenticationClient;

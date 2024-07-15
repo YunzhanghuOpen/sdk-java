@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询余额日账单数据返回
 public class ListBalanceDailyStatementResponse {
     
@@ -19,7 +17,7 @@ public class ListBalanceDailyStatementResponse {
     @Override
     public String toString() {
         return "ListBalanceDailyStatementResponse{" +
-             " list='" + list + '\'' + 
-           '}';
+                " list='" + list + '\'' + 
+               "}";
     }
 }

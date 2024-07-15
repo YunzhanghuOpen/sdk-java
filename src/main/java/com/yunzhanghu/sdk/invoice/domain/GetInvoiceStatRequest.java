@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询平台企业已开具和待开具发票金额请求
 public class GetInvoiceStatRequest {
     
@@ -41,9 +39,9 @@ public class GetInvoiceStatRequest {
     @Override
     public String toString() {
         return "GetInvoiceStatRequest{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", year='" + year + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", year='" + year + '\'' + 
+               "}";
     }
 }

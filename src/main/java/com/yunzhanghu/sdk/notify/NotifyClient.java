@@ -2,10 +2,8 @@ package com.yunzhanghu.sdk.notify;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import com.yunzhanghu.sdk.base.YzhClient;
 import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.notify.domain.NotifyRequest;

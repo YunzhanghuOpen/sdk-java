@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询发票信息返回
 public class InformationDataInfo {
     
@@ -96,14 +94,14 @@ public class InformationDataInfo {
     @Override
     public String toString() {
         return "InformationDataInfo{" +
-             " goodsServicesName='" + goodsServicesName + '\'' + 
-             ", invoiceNum='" + invoiceNum + '\'' + 
-             ", invoiceCode='" + invoiceCode + '\'' + 
-             ", priceAmount='" + priceAmount + '\'' + 
-             ", taxAmount='" + taxAmount + '\'' + 
-             ", taxRate='" + taxRate + '\'' + 
-             ", priceTaxAmount='" + priceTaxAmount + '\'' + 
-             ", invoicedDate='" + invoicedDate + '\'' + 
-           '}';
+                " goodsServicesName='" + goodsServicesName + '\'' + 
+                ", invoiceNum='" + invoiceNum + '\'' + 
+                ", invoiceCode='" + invoiceCode + '\'' + 
+                ", priceAmount='" + priceAmount + '\'' + 
+                ", taxAmount='" + taxAmount + '\'' + 
+                ", taxRate='" + taxRate + '\'' + 
+                ", priceTaxAmount='" + priceTaxAmount + '\'' + 
+                ", invoicedDate='" + invoicedDate + '\'' + 
+               "}";
     }
 }

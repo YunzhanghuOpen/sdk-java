@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 获取用户签约状态返回
 public class GetApiUserSignStatusResponse {
     
@@ -30,8 +28,8 @@ public class GetApiUserSignStatusResponse {
     @Override
     public String toString() {
         return "GetApiUserSignStatusResponse{" +
-             " signedAt='" + signedAt + '\'' + 
-             ", status='" + status + '\'' + 
-           '}';
+                " signedAt='" + signedAt + '\'' + 
+                ", status='" + status + '\'' + 
+               "}";
     }
 }

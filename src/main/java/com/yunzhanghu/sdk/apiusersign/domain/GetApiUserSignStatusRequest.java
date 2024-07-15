@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 获取用户签约状态请求
 public class GetApiUserSignStatusRequest {
     
@@ -52,10 +50,10 @@ public class GetApiUserSignStatusRequest {
     @Override
     public String toString() {
         return "GetApiUserSignStatusRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+               "}";
     }
 }

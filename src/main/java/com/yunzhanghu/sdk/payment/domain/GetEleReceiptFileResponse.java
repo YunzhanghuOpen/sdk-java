@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询电子回单返回
 public class GetEleReceiptFileResponse {
     
@@ -41,9 +39,9 @@ public class GetEleReceiptFileResponse {
     @Override
     public String toString() {
         return "GetEleReceiptFileResponse{" +
-             " expireTime='" + expireTime + '\'' + 
-             ", fileName='" + fileName + '\'' + 
-             ", url='" + url + '\'' + 
-           '}';
+                " expireTime='" + expireTime + '\'' + 
+                ", fileName='" + fileName + '\'' + 
+                ", url='" + url + '\'' + 
+               "}";
     }
 }

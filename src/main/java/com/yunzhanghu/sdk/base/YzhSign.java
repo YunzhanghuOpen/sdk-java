@@ -1,9 +1,7 @@
 package com.yunzhanghu.sdk.base;
 
-
 import com.yunzhanghu.sdk.constants.XmlData;
 import com.yunzhanghu.sdk.utils.DESUtil;
-
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.concurrent.ThreadLocalRandom;
@@ -55,22 +53,17 @@ public abstract class YzhSign {
 
     public class SignedData {
 
-
         // 时间戳，精确到秒
         private int timestamp;
-
 
         // 签名
         private String sign;
 
-
         // 签名算法
         private String signType;
 
-
         // 随机数，用于签名
         private String mess;
-
 
         // 经过加密后的具体数据
         private String data;

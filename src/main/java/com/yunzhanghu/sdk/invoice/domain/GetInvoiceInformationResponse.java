@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询发票信息返回
 public class GetInvoiceInformationResponse {
     
@@ -19,7 +17,7 @@ public class GetInvoiceInformationResponse {
     @Override
     public String toString() {
         return "GetInvoiceInformationResponse{" +
-             " information='" + information + '\'' + 
-           '}';
+                " information='" + information + '\'' + 
+               "}";
     }
 }

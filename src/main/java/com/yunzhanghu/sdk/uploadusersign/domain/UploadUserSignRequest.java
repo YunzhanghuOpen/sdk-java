@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.uploadusersign.domain;
 
-
-
-
 // 用户签约信息上传请求
 public class UploadUserSignRequest {
     
@@ -93,6 +90,6 @@ public class UploadUserSignRequest {
                 ", phone='" + phone + '\'' +
                 ", isAbroad='" + isAbroad + '\'' +
                 ", notifyUrl='" + notifyUrl + '\'' +
-                '}';
+               "}";
     }
 }

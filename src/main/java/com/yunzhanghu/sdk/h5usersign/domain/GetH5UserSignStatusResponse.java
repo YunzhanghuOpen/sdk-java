@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 获取用户签约状态返回
 public class GetH5UserSignStatusResponse {
     
@@ -30,8 +28,8 @@ public class GetH5UserSignStatusResponse {
     @Override
     public String toString() {
         return "GetH5UserSignStatusResponse{" +
-             " signedAt='" + signedAt + '\'' + 
-             ", status='" + status + '\'' + 
-           '}';
+                " signedAt='" + signedAt + '\'' + 
+                ", status='" + status + '\'' + 
+               "}";
     }
 }

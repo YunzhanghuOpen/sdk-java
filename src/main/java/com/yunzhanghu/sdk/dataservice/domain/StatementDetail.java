@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 余额账单信息详情
 public class StatementDetail {
     
@@ -195,23 +193,23 @@ public class StatementDetail {
     @Override
     public String toString() {
         return "StatementDetail{" +
-             " statementId='" + statementId + '\'' + 
-             ", statementDate='" + statementDate + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerProductName='" + brokerProductName + '\'' + 
-             ", dealerProductName='" + dealerProductName + '\'' + 
-             ", bizType='" + bizType + '\'' + 
-             ", totalMoney='" + totalMoney + '\'' + 
-             ", amount='" + amount + '\'' + 
-             ", reexAmount='" + reexAmount + '\'' + 
-             ", feeAmount='" + feeAmount + '\'' + 
-             ", deductRebateFeeAmount='" + deductRebateFeeAmount + '\'' + 
-             ", moneyAdjust='" + moneyAdjust + '\'' + 
-             ", status='" + status + '\'' + 
-             ", invoiceStatus='" + invoiceStatus + '\'' + 
-             ", projectId='" + projectId + '\'' + 
-             ", projectName='" + projectName + '\'' + 
-           '}';
+                " statementId='" + statementId + '\'' + 
+                ", statementDate='" + statementDate + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerProductName='" + brokerProductName + '\'' + 
+                ", dealerProductName='" + dealerProductName + '\'' + 
+                ", bizType='" + bizType + '\'' + 
+                ", totalMoney='" + totalMoney + '\'' + 
+                ", amount='" + amount + '\'' + 
+                ", reexAmount='" + reexAmount + '\'' + 
+                ", feeAmount='" + feeAmount + '\'' + 
+                ", deductRebateFeeAmount='" + deductRebateFeeAmount + '\'' + 
+                ", moneyAdjust='" + moneyAdjust + '\'' + 
+                ", status='" + status + '\'' + 
+                ", invoiceStatus='" + invoiceStatus + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+                ", projectName='" + projectName + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 用户解约（测试账号专用接口）请求
 public class H5UserReleaseRequest {
     
@@ -63,11 +61,11 @@ public class H5UserReleaseRequest {
     @Override
     public String toString() {
         return "H5UserReleaseRequest{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", certificateType='" + certificateType + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", certificateType='" + certificateType + '\'' + 
+               "}";
     }
 }

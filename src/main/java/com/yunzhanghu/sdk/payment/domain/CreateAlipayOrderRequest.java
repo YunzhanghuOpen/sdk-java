@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 支付宝实时支付请求
 public class CreateAlipayOrderRequest {
     
@@ -140,18 +138,18 @@ public class CreateAlipayOrderRequest {
     @Override
     public String toString() {
         return "CreateAlipayOrderRequest{" +
-             " orderId='" + orderId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", cardNo='" + cardNo + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", phoneNo='" + phoneNo + '\'' + 
-             ", pay='" + pay + '\'' + 
-             ", payRemark='" + payRemark + '\'' + 
-             ", notifyUrl='" + notifyUrl + '\'' + 
-             ", projectId='" + projectId + '\'' + 
-             ", checkName='" + checkName + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
+                ", notifyUrl='" + notifyUrl + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+                ", checkName='" + checkName + '\'' + 
+               "}";
     }
 }

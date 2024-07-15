@@ -3,7 +3,6 @@ package com.yunzhanghu.sdk.utils;
 import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,7 +35,6 @@ public class JsonUtil {
             String[] eles = element.split("=", 2);
             data.put(eles[0], eles[1]);
         }
-
         return gson.fromJson(toJson(data), clazz);
     }
 

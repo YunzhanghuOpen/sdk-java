@@ -114,6 +114,6 @@ public class GxV2H5GetAicStatusResponse {
                 ", uscc='" + uscc + '\'' + 
                 ", idCard='" + idCard + '\'' + 
                 ", realName='" + realName + '\'' + 
-               '}';
+               "}";
     }
 }

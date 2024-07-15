@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 预申请签约请求
 public class H5UserPresignRequest {
     
@@ -63,11 +61,11 @@ public class H5UserPresignRequest {
     @Override
     public String toString() {
         return "H5UserPresignRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", certificateType='" + certificateType + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", certificateType='" + certificateType + '\'' + 
+               "}";
     }
 }

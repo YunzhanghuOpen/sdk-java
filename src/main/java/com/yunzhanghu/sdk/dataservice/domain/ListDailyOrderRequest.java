@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日订单数据请求
 public class ListDailyOrderRequest {
     
@@ -63,11 +61,11 @@ public class ListDailyOrderRequest {
     @Override
     public String toString() {
         return "ListDailyOrderRequest{" +
-             " orderDate='" + orderDate + '\'' + 
-             ", offset='" + offset + '\'' + 
-             ", length='" + length + '\'' + 
-             ", channel='" + channel + '\'' + 
-             ", dataType='" + dataType + '\'' + 
-           '}';
+                " orderDate='" + orderDate + '\'' + 
+                ", offset='" + offset + '\'' + 
+                ", length='" + length + '\'' + 
+                ", channel='" + channel + '\'' + 
+                ", dataType='" + dataType + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日订单文件（支付和退款订单）返回
 public class GetDailyOrderFileV2Response {
     
@@ -19,7 +17,7 @@ public class GetDailyOrderFileV2Response {
     @Override
     public String toString() {
         return "GetDailyOrderFileV2Response{" +
-             " url='" + url + '\'' + 
-           '}';
+                " url='" + url + '\'' + 
+               "}";
     }
 }

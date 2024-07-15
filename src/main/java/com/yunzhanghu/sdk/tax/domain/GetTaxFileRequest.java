@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.tax.domain;
 
-
-
 // 下载个人所得税扣缴明细表请求
 public class GetTaxFileRequest {
     
@@ -41,9 +39,9 @@ public class GetTaxFileRequest {
     @Override
     public String toString() {
         return "GetTaxFileRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", entId='" + entId + '\'' + 
-             ", yearMonth='" + yearMonth + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", entId='" + entId + '\'' + 
+                ", yearMonth='" + yearMonth + '\'' + 
+               "}";
     }
 }

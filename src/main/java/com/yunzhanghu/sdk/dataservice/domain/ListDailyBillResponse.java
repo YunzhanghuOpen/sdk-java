@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日流水数据返回
 public class ListDailyBillResponse {
     
@@ -30,8 +28,8 @@ public class ListDailyBillResponse {
     @Override
     public String toString() {
         return "ListDailyBillResponse{" +
-             " totalNum='" + totalNum + '\'' + 
-             ", list='" + list + '\'' + 
-           '}';
+                " totalNum='" + totalNum + '\'' + 
+                ", list='" + list + '\'' + 
+               "}";
     }
 }

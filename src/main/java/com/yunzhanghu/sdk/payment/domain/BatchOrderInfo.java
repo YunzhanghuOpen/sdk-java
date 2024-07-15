@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 批次下单订单信息
 public class BatchOrderInfo {
     
@@ -118,16 +116,16 @@ public class BatchOrderInfo {
     @Override
     public String toString() {
         return "BatchOrderInfo{" +
-             " orderId='" + orderId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", cardNo='" + cardNo + '\'' + 
-             ", openid='" + openid + '\'' + 
-             ", phoneNo='" + phoneNo + '\'' + 
-             ", projectId='" + projectId + '\'' + 
-             ", pay='" + pay + '\'' + 
-             ", payRemark='" + payRemark + '\'' + 
-             ", notifyUrl='" + notifyUrl + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", cardNo='" + cardNo + '\'' + 
+                ", openid='" + openid + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
+                ", notifyUrl='" + notifyUrl + '\'' + 
+               "}";
     }
 }

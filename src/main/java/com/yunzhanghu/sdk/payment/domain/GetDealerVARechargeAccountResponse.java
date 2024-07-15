@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询平台企业汇款信息返回
 public class GetDealerVARechargeAccountResponse {
     
@@ -52,10 +50,10 @@ public class GetDealerVARechargeAccountResponse {
     @Override
     public String toString() {
         return "GetDealerVARechargeAccountResponse{" +
-             " acctName='" + acctName + '\'' + 
-             ", acctNo='" + acctNo + '\'' + 
-             ", bankName='" + bankName + '\'' + 
-             ", dealerAcctName='" + dealerAcctName + '\'' + 
-           '}';
+                " acctName='" + acctName + '\'' + 
+                ", acctNo='" + acctNo + '\'' + 
+                ", bankName='" + bankName + '\'' + 
+                ", dealerAcctName='" + dealerAcctName + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 批次下单返回订单信息
 public class BatchOrderResult {
     
@@ -63,11 +61,11 @@ public class BatchOrderResult {
     @Override
     public String toString() {
         return "BatchOrderResult{" +
-                   " orderId='" + orderId + '\'' + 
-                   ", ref='" + ref + '\'' + 
-                   ", pay='" + pay + '\'' + 
-                   ", status='" + status + '\'' + 
-                   ", errorReasons='" + errorReasons + '\'' + 
-                 '}';
+                " orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", status='" + status + '\'' + 
+                ", errorReasons='" + errorReasons + '\'' + 
+               "}";
     }
 }

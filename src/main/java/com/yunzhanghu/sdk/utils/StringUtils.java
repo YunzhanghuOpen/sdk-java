@@ -16,7 +16,6 @@ public class StringUtils {
         if (object == null) {
             return true;
         }
-
         return "".equals(trim(object));
     }
 
@@ -26,7 +25,7 @@ public class StringUtils {
 
     public static String getUA(){
     	// yunzhanghu-sdk-{{开发语言}}/{{sdk版本}}/{{语言版本}} 
-        return "yunzhanghu-sdk-java/1.4.15-RELEASE/1.8/";
+        return "yunzhanghu-sdk-java/1.4.16-RELEASE/1.8/";
     }
 
 }

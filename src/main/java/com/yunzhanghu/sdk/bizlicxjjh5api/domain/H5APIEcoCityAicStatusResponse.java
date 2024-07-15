@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
-
-
 // 查询个体工商户状态返回
 public class H5APIEcoCityAicStatusResponse {
     
@@ -107,15 +105,15 @@ public class H5APIEcoCityAicStatusResponse {
     @Override
     public String toString() {
         return "H5APIEcoCityAicStatusResponse{" +
-             " status='" + status + '\'' + 
-             ", statusMessage='" + statusMessage + '\'' + 
-             ", statusDetail='" + statusDetail + '\'' + 
-             ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-             ", applyedAt='" + applyedAt + '\'' + 
-             ", registedAt='" + registedAt + '\'' + 
-             ", uscc='" + uscc + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-           '}';
+                " status='" + status + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", applyedAt='" + applyedAt + '\'' + 
+                ", registedAt='" + registedAt + '\'' + 
+                ", uscc='" + uscc + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+               "}";
     }
 }

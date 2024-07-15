@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 微信实时支付请求
 public class CreateWxpayOrderRequest {
     
@@ -162,20 +160,20 @@ public class CreateWxpayOrderRequest {
     @Override
     public String toString() {
         return "CreateWxpayOrderRequest{" +
-             " orderId='" + orderId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", openid='" + openid + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", phoneNo='" + phoneNo + '\'' + 
-             ", pay='" + pay + '\'' + 
-             ", payRemark='" + payRemark + '\'' + 
-             ", notifyUrl='" + notifyUrl + '\'' + 
-             ", wxAppId='" + wxAppId + '\'' + 
-             ", wxpayMode='" + wxpayMode + '\'' + 
-             ", projectId='" + projectId + '\'' + 
-             ", notes='" + notes + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", openid='" + openid + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
+                ", notifyUrl='" + notifyUrl + '\'' + 
+                ", wxAppId='" + wxAppId + '\'' + 
+                ", wxpayMode='" + wxpayMode + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+                ", notes='" + notes + '\'' + 
+               "}";
     }
 }

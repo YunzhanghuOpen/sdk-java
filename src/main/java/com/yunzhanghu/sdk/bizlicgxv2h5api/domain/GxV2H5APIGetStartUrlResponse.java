@@ -18,6 +18,6 @@ public class GxV2H5APIGetStartUrlResponse {
     public String toString() {
         return "GxV2H5APIGetStartUrlResponse{" +
                 " h5Url='" + h5Url + '\'' + 
-               '}';
+               "}";
     }
 }

@@ -1,7 +1,6 @@
 package com.yunzhanghu.sdk.utils;
 
 import java.nio.charset.Charset;
-
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 

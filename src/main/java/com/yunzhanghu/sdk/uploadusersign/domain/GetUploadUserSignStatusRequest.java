@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.uploadusersign.domain;
 
-
-
-
 // 获取用户签约状态请求
 public class GetUploadUserSignStatusRequest {
     
@@ -57,6 +54,6 @@ public class GetUploadUserSignStatusRequest {
                 ", brokerId='" + brokerId + '\'' +
                 ", realName='" + realName + '\'' +
                 ", idCard='" + idCard + '\'' +
-                '}';
+               "}";
     }
 }

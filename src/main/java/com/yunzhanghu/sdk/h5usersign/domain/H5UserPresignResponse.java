@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 预申请签约返回
 public class H5UserPresignResponse {
     
@@ -41,9 +39,9 @@ public class H5UserPresignResponse {
     @Override
     public String toString() {
         return "H5UserPresignResponse{" +
-             " uid='" + uid + '\'' + 
-             ", token='" + token + '\'' + 
-             ", status='" + status + '\'' + 
-           '}';
+                " uid='" + uid + '\'' + 
+                ", token='" + token + '\'' + 
+                ", status='" + status + '\'' + 
+               "}";
     }
 }

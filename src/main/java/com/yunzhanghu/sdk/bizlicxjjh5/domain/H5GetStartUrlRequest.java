@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5.domain;
 
-
-
 // 预启动请求
 public class H5GetStartUrlRequest {
     
@@ -96,14 +94,14 @@ public class H5GetStartUrlRequest {
     @Override
     public String toString() {
         return "H5GetStartUrlRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", dealerUserId='" + dealerUserId + '\'' + 
-             ", clientType='" + clientType + '\'' + 
-             ", notifyUrl='" + notifyUrl + '\'' + 
-             ", color='" + color + '\'' + 
-             ", returnUrl='" + returnUrl + '\'' + 
-             ", customerTitle='" + customerTitle + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+                ", clientType='" + clientType + '\'' + 
+                ", notifyUrl='" + notifyUrl + '\'' + 
+                ", color='" + color + '\'' + 
+                ", returnUrl='" + returnUrl + '\'' + 
+                ", customerTitle='" + customerTitle + '\'' + 
+               "}";
     }
 }
