@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.tax.domain;
 
-
-
 // 报税文件详情
 public class FileInfo {
     

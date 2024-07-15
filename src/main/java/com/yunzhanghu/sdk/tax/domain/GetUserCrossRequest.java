@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.tax.domain;
 
-
-
 // 查询纳税人是否为跨集团用户请求
 public class GetUserCrossRequest {
     

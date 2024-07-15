@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 签约回调
 public class NotifyH5UserSignRequest {
     

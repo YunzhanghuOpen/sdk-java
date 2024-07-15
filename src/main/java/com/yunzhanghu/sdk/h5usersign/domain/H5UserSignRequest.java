@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 申请签约请求
 public class H5UserSignRequest {
     

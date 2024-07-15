@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 平台企业预付业务服务费记录请求
 public class ListDealerRechargeRecordV2Request {
     

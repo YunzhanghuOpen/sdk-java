@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 批次确认请求
 public class ConfirmBatchOrderRequest {
     

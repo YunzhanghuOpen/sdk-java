@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 预申请签约返回
 public class H5UserPresignResponse {
     

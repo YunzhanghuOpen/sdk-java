@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 订单支付状态回调通知数据
 public class NotifyOrderData {
     

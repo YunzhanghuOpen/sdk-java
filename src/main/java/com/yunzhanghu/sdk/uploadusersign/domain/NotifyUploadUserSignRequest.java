@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.uploadusersign.domain;
 
-
-
-
 // 签约成功状态回调通知
 public class NotifyUploadUserSignRequest {
     

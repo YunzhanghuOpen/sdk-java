@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 下载 PDF 版发票返回
 public class GetInvoiceFileResponse {
     

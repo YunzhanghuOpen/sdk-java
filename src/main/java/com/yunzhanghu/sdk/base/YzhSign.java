@@ -1,6 +1,5 @@
 package com.yunzhanghu.sdk.base;
 
-
 import com.yunzhanghu.sdk.constants.XmlData;
 import com.yunzhanghu.sdk.utils.DESUtil;
 

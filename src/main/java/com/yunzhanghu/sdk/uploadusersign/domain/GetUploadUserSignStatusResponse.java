@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.uploadusersign.domain;
 
-
-
-
 // 获取用户签约状态返回
 public class GetUploadUserSignStatusResponse {
     

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 微信实时支付请求
 public class CreateWxpayOrderRequest {
     

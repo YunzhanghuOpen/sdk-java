@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询余额日账单数据请求
 public class ListBalanceDailyStatementRequest {
     

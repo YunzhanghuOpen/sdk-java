@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
-
-
 // 工商实名信息录入请求
 public class H5PreCollectBizlicMsgRequest {
     

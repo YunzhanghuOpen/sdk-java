@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
-
 // 预付业务服务费记录信息
 public class RechargeRecordInfo {
     

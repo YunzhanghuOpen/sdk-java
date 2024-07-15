@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询单笔订单信息请求
 public class GetOrderRequest {
     

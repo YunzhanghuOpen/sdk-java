@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 银行卡四要素鉴权请求（下发短信验证码）请求
 public class BankCardFourAuthVerifyRequest {
     

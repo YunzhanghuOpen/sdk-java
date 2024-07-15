@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 取消待支付订单返回
 public class CancelOrderResponse {
     

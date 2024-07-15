@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 发票开具完成通知
 public class NotifyInvoiceDoneRequest {
     

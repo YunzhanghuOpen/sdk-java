@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5.domain;
 
-
-
 // 预启动返回
 public class H5GetStartUrlResponse {
     

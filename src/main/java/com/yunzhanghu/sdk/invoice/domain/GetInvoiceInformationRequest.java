@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询发票信息请求
 public class GetInvoiceInformationRequest {
     

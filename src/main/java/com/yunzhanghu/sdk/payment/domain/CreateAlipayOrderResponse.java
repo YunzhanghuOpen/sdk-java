@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 支付宝实时支付返回
 public class CreateAlipayOrderResponse {
     

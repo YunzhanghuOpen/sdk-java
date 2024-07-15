@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询平台企业已开具和待开具发票金额请求
 public class GetInvoiceStatRequest {
     

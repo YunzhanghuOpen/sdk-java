@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 批次下单订单信息
 public class BatchOrderInfo {
     

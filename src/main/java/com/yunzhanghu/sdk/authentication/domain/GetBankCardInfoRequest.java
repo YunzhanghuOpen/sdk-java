@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 银行卡信息查询请求
 public class GetBankCardInfoRequest {
     

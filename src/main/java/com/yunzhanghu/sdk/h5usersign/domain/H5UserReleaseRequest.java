@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 用户解约（测试账号专用接口）请求
 public class H5UserReleaseRequest {
     

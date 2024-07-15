@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 身份证实名验证请求
 public class IDCardVerifyRequest {
     

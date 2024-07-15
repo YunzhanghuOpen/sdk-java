@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 上传免验证用户名单信息请求
 public class UserExemptedInfoRequest {
     

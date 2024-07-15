@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询电子回单请求
 public class GetEleReceiptFileRequest {
     

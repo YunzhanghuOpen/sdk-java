@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日流水数据请求
 public class ListDailyBillRequest {
     

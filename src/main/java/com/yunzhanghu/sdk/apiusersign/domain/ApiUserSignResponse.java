@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 用户签约返回
 public class ApiUserSignResponse {
     

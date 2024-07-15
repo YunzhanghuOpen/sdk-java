@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询发票开具申请状态请求
 public class GetInvoiceStatusRequest {
     

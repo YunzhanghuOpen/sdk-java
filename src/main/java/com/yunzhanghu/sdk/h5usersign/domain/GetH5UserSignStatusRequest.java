@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 获取用户签约状态请求
 public class GetH5UserSignStatusRequest {
     

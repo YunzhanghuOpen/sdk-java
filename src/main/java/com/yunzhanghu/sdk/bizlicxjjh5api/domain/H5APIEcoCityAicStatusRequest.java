@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
-
-
 // 查询个体工商户状态请求
 public class H5APIEcoCityAicStatusRequest {
     

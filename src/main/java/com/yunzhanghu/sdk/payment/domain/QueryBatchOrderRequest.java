@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
-
 // 查询批次订单信息请求
 public class QueryBatchOrderRequest {
     

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日流水文件请求
 public class GetDailyBillFileV2Request {
     

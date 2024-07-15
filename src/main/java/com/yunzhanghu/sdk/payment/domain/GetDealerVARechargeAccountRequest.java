@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询平台企业汇款信息请求
 public class GetDealerVARechargeAccountRequest {
     

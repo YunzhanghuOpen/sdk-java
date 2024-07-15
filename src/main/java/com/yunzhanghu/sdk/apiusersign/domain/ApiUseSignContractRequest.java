@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 import java.util.List;
 
 // 获取协议预览 URL 请求

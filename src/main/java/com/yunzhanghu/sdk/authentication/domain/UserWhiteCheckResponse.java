@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 查看免验证用户名单是否存在返回
 public class UserWhiteCheckResponse {
     

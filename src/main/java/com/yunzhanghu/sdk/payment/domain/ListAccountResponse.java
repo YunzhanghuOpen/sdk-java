@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询平台企业余额返回
 public class ListAccountResponse {
     

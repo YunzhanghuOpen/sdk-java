@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5.domain;
 
-
-
 // 结果回调
 public class NotifyH5EcoCityAicRequest {
     

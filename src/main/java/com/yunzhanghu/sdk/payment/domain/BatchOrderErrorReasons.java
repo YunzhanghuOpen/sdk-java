@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
-
 // 下单失败原因信息
 public class BatchOrderErrorReasons {
     

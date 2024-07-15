@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 用户解约（测试账号专用接口）返回
 public class ApiUserSignReleaseResponse {
     

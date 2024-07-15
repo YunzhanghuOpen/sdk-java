@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
-
 // 批次撤销请求
 public class CancelBatchOrderRequest {
     

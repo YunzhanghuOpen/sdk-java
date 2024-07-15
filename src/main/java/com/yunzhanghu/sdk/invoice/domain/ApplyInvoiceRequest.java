@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 发票开具申请请求
 public class ApplyInvoiceRequest {
     

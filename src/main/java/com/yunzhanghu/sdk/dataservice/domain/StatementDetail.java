@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 余额账单信息详情
 public class StatementDetail {
     

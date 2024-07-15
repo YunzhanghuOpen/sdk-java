@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 银行卡实时支付返回
 public class CreateBankpayOrderResponse {
     
