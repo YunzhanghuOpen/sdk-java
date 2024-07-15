@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 上传免验证用户名单信息审核结果通知
 public class NotifyUserExemptedInfoRequest {
     
@@ -85,13 +83,13 @@ public class NotifyUserExemptedInfoRequest {
     @Override
     public String toString() {
         return "NotifyUserExemptedInfoRequest{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", status='" + status + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", comment='" + comment + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", status='" + status + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", comment='" + comment + '\'' + 
+               "}";
     }
 }

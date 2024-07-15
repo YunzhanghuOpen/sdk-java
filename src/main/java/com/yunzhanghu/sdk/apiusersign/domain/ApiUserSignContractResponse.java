@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 获取协议预览 URL 返回 V2
 public class ApiUserSignContractResponse {
 
@@ -30,8 +28,8 @@ public class ApiUserSignContractResponse {
     @Override
     public String toString() {
         return "ApiUserSignContractResponse{" +
-             " url='" + url + '\'' +
-             ", title='" + title + '\'' +
-           '}';
+                " url='" + url + '\'' +
+                ", title='" + title + '\'' +
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 申请签约请求
 public class H5UserSignRequest {
     
@@ -52,10 +50,10 @@ public class H5UserSignRequest {
     @Override
     public String toString() {
         return "H5UserSignRequest{" +
-             " token='" + token + '\'' + 
-             ", color='" + color + '\'' + 
-             ", url='" + url + '\'' + 
-             ", redirectUrl='" + redirectUrl + '\'' + 
-           '}';
+                " token='" + token + '\'' + 
+                ", color='" + color + '\'' + 
+                ", url='" + url + '\'' + 
+                ", redirectUrl='" + redirectUrl + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询发票信息请求
 public class GetInvoiceInformationRequest {
     
@@ -30,8 +28,8 @@ public class GetInvoiceInformationRequest {
     @Override
     public String toString() {
         return "GetInvoiceInformationRequest{" +
-             " invoiceApplyId='" + invoiceApplyId + '\'' + 
-             ", applicationId='" + applicationId + '\'' + 
-           '}';
+                " invoiceApplyId='" + invoiceApplyId + '\'' + 
+                ", applicationId='" + applicationId + '\'' + 
+               "}";
     }
 }

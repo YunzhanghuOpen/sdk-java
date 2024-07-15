@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 上传免验证用户名单信息请求
 public class UserExemptedInfoRequest {
     
@@ -140,18 +138,18 @@ public class UserExemptedInfoRequest {
     @Override
     public String toString() {
         return "UserExemptedInfoRequest{" +
-             " cardType='" + cardType + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", commentApply='" + commentApply + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", userImages='" + userImages + '\'' + 
-             ", country='" + country + '\'' + 
-             ", birthday='" + birthday + '\'' + 
-             ", gender='" + gender + '\'' + 
-             ", notifyUrl='" + notifyUrl + '\'' + 
-             ", ref='" + ref + '\'' + 
-           '}';
+                " cardType='" + cardType + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", commentApply='" + commentApply + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", userImages='" + userImages + '\'' + 
+                ", country='" + country + '\'' + 
+                ", birthday='" + birthday + '\'' + 
+                ", gender='" + gender + '\'' + 
+                ", notifyUrl='" + notifyUrl + '\'' + 
+                ", ref='" + ref + '\'' + 
+               "}";
     }
 }

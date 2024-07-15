@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 发票开具申请返回
 public class ApplyInvoiceResponse {
     
@@ -30,8 +28,8 @@ public class ApplyInvoiceResponse {
     @Override
     public String toString() {
         return "ApplyInvoiceResponse{" +
-             " applicationId='" + applicationId + '\'' + 
-             ", count='" + count + '\'' + 
-           '}';
+                " applicationId='" + applicationId + '\'' + 
+                ", count='" + count + '\'' + 
+               "}";
     }
 }

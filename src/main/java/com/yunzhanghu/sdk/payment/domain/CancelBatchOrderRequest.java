@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
-
 // 批次撤销请求
 public class CancelBatchOrderRequest {
     
@@ -42,9 +39,9 @@ public class CancelBatchOrderRequest {
     @Override
     public String toString() {
         return "CancelBatchOrderRequest{" +
-                       " batchId='" + batchId + '\'' + 
-                       ", dealerId='" + dealerId + '\'' + 
-                       ", brokerId='" + brokerId + '\'' + 
-                     '}';
+                " batchId='" + batchId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+               "}";
     }
 }

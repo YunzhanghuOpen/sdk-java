@@ -50,6 +50,6 @@ public class YzhRequest<T> {
         return "YzhRequest{" +
                 "requestId='" + requestId + '\'' +
                 ", request=" + request +
-                '}';
+               "}";
     }
 }

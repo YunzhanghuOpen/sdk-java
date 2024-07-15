@@ -138,6 +138,6 @@ public class GxV2H5APIPreCollectBizlicMsgRequest {
                 ", idCardNation='" + idCardNation + '\'' + 
                 ", idCardValidityStart='" + idCardValidityStart + '\'' + 
                 ", idCardValidityEnd='" + idCardValidityEnd + '\'' + 
-               '}';
+               "}";
     }
 }

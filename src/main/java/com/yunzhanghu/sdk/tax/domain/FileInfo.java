@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.tax.domain;
 
-
-
 // 报税文件详情
 public class FileInfo {
     
@@ -41,9 +39,9 @@ public class FileInfo {
     @Override
     public String toString() {
         return "FileInfo{" +
-             " name='" + name + '\'' + 
-             ", url='" + url + '\'' + 
-             ", pwd='" + pwd + '\'' + 
-           '}';
+                " name='" + name + '\'' + 
+                ", url='" + url + '\'' + 
+                ", pwd='" + pwd + '\'' + 
+               "}";
     }
 }

@@ -174,6 +174,6 @@ public class NotifyGxV2H5APIAicRequest {
                 ", idCard='" + idCard + '\'' + 
                 ", realName='" + realName + '\'' + 
                 ", type='" + type + '\'' + 
-               '}';
+               "}";
     }
 }

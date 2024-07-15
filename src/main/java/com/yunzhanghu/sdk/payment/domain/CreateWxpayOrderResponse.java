@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 微信实时支付返回
 public class CreateWxpayOrderResponse {
     
@@ -41,9 +39,9 @@ public class CreateWxpayOrderResponse {
     @Override
     public String toString() {
         return "CreateWxpayOrderResponse{" +
-             " orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", pay='" + pay + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", pay='" + pay + '\'' + 
+               "}";
     }
 }

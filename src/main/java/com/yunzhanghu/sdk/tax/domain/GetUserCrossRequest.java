@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.tax.domain;
 
-
-
 // 查询纳税人是否为跨集团用户请求
 public class GetUserCrossRequest {
     
@@ -52,10 +50,10 @@ public class GetUserCrossRequest {
     @Override
     public String toString() {
         return "GetUserCrossRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", year='" + year + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", entId='" + entId + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", year='" + year + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", entId='" + entId + '\'' + 
+               "}";
     }
 }

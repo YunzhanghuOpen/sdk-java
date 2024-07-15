@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询电子回单请求
 public class GetEleReceiptFileRequest {
     
@@ -30,8 +28,8 @@ public class GetEleReceiptFileRequest {
     @Override
     public String toString() {
         return "GetEleReceiptFileRequest{" +
-             " orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+               "}";
     }
 }

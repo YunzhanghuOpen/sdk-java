@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 银行卡信息查询请求
 public class GetBankCardInfoRequest {
     
@@ -30,8 +28,8 @@ public class GetBankCardInfoRequest {
     @Override
     public String toString() {
         return "GetBankCardInfoRequest{" +
-             " cardNo='" + cardNo + '\'' + 
-             ", bankName='" + bankName + '\'' + 
-           '}';
+                " cardNo='" + cardNo + '\'' + 
+                ", bankName='" + bankName + '\'' + 
+               "}";
     }
 }

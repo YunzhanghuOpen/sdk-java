@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 发票开具申请请求
 public class ApplyInvoiceRequest {
     
@@ -96,14 +94,14 @@ public class ApplyInvoiceRequest {
     @Override
     public String toString() {
         return "ApplyInvoiceRequest{" +
-             " invoiceApplyId='" + invoiceApplyId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", amount='" + amount + '\'' + 
-             ", invoiceType='" + invoiceType + '\'' + 
-             ", bankNameAccount='" + bankNameAccount + '\'' + 
-             ", goodsServicesName='" + goodsServicesName + '\'' + 
-             ", remark='" + remark + '\'' + 
-           '}';
+                " invoiceApplyId='" + invoiceApplyId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", amount='" + amount + '\'' + 
+                ", invoiceType='" + invoiceType + '\'' + 
+                ", bankNameAccount='" + bankNameAccount + '\'' + 
+                ", goodsServicesName='" + goodsServicesName + '\'' + 
+                ", remark='" + remark + '\'' + 
+               "}";
     }
 }

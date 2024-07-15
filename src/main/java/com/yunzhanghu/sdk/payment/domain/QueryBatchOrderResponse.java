@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
-
 // 查询批次订单信息返回
 public class QueryBatchOrderResponse {
     
@@ -119,16 +116,16 @@ public class QueryBatchOrderResponse {
     @Override
     public String toString() {
         return "QueryBatchOrderResponse{" +
-                   " brokerId='" + brokerId + '\'' + 
-                   ", dealerId='" + dealerId + '\'' + 
-                   ", batchId='" + batchId + '\'' + 
-                   ", totalCount='" + totalCount + '\'' + 
-                   ", totalPay='" + totalPay + '\'' + 
-                   ", channel='" + channel + '\'' + 
-                   ", batchStatus='" + batchStatus + '\'' + 
-                   ", batchStatusMessage='" + batchStatusMessage + '\'' + 
-                   ", batchReceivedTime='" + batchReceivedTime + '\'' + 
-                   ", orderList='" + orderList + '\'' + 
-                 '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", batchId='" + batchId + '\'' + 
+                ", totalCount='" + totalCount + '\'' + 
+                ", totalPay='" + totalPay + '\'' + 
+                ", channel='" + channel + '\'' + 
+                ", batchStatus='" + batchStatus + '\'' + 
+                ", batchStatusMessage='" + batchStatusMessage + '\'' + 
+                ", batchReceivedTime='" + batchReceivedTime + '\'' + 
+                ", orderList='" + orderList + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5.domain;
 
-
-
 // 预启动返回
 public class H5GetStartUrlResponse {
     
@@ -19,7 +17,7 @@ public class H5GetStartUrlResponse {
     @Override
     public String toString() {
         return "H5GetStartUrlResponse{" +
-             " h5Url='" + h5Url + '\'' + 
-           '}';
+                " h5Url='" + h5Url + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询发票开具申请状态返回
 public class GetInvoiceStatusResponse {
     
@@ -162,20 +160,20 @@ public class GetInvoiceStatusResponse {
     @Override
     public String toString() {
         return "GetInvoiceStatusResponse{" +
-             " status='" + status + '\'' + 
-             ", count='" + count + '\'' + 
-             ", priceTaxAmount='" + priceTaxAmount + '\'' + 
-             ", priceAmount='" + priceAmount + '\'' + 
-             ", taxAmount='" + taxAmount + '\'' + 
-             ", invoiceType='" + invoiceType + '\'' + 
-             ", customerName='" + customerName + '\'' + 
-             ", customerTaxNum='" + customerTaxNum + '\'' + 
-             ", customerAddressTel='" + customerAddressTel + '\'' + 
-             ", bankNameAccount='" + bankNameAccount + '\'' + 
-             ", goodsServicesName='" + goodsServicesName + '\'' + 
-             ", remark='" + remark + '\'' + 
-             ", postType='" + postType + '\'' + 
-             ", waybillNumber='" + waybillNumber + '\'' + 
-           '}';
+                " status='" + status + '\'' + 
+                ", count='" + count + '\'' + 
+                ", priceTaxAmount='" + priceTaxAmount + '\'' + 
+                ", priceAmount='" + priceAmount + '\'' + 
+                ", taxAmount='" + taxAmount + '\'' + 
+                ", invoiceType='" + invoiceType + '\'' + 
+                ", customerName='" + customerName + '\'' + 
+                ", customerTaxNum='" + customerTaxNum + '\'' + 
+                ", customerAddressTel='" + customerAddressTel + '\'' + 
+                ", bankNameAccount='" + bankNameAccount + '\'' + 
+                ", goodsServicesName='" + goodsServicesName + '\'' + 
+                ", remark='" + remark + '\'' + 
+                ", postType='" + postType + '\'' + 
+                ", waybillNumber='" + waybillNumber + '\'' + 
+               "}";
     }
 }

@@ -45,11 +45,11 @@ public class NotifyRequest {
 	@Override
 	public String toString() {
 		return "NotifyRequest{" +
-              " data='" + data + '\'' + 
-              ", mess='" + mess + '\'' + 
-              ", timestamp='" + timestamp + '\'' + 
-              ", sign='" + sign + '\'' + 
-               '}';
+                " data='" + data + '\'' + 
+                ", mess='" + mess + '\'' + 
+                ", timestamp='" + timestamp + '\'' + 
+                ", sign='" + sign + '\'' + 
+               "}";
 	}
 	
 	

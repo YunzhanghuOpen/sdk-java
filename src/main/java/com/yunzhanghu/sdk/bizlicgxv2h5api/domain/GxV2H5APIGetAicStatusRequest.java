@@ -78,6 +78,6 @@ public class GxV2H5APIGetAicStatusRequest {
                 ", realName='" + realName + '\'' + 
                 ", idCard='" + idCard + '\'' + 
                 ", dealerUserId='" + dealerUserId + '\'' + 
-               '}';
+               "}";
     }
 }

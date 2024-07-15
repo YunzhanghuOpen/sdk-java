@@ -18,6 +18,6 @@ public class GxV2H5APIPreCollectBizlicMsgResponse {
     public String toString() {
         return "GxV2H5APIPreCollectBizlicMsgResponse{" +
                 " dealerUserId='" + dealerUserId + '\'' + 
-               '}';
+               "}";
     }
 }

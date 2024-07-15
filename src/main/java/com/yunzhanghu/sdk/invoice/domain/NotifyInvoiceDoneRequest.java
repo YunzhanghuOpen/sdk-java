@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 发票开具完成通知
 public class NotifyInvoiceDoneRequest {
     
@@ -195,23 +193,23 @@ public class NotifyInvoiceDoneRequest {
     @Override
     public String toString() {
         return "NotifyInvoiceDoneRequest{" +
-             " applicationId='" + applicationId + '\'' + 
-             ", invoiceApplyId='" + invoiceApplyId + '\'' + 
-             ", status='" + status + '\'' + 
-             ", count='" + count + '\'' + 
-             ", priceTaxAmount='" + priceTaxAmount + '\'' + 
-             ", priceAmount='" + priceAmount + '\'' + 
-             ", taxAmount='" + taxAmount + '\'' + 
-             ", invoiceType='" + invoiceType + '\'' + 
-             ", customerName='" + customerName + '\'' + 
-             ", customerTaxNum='" + customerTaxNum + '\'' + 
-             ", customerAddressTel='" + customerAddressTel + '\'' + 
-             ", bankNameAccount='" + bankNameAccount + '\'' + 
-             ", goodsServicesName='" + goodsServicesName + '\'' + 
-             ", remark='" + remark + '\'' + 
-             ", postType='" + postType + '\'' + 
-             ", waybillNumber='" + waybillNumber + '\'' + 
-             ", rejectReason='" + rejectReason + '\'' + 
-           '}';
+                " applicationId='" + applicationId + '\'' + 
+                ", invoiceApplyId='" + invoiceApplyId + '\'' + 
+                ", status='" + status + '\'' + 
+                ", count='" + count + '\'' + 
+                ", priceTaxAmount='" + priceTaxAmount + '\'' + 
+                ", priceAmount='" + priceAmount + '\'' + 
+                ", taxAmount='" + taxAmount + '\'' + 
+                ", invoiceType='" + invoiceType + '\'' + 
+                ", customerName='" + customerName + '\'' + 
+                ", customerTaxNum='" + customerTaxNum + '\'' + 
+                ", customerAddressTel='" + customerAddressTel + '\'' + 
+                ", bankNameAccount='" + bankNameAccount + '\'' + 
+                ", goodsServicesName='" + goodsServicesName + '\'' + 
+                ", remark='" + remark + '\'' + 
+                ", postType='" + postType + '\'' + 
+                ", waybillNumber='" + waybillNumber + '\'' + 
+                ", rejectReason='" + rejectReason + '\'' + 
+               "}";
     }
 }

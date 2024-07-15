@@ -1,11 +1,9 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 银行卡实时支付返回
 public class CreateBankpayOrderResponse {
     
-    
+    // 平台企业订单号
     private String orderId;
     
     // 综合服务平台流水号
@@ -41,9 +39,9 @@ public class CreateBankpayOrderResponse {
     @Override
     public String toString() {
         return "CreateBankpayOrderResponse{" +
-             " orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", pay='" + pay + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", pay='" + pay + '\'' + 
+               "}";
     }
 }

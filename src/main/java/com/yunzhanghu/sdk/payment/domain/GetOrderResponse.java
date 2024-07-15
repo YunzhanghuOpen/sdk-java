@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询单笔订单信息返回
 public class GetOrderResponse {
     
@@ -380,6 +378,6 @@ public class GetOrderResponse {
                 ", sysAmount='" + sysAmount + '\'' + 
                 ", tax='" + tax + '\'' + 
                 ", sysFee='" + sysFee + '\'' + 
-               '}';
+               "}";
     }
 }

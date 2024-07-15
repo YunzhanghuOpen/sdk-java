@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 查询日订单数据返回
 public class ListDailyOrderResponse {
     
@@ -30,8 +28,8 @@ public class ListDailyOrderResponse {
     @Override
     public String toString() {
         return "ListDailyOrderResponse{" +
-             " totalNum='" + totalNum + '\'' + 
-             ", list='" + list + '\'' + 
-           '}';
+                " totalNum='" + totalNum + '\'' + 
+                ", list='" + list + '\'' + 
+               "}";
     }
 }

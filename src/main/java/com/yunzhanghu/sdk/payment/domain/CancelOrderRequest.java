@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 取消待支付订单请求
 public class CancelOrderRequest {
     
@@ -52,10 +50,10 @@ public class CancelOrderRequest {
     @Override
     public String toString() {
         return "CancelOrderRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", channel='" + channel + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", channel='" + channel + '\'' + 
+               "}";
     }
 }

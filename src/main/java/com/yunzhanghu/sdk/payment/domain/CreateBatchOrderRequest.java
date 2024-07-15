@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
-
 // 批次下单请求
 public class CreateBatchOrderRequest {
     
@@ -117,6 +114,6 @@ public class CreateBatchOrderRequest {
                 ", totalCount='" + totalCount + '\'' +
                 ", mode='" + mode + '\'' +
                 ", orderList='" + orderList + '\'' +
-                '}';
+               "}";
     }
 }

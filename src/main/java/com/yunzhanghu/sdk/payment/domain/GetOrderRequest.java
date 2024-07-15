@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询单笔订单信息请求
 public class GetOrderRequest {
     
@@ -41,9 +39,9 @@ public class GetOrderRequest {
     @Override
     public String toString() {
         return "GetOrderRequest{" +
-             " orderId='" + orderId + '\'' + 
-             ", channel='" + channel + '\'' + 
-             ", dataType='" + dataType + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", channel='" + channel + '\'' + 
+                ", dataType='" + dataType + '\'' + 
+               "}";
     }
 }

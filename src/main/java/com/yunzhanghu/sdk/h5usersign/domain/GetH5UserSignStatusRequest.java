@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 获取用户签约状态请求
 public class GetH5UserSignStatusRequest {
     
@@ -52,10 +50,10 @@ public class GetH5UserSignStatusRequest {
     @Override
     public String toString() {
         return "GetH5UserSignStatusRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+               "}";
     }
 }

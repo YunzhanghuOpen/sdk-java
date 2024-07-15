@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 批次确认请求
 public class ConfirmBatchOrderRequest {
     
@@ -52,10 +50,10 @@ public class ConfirmBatchOrderRequest {
     @Override
     public String toString() {
         return "ConfirmBatchOrderRequest{" +
-             " batchId='" + batchId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", channel='" + channel + '\'' + 
-           '}';
+                " batchId='" + batchId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", channel='" + channel + '\'' + 
+               "}";
     }
 }

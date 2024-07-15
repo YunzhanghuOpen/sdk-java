@@ -25,7 +25,6 @@ import org.apache.http.ssl.SSLContexts;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.IOException;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -36,7 +35,6 @@ import java.util.Map;
 public class YzhClient {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(YzhClient.class);
-
 
     private YzhSign yzhSign;
     private YzhConfig yzhConfig;

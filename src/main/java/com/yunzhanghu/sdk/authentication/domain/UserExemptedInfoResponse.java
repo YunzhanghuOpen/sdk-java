@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 上传免验证用户名单信息返回
 public class UserExemptedInfoResponse {
     
@@ -19,7 +17,7 @@ public class UserExemptedInfoResponse {
     @Override
     public String toString() {
         return "UserExemptedInfoResponse{" +
-             " ok='" + ok + '\'' + 
-           '}';
+                " ok='" + ok + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 平台企业预付业务服务费记录返回
 public class ListDealerRechargeRecordV2Response {
     
@@ -19,7 +17,7 @@ public class ListDealerRechargeRecordV2Response {
     @Override
     public String toString() {
         return "ListDealerRechargeRecordV2Response{" +
-             " data='" + data + '\'' + 
-           '}';
+                " data='" + data + '\'' + 
+               "}";
     }
 }

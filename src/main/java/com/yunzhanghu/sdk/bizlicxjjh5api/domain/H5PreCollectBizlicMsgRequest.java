@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
-
-
 // 工商实名信息录入请求
 public class H5PreCollectBizlicMsgRequest {
     
@@ -129,17 +127,17 @@ public class H5PreCollectBizlicMsgRequest {
     @Override
     public String toString() {
         return "H5PreCollectBizlicMsgRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", dealerUserId='" + dealerUserId + '\'' + 
-             ", phoneNo='" + phoneNo + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCardAddress='" + idCardAddress + '\'' + 
-             ", idCardAgency='" + idCardAgency + '\'' + 
-             ", idCardNation='" + idCardNation + '\'' + 
-             ", idCardValidityStart='" + idCardValidityStart + '\'' + 
-             ", idCardValidityEnd='" + idCardValidityEnd + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCardAddress='" + idCardAddress + '\'' + 
+                ", idCardAgency='" + idCardAgency + '\'' + 
+                ", idCardNation='" + idCardNation + '\'' + 
+                ", idCardValidityStart='" + idCardValidityStart + '\'' + 
+                ", idCardValidityEnd='" + idCardValidityEnd + '\'' + 
+               "}";
     }
 }

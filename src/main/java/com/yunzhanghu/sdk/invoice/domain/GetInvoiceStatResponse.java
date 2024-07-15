@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-
-
 // 查询平台企业已开具和待开具发票金额返回
 public class GetInvoiceStatResponse {
     
@@ -63,11 +61,11 @@ public class GetInvoiceStatResponse {
     @Override
     public String toString() {
         return "GetInvoiceStatResponse{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", invoiced='" + invoiced + '\'' + 
-             ", invoicing='" + invoicing + '\'' + 
-             ", notInvoiced='" + notInvoiced + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", invoiced='" + invoiced + '\'' + 
+                ", invoicing='" + invoicing + '\'' + 
+                ", notInvoiced='" + notInvoiced + '\'' + 
+               "}";
     }
 }

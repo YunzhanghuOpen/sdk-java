@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.h5usersign.domain;
 
-
-
 // 签约回调
 public class NotifyH5UserSignRequest {
     
@@ -63,11 +61,11 @@ public class NotifyH5UserSignRequest {
     @Override
     public String toString() {
         return "NotifyH5UserSignRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", phone='" + phone + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", phone='" + phone + '\'' + 
+               "}";
     }
 }

@@ -102,6 +102,6 @@ public class GxV2H5APIGetStartUrlRequest {
                 ", color='" + color + '\'' + 
                 ", returnUrl='" + returnUrl + '\'' + 
                 ", customerTitle='" + customerTitle + '\'' + 
-               '}';
+               "}";
     }
 }

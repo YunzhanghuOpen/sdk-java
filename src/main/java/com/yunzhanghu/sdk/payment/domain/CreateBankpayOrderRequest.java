@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 银行卡实时支付请求
 public class CreateBankpayOrderRequest {
     
@@ -129,17 +127,17 @@ public class CreateBankpayOrderRequest {
     @Override
     public String toString() {
         return "CreateBankpayOrderRequest{" +
-             " orderId='" + orderId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", cardNo='" + cardNo + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", phoneNo='" + phoneNo + '\'' + 
-             ", pay='" + pay + '\'' + 
-             ", payRemark='" + payRemark + '\'' + 
-             ", notifyUrl='" + notifyUrl + '\'' + 
-             ", projectId='" + projectId + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
+                ", notifyUrl='" + notifyUrl + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+               "}";
     }
 }

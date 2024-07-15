@@ -1,10 +1,7 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询平台企业余额返回
 public class ListAccountResponse {
-    
     
     private AccountInfo[] dealerInfos;
 
@@ -19,7 +16,7 @@ public class ListAccountResponse {
     @Override
     public String toString() {
         return "ListAccountResponse{" +
-             " dealerInfos='" + dealerInfos + '\'' + 
-           '}';
+                " dealerInfos='" + dealerInfos + '\'' + 
+               "}";
     }
 }

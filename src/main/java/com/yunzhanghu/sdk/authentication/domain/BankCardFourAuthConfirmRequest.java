@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 银行卡四要素确认请求（上传短信验证码）请求
 public class BankCardFourAuthConfirmRequest {
     
@@ -74,12 +72,12 @@ public class BankCardFourAuthConfirmRequest {
     @Override
     public String toString() {
         return "BankCardFourAuthConfirmRequest{" +
-             " cardNo='" + cardNo + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", mobile='" + mobile + '\'' + 
-             ", captcha='" + captcha + '\'' + 
-             ", ref='" + ref + '\'' + 
-           '}';
+                " cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", mobile='" + mobile + '\'' + 
+                ", captcha='" + captcha + '\'' + 
+                ", ref='" + ref + '\'' + 
+               "}";
     }
 }

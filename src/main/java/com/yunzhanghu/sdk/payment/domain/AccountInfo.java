@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 账户信息
 public class AccountInfo {
     
@@ -118,16 +116,16 @@ public class AccountInfo {
     @Override
     public String toString() {
         return "AccountInfo{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", bankCardBalance='" + bankCardBalance + '\'' + 
-             ", isBankCard='" + isBankCard + '\'' + 
-             ", alipayBalance='" + alipayBalance + '\'' + 
-             ", isAlipay='" + isAlipay + '\'' + 
-             ", wxpayBalance='" + wxpayBalance + '\'' + 
-             ", isWxpay='" + isWxpay + '\'' + 
-             ", rebateFeeBalance='" + rebateFeeBalance + '\'' + 
-             ", acctBalance='" + acctBalance + '\'' + 
-             ", totalBalance='" + totalBalance + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", bankCardBalance='" + bankCardBalance + '\'' + 
+                ", isBankCard='" + isBankCard + '\'' + 
+                ", alipayBalance='" + alipayBalance + '\'' + 
+                ", isAlipay='" + isAlipay + '\'' + 
+                ", wxpayBalance='" + wxpayBalance + '\'' + 
+                ", isWxpay='" + isWxpay + '\'' + 
+                ", rebateFeeBalance='" + rebateFeeBalance + '\'' + 
+                ", acctBalance='" + acctBalance + '\'' + 
+                ", totalBalance='" + totalBalance + '\'' + 
+               "}";
     }
 }

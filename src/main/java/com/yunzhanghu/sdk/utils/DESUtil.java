@@ -1,7 +1,6 @@
 package com.yunzhanghu.sdk.utils;
 
 import org.apache.commons.codec.binary.Base64;
-
 import javax.crypto.Cipher;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.IvParameterSpec;
@@ -57,7 +56,6 @@ public class DESUtil {
         final IvParameterSpec iv = new IvParameterSpec(icv);
 
         cipher.init(Cipher.ENCRYPT_MODE, secretKey, iv);
-
         return cipher.doFinal(content);
     }
 
@@ -73,7 +71,6 @@ public class DESUtil {
         final IvParameterSpec iv = new IvParameterSpec(icv);
 
         cipher.init(Cipher.DECRYPT_MODE, secretKey, iv);
-
         return cipher.doFinal(content);
     }
 

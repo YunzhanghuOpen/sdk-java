@@ -1,7 +1,6 @@
 package com.yunzhanghu.example;
 
 import java.util.List;
-
 import com.yunzhanghu.example.config.Config;
 import com.yunzhanghu.example.utils.BaseUtil;
 import com.yunzhanghu.sdk.base.YzhConfig;

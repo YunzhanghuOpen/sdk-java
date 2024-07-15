@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 用户解约（测试账号专用接口）返回
 public class ApiUserSignReleaseResponse {
     
@@ -19,7 +17,7 @@ public class ApiUserSignReleaseResponse {
     @Override
     public String toString() {
         return "ApiUserSignReleaseResponse{" +
-             " status='" + status + '\'' + 
-           '}';
+                " status='" + status + '\'' + 
+               "}";
     }
 }

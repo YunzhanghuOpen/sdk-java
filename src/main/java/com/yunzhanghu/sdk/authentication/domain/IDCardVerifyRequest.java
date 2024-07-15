@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 身份证实名验证请求
 public class IDCardVerifyRequest {
     
@@ -30,8 +28,8 @@ public class IDCardVerifyRequest {
     @Override
     public String toString() {
         return "IDCardVerifyRequest{" +
-             " idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-           '}';
+                " idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+               "}";
     }
 }

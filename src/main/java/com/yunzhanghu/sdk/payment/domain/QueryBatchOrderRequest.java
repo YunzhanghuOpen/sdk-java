@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
-
 // 查询批次订单信息请求
 public class QueryBatchOrderRequest {
     
@@ -31,8 +28,8 @@ public class QueryBatchOrderRequest {
     @Override
     public String toString() {
         return "QueryBatchOrderRequest{" +
-                   " batchId='" + batchId + '\'' + 
-                   ", dealerId='" + dealerId + '\'' + 
-                 '}';
+                " batchId='" + batchId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+               "}";
     }
 }

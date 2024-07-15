@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
-
 // 预付业务服务费记录信息
 public class RechargeRecordInfo {
     
@@ -108,15 +105,15 @@ public class RechargeRecordInfo {
     @Override
     public String toString() {
         return "RechargeRecordInfo{" +
-                       " dealerId='" + dealerId + '\'' + 
-                       ", brokerId='" + brokerId + '\'' + 
-                       ", rechargeId='" + rechargeId + '\'' + 
-                       ", amount='" + amount + '\'' + 
-                       ", actualAmount='" + actualAmount + '\'' + 
-                       ", createdAt='" + createdAt + '\'' + 
-                       ", rechargeChannel='" + rechargeChannel + '\'' + 
-                       ", remark='" + remark + '\'' + 
-                       ", rechargeAccountNo='" + rechargeAccountNo + '\'' + 
-                     '}';
+                " dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", rechargeId='" + rechargeId + '\'' + 
+                ", amount='" + amount + '\'' + 
+                ", actualAmount='" + actualAmount + '\'' + 
+                ", createdAt='" + createdAt + '\'' + 
+                ", rechargeChannel='" + rechargeChannel + '\'' + 
+                ", remark='" + remark + '\'' + 
+                ", rechargeAccountNo='" + rechargeAccountNo + '\'' + 
+               "}";
     }
 }

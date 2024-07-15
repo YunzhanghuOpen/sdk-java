@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 查询平台企业余额请求
 public class ListAccountRequest {
     
@@ -19,7 +17,7 @@ public class ListAccountRequest {
     @Override
     public String toString() {
         return "ListAccountRequest{" +
-             " dealerId='" + dealerId + '\'' + 
-           '}';
+                " dealerId='" + dealerId + '\'' + 
+               "}";
     }
 }

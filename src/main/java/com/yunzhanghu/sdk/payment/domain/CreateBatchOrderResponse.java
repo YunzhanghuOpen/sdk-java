@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 批次下单返回
 public class CreateBatchOrderResponse {
     
@@ -30,8 +28,8 @@ public class CreateBatchOrderResponse {
     @Override
     public String toString() {
         return "CreateBatchOrderResponse{" +
-             " batchId='" + batchId + '\'' + 
-             ", resultList='" + resultList + '\'' + 
-           '}';
+                " batchId='" + batchId + '\'' + 
+                ", resultList='" + resultList + '\'' + 
+               "}";
     }
 }

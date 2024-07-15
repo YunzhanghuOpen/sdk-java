@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 订单支付状态回调通知
 public class NotifyOrderRequest {
     
@@ -41,9 +39,9 @@ public class NotifyOrderRequest {
     @Override
     public String toString() {
         return "NotifyOrderRequest{" +
-             " notifyId='" + notifyId + '\'' + 
-             ", notifyTime='" + notifyTime + '\'' + 
-             ", data='" + data + '\'' + 
-           '}';
+                " notifyId='" + notifyId + '\'' + 
+                ", notifyTime='" + notifyTime + '\'' + 
+                ", data='" + data + '\'' + 
+               "}";
     }
 }

@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 获取协议预览 URL 请求 V2
 public class ApiUserSignContractRequest {
 
@@ -30,8 +28,8 @@ public class ApiUserSignContractRequest {
     @Override
     public String toString() {
         return "ApiUserSignContractRequest{" +
-             " dealerId='" + dealerId + '\'' +
-             ", brokerId='" + brokerId + '\'' +
-           '}';
+                " dealerId='" + dealerId + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+               "}";
     }
 }

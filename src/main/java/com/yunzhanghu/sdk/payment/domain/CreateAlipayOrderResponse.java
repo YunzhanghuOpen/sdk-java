@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.payment.domain;
 
-
-
 // 支付宝实时支付返回
 public class CreateAlipayOrderResponse {
     
@@ -41,9 +39,9 @@ public class CreateAlipayOrderResponse {
     @Override
     public String toString() {
         return "CreateAlipayOrderResponse{" +
-             " orderId='" + orderId + '\'' + 
-             ", ref='" + ref + '\'' + 
-             ", pay='" + pay + '\'' + 
-           '}';
+                " orderId='" + orderId + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", pay='" + pay + '\'' + 
+               "}";
     }
 }

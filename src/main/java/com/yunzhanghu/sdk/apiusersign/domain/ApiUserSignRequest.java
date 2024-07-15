@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.apiusersign.domain;
 
-
-
 // 用户签约请求
 public class ApiUserSignRequest {
     
@@ -63,11 +61,11 @@ public class ApiUserSignRequest {
     @Override
     public String toString() {
         return "ApiUserSignRequest{" +
-             " brokerId='" + brokerId + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", cardType='" + cardType + '\'' + 
-           '}';
+                " brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", cardType='" + cardType + '\'' + 
+               "}";
     }
 }

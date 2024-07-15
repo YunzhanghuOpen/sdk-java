@@ -1,8 +1,5 @@
 package com.yunzhanghu.sdk.uploadusersign.domain;
 
-
-
-
 // 用户签约信息上传返回
 public class UploadUserSignResponse {
     
@@ -21,6 +18,6 @@ public class UploadUserSignResponse {
     public String toString() {
         return "UploadUserSignResponse{" +
                 " status='" + status + '\'' +
-                '}';
+               "}";
     }
 }

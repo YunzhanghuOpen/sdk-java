@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-
-
 // 平台企业支付订单信息
 public class DealerOrderInfo {
     
@@ -260,6 +258,6 @@ public class DealerOrderInfo {
                 ", channel='" + channel + '\'' + 
                 ", createdAt='" + createdAt + '\'' + 
                 ", finishedTime='" + finishedTime + '\'' + 
-               '}';
+               "}";
     }
 }

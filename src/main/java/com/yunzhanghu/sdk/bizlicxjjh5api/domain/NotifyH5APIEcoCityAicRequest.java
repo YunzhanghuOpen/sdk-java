@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.bizlicxjjh5api.domain;
 
-
-
 // 结果回调
 public class NotifyH5APIEcoCityAicRequest {
     
@@ -162,20 +160,20 @@ public class NotifyH5APIEcoCityAicRequest {
     @Override
     public String toString() {
         return "NotifyH5APIEcoCityAicRequest{" +
-             " openId='" + openId + '\'' + 
-             ", dealerUserId='" + dealerUserId + '\'' + 
-             ", submitAt='" + submitAt + '\'' + 
-             ", registedAt='" + registedAt + '\'' + 
-             ", status='" + status + '\'' + 
-             ", statusMessage='" + statusMessage + '\'' + 
-             ", statusDetail='" + statusDetail + '\'' + 
-             ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-             ", dealerId='" + dealerId + '\'' + 
-             ", brokerId='" + brokerId + '\'' + 
-             ", uscc='" + uscc + '\'' + 
-             ", idCard='" + idCard + '\'' + 
-             ", realName='" + realName + '\'' + 
-             ", type='" + type + '\'' + 
-           '}';
+                " openId='" + openId + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+                ", submitAt='" + submitAt + '\'' + 
+                ", registedAt='" + registedAt + '\'' + 
+                ", status='" + status + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", uscc='" + uscc + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", type='" + type + '\'' + 
+               "}";
     }
 }

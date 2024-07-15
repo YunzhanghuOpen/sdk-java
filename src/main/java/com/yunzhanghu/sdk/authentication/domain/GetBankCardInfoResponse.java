@@ -1,7 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
-
 // 银行卡信息查询返回
 public class GetBankCardInfoResponse {
     
@@ -52,10 +50,10 @@ public class GetBankCardInfoResponse {
     @Override
     public String toString() {
         return "GetBankCardInfoResponse{" +
-             " bankCode='" + bankCode + '\'' + 
-             ", bankName='" + bankName + '\'' + 
-             ", cardType='" + cardType + '\'' + 
-             ", isSupport='" + isSupport + '\'' + 
-           '}';
+                " bankCode='" + bankCode + '\'' + 
+                ", bankName='" + bankName + '\'' + 
+                ", cardType='" + cardType + '\'' + 
+                ", isSupport='" + isSupport + '\'' + 
+               "}";
     }
 }
