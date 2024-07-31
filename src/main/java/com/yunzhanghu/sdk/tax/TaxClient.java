@@ -15,7 +15,7 @@ public class TaxClient extends YzhClient {
         super(yzhConfig);
     }
 
-    // 下载个人所得税扣缴明细表
+    // 下载个人所得税申报明细表
     public YzhResponse<GetTaxFileResponse> getTaxFile(YzhRequest<GetTaxFileRequest> req) throws YzhException {
         try {
             return post(req, "/api/tax/v1/taxfile/download", new TypeToken<YzhResponse<GetTaxFileResponse>>(){});

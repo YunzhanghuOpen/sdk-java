@@ -32,7 +32,6 @@ public class UploadUserSign {
 		request.setRealName("张三");
 		request.setIdCard("11010519491231002X");
 		request.setPhone("188****8888");
-		request.setIsAbroad(false);
 		request.setNotifyUrl("https://www.example.com");
 		YzhResponse<UploadUserSignResponse> response = null;
 		try {

@@ -11,20 +11,20 @@ import com.yunzhanghu.sdk.tax.domain.GetTaxFileResponse;
 import com.yunzhanghu.sdk.tax.domain.GetUserCrossRequest;
 import com.yunzhanghu.sdk.tax.domain.GetUserCrossResponse;
 
-// 个人所得税扣缴明细表
+// 个人所得税申报明细表
 public class Tax {
 
 	private static YzhConfig config = Config.getYzhConfig();
 	private static TaxClient client = new TaxClient(config);
 
 	public static void main(String[] args) {
-		// 下载个人所得税扣缴明细表
+		// 下载个人所得税申报明细表
 		getTaxFile();
 		// 查询纳税人是否为跨集团用户
 		getUserCross();
 	}
 
-	// 下载个人所得税扣缴明细表
+	// 下载个人所得税申报明细表
 	private static void getTaxFile() {
 		GetTaxFileRequest request = new GetTaxFileRequest();
 		request.setDealerId(config.getDealerId());

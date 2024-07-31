@@ -50,7 +50,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 <dependency>
     <groupId>com.yunzhanghu.openapi</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.4.16-RELEASE</version>
+    <version>1.4.18-RELEASE</version>
 </dependency>
 ```
 
@@ -72,7 +72,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 - [异步回调](src/main/java/com/yunzhanghu/example/Notify.java) 
 - [对账文件获取](src/main/java/com/yunzhanghu/example/DataService.java)
 - [发票开具](src/main/java/com/yunzhanghu/example/Invoice.java)
-- [个人所得税扣缴明细表](src/main/java/com/yunzhanghu/example/Tax.java)
+- [个人所得税申报明细表](src/main/java/com/yunzhanghu/example/Tax.java)
 
 #### 示例
 
