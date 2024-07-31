@@ -42,7 +42,7 @@ public class Notify {
 //			NotifyResponse<NotifyH5UserSignRequest> response = client.notifyDecoder(request, NotifyH5UserSignRequest.class);
 //			NotifyH5UserSignRequest notifyRequest = response.getData();
 
-			// 免验证名单审核结果回调通知
+			// 非居民身份证验证名单审核结果回调通知
 //			NotifyResponse<NotifyUserExemptedInfoRequest> response = client.notifyDecoder(request, NotifyUserExemptedInfoRequest.class);
 //			NotifyUserExemptedInfoRequest notifyRequest = response.getData();
 

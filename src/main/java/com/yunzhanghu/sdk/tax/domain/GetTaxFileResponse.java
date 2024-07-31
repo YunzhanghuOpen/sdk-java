@@ -1,6 +1,6 @@
 package com.yunzhanghu.sdk.tax.domain;
 
-// 下载个人所得税扣缴明细表返回
+// 下载个人所得税申报明细表返回
 public class GetTaxFileResponse {
     
     // 文件详情

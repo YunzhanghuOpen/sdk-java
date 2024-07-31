@@ -1,9 +1,9 @@
-package com.yunzhanghu.sdk.authentication.domain;
+package com.yunzhanghu.sdk.payment.domain;
 
-// 上传非居民身份证验证名单信息返回
-public class UserExemptedInfoResponse {
+// 重试挂起状态订单返回
+public class RetryOrderResponse {
     
-    // 是否上传成功
+    // 请求标识
     private String ok;
 
     public void setOk(String ok) {
@@ -16,7 +16,7 @@ public class UserExemptedInfoResponse {
 
     @Override
     public String toString() {
-        return "UserExemptedInfoResponse{" +
+        return "RetryOrderResponse{" +
                 " ok='" + ok + '\'' + 
                "}";
     }

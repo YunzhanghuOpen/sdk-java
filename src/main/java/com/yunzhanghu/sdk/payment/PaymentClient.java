@@ -95,6 +95,16 @@ public class PaymentClient extends YzhClient {
         }
     }
 
+    // 重试挂起状态订单
+    public YzhResponse<RetryOrderResponse> retryOrder(YzhRequest<RetryOrderRequest> req) throws YzhException {
+        try {
+            return post(req, "/api/payment/v1/order/retry", new TypeToken<YzhResponse<RetryOrderResponse>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
+
     // 批次下单
     public YzhResponse<CreateBatchOrderResponse> createBatchOrder(YzhRequest<CreateBatchOrderRequest> req) throws YzhException {
         try {
@@ -114,7 +124,7 @@ public class PaymentClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
-    
+
     // 查询批次订单信息
     public YzhResponse<QueryBatchOrderResponse> queryBatchOrder(YzhRequest<QueryBatchOrderRequest> req) throws YzhException {
         try {
@@ -129,6 +139,16 @@ public class PaymentClient extends YzhClient {
     public YzhResponse<CancelBatchOrderResponse> cancelBatchOrder(YzhRequest<CancelBatchOrderRequest> req) throws YzhException {
         try {
             return post(req, "/api/payment/v1/cancel-batch", new TypeToken<YzhResponse<CancelBatchOrderResponse>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
+
+    // 用户结算金额校验
+    public YzhResponse<CheckUserAmountResponse> CheckUserAmount(YzhRequest<CheckUserAmountRequest> req) throws YzhException {
+        try {
+            return post(req, "/api/payment/v1/risk-check/amount", new TypeToken<YzhResponse<CheckUserAmountResponse>>(){});
         } catch (Exception e){
             LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
             throw new YzhException("msg", e);
