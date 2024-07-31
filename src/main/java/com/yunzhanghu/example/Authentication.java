@@ -44,9 +44,9 @@ public class Authentication {
 		bankCardThreeVerify();
 		// 身份证实名验证
 		iDCardVerify();
-		// 上传用户免验证名单信息
+		// 上传非居民身份证验证名单信息
 		userExemptedInfo();
-		// 查看用户免验证名单是否存在
+		// 查看用户是否在非居民身份证验证名单中
 		userWhiteCheck();
 		// 银行卡信息查询
 		getBankCardInfo();
@@ -191,7 +191,7 @@ public class Authentication {
 		}
 	}
 
-	// 上传用户免验证名单信息
+	// 上传非居民身份证验证名单信息
 	private static void userExemptedInfo() {
 		String imgFile = "xxxxx/xxx.jpeg";
 		String[] imgarr = new String[1];
@@ -231,7 +231,7 @@ public class Authentication {
 		}
 	}
 
-	// 查看用户免验证名单是否存在
+	// 查看用户是否在非居民身份证验证名单中
 	private static void userWhiteCheck() {
 		UserWhiteCheckRequest request = new UserWhiteCheckRequest();
 		request.setRealName("张三");

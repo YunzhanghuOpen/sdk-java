@@ -1,6 +1,6 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-// 查看免验证用户名单是否存在请求
+// 查看用户是否在非居民身份证验证名单中请求
 public class UserWhiteCheckRequest {
     
     // 证件号码

@@ -1,6 +1,6 @@
 package com.yunzhanghu.sdk.tax.domain;
 
-// 下载个人所得税扣缴明细表请求
+// 下载个人所得税申报明细表请求
 public class GetTaxFileRequest {
     
     // 平台企业 ID

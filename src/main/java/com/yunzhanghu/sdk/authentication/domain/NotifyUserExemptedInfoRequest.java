@@ -1,6 +1,6 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-// 上传免验证用户名单信息审核结果通知
+// 非居民身份证验证名单审核结果回调通知
 public class NotifyUserExemptedInfoRequest {
     
     // 综合服务主体 ID

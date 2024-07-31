@@ -65,7 +65,7 @@ public class AuthenticationClient extends YzhClient {
         }
     }
 
-    // 上传免验证用户名单信息
+    // 上传非居民身份证验证名单信息
     public YzhResponse<UserExemptedInfoResponse> userExemptedInfo(YzhRequest<UserExemptedInfoRequest> req) throws YzhException {
         try {
             return post(req, "/api/payment/v1/user/exempted/info", new TypeToken<YzhResponse<UserExemptedInfoResponse>>(){});
@@ -75,7 +75,7 @@ public class AuthenticationClient extends YzhClient {
         }
     }
 
-    // 查看免验证用户名单是否存在
+    // 查看用户是否在非居民身份证验证名单中
     public YzhResponse<UserWhiteCheckResponse> userWhiteCheck(YzhRequest<UserWhiteCheckRequest> req) throws YzhException {
         try {
             return post(req, "/api/payment/v1/user/white/check", new TypeToken<YzhResponse<UserWhiteCheckResponse>>(){});
