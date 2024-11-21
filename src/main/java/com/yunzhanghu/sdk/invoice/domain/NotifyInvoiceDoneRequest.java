@@ -53,6 +53,9 @@ public class NotifyInvoiceDoneRequest {
     
     // 驳回原因
     private String rejectReason;
+    
+    // 发票介质
+    private String invoiceMedia;
 
     public void setApplicationId(String applicationId) {
         this.applicationId = applicationId;
@@ -190,6 +193,14 @@ public class NotifyInvoiceDoneRequest {
         return rejectReason;
     }
 
+    public void setInvoiceMedia(String invoiceMedia) {
+        this.invoiceMedia = invoiceMedia;
+    }
+
+    public String getInvoiceMedia() {
+        return invoiceMedia;
+    }
+
     @Override
     public String toString() {
         return "NotifyInvoiceDoneRequest{" +
@@ -210,6 +221,7 @@ public class NotifyInvoiceDoneRequest {
                 ", postType='" + postType + '\'' + 
                 ", waybillNumber='" + waybillNumber + '\'' + 
                 ", rejectReason='" + rejectReason + '\'' + 
+                ", invoiceMedia='" + invoiceMedia + '\'' + 
                "}";
     }
 }

@@ -75,7 +75,7 @@ public class InvoiceClient extends YzhClient {
         }
     }
 
-    // 发送发票扫描件压缩包下载链接邮件
+    // 发送发票开具成功通知邮件
     public YzhResponse<SendReminderEmailResponse> sendReminderEmail(YzhRequest<SendReminderEmailRequest> req) throws YzhException {
         try {
             return post(req, "/api/invoice/v2/invoice/reminder/email", new TypeToken<YzhResponse<SendReminderEmailResponse>>(){});

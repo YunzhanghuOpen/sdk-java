@@ -2,30 +2,33 @@ package com.yunzhanghu.sdk.invoice.domain;
 
 // 查询发票信息返回
 public class InformationDataInfo {
-    
+
     // 货物或应税劳务、服务名称
     private String goodsServicesName;
-    
+
     // 发票号码
     private String invoiceNum;
-    
+
     // 发票代码
     private String invoiceCode;
-    
+
     // 不含税金额
     private String priceAmount;
-    
+
     // 税额
     private String taxAmount;
-    
+
     // 税率
     private String taxRate;
-    
+
     // 价税合计
     private String priceTaxAmount;
-    
+
     // 开票日期
     private String invoicedDate;
+
+    // 发票状态
+    private String status;
 
     public void setGoodsServicesName(String goodsServicesName) {
         this.goodsServicesName = goodsServicesName;
@@ -91,17 +94,26 @@ public class InformationDataInfo {
         return invoicedDate;
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
     @Override
     public String toString() {
         return "InformationDataInfo{" +
-                " goodsServicesName='" + goodsServicesName + '\'' + 
-                ", invoiceNum='" + invoiceNum + '\'' + 
-                ", invoiceCode='" + invoiceCode + '\'' + 
-                ", priceAmount='" + priceAmount + '\'' + 
-                ", taxAmount='" + taxAmount + '\'' + 
-                ", taxRate='" + taxRate + '\'' + 
-                ", priceTaxAmount='" + priceTaxAmount + '\'' + 
-                ", invoicedDate='" + invoicedDate + '\'' + 
-               "}";
+                " goodsServicesName='" + goodsServicesName + '\'' +
+                ", invoiceNum='" + invoiceNum + '\'' +
+                ", invoiceCode='" + invoiceCode + '\'' +
+                ", priceAmount='" + priceAmount + '\'' +
+                ", taxAmount='" + taxAmount + '\'' +
+                ", taxRate='" + taxRate + '\'' +
+                ", priceTaxAmount='" + priceTaxAmount + '\'' +
+                ", invoicedDate='" + invoicedDate + '\'' +
+                ", status='" + status + '\'' +
+                "}";
     }
 }

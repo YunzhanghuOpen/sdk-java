@@ -1,6 +1,6 @@
 package com.yunzhanghu.sdk.invoice.domain;
 
-// 发送发票扫描件压缩包下载链接邮件请求
+// 发送发票开具成功通知邮件请求
 public class SendReminderEmailRequest {
     
     // 发票申请编号

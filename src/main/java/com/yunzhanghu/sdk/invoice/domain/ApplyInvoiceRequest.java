@@ -26,6 +26,12 @@ public class ApplyInvoiceRequest {
     
     // 发票备注
     private String remark;
+    
+    // 发票接收邮箱
+    private String[] receiveEmails;
+    
+    // 发票介质
+    private String invoiceMedia;
 
     public void setInvoiceApplyId(String invoiceApplyId) {
         this.invoiceApplyId = invoiceApplyId;
@@ -91,6 +97,22 @@ public class ApplyInvoiceRequest {
         return remark;
     }
 
+    public void setReceiveEmails(String[] receiveEmails) {
+        this.receiveEmails = receiveEmails;
+    }
+
+    public String[] getReceiveEmails() {
+        return receiveEmails;
+    }
+
+    public void setInvoiceMedia(String invoiceMedia) {
+        this.invoiceMedia = invoiceMedia;
+    }
+
+    public String getInvoiceMedia() {
+        return invoiceMedia;
+    }
+
     @Override
     public String toString() {
         return "ApplyInvoiceRequest{" +
@@ -102,6 +124,8 @@ public class ApplyInvoiceRequest {
                 ", bankNameAccount='" + bankNameAccount + '\'' + 
                 ", goodsServicesName='" + goodsServicesName + '\'' + 
                 ", remark='" + remark + '\'' + 
+                ", receiveEmails='" + receiveEmails + '\'' + 
+                ", invoiceMedia='" + invoiceMedia + '\'' + 
                "}";
     }
 }

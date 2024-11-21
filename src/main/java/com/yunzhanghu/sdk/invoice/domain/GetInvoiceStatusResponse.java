@@ -44,6 +44,12 @@ public class GetInvoiceStatusResponse {
     
     // 快递单号
     private String[] waybillNumber;
+    
+    // 驳回原因
+    private String rejectReason;
+    
+    // 发票介质
+    private String invoiceMedia;
 
     public void setStatus(String status) {
         this.status = status;
@@ -157,6 +163,22 @@ public class GetInvoiceStatusResponse {
         return waybillNumber;
     }
 
+    public void setRejectReason(String rejectReason) {
+        this.rejectReason = rejectReason;
+    }
+
+    public String getRejectReason() {
+        return rejectReason;
+    }
+
+    public void setInvoiceMedia(String invoiceMedia) {
+        this.invoiceMedia = invoiceMedia;
+    }
+
+    public String getInvoiceMedia() {
+        return invoiceMedia;
+    }
+
     @Override
     public String toString() {
         return "GetInvoiceStatusResponse{" +
@@ -174,6 +196,8 @@ public class GetInvoiceStatusResponse {
                 ", remark='" + remark + '\'' + 
                 ", postType='" + postType + '\'' + 
                 ", waybillNumber='" + waybillNumber + '\'' + 
+                ", rejectReason='" + rejectReason + '\'' + 
+                ", invoiceMedia='" + invoiceMedia + '\'' + 
                "}";
     }
 }

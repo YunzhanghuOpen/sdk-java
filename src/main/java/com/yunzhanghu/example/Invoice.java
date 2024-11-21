@@ -40,7 +40,7 @@ public class Invoice {
 		getInvoiceInformation();
 		// 下载 PDF 版发票
 		getInvoiceFile();
-		// 发送发票扫描件压缩包下载链接邮件
+		// 发送发票开具成功通知邮件
 		sendReminderEmail();
 	}
 
@@ -99,6 +99,10 @@ public class Invoice {
 
 	// 发票开具申请
 	private static void applyInvoice() {
+		String receiveEmail = "username1@example.com";
+		String[] receiveEmails = new String[1];
+		receiveEmails[0] = receiveEmail;
+        
 		ApplyInvoiceRequest request = new ApplyInvoiceRequest();
 		request.setInvoiceApplyId("test1234567890");
 		request.setDealerId(config.getDealerId());
@@ -108,6 +112,8 @@ public class Invoice {
 		request.setBankNameAccount("交通银行北京东大桥支行 12343456654321");
 		request.setGoodsServicesName("信息技术服务*信息技术服务费");
 		request.setRemark("测试备注");
+		request.setReceiveEmails(receiveEmails);
+		request.setInvoiceMedia("1");
 		YzhResponse<ApplyInvoiceResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -207,7 +213,7 @@ public class Invoice {
 		}
 	}
 
-	// 发送发票扫描件压缩包下载链接邮件
+	// 发送发票开具成功通知邮件
 	private static void sendReminderEmail() {
 		SendReminderEmailRequest request = new SendReminderEmailRequest();
 		request.setInvoiceApplyId("test1234567890");
