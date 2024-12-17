@@ -26,6 +26,16 @@ public class DataServiceClient extends YzhClient {
         }
     }
 
+    // 查询日订单数据（支付和退款订单）
+    public YzhResponse<ListDailyOrderV2Response> listDailyOrderV2(YzhRequest<ListDailyOrderV2Request> req) throws YzhException {
+        try {
+            return get(req, "/api/dataservice/v2/orders", "encryption".equals(req.getRequest().getDataType()), new TypeToken<YzhResponse<ListDailyOrderV2Response>>(){});
+        } catch (Exception e){
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            throw new YzhException("msg", e);
+        }
+    }
+
     // 查询日订单文件
     public YzhResponse<GetDailyOrderFileResponse> getDailyOrderFile(YzhRequest<GetDailyOrderFileRequest> req) throws YzhException {
         try {
