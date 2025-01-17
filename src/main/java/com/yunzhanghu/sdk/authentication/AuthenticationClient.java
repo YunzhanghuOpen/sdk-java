@@ -2,8 +2,8 @@ package com.yunzhanghu.sdk.authentication;
 
 import com.google.gson.reflect.TypeToken;
 import com.yunzhanghu.sdk.YzhException;
-import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.authentication.domain.*;
+import com.yunzhanghu.sdk.base.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +20,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return post(req, "/authentication/verify-request", new TypeToken<YzhResponse<BankCardFourAuthVerifyResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return post(req, "/authentication/verify-confirm", new TypeToken<YzhResponse<BankCardFourAuthConfirmResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -40,7 +40,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return post(req, "/authentication/verify-bankcard-four-factor", new TypeToken<YzhResponse<BankCardFourVerifyResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -50,7 +50,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return post(req, "/authentication/verify-bankcard-three-factor", new TypeToken<YzhResponse<BankCardThreeVerifyResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -60,7 +60,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return post(req, "/authentication/verify-id", new TypeToken<YzhResponse<IDCardVerifyResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -70,7 +70,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/user/exempted/info", new TypeToken<YzhResponse<UserExemptedInfoResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -80,7 +80,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/user/white/check", new TypeToken<YzhResponse<UserWhiteCheckResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -90,7 +90,7 @@ public class AuthenticationClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/card", false, new TypeToken<YzhResponse<GetBankCardInfoResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

@@ -4,9 +4,9 @@ import com.google.gson.reflect.TypeToken;
 import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.dataservice.domain.*;
+import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import java.util.List;
 
 public class DataServiceClient extends YzhClient {
 
@@ -21,7 +21,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v1/orders", "encryption".equals(req.getRequest().getDataType()), new TypeToken<YzhResponse<ListDailyOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -31,7 +31,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v2/orders", "encryption".equals(req.getRequest().getDataType()), new TypeToken<YzhResponse<ListDailyOrderV2Response>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -41,7 +41,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v1/order/downloadurl", false, new TypeToken<YzhResponse<GetDailyOrderFileResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -51,7 +51,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v1/order/day/url", false, new TypeToken<YzhResponse<GetDailyOrderFileV2Response>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -61,7 +61,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v1/bills", "encryption".equals(req.getRequest().getDataType()), new TypeToken<YzhResponse<ListDailyBillResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -71,7 +71,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v2/bill/downloadurl", false, new TypeToken<YzhResponse<GetDailyBillFileV2Response>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -81,7 +81,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v2/recharge-record", false, new TypeToken<YzhResponse<List<RechargeRecordInfo>>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -91,7 +91,7 @@ public class DataServiceClient extends YzhClient {
         try {
             return get(req, "/api/dataservice/v1/statements-daily", false, new TypeToken<YzhResponse<ListBalanceDailyStatementResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

@@ -20,7 +20,7 @@ public class InvoiceClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/invoice-stat", false, new TypeToken<YzhResponse<GetInvoiceStatResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class InvoiceClient extends YzhClient {
         try {
             return post(req, "/api/invoice/v2/invoice-amount", new TypeToken<YzhResponse<GetInvoiceAmountResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -40,7 +40,7 @@ public class InvoiceClient extends YzhClient {
         try {
             return post(req, "/api/invoice/v2/apply", new TypeToken<YzhResponse<ApplyInvoiceResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -50,7 +50,7 @@ public class InvoiceClient extends YzhClient {
         try {
             return post(req, "/api/invoice/v2/invoice/invoice-status", new TypeToken<YzhResponse<GetInvoiceStatusResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -60,7 +60,7 @@ public class InvoiceClient extends YzhClient {
         try {
             return post(req, "/api/invoice/v2/invoice-face-information", new TypeToken<YzhResponse<GetInvoiceInformationResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -70,7 +70,7 @@ public class InvoiceClient extends YzhClient {
         try {
             return post(req, "/api/invoice/v2/invoice/invoice-pdf", new TypeToken<YzhResponse<GetInvoiceFileResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -80,7 +80,7 @@ public class InvoiceClient extends YzhClient {
         try {
             return post(req, "/api/invoice/v2/invoice/reminder/email", new TypeToken<YzhResponse<SendReminderEmailResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

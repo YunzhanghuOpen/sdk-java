@@ -283,4 +283,11 @@ public class YzhClient {
         }
         return result;
     }
+
+    // 处理错误的方法
+    public void handleError(YzhRequest<?> req, Exception e) {
+        if (yzhConfig.isDebug()) {
+            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+        }
+    }
 }

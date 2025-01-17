@@ -20,7 +20,7 @@ public class TaxClient extends YzhClient {
         try {
             return post(req, "/api/tax/v1/taxfile/download", new TypeToken<YzhResponse<GetTaxFileResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class TaxClient extends YzhClient {
         try {
             return post(req, "/api/tax/v1/user/cross", new TypeToken<YzhResponse<GetUserCrossResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

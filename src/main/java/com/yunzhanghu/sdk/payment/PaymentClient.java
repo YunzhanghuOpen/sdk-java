@@ -20,7 +20,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/order-bankpay", new TypeToken<YzhResponse<CreateBankpayOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/order-alipay", new TypeToken<YzhResponse<CreateAlipayOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -40,7 +40,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/order-wxpay", new TypeToken<YzhResponse<CreateWxpayOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -50,7 +50,7 @@ public class PaymentClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/query-order", "encryption".equals(req.getRequest().getDataType()), new TypeToken<YzhResponse<GetOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -60,7 +60,7 @@ public class PaymentClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/va-account", false, new TypeToken<YzhResponse<GetDealerVARechargeAccountResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -70,7 +70,7 @@ public class PaymentClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/query-accounts", false, new TypeToken<YzhResponse<ListAccountResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -80,7 +80,7 @@ public class PaymentClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/receipt/file", false, new TypeToken<YzhResponse<GetEleReceiptFileResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -90,7 +90,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/order/fail", new TypeToken<YzhResponse<CancelOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -100,7 +100,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/order/retry", new TypeToken<YzhResponse<RetryOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -110,7 +110,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/order-batch", new TypeToken<YzhResponse<CreateBatchOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -120,7 +120,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/confirm-batch", new TypeToken<YzhResponse<ConfirmBatchOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -130,7 +130,7 @@ public class PaymentClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/query-batch", false, new TypeToken<YzhResponse<QueryBatchOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -140,7 +140,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/cancel-batch", new TypeToken<YzhResponse<CancelBatchOrderResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -150,7 +150,7 @@ public class PaymentClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/risk-check/amount", new TypeToken<YzhResponse<CheckUserAmountResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

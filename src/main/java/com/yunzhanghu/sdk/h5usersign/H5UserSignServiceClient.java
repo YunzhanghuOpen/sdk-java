@@ -20,7 +20,7 @@ public class H5UserSignServiceClient extends YzhClient {
         try {
             return post(req, "/api/sdk/v1/presign", new TypeToken<YzhResponse<H5UserPresignResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class H5UserSignServiceClient extends YzhClient {
         try {
             return get(req, "/api/sdk/v1/sign/h5", false, new TypeToken<YzhResponse<H5UserSignResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -40,7 +40,7 @@ public class H5UserSignServiceClient extends YzhClient {
         try {
             return get(req, "/api/sdk/v1/sign/user/status", false, new TypeToken<YzhResponse<GetH5UserSignStatusResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -50,7 +50,7 @@ public class H5UserSignServiceClient extends YzhClient {
         try {
             return post(req, "/api/sdk/v1/sign/release", new TypeToken<YzhResponse<H5UserReleaseResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

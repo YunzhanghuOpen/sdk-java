@@ -42,7 +42,7 @@ public class YzhCustomClient extends YzhClient {
             response.setData(linkTreeMapToEntry(response.getData(), clazz));
             return response;
         } catch (Exception e) {
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

@@ -25,6 +25,7 @@ public class YzhConfig {
     public static String YZH_APP_KEY = "app_key";
     public static String YZH_RSA_PRIVATE_KEY = "rsa_private_key";
     public static String YZH_RSA_PUBLIC_KEY = "rsa_public_key";
+    public static String YZH_IS_DEBUG = "is_debug";
     private SignType signType;
     private String dealerId;
     private String brokerId;
@@ -33,6 +34,7 @@ public class YzhConfig {
     private String yzhRsaPublicKey;
     private String yzhRsaPrivateKey;
     private String yzhUrl;
+    private boolean isDebug;
 
     public static YzhConfig loadConfig(String fileName) throws Exception {
         fileName = StringUtils.trim(fileName);
@@ -65,6 +67,12 @@ public class YzhConfig {
             config.setYzhRsaPrivateKey(properties.getProperty(YZH_PRE + YZH_RSA_PRIVATE_KEY));
             config.setYzhRsaPublicKey(properties.getProperty(YZH_PRE + YZH_RSA_PUBLIC_KEY));
             config.setYzhUrl(properties.getProperty(YZH_PRE + YZH_URL));
+
+            config.setIsDebug(true);
+            String isDebugStr = properties.getProperty(YZH_PRE + YZH_IS_DEBUG);
+            if ("false".equalsIgnoreCase(isDebugStr)) {
+                config.setIsDebug(false);
+            }
 
             config.checkConfig();
         } catch (Exception e) {
@@ -108,6 +116,12 @@ public class YzhConfig {
                 config.setYzhRsaPublicKey(StringUtils.trim(properties.get(YZH_RSA_PUBLIC_KEY)));
                 config.setYzhUrl(StringUtils.trim(properties.get(YZH_URL)));
 
+                config.setIsDebug(true);
+                String isDebugStr = StringUtils.trim(properties.get(YZH_IS_DEBUG));
+                if ("false".equalsIgnoreCase(isDebugStr)) {
+                    config.setIsDebug(false);
+                }
+
                 config.checkConfig();
             } else {
                 throw new YzhException("key yzh not found in config file");
@@ -130,6 +144,14 @@ public class YzhConfig {
 
         // 检查配置文件
         return config;
+    }
+
+    public boolean isDebug() {
+        return isDebug;
+    }
+
+    public void setIsDebug(boolean isDebug) {
+        this.isDebug = isDebug;
     }
 
     public String getYzhUrl() {

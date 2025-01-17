@@ -20,7 +20,7 @@ public class UploadUserSignServiceClient extends YzhClient {
         try {
             return post(req, "/api/payment/v1/sign/user", new TypeToken<YzhResponse<UploadUserSignResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class UploadUserSignServiceClient extends YzhClient {
         try {
             return get(req, "/api/payment/v1/sign/user/status", false, new TypeToken<YzhResponse<GetUploadUserSignStatusResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

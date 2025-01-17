@@ -20,3 +20,5 @@ yzh:
   rsa_private_key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDACZcSLLFF8KX2***SbuWiGzRX/nNUsg+/RKCR56
   # 云账户公钥。
   rsa_public_key: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDM8TIYAVN+xwvTyNOttvt+rVGo***bSPGVxNMgAMmu6PVLQIDAQAB
+  # 是否打印日志。true：打印（默认）， false：不打印
+  # is_debug: true

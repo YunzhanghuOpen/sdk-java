@@ -20,7 +20,7 @@ public class BizlicGxV2H5APIServiceClient extends YzhClient {
         try {
             return post(req, "/api/aic/sharing-economy/api-h5/v1/collect", new TypeToken<YzhResponse<GxV2H5APIPreCollectBizlicMsgResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class BizlicGxV2H5APIServiceClient extends YzhClient {
         try {
             return get(req, "/api/aic/sharing-economy/api-h5/v1/h5url", false, new TypeToken<YzhResponse<GxV2H5APIGetStartUrlResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -40,7 +40,7 @@ public class BizlicGxV2H5APIServiceClient extends YzhClient {
         try {
             return get(req, "/api/aic/sharing-economy/api-h5/v1/status", false, new TypeToken<YzhResponse<GxV2H5APIGetAicStatusResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }

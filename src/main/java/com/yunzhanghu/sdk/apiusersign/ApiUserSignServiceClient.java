@@ -2,8 +2,8 @@ package com.yunzhanghu.sdk.apiusersign;
 
 import com.google.gson.reflect.TypeToken;
 import com.yunzhanghu.sdk.YzhException;
-import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.apiusersign.domain.*;
+import com.yunzhanghu.sdk.base.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +20,7 @@ public class ApiUserSignServiceClient extends YzhClient {
         try {
             return get(req, "/api/sign/v1/user/contract", false, new TypeToken<YzhResponse<ApiUseSignContractResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -30,7 +30,7 @@ public class ApiUserSignServiceClient extends YzhClient {
         try {
             return get(req, "/api/sign/v1/user/contract", false, new TypeToken<YzhResponse<ApiUserSignContractResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -40,7 +40,7 @@ public class ApiUserSignServiceClient extends YzhClient {
         try {
             return post(req, "/api/sign/v1/user/sign", new TypeToken<YzhResponse<ApiUserSignResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -50,7 +50,7 @@ public class ApiUserSignServiceClient extends YzhClient {
         try {
             return get(req, "/api/sign/v1/user/status", false, new TypeToken<YzhResponse<GetApiUserSignStatusResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
@@ -60,7 +60,7 @@ public class ApiUserSignServiceClient extends YzhClient {
         try {
             return post(req, "/api/sign/v1/user/release", new TypeToken<YzhResponse<ApiUserSignReleaseResponse>>(){});
         } catch (Exception e){
-            LOGGER.error("request: {}, errorMsg: {}", req, e.getMessage(), e);
+            handleError(req, e);
             throw new YzhException("msg", e);
         }
     }
