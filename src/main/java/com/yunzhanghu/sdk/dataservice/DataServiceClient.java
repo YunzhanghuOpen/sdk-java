@@ -95,4 +95,24 @@ public class DataServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+    
+    // 查询日订单汇总数据
+    public YzhResponse<ListDailyOrderSummaryResponse> listDailyOrderSummary(YzhRequest<ListDailyOrderSummaryRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/dataservice/v2/order/daily-summary", false, new TypeToken<YzhResponse<ListDailyOrderSummaryResponse>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
+
+    // 查询月订单汇总数据
+    public YzhResponse<ListMonthlyOrderSummaryResponse> listMonthlyOrderSummary(YzhRequest<ListMonthlyOrderSummaryRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/dataservice/v2/order/monthly-summary", false, new TypeToken<YzhResponse<ListMonthlyOrderSummaryResponse>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
 }

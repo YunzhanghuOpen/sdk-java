@@ -33,6 +33,10 @@ public class DataService {
 		listDailyBill();
 		// 查询余额日账单数据
 		listBalanceDailyStatement();
+		// 查询日订单汇总数据
+		listDailyOrderSummary();
+		// 查询月订单汇总数据
+		listMonthlyOrderSummary();
 	}
 
 	// 查询日订单文件
@@ -256,6 +260,68 @@ public class DataService {
 					System.out.println("---------");
 					System.out.println(info);
 				}
+			} else {
+				// 失败返回
+				System.out.println("HTTP Status Code：" + response.getHttpCode());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
+			}
+		} catch (Exception e) {
+			// 发生异常
+			e.printStackTrace();
+		}
+	}
+
+	// 查询日订单汇总数据
+	private static void listDailyOrderSummary() {
+		ListDailyOrderSummaryRequest request = new ListDailyOrderSummaryRequest();
+		request.setDealerId(config.getDealerId());
+		request.setBrokerId(config.getBrokerId());
+		request.setChannel("支付宝");
+		request.setBeginAt("2025-02-01");
+		request.setEndAt("2025-02-07");
+		request.setFilterType("apply");
+		YzhResponse<ListDailyOrderSummaryResponse> response = null;
+		try {
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+			response = client.listDailyOrderSummary(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+			if (response.isSuccess()) {
+				// 操作成功
+				ListDailyOrderSummaryResponse data = response.getData();
+				System.out.println("操作成功返回条数：" + data.getSummaryList().length);
+				for (ListDailyOrderSummary info : data.getSummaryList()) {
+					System.out.println(info);
+				}
+			} else {
+				// 失败返回
+				System.out.println("HTTP Status Code：" + response.getHttpCode());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
+			}
+		} catch (Exception e) {
+			// 发生异常
+			e.printStackTrace();
+		}
+	}
+
+	// 查询月订单汇总数据
+	private static void listMonthlyOrderSummary() {
+		ListMonthlyOrderSummaryRequest request = new ListMonthlyOrderSummaryRequest();
+		request.setDealerId(config.getDealerId());
+		request.setBrokerId(config.getBrokerId());
+		request.setChannel("银行卡");
+		request.setMonth("2025-01");
+		request.setFilterType("apply");
+		YzhResponse<ListMonthlyOrderSummaryResponse> response = null;
+		try {
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+			response = client.listMonthlyOrderSummary(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+			if (response.isSuccess()) {
+				// 操作成功
+				ListMonthlyOrderSummaryResponse data = response.getData();
+				System.out.println("操作成功：" + data);
 			} else {
 				// 失败返回
 				System.out.println("HTTP Status Code：" + response.getHttpCode());
