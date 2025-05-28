@@ -196,6 +196,10 @@ public class Authentication {
 		String imgFile = "xxxxx/xxx.jpeg";
 		String[] imgarr = new String[1];
 		imgarr[0] = getImgStr(imgFile);
+		String imgUrl = "https://www.example.com/image01.png";
+		String[] imgUrls = new String[1];
+		imgUrls[0] = imgUrl;
+
 
 		UserExemptedInfoRequest request = new UserExemptedInfoRequest();
 		request.setIdCard("EA3456789");
@@ -205,6 +209,7 @@ public class Authentication {
 		request.setBrokerId(config.getBrokerId());
 		request.setDealerId(config.getDealerId());
 		request.setUserImages(imgarr);
+		request.setImageUrls(imgUrls);
 		request.setCountry("CHN");
 		request.setBirthday("20010809");
 		request.setGender("男");

@@ -89,7 +89,7 @@ public class Payment {
 		request.setPay("100.00");
 		request.setPayRemark("");
 		request.setNotifyUrl("https://www.example.com");
-		request.setProjectId("testproject");
+		request.setProjectId("");
 		YzhResponse<CreateBankpayOrderResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -125,7 +125,7 @@ public class Payment {
 		request.setPayRemark("");
 		request.setCheckName("Check");
 		request.setNotifyUrl("https://www.example.com");
-		request.setProjectId("testproject");
+		request.setProjectId("");
 		YzhResponse<CreateAlipayOrderResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -162,7 +162,7 @@ public class Payment {
 		request.setNotifyUrl("https://www.example.com");
 		request.setWxAppId("");
 		request.setWxpayMode("transfer");
-		request.setProjectId("testproject");
+		request.setProjectId("");
 		YzhResponse<CreateWxpayOrderResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -502,7 +502,7 @@ public class Payment {
 		info1.setIdCard("440524188001010014");
 		info1.setOpenid("o4GgauInH_RCEdvrrNGrntXDuXXX1");
 		info1.setPhoneNo("188****8888");
-		info1.setProjectId("testproject1");
+		info1.setProjectId("");
 		info1.setPay("1.00");
 		info1.setPayRemark("");
 		info1.setNotifyUrl("https://www.example.com");
@@ -513,7 +513,7 @@ public class Payment {
 		info2.setIdCard("11010519491231002X");
 		info2.setOpenid("o4GgauInH_RCEdvrrNGrntXDuXXX2");
 		info2.setPhoneNo("188****8888");
-		info2.setProjectId("testproject2");
+		info2.setProjectId("");
 		info2.setPay("2.30");
 		info2.setPayRemark("");
 		info2.setNotifyUrl("https://www.example.com");

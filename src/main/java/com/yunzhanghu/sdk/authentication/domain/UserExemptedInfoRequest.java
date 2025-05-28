@@ -38,6 +38,9 @@ public class UserExemptedInfoRequest {
     
     // 请求流水号
     private String ref;
+    
+    // 证件照片 URL 地址
+    private String[] imageUrls;
 
     public void setCardType(String cardType) {
         this.cardType = cardType;
@@ -135,6 +138,14 @@ public class UserExemptedInfoRequest {
         return ref;
     }
 
+    public void setImageUrls(String[] imageUrls) {
+        this.imageUrls = imageUrls;
+    }
+
+    public String[] getImageUrls() {
+        return imageUrls;
+    }
+
     @Override
     public String toString() {
         return "UserExemptedInfoRequest{" +
@@ -150,6 +161,7 @@ public class UserExemptedInfoRequest {
                 ", gender='" + gender + '\'' + 
                 ", notifyUrl='" + notifyUrl + '\'' + 
                 ", ref='" + ref + '\'' + 
+                ", imageUrls='" + imageUrls + '\'' + 
                "}";
     }
 }
