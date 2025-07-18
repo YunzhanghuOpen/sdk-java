@@ -60,20 +60,32 @@ public class NotifyOrderData {
     // 订单完成时间，精确到秒
     private String finishedTime;
     
-    // 综合服务主体加成服务费
+    // 应收综合服务主体加成服务费金额
     private String brokerFee;
     
-    // 余额账户支出加成服务费
+    // 应收余额账户支出加成服务费金额
     private String brokerRealFee;
     
-    // 抵扣账户支出加成服务费
+    // 应收加成服务费抵扣金额
     private String brokerDeductFee;
+    
+    // 应收用户加成服务费金额
+    private String userFee;
+    
+    // 实收综合服务主体加成服务费金额
+    private String receivedBrokerFee;
+    
+    // 实收余额账户支出加成服务费金额
+    private String receivedBrokerRealFee;
+    
+    // 实收加成服务费抵扣金额
+    private String receivedBrokerDeductFee;
+    
+    // 实收用户加成服务费金额
+    private String receivedUserFee;
     
     // 订单备注
     private String payRemark;
-    
-    // 用户加成服务费
-    private String userFee;
     
     // 银行名称
     private String bankName;
@@ -260,20 +272,52 @@ public class NotifyOrderData {
         return brokerDeductFee;
     }
 
-    public void setPayRemark(String payRemark) {
-        this.payRemark = payRemark;
-    }
-
-    public String getPayRemark() {
-        return payRemark;
-    }
-
     public void setUserFee(String userFee) {
         this.userFee = userFee;
     }
 
     public String getUserFee() {
         return userFee;
+    }
+
+    public void setReceivedBrokerFee(String receivedBrokerFee) {
+        this.receivedBrokerFee = receivedBrokerFee;
+    }
+
+    public String getReceivedBrokerFee() {
+        return receivedBrokerFee;
+    }
+
+    public void setReceivedBrokerRealFee(String receivedBrokerRealFee) {
+        this.receivedBrokerRealFee = receivedBrokerRealFee;
+    }
+
+    public String getReceivedBrokerRealFee() {
+        return receivedBrokerRealFee;
+    }
+
+    public void setReceivedBrokerDeductFee(String receivedBrokerDeductFee) {
+        this.receivedBrokerDeductFee = receivedBrokerDeductFee;
+    }
+
+    public String getReceivedBrokerDeductFee() {
+        return receivedBrokerDeductFee;
+    }
+
+    public void setReceivedUserFee(String receivedUserFee) {
+        this.receivedUserFee = receivedUserFee;
+    }
+
+    public String getReceivedUserFee() {
+        return receivedUserFee;
+    }
+
+    public void setPayRemark(String payRemark) {
+        this.payRemark = payRemark;
+    }
+
+    public String getPayRemark() {
+        return payRemark;
     }
 
     public void setBankName(String bankName) {
@@ -325,8 +369,12 @@ public class NotifyOrderData {
                 ", brokerFee='" + brokerFee + '\'' + 
                 ", brokerRealFee='" + brokerRealFee + '\'' + 
                 ", brokerDeductFee='" + brokerDeductFee + '\'' + 
-                ", payRemark='" + payRemark + '\'' + 
                 ", userFee='" + userFee + '\'' + 
+                ", receivedBrokerFee='" + receivedBrokerFee + '\'' + 
+                ", receivedBrokerRealFee='" + receivedBrokerRealFee + '\'' + 
+                ", receivedBrokerDeductFee='" + receivedBrokerDeductFee + '\'' + 
+                ", receivedUserFee='" + receivedUserFee + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
                 ", bankName='" + bankName + '\'' + 
                 ", projectId='" + projectId + '\'' + 
                 ", userId='" + userId + '\'' + 

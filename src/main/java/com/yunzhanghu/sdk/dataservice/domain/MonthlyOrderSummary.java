@@ -9,17 +9,29 @@ public class MonthlyOrderSummary {
     // 订单金额
     private String pay;
     
-    // 加成服务费金额
+    // 应收综合服务主体加成服务费金额
     private String brokerFee;
     
-    // 加成服务费实收金额
+    // 应收余额账户支出加成服务费金额
     private String brokerRealFee;
     
-    // 已抵扣加成服务费金额
+    // 应收加成服务费抵扣金额
     private String brokerRebateFee;
     
-    // 用户加成服务费金额
+    // 应收用户加成服务费金额
     private String userFee;
+    
+    // 实收综合服务主体加成服务费金额
+    private String receivedBrokerFee;
+    
+    // 实收余额账户支出加成服务费金额
+    private String receivedBrokerRealFee;
+    
+    // 实收加成服务费抵扣金额
+    private String receivedBrokerDeductFee;
+    
+    // 实收用户加成服务费金额
+    private String receivedUserFee;
 
     public void setOrderNum(int orderNum) {
         this.orderNum = orderNum;
@@ -69,6 +81,38 @@ public class MonthlyOrderSummary {
         return userFee;
     }
 
+    public void setReceivedBrokerFee(String receivedBrokerFee) {
+        this.receivedBrokerFee = receivedBrokerFee;
+    }
+
+    public String getReceivedBrokerFee() {
+        return receivedBrokerFee;
+    }
+
+    public void setReceivedBrokerRealFee(String receivedBrokerRealFee) {
+        this.receivedBrokerRealFee = receivedBrokerRealFee;
+    }
+
+    public String getReceivedBrokerRealFee() {
+        return receivedBrokerRealFee;
+    }
+
+    public void setReceivedBrokerDeductFee(String receivedBrokerDeductFee) {
+        this.receivedBrokerDeductFee = receivedBrokerDeductFee;
+    }
+
+    public String getReceivedBrokerDeductFee() {
+        return receivedBrokerDeductFee;
+    }
+
+    public void setReceivedUserFee(String receivedUserFee) {
+        this.receivedUserFee = receivedUserFee;
+    }
+
+    public String getReceivedUserFee() {
+        return receivedUserFee;
+    }
+
     @Override
     public String toString() {
         return "MonthlyOrderSummary{" +
@@ -78,6 +122,10 @@ public class MonthlyOrderSummary {
                 ", brokerRealFee='" + brokerRealFee + '\'' + 
                 ", brokerRebateFee='" + brokerRebateFee + '\'' + 
                 ", userFee='" + userFee + '\'' + 
+                ", receivedBrokerFee='" + receivedBrokerFee + '\'' + 
+                ", receivedBrokerRealFee='" + receivedBrokerRealFee + '\'' + 
+                ", receivedBrokerDeductFee='" + receivedBrokerDeductFee + '\'' + 
+                ", receivedUserFee='" + receivedUserFee + '\'' + 
                "}";
     }
 }

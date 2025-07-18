@@ -33,10 +33,10 @@ public class StatementDetail {
     // 退汇金额
     private String reexAmount;
     
-    // 加成服务费金额
+    // 实收综合服务主体加成服务费金额
     private String feeAmount;
     
-    // 加成服务费抵扣金额
+    // 实收加成服务费抵扣金额
     private String deductRebateFeeAmount;
     
     // 冲补金额

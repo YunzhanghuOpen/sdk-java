@@ -30,8 +30,11 @@ public class DealerOrderInfoV2 {
     // 综合服务主体订单金额
     private String brokerAmount;
     
-    // 综合服务主体加成服务费
+    // 应收综合服务主体加成服务费金额
     private String brokerFee;
+    
+    // 实收综合服务主体加成服务费金额
+    private String receivedBrokerFee;
     
     // 支付路径流水号
     private String bill;
@@ -153,6 +156,14 @@ public class DealerOrderInfoV2 {
 
     public String getBrokerFee() {
         return brokerFee;
+    }
+
+    public void setReceivedBrokerFee(String receivedBrokerFee) {
+        this.receivedBrokerFee = receivedBrokerFee;
+    }
+
+    public String getReceivedBrokerFee() {
+        return receivedBrokerFee;
     }
 
     public void setBill(String bill) {
@@ -280,6 +291,7 @@ public class DealerOrderInfoV2 {
                 ", cardNo='" + cardNo + '\'' + 
                 ", brokerAmount='" + brokerAmount + '\'' + 
                 ", brokerFee='" + brokerFee + '\'' + 
+                ", receivedBrokerFee='" + receivedBrokerFee + '\'' + 
                 ", bill='" + bill + '\'' + 
                 ", status='" + status + '\'' + 
                 ", statusMessage='" + statusMessage + '\'' + 
