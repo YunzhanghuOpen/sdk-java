@@ -33,6 +33,7 @@ public class H5UserSign {
 		request.setRealName("张三");
 		request.setIdCard("11010519491231002X");
 		request.setCertificateType(0);
+		request.setCollectPhoneNo(0);
 		YzhResponse<H5UserPresignResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识

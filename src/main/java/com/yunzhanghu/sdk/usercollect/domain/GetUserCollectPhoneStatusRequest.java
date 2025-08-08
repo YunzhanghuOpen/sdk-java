@@ -1,7 +1,7 @@
-package com.yunzhanghu.sdk.h5usersign.domain;
+package com.yunzhanghu.sdk.usercollect.domain;
 
-// 预申请签约请求
-public class H5UserPresignRequest {
+// 查询手机号码绑定状态请求
+public class GetUserCollectPhoneStatusRequest {
     
     // 平台企业 ID
     private String dealerId;
@@ -9,17 +9,17 @@ public class H5UserPresignRequest {
     // 综合服务主体 ID
     private String brokerId;
     
+    // 平台企业用户 ID
+    private String dealerUserId;
+    
     // 姓名
     private String realName;
     
     // 证件号码
     private String idCard;
     
-    // 证件类型 0：身份证 2：港澳居民来往内地通行证 3：护照 5：台湾居民来往大陆通行证 9：港澳居民居住证 10：台湾居民居住证 11：外国人永久居留身份证 12：外国人工作许可证
+    // 证件类型编码
     private int certificateType;
-    
-    // 是否收集手机号码 0：不收集（默认） 1：收集手机号码
-    private int collectPhoneNo;
 
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
@@ -35,6 +35,14 @@ public class H5UserPresignRequest {
 
     public String getBrokerId() {
         return brokerId;
+    }
+
+    public void setDealerUserId(String dealerUserId) {
+        this.dealerUserId = dealerUserId;
+    }
+
+    public String getDealerUserId() {
+        return dealerUserId;
     }
 
     public void setRealName(String realName) {
@@ -61,23 +69,15 @@ public class H5UserPresignRequest {
         return certificateType;
     }
 
-    public void setCollectPhoneNo(int collectPhoneNo) {
-        this.collectPhoneNo = collectPhoneNo;
-    }
-
-    public int getCollectPhoneNo() {
-        return collectPhoneNo;
-    }
-
     @Override
     public String toString() {
-        return "H5UserPresignRequest{" +
+        return "GetUserCollectPhoneStatusRequest{" +
                 " dealerId='" + dealerId + '\'' + 
                 ", brokerId='" + brokerId + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
                 ", realName='" + realName + '\'' + 
                 ", idCard='" + idCard + '\'' + 
                 ", certificateType='" + certificateType + '\'' + 
-                ", collectPhoneNo='" + collectPhoneNo + '\'' + 
                "}";
     }
 }
