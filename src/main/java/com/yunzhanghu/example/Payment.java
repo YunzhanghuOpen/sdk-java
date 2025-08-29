@@ -37,6 +37,8 @@ import com.yunzhanghu.sdk.payment.domain.RetryOrderRequest;
 import com.yunzhanghu.sdk.payment.domain.RetryOrderResponse;
 import com.yunzhanghu.sdk.payment.domain.CheckUserAmountRequest;
 import com.yunzhanghu.sdk.payment.domain.CheckUserAmountResponse;
+import com.yunzhanghu.sdk.payment.domain.GetOrderLxlwRequest;
+import com.yunzhanghu.sdk.payment.domain.GetOrderLxlwResponse;
 import com.yunzhanghu.sdk.utils.JsonUtil;
 
 // 实时支付
@@ -73,7 +75,10 @@ public class Payment {
 		// 重试挂起状态订单
 		retryOrder();
 		// 用户结算金额校验
-        checkUserAmount();
+		checkUserAmount();
+		// 查询劳务模式单笔订单信息
+		getOrderLxlw();
+
 	}
 
 	// 银行卡实时支付
@@ -522,6 +527,33 @@ public class Payment {
 		infoArry[0] = info1;
 		infoArry[1] = info2;
 		return infoArry;
+	}
+
+	// 查询劳务模式单笔订单信息
+	private static void getOrderLxlw() {
+		GetOrderLxlwRequest request = new GetOrderLxlwRequest();
+		request.setOrderId("180490818101749");
+		request.setChannel("银行卡");
+		request.setDataType("");
+		YzhResponse<GetOrderLxlwResponse> response = null;
+		try {
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+			response = client.getOrderLxlw(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+			if (response.isSuccess()) {
+				// 操作成功
+				GetOrderLxlwResponse data = response.getData();
+				System.out.println("操作成功：" + data);
+			} else {
+				// 失败返回
+				System.out.println("HTTP Status Code：" + response.getHttpCode());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
+			}
+		} catch (Exception e) {
+			// 发生异常
+			e.printStackTrace();
+		}
 	}
 
 }

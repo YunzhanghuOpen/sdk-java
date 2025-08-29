@@ -154,4 +154,14 @@ public class PaymentClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
+    // 查询劳务模式单笔订单信息
+    public YzhResponse<GetOrderLxlwResponse> getOrderLxlw(YzhRequest<GetOrderLxlwRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/payment/v1/query-order", "encryption".equals(req.getRequest().getDataType()), new TypeToken<YzhResponse<GetOrderLxlwResponse>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
 }

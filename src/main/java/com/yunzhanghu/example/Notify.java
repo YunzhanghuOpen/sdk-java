@@ -12,6 +12,7 @@ import com.yunzhanghu.sdk.notify.*;
 import com.yunzhanghu.sdk.notify.domain.NotifyRequest;
 import com.yunzhanghu.sdk.notify.domain.NotifyResponse;
 import com.yunzhanghu.sdk.payment.domain.NotifyOrderData;
+import com.yunzhanghu.sdk.payment.domain.NotifyOrderLxlwRequest;
 import com.yunzhanghu.sdk.payment.domain.NotifyOrderRequest;
 import com.yunzhanghu.sdk.uploadusersign.domain.NotifyUploadUserSignRequest;
 import com.yunzhanghu.sdk.usercollect.domain.NotifyUserCollectPhoneRequest;
@@ -70,6 +71,10 @@ public class Notify {
 			// 收集手机号码结果回调通知
 //			NotifyResponse<NotifyUserCollectPhoneRequest> response = client.notifyDecoder(request, NotifyUserCollectPhoneRequest.class);
 //			NotifyUserCollectPhoneRequest notifyRequest = response.getData();
+
+			// 劳务模式订单支付状态回调通知
+//			NotifyResponse<NotifyOrderLxlwRequest> response = client.notifyDecoder(request, NotifyOrderLxlwRequest.class);
+//			NotifyOrderLxlwRequest notifyRequest = response.getData();
 
 			System.out.println("签名验证结果：" + response.getSignRes());
 			System.out.println("数据解密结果：" + response.getDescryptRes());
