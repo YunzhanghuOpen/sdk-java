@@ -15,8 +15,11 @@ public class CalcTaxRequest {
     // 证件号
     private String idCard;
     
-    // 订单金额
+    // 测算金额
     private String pay;
+
+    // 测算类型
+    private String taxType;
 
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
@@ -58,14 +61,23 @@ public class CalcTaxRequest {
         return pay;
     }
 
+    public String getTaxType() {
+        return taxType;
+    }
+
+    public void setTaxType(String taxType) {
+        this.taxType = taxType;
+    }
+
     @Override
     public String toString() {
         return "CalcTaxRequest{" +
-                " dealerId='" + dealerId + '\'' + 
-                ", brokerId='" + brokerId + '\'' + 
-                ", realName='" + realName + '\'' + 
-                ", idCard='" + idCard + '\'' + 
-                ", pay='" + pay + '\'' + 
-               "}";
+                "dealerId='" + dealerId + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", realName='" + realName + '\'' +
+                ", idCard='" + idCard + '\'' +
+                ", pay='" + pay + '\'' +
+                ", taxType='" + taxType + '\'' +
+                '}';
     }
 }

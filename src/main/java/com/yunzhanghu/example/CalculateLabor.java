@@ -72,6 +72,7 @@ public class CalculateLabor {
         request.setRealName("张三");
         request.setIdCard("11010519491231002X");
         request.setPay("99");
+        request.setTaxType("after_tax");
         YzhResponse<CalcTaxResponse> response = null;
         try {
             // request-id：请求 ID，请求的唯一标识
