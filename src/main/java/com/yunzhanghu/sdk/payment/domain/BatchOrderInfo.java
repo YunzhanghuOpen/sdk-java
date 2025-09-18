@@ -2,36 +2,45 @@ package com.yunzhanghu.sdk.payment.domain;
 
 // 批次下单订单信息
 public class BatchOrderInfo {
-    
+
     // 平台企业订单号
     private String orderId;
-    
+
     // 姓名
     private String realName;
-    
+
     // 身份证号码
     private String idCard;
-    
+
     // 收款账号
     private String cardNo;
-    
+
     // 微信用户 openid
     private String openid;
-    
+
     // 手机号
     private String phoneNo;
-    
-    // 项目标识
+
+    // 业务线标识
     private String projectId;
-    
+
     // 订单金额
     private String pay;
-    
+
     // 订单备注
     private String payRemark;
-    
+
     // 回调地址
     private String notifyUrl;
+
+    // 互联网平台名称
+    private String dealerPlatformName;
+
+    // 用户名称/昵称
+    private String dealerUserNickname;
+
+    // 用户唯一标识码
+    private String dealerUserId;
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -113,19 +122,46 @@ public class BatchOrderInfo {
         return notifyUrl;
     }
 
+    public void setDealerPlatformName(String dealerPlatformName) {
+        this.dealerPlatformName = dealerPlatformName;
+    }
+
+    public String getDealerPlatformName() {
+        return dealerPlatformName;
+    }
+
+    public void setDealerUserNickname(String dealerUserNickname) {
+        this.dealerUserNickname = dealerUserNickname;
+    }
+
+    public String getDealerUserNickname() {
+        return dealerUserNickname;
+    }
+
+    public void setDealerUserId(String dealerUserId) {
+        this.dealerUserId = dealerUserId;
+    }
+
+    public String getDealerUserId() {
+        return dealerUserId;
+    }
+
     @Override
     public String toString() {
         return "BatchOrderInfo{" +
-                " orderId='" + orderId + '\'' + 
-                ", realName='" + realName + '\'' + 
-                ", idCard='" + idCard + '\'' + 
-                ", cardNo='" + cardNo + '\'' + 
-                ", openid='" + openid + '\'' + 
-                ", phoneNo='" + phoneNo + '\'' + 
-                ", projectId='" + projectId + '\'' + 
-                ", pay='" + pay + '\'' + 
-                ", payRemark='" + payRemark + '\'' + 
-                ", notifyUrl='" + notifyUrl + '\'' + 
-               "}";
+                " orderId='" + orderId + '\'' +
+                ", realName='" + realName + '\'' +
+                ", idCard='" + idCard + '\'' +
+                ", cardNo='" + cardNo + '\'' +
+                ", openid='" + openid + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", projectId='" + projectId + '\'' +
+                ", pay='" + pay + '\'' +
+                ", payRemark='" + payRemark + '\'' +
+                ", notifyUrl='" + notifyUrl + '\'' +
+                ", dealerPlatformName='" + dealerPlatformName + '\'' +
+                ", dealerUserNickname='" + dealerUserNickname + '\'' +
+                ", dealerUserId='" + dealerUserId + '\'' +
+                "}";
     }
 }

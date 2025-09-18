@@ -2,48 +2,57 @@ package com.yunzhanghu.sdk.payment.domain;
 
 // 微信实时支付请求
 public class CreateWxpayOrderRequest {
-    
+
     // 平台企业订单号
     private String orderId;
-    
+
     // 平台企业 ID
     private String dealerId;
-    
+
     // 综合服务主体 ID
     private String brokerId;
-    
+
     // 姓名
     private String realName;
-    
+
     // 微信用户 openid
     private String openid;
-    
+
     // 身份证号码
     private String idCard;
-    
+
     // 手机号
     private String phoneNo;
-    
+
     // 订单金额
     private String pay;
-    
+
     // 订单备注
     private String payRemark;
-    
+
     // 回调地址
     private String notifyUrl;
-    
+
     // 平台企业微信 AppID
     private String wxAppId;
-    
+
     // 微信支付模式，固定值：transfer
     private String wxpayMode;
-    
-    // 项目标识
+
+    // 业务线标识
     private String projectId;
-    
+
     // 描述信息，该字段已废弃
     private String notes;
+
+    // 互联网平台名称
+    private String dealerPlatformName;
+
+    // 用户名称/昵称
+    private String dealerUserNickname;
+
+    // 用户唯一标识码
+    private String dealerUserId;
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -157,23 +166,50 @@ public class CreateWxpayOrderRequest {
         return notes;
     }
 
+    public void setDealerPlatformName(String dealerPlatformName) {
+        this.dealerPlatformName = dealerPlatformName;
+    }
+
+    public String getDealerPlatformName() {
+        return dealerPlatformName;
+    }
+
+    public void setDealerUserNickname(String dealerUserNickname) {
+        this.dealerUserNickname = dealerUserNickname;
+    }
+
+    public String getDealerUserNickname() {
+        return dealerUserNickname;
+    }
+
+    public void setDealerUserId(String dealerUserId) {
+        this.dealerUserId = dealerUserId;
+    }
+
+    public String getDealerUserId() {
+        return dealerUserId;
+    }
+
     @Override
     public String toString() {
         return "CreateWxpayOrderRequest{" +
-                " orderId='" + orderId + '\'' + 
-                ", dealerId='" + dealerId + '\'' + 
-                ", brokerId='" + brokerId + '\'' + 
-                ", realName='" + realName + '\'' + 
-                ", openid='" + openid + '\'' + 
-                ", idCard='" + idCard + '\'' + 
-                ", phoneNo='" + phoneNo + '\'' + 
-                ", pay='" + pay + '\'' + 
-                ", payRemark='" + payRemark + '\'' + 
-                ", notifyUrl='" + notifyUrl + '\'' + 
-                ", wxAppId='" + wxAppId + '\'' + 
-                ", wxpayMode='" + wxpayMode + '\'' + 
-                ", projectId='" + projectId + '\'' + 
-                ", notes='" + notes + '\'' + 
-               "}";
+                " orderId='" + orderId + '\'' +
+                ", dealerId='" + dealerId + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", realName='" + realName + '\'' +
+                ", openid='" + openid + '\'' +
+                ", idCard='" + idCard + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", pay='" + pay + '\'' +
+                ", payRemark='" + payRemark + '\'' +
+                ", notifyUrl='" + notifyUrl + '\'' +
+                ", wxAppId='" + wxAppId + '\'' +
+                ", wxpayMode='" + wxpayMode + '\'' +
+                ", projectId='" + projectId + '\'' +
+                ", notes='" + notes + '\'' +
+                ", dealerPlatformName='" + dealerPlatformName + '\'' +
+                ", dealerUserNickname='" + dealerUserNickname + '\'' +
+                ", dealerUserId='" + dealerUserId + '\'' +
+                "}";
     }
 }
