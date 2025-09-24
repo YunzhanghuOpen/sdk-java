@@ -57,6 +57,12 @@ public class TaxDetail {
     // 平台企业实缴附加税费
     private String dealerReceivedAdditionalTax;
 
+    // 预扣个税税率
+    private String personalTaxRate;
+
+    // 预扣个税速算扣除数
+    private String deductTax;
+
     public void setPersonalTax(String personalTax) {
         this.personalTax = personalTax;
     }
@@ -201,6 +207,22 @@ public class TaxDetail {
         return dealerReceivedAdditionalTax;
     }
 
+    public void setPersonalTaxRate(String personalTaxRate) {
+        this.personalTaxRate = personalTaxRate;
+    }
+
+    public String getPersonalTaxRate() {
+        return personalTaxRate;
+    }
+
+    public void setDeductTax(String deductTax) {
+        this.deductTax = deductTax;
+    }
+
+    public String getDeductTax() {
+        return deductTax;
+    }
+
     @Override
     public String toString() {
         return "TaxDetail{" +
@@ -222,6 +244,8 @@ public class TaxDetail {
                 ", dealerReceivedValueAddedTax='" + dealerReceivedValueAddedTax + '\'' +
                 ", userReceivedAdditionalTax='" + userReceivedAdditionalTax + '\'' +
                 ", dealerReceivedAdditionalTax='" + dealerReceivedAdditionalTax + '\'' +
+                ", personalTaxRate='" + personalTaxRate + '\'' +
+                ", deductTax='" + deductTax + '\'' +
                 "}";
     }
 }

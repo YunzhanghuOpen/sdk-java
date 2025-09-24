@@ -2,96 +2,111 @@ package com.yunzhanghu.sdk.payment.domain;
 
 // 查询批次订单信息订单详情
 public class QueryBatchOrderInfo {
-    
+
     // 平台企业订单号
     private String orderId;
-    
+
     // 订单金额
     private String pay;
-    
+
     // 综合服务主体 ID
     private String brokerId;
-    
+
     // 平台企业 ID
     private String dealerId;
-    
+
     // 姓名
     private String realName;
-    
+
     // 收款人账号
     private String cardNo;
-    
+
     // 身份证号码
     private String idCard;
-    
+
     // 手机号
     private String phoneNo;
-    
+
     // 订单状态码
     private String status;
-    
+
     // 订单详情状态码
     private String statusDetail;
-    
+
     // 订单状态码描述
     private String statusMessage;
-    
+
     // 订单详情状态码描述
     private String statusDetailMessage;
-    
+
     // 订单状态补充信息
     private String supplementalDetailMessage;
-    
+
     // 综合服务主体支付金额
     private String brokerAmount;
-    
+
     // 综合服务平台流水号
     private String ref;
-    
+
     // 支付交易流水号
     private String brokerBankBill;
-    
+
     // 支付路径
     private String withdrawPlatform;
-    
+
     // 订单接收时间
     private String createdAt;
-    
+
     // 订单完成时间
     private String finishedTime;
-    
+
     // 应收综合服务主体加成服务费金额
     private String brokerFee;
-    
+
     // 应收余额账户支出加成服务费金额
     private String brokerRealFee;
-    
+
     // 应收加成服务费抵扣金额
     private String brokerDeductFee;
-    
+
     // 应收用户加成服务费金额
     private String userFee;
-    
+
     // 实收综合服务主体加成服务费金额
     private String receivedBrokerFee;
-    
+
     // 实收余额账户支出加成服务费金额
     private String receivedBrokerRealFee;
-    
+
     // 实收加成服务费抵扣金额
     private String receivedBrokerDeductFee;
-    
+
     // 实收用户加成服务费金额
     private String receivedUserFee;
-    
+
     // 订单备注
     private String payRemark;
-    
+
     // 银行名称
     private String bankName;
-    
+
     // 业务线标识
     private String projectId;
+
+    // 互联网平台名称
+    private String dealerPlatformName;
+
+    // 用户名称/昵称
+    private String dealerUserNickname;
+
+    // 用户唯一标识码
+    private String dealerUserId;
+
+    // 预扣个税税率
+    private String personalTaxRate;
+
+    // 预扣个税速算扣除数
+    private String deductTax;
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -333,39 +348,84 @@ public class QueryBatchOrderInfo {
         return projectId;
     }
 
+    public void setDealerPlatformName(String dealerPlatformName) {
+        this.dealerPlatformName = dealerPlatformName;
+    }
+
+    public String getDealerPlatformName() {
+        return dealerPlatformName;
+    }
+
+    public void setDealerUserNickname(String dealerUserNickname) {
+        this.dealerUserNickname = dealerUserNickname;
+    }
+
+    public String getDealerUserNickname() {
+        return dealerUserNickname;
+    }
+
+    public void setDealerUserId(String dealerUserId) {
+        this.dealerUserId = dealerUserId;
+    }
+
+    public String getDealerUserId() {
+        return dealerUserId;
+    }
+
+    public void setPersonalTaxRate(String personalTaxRate) {
+        this.personalTaxRate = personalTaxRate;
+    }
+
+    public String getPersonalTaxRate() {
+        return personalTaxRate;
+    }
+
+    public void setDeductTax(String deductTax) {
+        this.deductTax = deductTax;
+    }
+
+    public String getDeductTax() {
+        return deductTax;
+    }
+
     @Override
     public String toString() {
         return "QueryBatchOrderInfo{" +
-                " orderId='" + orderId + '\'' + 
-                ", pay='" + pay + '\'' + 
-                ", brokerId='" + brokerId + '\'' + 
-                ", dealerId='" + dealerId + '\'' + 
-                ", realName='" + realName + '\'' + 
-                ", cardNo='" + cardNo + '\'' + 
-                ", idCard='" + idCard + '\'' + 
-                ", phoneNo='" + phoneNo + '\'' + 
-                ", status='" + status + '\'' + 
-                ", statusDetail='" + statusDetail + '\'' + 
-                ", statusMessage='" + statusMessage + '\'' + 
-                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
-                ", supplementalDetailMessage='" + supplementalDetailMessage + '\'' + 
-                ", brokerAmount='" + brokerAmount + '\'' + 
-                ", ref='" + ref + '\'' + 
-                ", brokerBankBill='" + brokerBankBill + '\'' + 
-                ", withdrawPlatform='" + withdrawPlatform + '\'' + 
-                ", createdAt='" + createdAt + '\'' + 
-                ", finishedTime='" + finishedTime + '\'' + 
-                ", brokerFee='" + brokerFee + '\'' + 
-                ", brokerRealFee='" + brokerRealFee + '\'' + 
-                ", brokerDeductFee='" + brokerDeductFee + '\'' + 
-                ", userFee='" + userFee + '\'' + 
-                ", receivedBrokerFee='" + receivedBrokerFee + '\'' + 
-                ", receivedBrokerRealFee='" + receivedBrokerRealFee + '\'' + 
-                ", receivedBrokerDeductFee='" + receivedBrokerDeductFee + '\'' + 
-                ", receivedUserFee='" + receivedUserFee + '\'' + 
-                ", payRemark='" + payRemark + '\'' + 
-                ", bankName='" + bankName + '\'' + 
-                ", projectId='" + projectId + '\'' + 
-               "}";
+                " orderId='" + orderId + '\'' +
+                ", pay='" + pay + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", dealerId='" + dealerId + '\'' +
+                ", realName='" + realName + '\'' +
+                ", cardNo='" + cardNo + '\'' +
+                ", idCard='" + idCard + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", status='" + status + '\'' +
+                ", statusDetail='" + statusDetail + '\'' +
+                ", statusMessage='" + statusMessage + '\'' +
+                ", statusDetailMessage='" + statusDetailMessage + '\'' +
+                ", supplementalDetailMessage='" + supplementalDetailMessage + '\'' +
+                ", brokerAmount='" + brokerAmount + '\'' +
+                ", ref='" + ref + '\'' +
+                ", brokerBankBill='" + brokerBankBill + '\'' +
+                ", withdrawPlatform='" + withdrawPlatform + '\'' +
+                ", createdAt='" + createdAt + '\'' +
+                ", finishedTime='" + finishedTime + '\'' +
+                ", brokerFee='" + brokerFee + '\'' +
+                ", brokerRealFee='" + brokerRealFee + '\'' +
+                ", brokerDeductFee='" + brokerDeductFee + '\'' +
+                ", userFee='" + userFee + '\'' +
+                ", receivedBrokerFee='" + receivedBrokerFee + '\'' +
+                ", receivedBrokerRealFee='" + receivedBrokerRealFee + '\'' +
+                ", receivedBrokerDeductFee='" + receivedBrokerDeductFee + '\'' +
+                ", receivedUserFee='" + receivedUserFee + '\'' +
+                ", payRemark='" + payRemark + '\'' +
+                ", bankName='" + bankName + '\'' +
+                ", projectId='" + projectId + '\'' +
+                ", dealerPlatformName='" + dealerPlatformName + '\'' +
+                ", dealerUserNickname='" + dealerUserNickname + '\'' +
+                ", dealerUserId='" + dealerUserId + '\'' +
+                ", personalTaxRate='" + personalTaxRate + '\'' +
+                ", deductTax='" + deductTax + '\'' +
+                "}";
     }
 }

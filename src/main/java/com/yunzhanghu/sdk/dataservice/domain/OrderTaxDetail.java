@@ -1,193 +1,61 @@
 package com.yunzhanghu.sdk.dataservice.domain;
 
-// 月订单汇总详情
-public class MonthlyOrderSummary {
-
-    // 订单数量
-    private int orderNum;
-
-    // 订单金额
-    private String pay;
-
-    // 应收综合服务主体加成服务费金额
-    private String brokerFee;
-
-    // 应收余额账户支出加成服务费金额
-    private String brokerRealFee;
-
-    // 应收加成服务费抵扣金额
-    private String brokerRebateFee;
-
-    // 应收用户加成服务费金额
-    private String userFee;
-
-    // 实收综合服务主体加成服务费金额
-    private String receivedBrokerFee;
-
-    // 实收余额账户支出加成服务费金额
-    private String receivedBrokerRealFee;
-
-    // 实收加成服务费抵扣金额
-    private String receivedBrokerDeductFee;
-
-    // 实收用户加成服务费金额
-    private String receivedUserFee;
-
-    // 预扣税费总额
-    private String tax;
-
-    // 实缴税费总额
-    private String receivedTaxAmount;
-
+// 缴税明细
+public class OrderTaxDetail {
+    
     // 预扣个税
     private String personalTax;
-
+    
     // 预扣增值税
     private String valueAddedTax;
-
+    
     // 预扣附加税费
     private String additionalTax;
-
+    
     // 实缴个税
     private String receivedPersonalTax;
-
+    
     // 实缴增值税
     private String receivedValueAddedTax;
-
+    
     // 实缴附加税费
     private String receivedAdditionalTax;
-
+    
     // 用户预扣个税
     private String userPersonalTax;
-
+    
     // 平台企业预扣个税
     private String dealerPersonalTax;
-
+    
     // 用户预扣增值税
     private String userValueAddedTax;
-
+    
     // 平台企业预扣增值税
     private String dealerValueAddedTax;
-
+    
     // 用户预扣附加税费
     private String userAdditionalTax;
-
+    
     // 平台企业预扣附加税费
     private String dealerAdditionalTax;
-
+    
     // 用户实缴个税
     private String userReceivedPersonalTax;
-
+    
     // 平台企业实缴个税
     private String dealerReceivedPersonalTax;
-
+    
     // 用户实缴增值税
     private String userReceivedValueAddedTax;
-
+    
     // 平台企业实缴增值税
     private String dealerReceivedValueAddedTax;
-
+    
     // 用户实缴附加税费
     private String userReceivedAdditionalTax;
-
+    
     // 平台企业实缴附加税费
     private String dealerReceivedAdditionalTax;
-
-    public void setOrderNum(int orderNum) {
-        this.orderNum = orderNum;
-    }
-
-    public int getOrderNum() {
-        return orderNum;
-    }
-
-    public void setPay(String pay) {
-        this.pay = pay;
-    }
-
-    public String getPay() {
-        return pay;
-    }
-
-    public void setBrokerFee(String brokerFee) {
-        this.brokerFee = brokerFee;
-    }
-
-    public String getBrokerFee() {
-        return brokerFee;
-    }
-
-    public void setBrokerRealFee(String brokerRealFee) {
-        this.brokerRealFee = brokerRealFee;
-    }
-
-    public String getBrokerRealFee() {
-        return brokerRealFee;
-    }
-
-    public void setBrokerRebateFee(String brokerRebateFee) {
-        this.brokerRebateFee = brokerRebateFee;
-    }
-
-    public String getBrokerRebateFee() {
-        return brokerRebateFee;
-    }
-
-    public void setUserFee(String userFee) {
-        this.userFee = userFee;
-    }
-
-    public String getUserFee() {
-        return userFee;
-    }
-
-    public void setReceivedBrokerFee(String receivedBrokerFee) {
-        this.receivedBrokerFee = receivedBrokerFee;
-    }
-
-    public String getReceivedBrokerFee() {
-        return receivedBrokerFee;
-    }
-
-    public void setReceivedBrokerRealFee(String receivedBrokerRealFee) {
-        this.receivedBrokerRealFee = receivedBrokerRealFee;
-    }
-
-    public String getReceivedBrokerRealFee() {
-        return receivedBrokerRealFee;
-    }
-
-    public void setReceivedBrokerDeductFee(String receivedBrokerDeductFee) {
-        this.receivedBrokerDeductFee = receivedBrokerDeductFee;
-    }
-
-    public String getReceivedBrokerDeductFee() {
-        return receivedBrokerDeductFee;
-    }
-
-    public void setReceivedUserFee(String receivedUserFee) {
-        this.receivedUserFee = receivedUserFee;
-    }
-
-    public String getReceivedUserFee() {
-        return receivedUserFee;
-    }
-
-    public void setTax(String tax) {
-        this.tax = tax;
-    }
-
-    public String getTax() {
-        return tax;
-    }
-
-    public void setReceivedTaxAmount(String receivedTaxAmount) {
-        this.receivedTaxAmount = receivedTaxAmount;
-    }
-
-    public String getReceivedTaxAmount() {
-        return receivedTaxAmount;
-    }
 
     public void setPersonalTax(String personalTax) {
         this.personalTax = personalTax;
@@ -335,37 +203,25 @@ public class MonthlyOrderSummary {
 
     @Override
     public String toString() {
-        return "MonthlyOrderSummary{" +
-                " orderNum='" + orderNum + '\'' +
-                ", pay='" + pay + '\'' +
-                ", brokerFee='" + brokerFee + '\'' +
-                ", brokerRealFee='" + brokerRealFee + '\'' +
-                ", brokerRebateFee='" + brokerRebateFee + '\'' +
-                ", userFee='" + userFee + '\'' +
-                ", receivedBrokerFee='" + receivedBrokerFee + '\'' +
-                ", receivedBrokerRealFee='" + receivedBrokerRealFee + '\'' +
-                ", receivedBrokerDeductFee='" + receivedBrokerDeductFee + '\'' +
-                ", receivedUserFee='" + receivedUserFee + '\'' +
-                ", tax='" + tax + '\'' +
-                ", receivedTaxAmount='" + receivedTaxAmount + '\'' +
-                ", personalTax='" + personalTax + '\'' +
-                ", valueAddedTax='" + valueAddedTax + '\'' +
-                ", additionalTax='" + additionalTax + '\'' +
-                ", receivedPersonalTax='" + receivedPersonalTax + '\'' +
-                ", receivedValueAddedTax='" + receivedValueAddedTax + '\'' +
-                ", receivedAdditionalTax='" + receivedAdditionalTax + '\'' +
-                ", userPersonalTax='" + userPersonalTax + '\'' +
-                ", dealerPersonalTax='" + dealerPersonalTax + '\'' +
-                ", userValueAddedTax='" + userValueAddedTax + '\'' +
-                ", dealerValueAddedTax='" + dealerValueAddedTax + '\'' +
-                ", userAdditionalTax='" + userAdditionalTax + '\'' +
-                ", dealerAdditionalTax='" + dealerAdditionalTax + '\'' +
-                ", userReceivedPersonalTax='" + userReceivedPersonalTax + '\'' +
-                ", dealerReceivedPersonalTax='" + dealerReceivedPersonalTax + '\'' +
-                ", userReceivedValueAddedTax='" + userReceivedValueAddedTax + '\'' +
-                ", dealerReceivedValueAddedTax='" + dealerReceivedValueAddedTax + '\'' +
-                ", userReceivedAdditionalTax='" + userReceivedAdditionalTax + '\'' +
-                ", dealerReceivedAdditionalTax='" + dealerReceivedAdditionalTax + '\'' +
-                "}";
+        return "OrderTaxDetail{" +
+                " personalTax='" + personalTax + '\'' + 
+                ", valueAddedTax='" + valueAddedTax + '\'' + 
+                ", additionalTax='" + additionalTax + '\'' + 
+                ", receivedPersonalTax='" + receivedPersonalTax + '\'' + 
+                ", receivedValueAddedTax='" + receivedValueAddedTax + '\'' + 
+                ", receivedAdditionalTax='" + receivedAdditionalTax + '\'' + 
+                ", userPersonalTax='" + userPersonalTax + '\'' + 
+                ", dealerPersonalTax='" + dealerPersonalTax + '\'' + 
+                ", userValueAddedTax='" + userValueAddedTax + '\'' + 
+                ", dealerValueAddedTax='" + dealerValueAddedTax + '\'' + 
+                ", userAdditionalTax='" + userAdditionalTax + '\'' + 
+                ", dealerAdditionalTax='" + dealerAdditionalTax + '\'' + 
+                ", userReceivedPersonalTax='" + userReceivedPersonalTax + '\'' + 
+                ", dealerReceivedPersonalTax='" + dealerReceivedPersonalTax + '\'' + 
+                ", userReceivedValueAddedTax='" + userReceivedValueAddedTax + '\'' + 
+                ", dealerReceivedValueAddedTax='" + dealerReceivedValueAddedTax + '\'' + 
+                ", userReceivedAdditionalTax='" + userReceivedAdditionalTax + '\'' + 
+                ", dealerReceivedAdditionalTax='" + dealerReceivedAdditionalTax + '\'' + 
+               "}";
     }
 }

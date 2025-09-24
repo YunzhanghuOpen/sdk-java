@@ -6,86 +6,53 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.calculatelabor.domain.*;
-import com.yunzhanghu.sdk.calculatelabor.CalculateLaborServiceClient;
+import com.yunzhanghu.sdk.realname.RealNameServiceClient;
+import com.yunzhanghu.sdk.realname.domain.CollectRealNameInfoRequest;
+import com.yunzhanghu.sdk.realname.domain.CollectRealNameInfoResponse;
+import com.yunzhanghu.sdk.realname.domain.QueryRealNameInfoRequest;
+import com.yunzhanghu.sdk.realname.domain.QueryRealNameInfoResponse;
 
-//  连续劳务税费试算
-public class CalculateLabor {
-
+// 用户实名认证信息收集
+public class RealName {
     private static YzhConfig config = Config.getYzhConfig();
-    private static CalculateLaborServiceClient client = new CalculateLaborServiceClient(config);
+    private static RealNameServiceClient client = new RealNameServiceClient(config);
 
     public static void main(String[] args) {
-        // 连续劳务税费试算（计算器）
-        laborCaculator();
-        // 订单税费试算
-        calcTax();
-        // 连续劳务年度税费测算-H5
-        calculationYearH5Url();
-        // 连续劳务单笔结算税费测算-H5
-        calculationH5Url();
+        // 用户实名认证信息收集-人脸认证方式
+        collectRealNameInfoFace();
+        // 用户实名认证信息收集-银行卡四要素认证方式
+        collectRealNameInfoBank();
+        // 用户实名认证信息收集-人工审核
+        collectRealNameInfoReviewer();
+        // 用户实名认证信息查询
+        queryRealNameInfo();
     }
 
-    // 连续劳务税费试算（计算器）
-    private static void laborCaculator() {
-        LaborCaculatorRequest request = new LaborCaculatorRequest();
-        request.setDealerId(config.getDealerId());
-        request.setBrokerId(config.getBrokerId());
-        request.setMonthSettlementList(getMonthSettlementList());
-
-        YzhResponse<LaborCaculatorResponse> response = null;
-        try {
-            // request-id：请求 ID，请求的唯一标识
-            // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-            // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
-            response = client.laborCaculator(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-            if (response.isSuccess()) {
-                // 操作成功
-                LaborCaculatorResponse data = response.getData();
-                System.out.println("操作成功：" + data);
-            } else {
-                // 失败返回
-                System.out.println("HTTP Status Code：" + response.getHttpCode());
-                System.out.println("失败返回：" + response.getCode() + "-" + response.getMessage());
-            }
-        } catch (Exception e) {
-            // 发生异常
-            e.printStackTrace();
-        }
-    }
-
-    private static MonthSettlement[] getMonthSettlementList() {
-        MonthSettlement info1 = new MonthSettlement();
-        info1.setMonth(1);
-        info1.setMonthPreTaxAmount("10.00");
-
-        MonthSettlement info2 = new MonthSettlement();
-        info2.setMonth(2);
-        info2.setMonthPreTaxAmount("10.00");
-
-        MonthSettlement[] infoArry = new MonthSettlement[2];
-        infoArry[0] = info1;
-        infoArry[1] = info2;
-        return infoArry;
-    }
-
-    // 订单税费试算
-    private static void calcTax() {
-        CalcTaxRequest request = new CalcTaxRequest();
+    // 用户实名认证信息收集-人脸认证方式
+    private static void collectRealNameInfoFace() {
+        CollectRealNameInfoRequest request = new CollectRealNameInfoRequest();
         request.setDealerId(config.getDealerId());
         request.setBrokerId(config.getBrokerId());
         request.setRealName("张三");
-        request.setIdCard("11010519491231002X");
-        request.setPay("99");
-        request.setTaxType("after_tax");
-        YzhResponse<CalcTaxResponse> response = null;
+        request.setIdCard("110xxxxxxxxxxxxx16");
+        request.setRealnameResult(1);
+        request.setRealnameTime("2025-09-09 19:19:19");
+        request.setRealnameType(1);
+        request.setRealnameTraceId("1413536187796566016");
+        request.setRealnamePlatform("xxxxxxx公司");
+        request.setFaceImageCollectType(1);
+        request.setFaceImage("https://www.example.com/file_name.png");
+        request.setFaceVerifyScore("89.12");
+
+        YzhResponse<CollectRealNameInfoResponse> response = null;
         try {
             // request-id：请求 ID，请求的唯一标识
             // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
             // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
-            response = client.calcTax(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+            response = client.collectRealNameInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
             if (response.isSuccess()) {
                 // 操作成功
-                CalcTaxResponse data = response.getData();
+                CollectRealNameInfoResponse data = response.getData();
                 System.out.println("操作成功：" + data);
             } else {
                 // 失败返回
@@ -98,50 +65,30 @@ public class CalculateLabor {
         }
     }
 
-    // 连续劳务年度税费测算-H5
-    private static void calculationYearH5Url() {
-        CalculationYearH5UrlRequest request = new CalculationYearH5UrlRequest();
+    // 用户实名认证信息收集-银行卡四要素认证方式
+    private static void collectRealNameInfoBank() {
+        CollectRealNameInfoRequest request = new CollectRealNameInfoRequest();
         request.setDealerId(config.getDealerId());
         request.setBrokerId(config.getBrokerId());
-        request.setColor("#FF3D3D");
-        YzhResponse<CalculationYearH5UrlResponse> response = null;
-        try {
-            // request-id：请求 ID，请求的唯一标识
-            // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
-            // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
-            response = client.calculationYearH5Url(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
-            if (response.isSuccess()) {
-                // 操作成功
-                CalculationYearH5UrlResponse data = response.getData();
-                System.out.println("操作成功：" + data);
-            } else {
-                // 失败返回
-                System.out.println("HTTP Status Code：" + response.getHttpCode());
-                System.out.println("失败返回：" + response.getCode() + "-" + response.getMessage());
-            }
-        } catch (Exception e) {
-            // 发生异常
-            e.printStackTrace();
-        }
-    }
-
-    // 连续劳务单笔结算税费测算-H5
-    private static void calculationH5Url() {
-        CalculationH5UrlRequest request = new CalculationH5UrlRequest();
-        request.setDealerId(config.getDealerId());
-        request.setBrokerId(config.getBrokerId());
-        request.setColor("#FF3D3D");
         request.setRealName("张三");
-        request.setIdCard("11010519491231002X");
-        YzhResponse<CalculationH5UrlResponse> response = null;
+        request.setIdCard("110xxxxxxxxxxxxx16");
+        request.setRealnameResult(1);
+        request.setRealnameTime("2025-09-09 19:19:19");
+        request.setRealnameType(2);
+        request.setRealnameTraceId("1413536187796566016");
+        request.setRealnamePlatform("xxxxxxx公司");
+        request.setBankNo("6127000xxxxxxx16");
+        request.setBankPhone("188xxx8888");
+
+        YzhResponse<CollectRealNameInfoResponse> response = null;
         try {
             // request-id：请求 ID，请求的唯一标识
             // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
             // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
-            response = client.calculationH5Url(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+            response = client.collectRealNameInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
             if (response.isSuccess()) {
                 // 操作成功
-                CalculationH5UrlResponse data = response.getData();
+                CollectRealNameInfoResponse data = response.getData();
                 System.out.println("操作成功：" + data);
             } else {
                 // 失败返回
@@ -154,4 +101,72 @@ public class CalculateLabor {
         }
     }
 
+    // 用户实名认证信息收集-人工审核
+    private static void collectRealNameInfoReviewer() {
+        CollectRealNameInfoRequest request = new CollectRealNameInfoRequest();
+        request.setDealerId(config.getDealerId());
+        request.setBrokerId(config.getBrokerId());
+        request.setRealName("张三");
+        request.setIdCard("110xxxxxxxxxxxxx16");
+        request.setRealnameResult(1);
+        request.setRealnameTime("2025-09-09 19:19:19");
+        request.setRealnameType(3);
+        request.setRealnameTraceId("1413536187796566016");
+        request.setRealnamePlatform("xxxxxxx公司");
+        request.setFaceImageCollectType(1);
+        request.setFaceImage("https://www.example.com/file_name.png");
+        request.setFaceVerifyScore("89.12");
+        request.setBankNo("6127000xxxxxxx16");
+        request.setBankPhone("188xxx8888");
+        request.setReviewer("908xxx8888");
+
+        YzhResponse<CollectRealNameInfoResponse> response = null;
+        try {
+            // request-id：请求 ID，请求的唯一标识
+            // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+            // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+            response = client.collectRealNameInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+            if (response.isSuccess()) {
+                // 操作成功
+                CollectRealNameInfoResponse data = response.getData();
+                System.out.println("操作成功：" + data);
+            } else {
+                // 失败返回
+                System.out.println("HTTP Status Code：" + response.getHttpCode());
+                System.out.println("失败返回：" + response.getCode() + "-" + response.getMessage());
+            }
+        } catch (Exception e) {
+            // 发生异常
+            e.printStackTrace();
+        }
+    }
+
+    // 用户实名认证信息查询
+    private static void queryRealNameInfo() {
+        QueryRealNameInfoRequest request = new QueryRealNameInfoRequest();
+        request.setDealerId(config.getDealerId());
+        request.setBrokerId(config.getBrokerId());
+        request.setRealName("张三");
+        request.setIdCard("110xxxxxxxxxxxxx16");
+
+        YzhResponse<QueryRealNameInfoResponse> response = null;
+        try {
+            // request-id：请求 ID，请求的唯一标识
+            // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+            // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+            response = client.queryRealNameInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+            if (response.isSuccess()) {
+                // 操作成功
+                QueryRealNameInfoResponse data = response.getData();
+                System.out.println("操作成功：" + data);
+            } else {
+                // 失败返回
+                System.out.println("HTTP Status Code：" + response.getHttpCode());
+                System.out.println("失败返回：" + response.getCode() + "-" + response.getMessage());
+            }
+        } catch (Exception e) {
+            // 发生异常
+            e.printStackTrace();
+        }
+    }
 }

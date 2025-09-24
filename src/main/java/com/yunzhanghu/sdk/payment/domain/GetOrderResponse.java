@@ -36,7 +36,7 @@ public class GetOrderResponse {
     // 订单状态码描述
     private String statusMessage;
 
-    // 订单详细状态码描述
+    // 订单详情状态码描述
     private String statusDetailMessage;
 
     // 订单状态补充信息
@@ -90,7 +90,7 @@ public class GetOrderResponse {
     // 银行名称
     private String bankName;
 
-    // 项目标识
+    // 业务线标识
     private String projectId;
 
     // 新就业形态劳动者 ID，该字段已废弃
@@ -125,6 +125,12 @@ public class GetOrderResponse {
 
     // 用户唯一标识码
     private String dealerUserId;
+
+    // 用户实收金额（追缴前）
+    private String userRealExcludingVatAmount;
+
+    // 已追缴增附税（本笔订单）
+    private String userRecoverTaxAmount;
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -454,6 +460,22 @@ public class GetOrderResponse {
         return dealerUserId;
     }
 
+    public void setUserRealExcludingVatAmount(String userRealExcludingVatAmount) {
+        this.userRealExcludingVatAmount = userRealExcludingVatAmount;
+    }
+
+    public String getUserRealExcludingVatAmount() {
+        return userRealExcludingVatAmount;
+    }
+
+    public void setUserRecoverTaxAmount(String userRecoverTaxAmount) {
+        this.userRecoverTaxAmount = userRecoverTaxAmount;
+    }
+
+    public String getUserRecoverTaxAmount() {
+        return userRecoverTaxAmount;
+    }
+
     @Override
     public String toString() {
         return "GetOrderResponse{" +
@@ -498,6 +520,8 @@ public class GetOrderResponse {
                 ", dealerPlatformName='" + dealerPlatformName + '\'' +
                 ", dealerUserNickname='" + dealerUserNickname + '\'' +
                 ", dealerUserId='" + dealerUserId + '\'' +
+                ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' +
+                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
                 "}";
     }
 }

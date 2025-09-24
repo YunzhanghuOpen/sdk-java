@@ -2,57 +2,60 @@ package com.yunzhanghu.sdk.dataservice.domain;
 
 // 余额账单信息详情
 public class StatementDetail {
-    
+
     // 账单 ID
     private String statementId;
-    
+
     // 账单日期
     private String statementDate;
-    
+
     // 综合服务主体 ID
     private String brokerId;
-    
+
     // 平台企业 ID
     private String dealerId;
-    
+
     // 综合服务主体名称
     private String brokerProductName;
-    
+
     // 平台企业名称
     private String dealerProductName;
-    
+
     // 业务类型
     private String bizType;
-    
+
     // 账单金额
     private String totalMoney;
-    
+
     // 订单金额
     private String amount;
-    
+
     // 退汇金额
     private String reexAmount;
-    
+
     // 实收综合服务主体加成服务费金额
     private String feeAmount;
-    
+
     // 实收加成服务费抵扣金额
     private String deductRebateFeeAmount;
-    
+
     // 冲补金额
     private String moneyAdjust;
-    
+
     // 账单状态
     private String status;
-    
+
     // 开票状态
     private String invoiceStatus;
-    
+
     // 项目 ID
     private String projectId;
-    
+
     // 项目名称
     private String projectName;
+
+    // 实纳税费金额
+    private String receivedTaxAmount;
 
     public void setStatementId(String statementId) {
         this.statementId = statementId;
@@ -190,26 +193,35 @@ public class StatementDetail {
         return projectName;
     }
 
+    public void setReceivedTaxAmount(String receivedTaxAmount) {
+        this.receivedTaxAmount = receivedTaxAmount;
+    }
+
+    public String getReceivedTaxAmount() {
+        return receivedTaxAmount;
+    }
+
     @Override
     public String toString() {
         return "StatementDetail{" +
-                " statementId='" + statementId + '\'' + 
-                ", statementDate='" + statementDate + '\'' + 
-                ", brokerId='" + brokerId + '\'' + 
-                ", dealerId='" + dealerId + '\'' + 
-                ", brokerProductName='" + brokerProductName + '\'' + 
-                ", dealerProductName='" + dealerProductName + '\'' + 
-                ", bizType='" + bizType + '\'' + 
-                ", totalMoney='" + totalMoney + '\'' + 
-                ", amount='" + amount + '\'' + 
-                ", reexAmount='" + reexAmount + '\'' + 
-                ", feeAmount='" + feeAmount + '\'' + 
-                ", deductRebateFeeAmount='" + deductRebateFeeAmount + '\'' + 
-                ", moneyAdjust='" + moneyAdjust + '\'' + 
-                ", status='" + status + '\'' + 
-                ", invoiceStatus='" + invoiceStatus + '\'' + 
-                ", projectId='" + projectId + '\'' + 
-                ", projectName='" + projectName + '\'' + 
-               "}";
+                " statementId='" + statementId + '\'' +
+                ", statementDate='" + statementDate + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", dealerId='" + dealerId + '\'' +
+                ", brokerProductName='" + brokerProductName + '\'' +
+                ", dealerProductName='" + dealerProductName + '\'' +
+                ", bizType='" + bizType + '\'' +
+                ", totalMoney='" + totalMoney + '\'' +
+                ", amount='" + amount + '\'' +
+                ", reexAmount='" + reexAmount + '\'' +
+                ", feeAmount='" + feeAmount + '\'' +
+                ", deductRebateFeeAmount='" + deductRebateFeeAmount + '\'' +
+                ", moneyAdjust='" + moneyAdjust + '\'' +
+                ", status='" + status + '\'' +
+                ", invoiceStatus='" + invoiceStatus + '\'' +
+                ", projectId='" + projectId + '\'' +
+                ", projectName='" + projectName + '\'' +
+                ", receivedTaxAmount='" + receivedTaxAmount + '\'' +
+                "}";
     }
 }

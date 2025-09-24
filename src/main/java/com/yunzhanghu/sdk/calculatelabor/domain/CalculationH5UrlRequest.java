@@ -1,7 +1,7 @@
 package com.yunzhanghu.sdk.calculatelabor.domain;
 
-// 订单税费试算请求
-public class CalcTaxRequest {
+// 连续劳务单笔结算税费测算-H5 请求
+public class CalculationH5UrlRequest {
     
     // 平台企业 ID
     private String dealerId;
@@ -15,11 +15,8 @@ public class CalcTaxRequest {
     // 证件号
     private String idCard;
     
-    // 测算金额
-    private String pay;
-    
-    // 测算类型
-    private String taxType;
+    // 主题颜色
+    private String color;
 
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
@@ -53,31 +50,22 @@ public class CalcTaxRequest {
         return idCard;
     }
 
-    public void setPay(String pay) {
-        this.pay = pay;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public String getPay() {
-        return pay;
-    }
-
-    public void setTaxType(String taxType) {
-        this.taxType = taxType;
-    }
-
-    public String getTaxType() {
-        return taxType;
+    public String getColor() {
+        return color;
     }
 
     @Override
     public String toString() {
-        return "CalcTaxRequest{" +
+        return "CalculationH5UrlRequest{" +
                 " dealerId='" + dealerId + '\'' + 
                 ", brokerId='" + brokerId + '\'' + 
                 ", realName='" + realName + '\'' + 
                 ", idCard='" + idCard + '\'' + 
-                ", pay='" + pay + '\'' + 
-                ", taxType='" + taxType + '\'' + 
+                ", color='" + color + '\'' + 
                "}";
     }
 }

@@ -2,17 +2,17 @@ package com.yunzhanghu.sdk.calculatelabor.domain;
 
 // 订单税费试算返回
 public class CalcTaxResponse {
-    
+
     // 测算金额
     private String pay;
-    
+
     // 税费总额
     private String tax;
-    
+
     // 税后结算金额
     private String afterTaxAmount;
-    
-    // 税费明细
+
+    // 缴税明细
     private CalcTaxDetail taxDetail;
 
     // 税前订单金额
@@ -41,6 +41,18 @@ public class CalcTaxResponse {
 
     // 结果详细状态码描述
     private String statusDetailMessage;
+
+    // 用户实收金额（未扣除追缴的增附税）
+    private String userRealExcludingVatAmount;
+
+    // 用户还未缴清的增附税
+    private String userRemainingRepaymentAmount;
+
+    // 已追缴增附税（本笔订单）
+    private String userRecoverTaxAmount;
+
+    // 待追缴增附税总金额
+    private String userTotalRecoverTaxAmount;
 
     public void setPay(String pay) {
         this.pay = pay;
@@ -74,85 +86,117 @@ public class CalcTaxResponse {
         return taxDetail;
     }
 
-    public String getBeforeTaxAmount() {
-        return beforeTaxAmount;
-    }
-
     public void setBeforeTaxAmount(String beforeTaxAmount) {
         this.beforeTaxAmount = beforeTaxAmount;
     }
 
-    public String getUserTax() {
-        return userTax;
+    public String getBeforeTaxAmount() {
+        return beforeTaxAmount;
     }
 
     public void setUserTax(String userTax) {
         this.userTax = userTax;
     }
 
-    public String getDealerTax() {
-        return dealerTax;
+    public String getUserTax() {
+        return userTax;
     }
 
     public void setDealerTax(String dealerTax) {
         this.dealerTax = dealerTax;
     }
 
-    public String getBrokerTax() {
-        return brokerTax;
+    public String getDealerTax() {
+        return dealerTax;
     }
 
     public void setBrokerTax(String brokerTax) {
         this.brokerTax = brokerTax;
     }
 
-    public String getUserFee() {
-        return userFee;
+    public String getBrokerTax() {
+        return brokerTax;
     }
 
     public void setUserFee(String userFee) {
         this.userFee = userFee;
     }
 
-    public String getStatus() {
-        return status;
+    public String getUserFee() {
+        return userFee;
     }
 
     public void setStatus(String status) {
         this.status = status;
     }
 
-    public String getStatusDetail() {
-        return statusDetail;
+    public String getStatus() {
+        return status;
     }
 
     public void setStatusDetail(String statusDetail) {
         this.statusDetail = statusDetail;
     }
 
-    public String getStatusMessage() {
-        return statusMessage;
+    public String getStatusDetail() {
+        return statusDetail;
     }
 
     public void setStatusMessage(String statusMessage) {
         this.statusMessage = statusMessage;
     }
 
-    public String getStatusDetailMessage() {
-        return statusDetailMessage;
+    public String getStatusMessage() {
+        return statusMessage;
     }
 
     public void setStatusDetailMessage(String statusDetailMessage) {
         this.statusDetailMessage = statusDetailMessage;
     }
 
+    public String getStatusDetailMessage() {
+        return statusDetailMessage;
+    }
+
+    public void setUserRealExcludingVatAmount(String userRealExcludingVatAmount) {
+        this.userRealExcludingVatAmount = userRealExcludingVatAmount;
+    }
+
+    public String getUserRealExcludingVatAmount() {
+        return userRealExcludingVatAmount;
+    }
+
+    public void setUserRemainingRepaymentAmount(String userRemainingRepaymentAmount) {
+        this.userRemainingRepaymentAmount = userRemainingRepaymentAmount;
+    }
+
+    public String getUserRemainingRepaymentAmount() {
+        return userRemainingRepaymentAmount;
+    }
+
+    public void setUserRecoverTaxAmount(String userRecoverTaxAmount) {
+        this.userRecoverTaxAmount = userRecoverTaxAmount;
+    }
+
+    public String getUserRecoverTaxAmount() {
+        return userRecoverTaxAmount;
+    }
+
+    public void setUserTotalRecoverTaxAmount(String userTotalRecoverTaxAmount) {
+        this.userTotalRecoverTaxAmount = userTotalRecoverTaxAmount;
+    }
+
+    public String getUserTotalRecoverTaxAmount() {
+        return userTotalRecoverTaxAmount;
+    }
+
     @Override
     public String toString() {
         return "CalcTaxResponse{" +
-                "pay='" + pay + '\'' +
+                " pay='" + pay + '\'' +
                 ", tax='" + tax + '\'' +
                 ", afterTaxAmount='" + afterTaxAmount + '\'' +
-                ", taxDetail=" + taxDetail +
+                ", taxDetail='" + taxDetail + '\'' +
                 ", beforeTaxAmount='" + beforeTaxAmount + '\'' +
                 ", userTax='" + userTax + '\'' +
                 ", dealerTax='" + dealerTax + '\'' +
@@ -162,6 +206,10 @@ public class CalcTaxResponse {
                 ", statusDetail='" + statusDetail + '\'' +
                 ", statusMessage='" + statusMessage + '\'' +
                 ", statusDetailMessage='" + statusDetailMessage + '\'' +
-                '}';
+                ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' +
+                ", userRemainingRepaymentAmount='" + userRemainingRepaymentAmount + '\'' +
+                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
+                ", userTotalRecoverTaxAmount='" + userTotalRecoverTaxAmount + '\'' +
+                "}";
     }
 }

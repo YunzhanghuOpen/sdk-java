@@ -126,6 +126,12 @@ public class GetOrderLxlwResponse {
     // 用户唯一标识码
     private String dealerUserId;
 
+    // 用户实收金额（追缴前）
+    private String userRealExcludingVatAmount;
+
+    // 已追缴增附税（本笔订单）
+    private String userRecoverTaxAmount;
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -454,6 +460,22 @@ public class GetOrderLxlwResponse {
         return dealerUserId;
     }
 
+    public void setUserRealExcludingVatAmount(String userRealExcludingVatAmount) {
+        this.userRealExcludingVatAmount = userRealExcludingVatAmount;
+    }
+
+    public String getUserRealExcludingVatAmount() {
+        return userRealExcludingVatAmount;
+    }
+
+    public void setUserRecoverTaxAmount(String userRecoverTaxAmount) {
+        this.userRecoverTaxAmount = userRecoverTaxAmount;
+    }
+
+    public String getUserRecoverTaxAmount() {
+        return userRecoverTaxAmount;
+    }
+
     @Override
     public String toString() {
         return "GetOrderLxlwResponse{" +
@@ -498,6 +520,8 @@ public class GetOrderLxlwResponse {
                 ", dealerPlatformName='" + dealerPlatformName + '\'' +
                 ", dealerUserNickname='" + dealerUserNickname + '\'' +
                 ", dealerUserId='" + dealerUserId + '\'' +
+                ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' +
+                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
                 "}";
     }
 }

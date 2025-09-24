@@ -117,6 +117,12 @@ public class NotifyOrderData {
     // 实缴税费总额
     private String receivedTaxAmount;
 
+    // 用户实收金额（追缴前）
+    private String userRealExcludingVatAmount;
+
+    // 已追缴增附税（本笔订单）
+    private String userRecoverTaxAmount;
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -421,6 +427,22 @@ public class NotifyOrderData {
         return receivedTaxAmount;
     }
 
+    public void setUserRealExcludingVatAmount(String userRealExcludingVatAmount) {
+        this.userRealExcludingVatAmount = userRealExcludingVatAmount;
+    }
+
+    public String getUserRealExcludingVatAmount() {
+        return userRealExcludingVatAmount;
+    }
+
+    public void setUserRecoverTaxAmount(String userRecoverTaxAmount) {
+        this.userRecoverTaxAmount = userRecoverTaxAmount;
+    }
+
+    public String getUserRecoverTaxAmount() {
+        return userRecoverTaxAmount;
+    }
+
     @Override
     public String toString() {
         return "NotifyOrderData{" +
@@ -462,6 +484,8 @@ public class NotifyOrderData {
                 ", dealerUserId='" + dealerUserId + '\'' +
                 ", tax='" + tax + '\'' +
                 ", receivedTaxAmount='" + receivedTaxAmount + '\'' +
+                ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' +
+                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
                 "}";
     }
 }
