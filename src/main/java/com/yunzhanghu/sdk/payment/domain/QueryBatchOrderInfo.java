@@ -108,6 +108,18 @@ public class QueryBatchOrderInfo {
     // 预扣个税速算扣除数
     private String deductTax;
 
+    // 实缴税费总额
+    private String receivedTaxAmount;
+
+    // 用户实收金额
+    private String userRealAmount;
+
+    // 预扣税费总额
+    private String tax;
+
+    // 缴税明细
+    private TaxDetail taxDetail;
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -388,6 +400,38 @@ public class QueryBatchOrderInfo {
         return deductTax;
     }
 
+    public void setReceivedTaxAmount(String receivedTaxAmount) {
+        this.receivedTaxAmount = receivedTaxAmount;
+    }
+
+    public String getReceivedTaxAmount() {
+        return receivedTaxAmount;
+    }
+
+    public void setUserRealAmount(String userRealAmount) {
+        this.userRealAmount = userRealAmount;
+    }
+
+    public String getUserRealAmount() {
+        return userRealAmount;
+    }
+
+    public void setTax(String tax) {
+        this.tax = tax;
+    }
+
+    public String getTax() {
+        return tax;
+    }
+
+    public void setTaxDetail(TaxDetail taxDetail) {
+        this.taxDetail = taxDetail;
+    }
+
+    public TaxDetail getTaxDetail() {
+        return taxDetail;
+    }
+
     @Override
     public String toString() {
         return "QueryBatchOrderInfo{" +
@@ -426,6 +470,10 @@ public class QueryBatchOrderInfo {
                 ", dealerUserId='" + dealerUserId + '\'' +
                 ", personalTaxRate='" + personalTaxRate + '\'' +
                 ", deductTax='" + deductTax + '\'' +
+                ", receivedTaxAmount='" + receivedTaxAmount + '\'' +
+                ", userRealAmount='" + userRealAmount + '\'' +
+                ", tax='" + tax + '\'' +
+                ", taxDetail='" + taxDetail + '\'' +
                 "}";
     }
 }

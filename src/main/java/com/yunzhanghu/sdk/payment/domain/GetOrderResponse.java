@@ -102,7 +102,7 @@ public class GetOrderResponse {
     // 系统支付金额，该字段已废弃
     private String sysAmount;
 
-    // 税费，该字段已废弃
+    // 预扣税费总额
     private String tax;
 
     // 系统支付费用，该字段已废弃
