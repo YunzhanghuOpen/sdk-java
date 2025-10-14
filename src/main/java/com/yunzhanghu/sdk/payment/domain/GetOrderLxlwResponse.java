@@ -132,6 +132,12 @@ public class GetOrderLxlwResponse {
     // 已追缴增附税（本笔订单）
     private String userRecoverTaxAmount;
 
+    // 预扣个税税率
+    private String personalTaxRate;
+
+    // 预扣个税速算扣除数
+    private String deductTax;
+
     public void setOrderId(String orderId) {
         this.orderId = orderId;
     }
@@ -476,6 +482,22 @@ public class GetOrderLxlwResponse {
         return userRecoverTaxAmount;
     }
 
+    public void setPersonalTaxRate(String personalTaxRate) {
+        this.personalTaxRate = personalTaxRate;
+    }
+
+    public String getPersonalTaxRate() {
+        return personalTaxRate;
+    }
+
+    public void setDeductTax(String deductTax) {
+        this.deductTax = deductTax;
+    }
+
+    public String getDeductTax() {
+        return deductTax;
+    }
+
     @Override
     public String toString() {
         return "GetOrderLxlwResponse{" +
@@ -522,6 +544,8 @@ public class GetOrderLxlwResponse {
                 ", dealerUserId='" + dealerUserId + '\'' +
                 ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' +
                 ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
+                ", personalTaxRate='" + personalTaxRate + '\'' +
+                ", deductTax='" + deductTax + '\'' +
                 "}";
     }
 }
