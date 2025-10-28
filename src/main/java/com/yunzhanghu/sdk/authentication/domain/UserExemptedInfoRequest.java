@@ -2,45 +2,48 @@ package com.yunzhanghu.sdk.authentication.domain;
 
 // 上传非居民身份证验证名单信息请求
 public class UserExemptedInfoRequest {
-    
+
     // 证件类型码
     private String cardType;
-    
+
     // 证件号码
     private String idCard;
-    
+
     // 姓名
     private String realName;
-    
+
     // 申请备注
     private String commentApply;
-    
+
     // 综合服务主体 ID
     private String brokerId;
-    
+
     // 平台企业 ID
     private String dealerId;
-    
+
     // 人员信息图片
     private String[] userImages;
-    
+
     // 国别（地区）代码
     private String country;
-    
+
     // 出生日期
     private String birthday;
-    
+
     // 性别
     private String gender;
-    
+
     // 回调地址
     private String notifyUrl;
-    
+
     // 请求流水号
     private String ref;
-    
+
     // 证件照片 URL 地址
     private String[] imageUrls;
+
+    // 外籍人员类型
+    private String residentType;
 
     public void setCardType(String cardType) {
         this.cardType = cardType;
@@ -146,22 +149,31 @@ public class UserExemptedInfoRequest {
         return imageUrls;
     }
 
+    public void setResidentType(String residentType) {
+        this.residentType = residentType;
+    }
+
+    public String getResidentType() {
+        return residentType;
+    }
+
     @Override
     public String toString() {
         return "UserExemptedInfoRequest{" +
-                " cardType='" + cardType + '\'' + 
-                ", idCard='" + idCard + '\'' + 
-                ", realName='" + realName + '\'' + 
-                ", commentApply='" + commentApply + '\'' + 
-                ", brokerId='" + brokerId + '\'' + 
-                ", dealerId='" + dealerId + '\'' + 
-                ", userImages='" + userImages + '\'' + 
-                ", country='" + country + '\'' + 
-                ", birthday='" + birthday + '\'' + 
-                ", gender='" + gender + '\'' + 
-                ", notifyUrl='" + notifyUrl + '\'' + 
-                ", ref='" + ref + '\'' + 
-                ", imageUrls='" + imageUrls + '\'' + 
-               "}";
+                " cardType='" + cardType + '\'' +
+                ", idCard='" + idCard + '\'' +
+                ", realName='" + realName + '\'' +
+                ", commentApply='" + commentApply + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", dealerId='" + dealerId + '\'' +
+                ", userImages='" + userImages + '\'' +
+                ", country='" + country + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", gender='" + gender + '\'' +
+                ", notifyUrl='" + notifyUrl + '\'' +
+                ", ref='" + ref + '\'' +
+                ", imageUrls='" + imageUrls + '\'' +
+                ", residentType='" + residentType + '\'' +
+                "}";
     }
 }

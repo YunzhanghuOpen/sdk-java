@@ -50,7 +50,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 <dependency>
     <groupId>com.yunzhanghu.openapi</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.4.34-RELEASE</version>
+    <version>1.4.35-RELEASE</version>
 </dependency>
 ```
 

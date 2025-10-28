@@ -104,6 +104,8 @@ public class CalculateLabor {
         request.setDealerId(config.getDealerId());
         request.setBrokerId(config.getBrokerId());
         request.setColor("#FF3D3D");
+        request.setNavbarHide(0);
+        request.setTitle("云账户");
         YzhResponse<CalculationYearH5UrlResponse> response = null;
         try {
             // request-id：请求 ID，请求的唯一标识
@@ -133,6 +135,8 @@ public class CalculateLabor {
         request.setColor("#FF3D3D");
         request.setRealName("张三");
         request.setIdCard("11010519491231002X");
+        request.setNavbarHide(0);
+        request.setTitle("云账户");
         YzhResponse<CalculationH5UrlResponse> response = null;
         try {
             // request-id：请求 ID，请求的唯一标识

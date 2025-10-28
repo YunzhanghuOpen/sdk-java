@@ -215,6 +215,7 @@ public class Authentication {
 		request.setGender("男");
 		request.setNotifyUrl("https://www.example.com");
 		request.setRef("1234qwer");
+		request.setResidentType("1");
 		YzhResponse<UserExemptedInfoResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
