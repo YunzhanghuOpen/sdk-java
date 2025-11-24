@@ -44,6 +44,15 @@ public class CalcTaxDetail {
     
     // 预扣个税速算扣除数
     private String deductTax;
+    
+    // 预扣城建附加税
+    private String additionalUrbanTax;
+    
+    // 预扣教育附加税
+    private String additionalTuitionTax;
+    
+    // 预扣地方教育附加税
+    private String additionalLocalTuitionTax;
 
     public void setPersonalTax(String personalTax) {
         this.personalTax = personalTax;
@@ -157,6 +166,30 @@ public class CalcTaxDetail {
         return deductTax;
     }
 
+    public void setAdditionalUrbanTax(String additionalUrbanTax) {
+        this.additionalUrbanTax = additionalUrbanTax;
+    }
+
+    public String getAdditionalUrbanTax() {
+        return additionalUrbanTax;
+    }
+
+    public void setAdditionalTuitionTax(String additionalTuitionTax) {
+        this.additionalTuitionTax = additionalTuitionTax;
+    }
+
+    public String getAdditionalTuitionTax() {
+        return additionalTuitionTax;
+    }
+
+    public void setAdditionalLocalTuitionTax(String additionalLocalTuitionTax) {
+        this.additionalLocalTuitionTax = additionalLocalTuitionTax;
+    }
+
+    public String getAdditionalLocalTuitionTax() {
+        return additionalLocalTuitionTax;
+    }
+
     @Override
     public String toString() {
         return "CalcTaxDetail{" +
@@ -174,6 +207,9 @@ public class CalcTaxDetail {
                 ", brokerAdditionalTax='" + brokerAdditionalTax + '\'' + 
                 ", personalTaxRate='" + personalTaxRate + '\'' + 
                 ", deductTax='" + deductTax + '\'' + 
+                ", additionalUrbanTax='" + additionalUrbanTax + '\'' + 
+                ", additionalTuitionTax='" + additionalTuitionTax + '\'' + 
+                ", additionalLocalTuitionTax='" + additionalLocalTuitionTax + '\'' + 
                "}";
     }
 }
