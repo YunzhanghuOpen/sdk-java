@@ -77,6 +77,7 @@ public class CalculateLabor {
         request.setIdCard("11010519491231002X");
         request.setPay("99");
         request.setTaxType("after_tax");
+        request.setBeforeTaxAmountType("max");
         YzhResponse<CalcTaxResponse> response = null;
         try {
             // request-id：请求 ID，请求的唯一标识

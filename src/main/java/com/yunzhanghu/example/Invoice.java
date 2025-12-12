@@ -6,20 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.invoice.InvoiceClient;
-import com.yunzhanghu.sdk.invoice.domain.ApplyInvoiceRequest;
-import com.yunzhanghu.sdk.invoice.domain.ApplyInvoiceResponse;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceAmountRequest;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceAmountResponse;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceFileRequest;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceFileResponse;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceInformationRequest;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceInformationResponse;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceStatRequest;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceStatResponse;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceStatusRequest;
-import com.yunzhanghu.sdk.invoice.domain.GetInvoiceStatusResponse;
-import com.yunzhanghu.sdk.invoice.domain.SendReminderEmailRequest;
-import com.yunzhanghu.sdk.invoice.domain.SendReminderEmailResponse;
+import com.yunzhanghu.sdk.invoice.domain.*;
 
 // 发票开具
 public class Invoice {

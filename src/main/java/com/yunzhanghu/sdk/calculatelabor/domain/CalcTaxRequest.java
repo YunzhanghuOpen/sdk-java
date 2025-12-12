@@ -2,24 +2,27 @@ package com.yunzhanghu.sdk.calculatelabor.domain;
 
 // 订单税费试算请求
 public class CalcTaxRequest {
-    
+
     // 平台企业 ID
     private String dealerId;
-    
+
     // 综合服务主体 ID
     private String brokerId;
-    
+
     // 姓名
     private String realName;
-    
+
     // 证件号
     private String idCard;
-    
+
     // 测算金额
     private String pay;
-    
+
     // 测算类型
     private String taxType;
+
+    // 税前订单金额返回值类型
+    private String beforeTaxAmountType;
 
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
@@ -69,15 +72,24 @@ public class CalcTaxRequest {
         return taxType;
     }
 
+    public void setBeforeTaxAmountType(String beforeTaxAmountType) {
+        this.beforeTaxAmountType = beforeTaxAmountType;
+    }
+
+    public String getBeforeTaxAmountType() {
+        return beforeTaxAmountType;
+    }
+
     @Override
     public String toString() {
         return "CalcTaxRequest{" +
-                " dealerId='" + dealerId + '\'' + 
-                ", brokerId='" + brokerId + '\'' + 
-                ", realName='" + realName + '\'' + 
-                ", idCard='" + idCard + '\'' + 
-                ", pay='" + pay + '\'' + 
-                ", taxType='" + taxType + '\'' + 
-               "}";
+                " dealerId='" + dealerId + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", realName='" + realName + '\'' +
+                ", idCard='" + idCard + '\'' +
+                ", pay='" + pay + '\'' +
+                ", taxType='" + taxType + '\'' +
+                ", beforeTaxAmountType='" + beforeTaxAmountType + '\'' +
+                "}";
     }
 }

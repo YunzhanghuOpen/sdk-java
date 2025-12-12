@@ -6,10 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.uploadusersign.UploadUserSignServiceClient;
-import com.yunzhanghu.sdk.uploadusersign.domain.GetUploadUserSignStatusRequest;
-import com.yunzhanghu.sdk.uploadusersign.domain.GetUploadUserSignStatusResponse;
-import com.yunzhanghu.sdk.uploadusersign.domain.UploadUserSignRequest;
-import com.yunzhanghu.sdk.uploadusersign.domain.UploadUserSignResponse;
+import com.yunzhanghu.sdk.uploadusersign.domain.*;
 
 // 用户签约（签约信息上传）
 public class UploadUserSign {

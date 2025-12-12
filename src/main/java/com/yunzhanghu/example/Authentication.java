@@ -3,26 +3,12 @@ package com.yunzhanghu.example;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+
+import com.yunzhanghu.sdk.authentication.domain.*;
 import org.apache.commons.codec.binary.Base64;
 import com.yunzhanghu.example.config.Config;
 import com.yunzhanghu.example.utils.BaseUtil;
 import com.yunzhanghu.sdk.authentication.AuthenticationClient;
-import com.yunzhanghu.sdk.authentication.domain.BankCardFourAuthConfirmRequest;
-import com.yunzhanghu.sdk.authentication.domain.BankCardFourAuthConfirmResponse;
-import com.yunzhanghu.sdk.authentication.domain.BankCardFourAuthVerifyRequest;
-import com.yunzhanghu.sdk.authentication.domain.BankCardFourAuthVerifyResponse;
-import com.yunzhanghu.sdk.authentication.domain.BankCardFourVerifyRequest;
-import com.yunzhanghu.sdk.authentication.domain.BankCardFourVerifyResponse;
-import com.yunzhanghu.sdk.authentication.domain.BankCardThreeVerifyRequest;
-import com.yunzhanghu.sdk.authentication.domain.BankCardThreeVerifyResponse;
-import com.yunzhanghu.sdk.authentication.domain.GetBankCardInfoRequest;
-import com.yunzhanghu.sdk.authentication.domain.GetBankCardInfoResponse;
-import com.yunzhanghu.sdk.authentication.domain.IDCardVerifyRequest;
-import com.yunzhanghu.sdk.authentication.domain.IDCardVerifyResponse;
-import com.yunzhanghu.sdk.authentication.domain.UserExemptedInfoRequest;
-import com.yunzhanghu.sdk.authentication.domain.UserExemptedInfoResponse;
-import com.yunzhanghu.sdk.authentication.domain.UserWhiteCheckRequest;
-import com.yunzhanghu.sdk.authentication.domain.UserWhiteCheckResponse;
 import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
@@ -50,6 +36,8 @@ public class Authentication {
 		userWhiteCheck();
 		// 银行卡信息查询
 		getBankCardInfo();
+		// 非居民身份证验证名单审核结果查询
+		getUserWhiteApproveInfo();
 	}
 
 	// 银行卡四要素鉴权请求（下发短信验证码）
@@ -309,4 +297,31 @@ public class Authentication {
 		}
 		return new String(Base64.encodeBase64(data));
 	}
+
+    // 非居民身份证验证名单审核结果查询
+    private static void getUserWhiteApproveInfo() {
+        GetUserWhiteApproveInfoRequest request = new GetUserWhiteApproveInfoRequest();
+        request.setRealName("张三");
+        request.setIdCard("EA3456789");
+        request.setCardType("passport");
+        YzhResponse<GetUserWhiteApproveInfoResponse> response = null;
+        try {
+            // request-id：请求 ID，请求的唯一标识
+            // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+            // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+            response = client.getUserWhiteApproveInfo(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+            if (response.isSuccess()) {
+                // 操作成功
+                GetUserWhiteApproveInfoResponse data = response.getData();
+                System.out.println("操作成功：" + data);
+            } else {
+                // 失败返回
+                System.out.println("HTTP Status Code：" + response.getHttpCode());
+                System.out.println("失败返回：" + response.getCode() + response.getMessage());
+            }
+        } catch (Exception e) {
+            // 发生异常
+            e.printStackTrace();
+        }
+    }
 }

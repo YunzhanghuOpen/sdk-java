@@ -6,10 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.bizlicxjjh5.BizlicXjjH5ServiceClient;
-import com.yunzhanghu.sdk.bizlicxjjh5.domain.H5EcoCityAicStatusRequest;
-import com.yunzhanghu.sdk.bizlicxjjh5.domain.H5EcoCityAicStatusResponse;
-import com.yunzhanghu.sdk.bizlicxjjh5.domain.H5GetStartUrlRequest;
-import com.yunzhanghu.sdk.bizlicxjjh5.domain.H5GetStartUrlResponse;
+import com.yunzhanghu.sdk.bizlicxjjh5.domain.*;
 
 // 个体工商户注册（云账户新经济 H5）
 public class BizLicXjjH5 {

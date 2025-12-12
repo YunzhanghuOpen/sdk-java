@@ -6,39 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.payment.PaymentClient;
-import com.yunzhanghu.sdk.payment.domain.AccountInfo;
-import com.yunzhanghu.sdk.payment.domain.BatchOrderInfo;
-import com.yunzhanghu.sdk.payment.domain.BatchOrderResult;
-import com.yunzhanghu.sdk.payment.domain.CancelBatchOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CancelBatchOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CancelOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CancelOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.ConfirmBatchOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.ConfirmBatchOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateAlipayOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateAlipayOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateBankpayOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateBankpayOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateBatchOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateBatchOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CreateWxpayOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.CreateWxpayOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.GetDealerVARechargeAccountRequest;
-import com.yunzhanghu.sdk.payment.domain.GetDealerVARechargeAccountResponse;
-import com.yunzhanghu.sdk.payment.domain.GetEleReceiptFileRequest;
-import com.yunzhanghu.sdk.payment.domain.GetEleReceiptFileResponse;
-import com.yunzhanghu.sdk.payment.domain.GetOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.GetOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.ListAccountRequest;
-import com.yunzhanghu.sdk.payment.domain.ListAccountResponse;
-import com.yunzhanghu.sdk.payment.domain.QueryBatchOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.QueryBatchOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.RetryOrderRequest;
-import com.yunzhanghu.sdk.payment.domain.RetryOrderResponse;
-import com.yunzhanghu.sdk.payment.domain.CheckUserAmountRequest;
-import com.yunzhanghu.sdk.payment.domain.CheckUserAmountResponse;
-import com.yunzhanghu.sdk.payment.domain.GetOrderLxlwRequest;
-import com.yunzhanghu.sdk.payment.domain.GetOrderLxlwResponse;
+import com.yunzhanghu.sdk.payment.domain.*;
 import com.yunzhanghu.sdk.utils.JsonUtil;
 
 // 实时支付
@@ -78,7 +46,6 @@ public class Payment {
         checkUserAmount();
         // 查询劳务模式单笔订单信息
         getOrderLxlw();
-
     }
 
     // 银行卡实时支付

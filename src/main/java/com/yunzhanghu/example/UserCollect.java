@@ -6,10 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.usercollect.UserCollectServiceClient;
-import com.yunzhanghu.sdk.usercollect.domain.GetUserCollectPhoneStatusRequest;
-import com.yunzhanghu.sdk.usercollect.domain.GetUserCollectPhoneStatusResponse;
-import com.yunzhanghu.sdk.usercollect.domain.GetUserCollectPhoneUrlRequest;
-import com.yunzhanghu.sdk.usercollect.domain.GetUserCollectPhoneUrlResponse;
+import com.yunzhanghu.sdk.usercollect.domain.*;
 
 // 用户信息收集
 public class UserCollect {

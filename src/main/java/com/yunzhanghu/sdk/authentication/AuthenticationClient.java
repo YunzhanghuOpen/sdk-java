@@ -94,4 +94,14 @@ public class AuthenticationClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
+    // 非居民身份证验证名单审核结果查询
+    public YzhResponse<GetUserWhiteApproveInfoResponse> getUserWhiteApproveInfo(YzhRequest<GetUserWhiteApproveInfoRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/payment/v1/user/white/approve", false, new TypeToken<YzhResponse<GetUserWhiteApproveInfoResponse>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
 }

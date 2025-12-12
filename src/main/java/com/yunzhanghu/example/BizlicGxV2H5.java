@@ -6,10 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.bizlicgxv2h5.BizlicGxV2H5ServiceClient;
-import com.yunzhanghu.sdk.bizlicgxv2h5.domain.GxV2H5GetAicStatusRequest;
-import com.yunzhanghu.sdk.bizlicgxv2h5.domain.GxV2H5GetAicStatusResponse;
-import com.yunzhanghu.sdk.bizlicgxv2h5.domain.GxV2H5GetStartUrlRequest;
-import com.yunzhanghu.sdk.bizlicgxv2h5.domain.GxV2H5GetStartUrlResponse;
+import com.yunzhanghu.sdk.bizlicgxv2h5.domain.*;
 
 // 个体工商户注册（云账户共享大额 H5）
 public class BizlicGxV2H5 {

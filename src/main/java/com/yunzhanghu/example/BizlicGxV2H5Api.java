@@ -6,12 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.bizlicgxv2h5api.BizlicGxV2H5APIServiceClient;
-import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIGetAicStatusRequest;
-import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIGetAicStatusResponse;
-import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIGetStartUrlRequest;
-import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIGetStartUrlResponse;
-import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIPreCollectBizlicMsgRequest;
-import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.GxV2H5APIPreCollectBizlicMsgResponse;
+import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.*;
 
 // 个体工商户注册（云账户共享大额 H5+API）
 public class BizlicGxV2H5Api {

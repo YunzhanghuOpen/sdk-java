@@ -11,9 +11,9 @@ import com.yunzhanghu.sdk.invoice.domain.NotifyInvoiceDoneRequest;
 import com.yunzhanghu.sdk.notify.*;
 import com.yunzhanghu.sdk.notify.domain.NotifyRequest;
 import com.yunzhanghu.sdk.notify.domain.NotifyResponse;
-import com.yunzhanghu.sdk.payment.domain.NotifyOrderData;
-import com.yunzhanghu.sdk.payment.domain.NotifyOrderLxlwRequest;
-import com.yunzhanghu.sdk.payment.domain.NotifyOrderRequest;
+import com.yunzhanghu.sdk.payment.domain.*;
+import com.yunzhanghu.sdk.taxclearrefund.domain.NotifyClearTaxDoneRequest;
+import com.yunzhanghu.sdk.taxclearrefund.domain.NotifyRefundTaxDoneRequest;
 import com.yunzhanghu.sdk.uploadusersign.domain.NotifyUploadUserSignRequest;
 import com.yunzhanghu.sdk.usercollect.domain.NotifyUserCollectPhoneRequest;
 
@@ -75,6 +75,14 @@ public class Notify {
 			// 劳务模式订单支付状态回调通知
 //			NotifyResponse<NotifyOrderLxlwRequest> response = client.notifyDecoder(request, NotifyOrderLxlwRequest.class);
 //			NotifyOrderLxlwRequest notifyRequest = response.getData();
+
+            // 税费清缴完成通知
+//			NotifyResponse<NotifyClearTaxDoneRequest> response = client.notifyDecoder(request, NotifyClearTaxDoneRequest.class);
+//          NotifyClearTaxDoneRequest notifyRequest = response.getData();
+
+            // 税费退补完成通知
+//          NotifyResponse<NotifyRefundTaxDoneRequest> response = client.notifyDecoder(request, NotifyRefundTaxDoneRequest.class);
+//          NotifyRefundTaxDoneRequest notifyRequest = response.getData();
 
 			System.out.println("签名验证结果：" + response.getSignRes());
 			System.out.println("数据解密结果：" + response.getDescryptRes());

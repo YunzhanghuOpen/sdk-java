@@ -6,10 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.tax.TaxClient;
-import com.yunzhanghu.sdk.tax.domain.GetTaxFileRequest;
-import com.yunzhanghu.sdk.tax.domain.GetTaxFileResponse;
-import com.yunzhanghu.sdk.tax.domain.GetUserCrossRequest;
-import com.yunzhanghu.sdk.tax.domain.GetUserCrossResponse;
+import com.yunzhanghu.sdk.tax.domain.*;
 
 // 个人所得税申报明细表
 public class Tax {

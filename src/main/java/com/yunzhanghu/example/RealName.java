@@ -7,10 +7,7 @@ import com.yunzhanghu.sdk.base.YzhRequest;
 import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.calculatelabor.domain.*;
 import com.yunzhanghu.sdk.realname.RealNameServiceClient;
-import com.yunzhanghu.sdk.realname.domain.CollectRealNameInfoRequest;
-import com.yunzhanghu.sdk.realname.domain.CollectRealNameInfoResponse;
-import com.yunzhanghu.sdk.realname.domain.QueryRealNameInfoRequest;
-import com.yunzhanghu.sdk.realname.domain.QueryRealNameInfoResponse;
+import com.yunzhanghu.sdk.realname.domain.*;
 
 // 用户实名认证信息收集
 public class RealName {
