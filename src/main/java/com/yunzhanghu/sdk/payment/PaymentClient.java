@@ -164,4 +164,14 @@ public class PaymentClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
+    // 取消批次中单笔订单
+    public YzhResponse<CancelOrderInBatchResponse> cancelOrderInBatch(YzhRequest<CancelOrderInBatchRequest> req) throws YzhException {
+        try {
+            return post(req, "/api/payment/v1/order-batch/cancel-order", new TypeToken<YzhResponse<CancelOrderInBatchResponse>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
 }

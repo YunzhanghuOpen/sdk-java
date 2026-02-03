@@ -21,37 +21,37 @@ public class TaxDetail {
     // 实缴附加税费
     private String receivedAdditionalTax;
 
-    // 用户预扣个税
+    // 劳动者预扣个税
     private String userPersonalTax;
 
     // 平台企业预扣个税
     private String dealerPersonalTax;
 
-    // 用户预扣增值税
+    // 劳动者预扣增值税
     private String userValueAddedTax;
 
     // 平台企业预扣增值税
     private String dealerValueAddedTax;
 
-    // 用户预扣附加税费
+    // 劳动者预扣附加税费
     private String userAdditionalTax;
 
     // 平台企业预扣附加税费
     private String dealerAdditionalTax;
 
-    // 用户实缴个税
+    // 劳动者实缴个税
     private String userReceivedPersonalTax;
 
     // 平台企业实缴个税
     private String dealerReceivedPersonalTax;
 
-    // 用户实缴增值税
+    // 劳动者实缴增值税
     private String userReceivedValueAddedTax;
 
     // 平台企业实缴增值税
     private String dealerReceivedValueAddedTax;
 
-    // 用户实缴附加税费
+    // 劳动者实缴附加税费
     private String userReceivedAdditionalTax;
 
     // 平台企业实缴附加税费
@@ -258,6 +258,6 @@ public class TaxDetail {
                 ", additionalUrbanTax='" + additionalUrbanTax + '\'' +
                 ", additionalTuitionTax='" + additionalTuitionTax + '\'' +
                 ", additionalLocalTuitionTax='" + additionalLocalTuitionTax + '\'' +
-               "}";
+                "}";
     }
 }

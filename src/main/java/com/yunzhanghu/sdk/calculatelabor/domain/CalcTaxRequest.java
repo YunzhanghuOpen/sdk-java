@@ -24,6 +24,12 @@ public class CalcTaxRequest {
     // 税前订单金额返回值类型
     private String beforeTaxAmountType;
 
+    // 将追缴税费纳入测算
+    private int includeRecoveryAmount;
+
+    // 将劳动者服务费纳入测算
+    private int includeUserServiceFee;
+
     public void setDealerId(String dealerId) {
         this.dealerId = dealerId;
     }
@@ -80,6 +86,22 @@ public class CalcTaxRequest {
         return beforeTaxAmountType;
     }
 
+    public void setIncludeRecoveryAmount(int includeRecoveryAmount) {
+        this.includeRecoveryAmount = includeRecoveryAmount;
+    }
+
+    public int getIncludeRecoveryAmount() {
+        return includeRecoveryAmount;
+    }
+
+    public void setIncludeUserServiceFee(int includeUserServiceFee) {
+        this.includeUserServiceFee = includeUserServiceFee;
+    }
+
+    public int getIncludeUserServiceFee() {
+        return includeUserServiceFee;
+    }
+
     @Override
     public String toString() {
         return "CalcTaxRequest{" +
@@ -90,6 +112,8 @@ public class CalcTaxRequest {
                 ", pay='" + pay + '\'' +
                 ", taxType='" + taxType + '\'' +
                 ", beforeTaxAmountType='" + beforeTaxAmountType + '\'' +
+                ", includeRecoveryAmount='" + includeRecoveryAmount + '\'' +
+                ", includeUserServiceFee='" + includeUserServiceFee + '\'' +
                 "}";
     }
 }

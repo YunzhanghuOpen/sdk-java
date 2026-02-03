@@ -69,7 +69,7 @@ public class NotifyOrderData {
     // 应收加成服务费抵扣金额
     private String brokerDeductFee;
 
-    // 应收用户加成服务费金额
+    // 应收劳动者加成服务费金额
     private String userFee;
 
     // 实收综合服务主体加成服务费金额
@@ -81,7 +81,7 @@ public class NotifyOrderData {
     // 实收加成服务费抵扣金额
     private String receivedBrokerDeductFee;
 
-    // 实收用户加成服务费金额
+    // 实收劳动者加成服务费金额
     private String receivedUserFee;
 
     // 订单备注
@@ -93,10 +93,10 @@ public class NotifyOrderData {
     // 项目标识
     private String projectId;
 
-    // 平台企业用户 ID
+    // 平台企业劳动者 ID
     private String userId;
 
-    // 用户实收金额
+    // 劳动者实收金额
     private String userRealAmount;
 
     // 缴税明细
@@ -105,10 +105,10 @@ public class NotifyOrderData {
     // 互联网平台名称
     private String dealerPlatformName;
 
-    // 用户名称/昵称
+    // 劳动者名称/昵称
     private String dealerUserNickname;
 
-    // 用户唯一标识码
+    // 劳动者唯一标识码
     private String dealerUserId;
 
     // 预扣税费总额
@@ -117,10 +117,10 @@ public class NotifyOrderData {
     // 实缴税费总额
     private String receivedTaxAmount;
 
-    // 用户实收金额（追缴前）
+    // 劳动者应收金额（追缴退回前）
     private String userRealExcludingVatAmount;
 
-    // 已追缴增附税（本笔订单）
+    // 追缴增附税
     private String userRecoverTaxAmount;
 
     // 预扣个税税率
@@ -128,6 +128,9 @@ public class NotifyOrderData {
 
     // 预扣个税速算扣除数
     private String deductTax;
+
+    // 追缴个税
+    private String userRecoverPersonalTaxAmount;
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -465,6 +468,14 @@ public class NotifyOrderData {
         return deductTax;
     }
 
+    public void setUserRecoverPersonalTaxAmount(String userRecoverPersonalTaxAmount) {
+        this.userRecoverPersonalTaxAmount = userRecoverPersonalTaxAmount;
+    }
+
+    public String getUserRecoverPersonalTaxAmount() {
+        return userRecoverPersonalTaxAmount;
+    }
+
     @Override
     public String toString() {
         return "NotifyOrderData{" +
@@ -510,6 +521,7 @@ public class NotifyOrderData {
                 ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
                 ", personalTaxRate='" + personalTaxRate + '\'' +
                 ", deductTax='" + deductTax + '\'' +
+                ", userRecoverPersonalTaxAmount='" + userRecoverPersonalTaxAmount + '\'' +
                 "}";
     }
 }

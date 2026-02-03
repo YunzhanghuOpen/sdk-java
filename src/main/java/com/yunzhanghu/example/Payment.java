@@ -46,6 +46,8 @@ public class Payment {
         checkUserAmount();
         // 查询劳务模式单笔订单信息
         getOrderLxlw();
+        // 取消批次中单笔订单
+        cancelOrderInBatch();
     }
 
     // 银行卡实时支付
@@ -526,6 +528,35 @@ public class Payment {
             if (response.isSuccess()) {
                 // 操作成功
                 GetOrderLxlwResponse data = response.getData();
+                System.out.println("操作成功：" + data);
+            } else {
+                // 失败返回
+                System.out.println("HTTP Status Code：" + response.getHttpCode());
+                System.out.println("失败返回：" + response.getCode() + response.getMessage());
+            }
+        } catch (Exception e) {
+            // 发生异常
+            e.printStackTrace();
+        }
+    }
+
+    // 取消批次中单笔订单
+    private static void cancelOrderInBatch() {
+        CancelOrderInBatchRequest request = new CancelOrderInBatchRequest();
+        request.setBrokerId(config.getBrokerId());
+        request.setDealerId(config.getDealerId());
+        request.setBatchId("batch2032934858483");
+        request.setOrderId("order_id123456");
+
+        YzhResponse<CancelOrderInBatchResponse> response = null;
+        try {
+            // request-id：请求 ID，请求的唯一标识
+            // 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+            // 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+            response = client.cancelOrderInBatch(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+            if (response.isSuccess()) {
+                // 操作成功
+                CancelOrderInBatchResponse data = response.getData();
                 System.out.println("操作成功：" + data);
             } else {
                 // 失败返回

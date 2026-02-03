@@ -9,7 +9,7 @@ public class CalcTaxResponse {
     // 税费总额
     private String tax;
 
-    // 税后结算金额
+    // 劳动者预估到手金额
     private String afterTaxAmount;
 
     // 缴税明细
@@ -18,7 +18,7 @@ public class CalcTaxResponse {
     // 税前订单金额
     private String beforeTaxAmount;
 
-    // 用户税费总额
+    // 劳动者税费总额
     private String userTax;
 
     // 平台企业税费总额
@@ -27,7 +27,7 @@ public class CalcTaxResponse {
     // 云账户税费总额
     private String brokerTax;
 
-    // 用户服务费
+    // 劳动者服务费
     private String userFee;
 
     // 结果
@@ -42,17 +42,32 @@ public class CalcTaxResponse {
     // 结果详细状态码描述
     private String statusDetailMessage;
 
-    // 用户实收金额（未扣除追缴的增附税）
+    // 劳动者预估应收金额（追缴退回前）
     private String userRealExcludingVatAmount;
 
-    // 用户还未缴清的增附税
+    // 劳动者还未缴清的增附税
     private String userRemainingRepaymentAmount;
 
-    // 已追缴增附税（本笔订单）
+    // 追缴增附税
     private String userRecoverTaxAmount;
 
     // 待追缴增附税总金额
     private String userTotalRecoverTaxAmount;
+
+    // 劳动者还未缴清的个税
+    private String userRemainingRepaymentPersonalAmount;
+
+    // 追缴个税
+    private String userRecoverPersonalTaxAmount;
+
+    // 待追缴个税总金额
+    private String userTotalRecoverPersonalTaxAmount;
+
+    // 退回增附税
+    private String userRefundTaxAmount;
+
+    // 退回个税
+    private String userRefundPersonalTaxAmount;
 
     public void setPay(String pay) {
         this.pay = pay;
@@ -190,6 +205,46 @@ public class CalcTaxResponse {
         return userTotalRecoverTaxAmount;
     }
 
+    public void setUserRemainingRepaymentPersonalAmount(String userRemainingRepaymentPersonalAmount) {
+        this.userRemainingRepaymentPersonalAmount = userRemainingRepaymentPersonalAmount;
+    }
+
+    public String getUserRemainingRepaymentPersonalAmount() {
+        return userRemainingRepaymentPersonalAmount;
+    }
+
+    public void setUserRecoverPersonalTaxAmount(String userRecoverPersonalTaxAmount) {
+        this.userRecoverPersonalTaxAmount = userRecoverPersonalTaxAmount;
+    }
+
+    public String getUserRecoverPersonalTaxAmount() {
+        return userRecoverPersonalTaxAmount;
+    }
+
+    public void setUserTotalRecoverPersonalTaxAmount(String userTotalRecoverPersonalTaxAmount) {
+        this.userTotalRecoverPersonalTaxAmount = userTotalRecoverPersonalTaxAmount;
+    }
+
+    public String getUserTotalRecoverPersonalTaxAmount() {
+        return userTotalRecoverPersonalTaxAmount;
+    }
+
+    public void setUserRefundTaxAmount(String userRefundTaxAmount) {
+        this.userRefundTaxAmount = userRefundTaxAmount;
+    }
+
+    public String getUserRefundTaxAmount() {
+        return userRefundTaxAmount;
+    }
+
+    public void setUserRefundPersonalTaxAmount(String userRefundPersonalTaxAmount) {
+        this.userRefundPersonalTaxAmount = userRefundPersonalTaxAmount;
+    }
+
+    public String getUserRefundPersonalTaxAmount() {
+        return userRefundPersonalTaxAmount;
+    }
+
     @Override
     public String toString() {
         return "CalcTaxResponse{" +
@@ -210,6 +265,11 @@ public class CalcTaxResponse {
                 ", userRemainingRepaymentAmount='" + userRemainingRepaymentAmount + '\'' +
                 ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
                 ", userTotalRecoverTaxAmount='" + userTotalRecoverTaxAmount + '\'' +
+                ", userRemainingRepaymentPersonalAmount='" + userRemainingRepaymentPersonalAmount + '\'' +
+                ", userRecoverPersonalTaxAmount='" + userRecoverPersonalTaxAmount + '\'' +
+                ", userTotalRecoverPersonalTaxAmount='" + userTotalRecoverPersonalTaxAmount + '\'' +
+                ", userRefundTaxAmount='" + userRefundTaxAmount + '\'' +
+                ", userRefundPersonalTaxAmount='" + userRefundPersonalTaxAmount + '\'' +
                 "}";
     }
 }
