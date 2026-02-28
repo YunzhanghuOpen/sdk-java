@@ -33,6 +33,12 @@ public class ApplyInvoiceRequest {
     // 发票介质
     private String invoiceMedia;
 
+    // 查询开始日期
+    private String startDate;
+
+    // 查询结束日期
+    private String endDate;
+
     public void setInvoiceApplyId(String invoiceApplyId) {
         this.invoiceApplyId = invoiceApplyId;
     }
@@ -113,19 +119,37 @@ public class ApplyInvoiceRequest {
         return invoiceMedia;
     }
 
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
+
+    public String getStartDate() {
+        return startDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
     @Override
     public String toString() {
         return "ApplyInvoiceRequest{" +
-                " invoiceApplyId='" + invoiceApplyId + '\'' + 
-                ", brokerId='" + brokerId + '\'' + 
-                ", dealerId='" + dealerId + '\'' + 
-                ", amount='" + amount + '\'' + 
-                ", invoiceType='" + invoiceType + '\'' + 
-                ", bankNameAccount='" + bankNameAccount + '\'' + 
-                ", goodsServicesName='" + goodsServicesName + '\'' + 
-                ", remark='" + remark + '\'' + 
-                ", receiveEmails='" + receiveEmails + '\'' + 
-                ", invoiceMedia='" + invoiceMedia + '\'' + 
-               "}";
+                " invoiceApplyId='" + invoiceApplyId + '\'' +
+                ", brokerId='" + brokerId + '\'' +
+                ", dealerId='" + dealerId + '\'' +
+                ", amount='" + amount + '\'' +
+                ", invoiceType='" + invoiceType + '\'' +
+                ", bankNameAccount='" + bankNameAccount + '\'' +
+                ", goodsServicesName='" + goodsServicesName + '\'' +
+                ", remark='" + remark + '\'' +
+                ", receiveEmails='" + receiveEmails + '\'' +
+                ", invoiceMedia='" + invoiceMedia + '\'' +
+                ", startDate='" + startDate + '\'' +
+                ", endDate='" + endDate + '\'' +
+                "}";
     }
 }

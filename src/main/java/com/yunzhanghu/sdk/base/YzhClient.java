@@ -222,6 +222,10 @@ public class YzhClient {
                     if (StringUtils.isNull(response.getRequestId())) {
                         response.setRequestId(StringUtils.trim(map.get("requestID")));
                     }
+                    // 兼容
+                    if (StringUtils.isNull(response.getRequestId())) {
+                        response.setRequestId(StringUtils.trim(map.get("request_id")));
+                    }
                     response.setHttpCode(statusCode);
                     return response;
                 }

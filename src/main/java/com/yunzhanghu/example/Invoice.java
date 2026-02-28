@@ -63,6 +63,8 @@ public class Invoice {
 		GetInvoiceAmountRequest request = new GetInvoiceAmountRequest();
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
+		request.setStartDate("2026-01-01");
+		request.setEndDate("2026-01-26");
 		YzhResponse<GetInvoiceAmountResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -101,6 +103,8 @@ public class Invoice {
 		request.setRemark("测试备注");
 		request.setReceiveEmails(receiveEmails);
 		request.setInvoiceMedia("1");
+		request.setStartDate("2026-01-01");
+		request.setEndDate("2026-01-26");
 		YzhResponse<ApplyInvoiceResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识

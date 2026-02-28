@@ -5,9 +5,8 @@ import com.yunzhanghu.sdk.YzhException;
 import com.yunzhanghu.sdk.base.*;
 import com.yunzhanghu.sdk.taxclearrefund.domain.*;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;   
+import org.slf4j.LoggerFactory;
 
-// 连续劳务税费退补
 public class TaxClearRefundClient extends YzhClient {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(TaxClearRefundClient.class);
@@ -40,6 +39,16 @@ public class TaxClearRefundClient extends YzhClient {
     public YzhResponse<RefundTaxData> getRefundTaxInfo(YzhRequest<GetRefundTaxInfoRequest> req) throws YzhException {
         try {
             return get(req, "/api/payment/v1/query-clear-status", false, new TypeToken<YzhResponse<RefundTaxData>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
+
+    // 查询税费退补涉及劳动者
+    public YzhResponse<GetRefundTaxLaborInfoResponse> getRefundTaxLaborInfo(YzhRequest<GetRefundTaxLaborInfoRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/payment/v1/query-clear-labor-info", false, new TypeToken<YzhResponse<GetRefundTaxLaborInfoResponse>>(){});
         } catch (Exception e){
             handleError(req, e);
             throw new YzhException("msg", e);

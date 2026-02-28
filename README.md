@@ -50,7 +50,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
 <dependency>
     <groupId>com.yunzhanghu.openapi</groupId>
     <artifactId>sdk</artifactId>
-    <version>1.4.38-RELEASE</version>
+    <version>1.4.39-RELEASE</version>
 </dependency>
 ```
 
@@ -63,9 +63,7 @@ OpenSSL-> rsa -in private_key.pem -pubout -out pubkey.pem
    - [H5 签约](src/main/java/com/yunzhanghu/example/H5UserSign.java)
    - [API 签约](src/main/java/com/yunzhanghu/example/ApiUserSign.java)
    - [签约信息上传](src/main/java/com/yunzhanghu/example/UploadUserSign.java)
-- 个体工商户注册
-   - [云账户新经济 H5](src/main/java/com/yunzhanghu/example/BizLicXjjH5.java)
-   - [云账户新经济 H5+API](src/main/java/com/yunzhanghu/example/BizLicXjjH5Api.java) 
+- [订单税费试算](src/main/java/com/yunzhanghu/example/CalculateLabor.java)
 - [实时支付](src/main/java/com/yunzhanghu/example/Payment.java)
 - [异步回调](src/main/java/com/yunzhanghu/example/Notify.java) 
 - [对账文件获取](src/main/java/com/yunzhanghu/example/DataService.java)

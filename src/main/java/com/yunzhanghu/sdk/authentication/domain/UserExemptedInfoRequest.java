@@ -45,6 +45,9 @@ public class UserExemptedInfoRequest {
     // 外籍人员类型
     private String residentType;
 
+    // 港澳台通行证号码
+    private String permitCard;
+
     public void setCardType(String cardType) {
         this.cardType = cardType;
     }
@@ -157,6 +160,14 @@ public class UserExemptedInfoRequest {
         return residentType;
     }
 
+    public void setPermitCard(String permitCard) {
+        this.permitCard = permitCard;
+    }
+
+    public String getPermitCard() {
+        return permitCard;
+    }
+
     @Override
     public String toString() {
         return "UserExemptedInfoRequest{" +
@@ -174,6 +185,7 @@ public class UserExemptedInfoRequest {
                 ", ref='" + ref + '\'' +
                 ", imageUrls='" + imageUrls + '\'' +
                 ", residentType='" + residentType + '\'' +
+                ", permitCard='" + permitCard + '\'' +
                 "}";
     }
 }
