@@ -20,9 +20,11 @@ public class H5UserSign {
 		// 申请签约
 		h5UserSign();
 		// 获取用户签约状态
-		geH5UserSignStatus();
+		getH5UserSignStatus();
 		// 用户解约（测试账号专用接口）
 		h5UserRelease();
+		// 申请解约
+		h5UserReleaseApply();
 	}
 
 	// 预申请签约
@@ -34,7 +36,6 @@ public class H5UserSign {
 		request.setIdCard("11010519491231002X");
 		request.setCertificateType(0);
 		request.setCollectPhoneNo(0);
-		request.setPageOpenWay(1);
 		YzhResponse<H5UserPresignResponse> response = null;
 		try {
 			// request-id：请求 ID，请求的唯一标识
@@ -85,7 +86,7 @@ public class H5UserSign {
 	}
 
 	// 获取用户签约状态
-	private static void geH5UserSignStatus() {
+	private static void getH5UserSignStatus() {
 		GetH5UserSignStatusRequest request = new GetH5UserSignStatusRequest();
 		request.setDealerId(config.getDealerId());
 		request.setBrokerId(config.getBrokerId());
@@ -129,6 +130,37 @@ public class H5UserSign {
 			if (response.isSuccess()) {
 				// 操作成功
 				H5UserReleaseResponse data = response.getData();
+				System.out.println("操作成功：" + data);
+			} else {
+				// 失败返回
+				System.out.println("HTTP Status Code：" + response.getHttpCode());
+				System.out.println("失败返回：" + response.getCode() + response.getMessage());
+			}
+		} catch (Exception e) {
+			// 发生异常
+			e.printStackTrace();
+		}
+	}
+
+	// 申请解约
+	private static void h5UserReleaseApply() {
+		H5UserReleaseApplyRequest request = new H5UserReleaseApplyRequest();
+		request.setDealerId(config.getDealerId());
+		request.setBrokerId(config.getBrokerId());
+		request.setRealName("张三");
+		request.setIdCard("11010519491231002X");
+		request.setColor("#8171ff");
+		request.setUrl("https://www.example.com");
+		request.setRedirectUrl("https://www.example.com");
+		YzhResponse<H5UserReleaseApplyResponse> response = null;
+		try {
+			// request-id：请求 ID，请求的唯一标识
+			// 建议平台企业自定义 request-id，并记录在日志中，便于问题发现及排查
+			// 如未自定义 request-id，将使用 SDK 中的 UUID 方法自动生成。注意：UUID 方法生成的 request-id 不能保证全局唯一，推荐自定义 request-id
+			response = client.h5UserReleaseApply(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
+			if (response.isSuccess()) {
+				// 操作成功
+				H5UserReleaseApplyResponse data = response.getData();
 				System.out.println("操作成功：" + data);
 			} else {
 				// 失败返回

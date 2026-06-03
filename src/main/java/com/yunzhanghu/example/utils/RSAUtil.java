@@ -22,10 +22,10 @@ public class RSAUtil {
 			rsaKeyArr = rsaKey.split("\n");
 		}
 
-		StringBuffer sbf = new StringBuffer();
+		StringBuilder result = new StringBuilder();
 		for (int i = 1; i < rsaKeyArr.length - 1; i++) {
-			sbf.append(rsaKeyArr[i]);
+			result.append(rsaKeyArr[i]);
 		}
-		return sbf.toString().replace("\r\n", "").replace("\r", "").replace("\n", "");
+		return result.toString().replace("\r\n", "").replace("\r", "").replace("\n", "");
 	}
 }

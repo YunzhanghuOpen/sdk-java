@@ -1,6 +1,5 @@
 package com.yunzhanghu.sdk.realname.domain;
 
-
 public class CollectRealNameInfoResponse {
     
     // 录入状态

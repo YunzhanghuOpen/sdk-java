@@ -1,6 +1,5 @@
 package com.yunzhanghu.sdk.authentication.domain;
 
-
 public class GetUserWhiteApproveInfoResponse {
     
     // 审核状态 pass：通过 reviewing：审核中 reject：拒绝

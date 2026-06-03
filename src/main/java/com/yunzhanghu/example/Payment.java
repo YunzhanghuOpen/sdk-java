@@ -100,6 +100,7 @@ public class Payment {
         request.setPhoneNo("188****8888");
         request.setPay("1.00");
         request.setPayRemark("");
+        request.setOrderTitle("支付宝转账备注");
         request.setCheckName("Check");
         request.setNotifyUrl("https://www.example.com");
         request.setProjectId("");

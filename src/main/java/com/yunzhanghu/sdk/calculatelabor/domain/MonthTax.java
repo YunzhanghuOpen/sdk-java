@@ -1,7 +1,7 @@
 package com.yunzhanghu.sdk.calculatelabor.domain;
 
 // 月度税务信息
-public class MontTax {
+public class MonthTax {
     
     // 月份
     private int month;
@@ -115,7 +115,7 @@ public class MontTax {
 
     @Override
     public String toString() {
-        return "MontTax{" +
+        return "MonthTax{" +
                 " month='" + month + '\'' + 
                 ", preTaxAmount='" + preTaxAmount + '\'' + 
                 ", excludingVatAmount='" + excludingVatAmount + '\'' + 

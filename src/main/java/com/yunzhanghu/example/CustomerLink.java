@@ -16,9 +16,9 @@ public class CustomerLink {
 
     // 生成专属客服链接
     private static void getLinkUrl() {
-        String baseurl = "https://www.example.com";
+        String baseUrl = "https://www.example.com";
         String memberId = "Test123456";
-        String linkUrl = CustomerLinkUtil.getCustomerLink(config, baseurl, memberId);
+        String linkUrl = CustomerLinkUtil.getCustomerLink(config, baseUrl, memberId);
         System.out.println(linkUrl);
     }
 }

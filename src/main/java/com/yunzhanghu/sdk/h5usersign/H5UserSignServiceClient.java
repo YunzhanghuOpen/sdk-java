@@ -54,4 +54,14 @@ public class H5UserSignServiceClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
+    // 申请解约
+    public YzhResponse<H5UserReleaseApplyResponse> h5UserReleaseApply(YzhRequest<H5UserReleaseApplyRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/sdk/v1/release/h5", false, new TypeToken<YzhResponse<H5UserReleaseApplyResponse>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
 }

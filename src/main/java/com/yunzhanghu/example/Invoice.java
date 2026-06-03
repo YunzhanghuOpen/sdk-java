@@ -102,7 +102,7 @@ public class Invoice {
 		request.setGoodsServicesName("信息技术服务*信息技术服务费");
 		request.setRemark("测试备注");
 		request.setReceiveEmails(receiveEmails);
-		request.setInvoiceMedia("1");
+		request.setInvoiceMedia("3");
 		request.setStartDate("2026-01-01");
 		request.setEndDate("2026-01-26");
 		YzhResponse<ApplyInvoiceResponse> response = null;

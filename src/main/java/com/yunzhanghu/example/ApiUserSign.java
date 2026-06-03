@@ -21,7 +21,7 @@ public class ApiUserSign {
 		apiUserSign();
 		// 获取用户签约状态
 		getApiUserSignStatus();
-		// 用户解约（测试账号专用接口）
+		// 用户解约
 		apiUserSignRelease();
 	}
 
@@ -108,7 +108,7 @@ public class ApiUserSign {
 		}
 	}
 
-	// 用户解约（测试账号专用接口）
+	// 用户解约
 	private static void apiUserSignRelease() {
 		ApiUserSignReleaseRequest request = new ApiUserSignReleaseRequest();
 		request.setDealerId(config.getDealerId());

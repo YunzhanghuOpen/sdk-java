@@ -7,7 +7,7 @@ public class LaborCaculatorResponse {
     private YearTaxInfo yearTaxInfo;
     
     // 月度税务信息列表
-    private MontTax[] monthTaxList;
+    private MonthTax[] monthTaxList;
 
     public void setYearTaxInfo(YearTaxInfo yearTaxInfo) {
         this.yearTaxInfo = yearTaxInfo;
@@ -17,11 +17,11 @@ public class LaborCaculatorResponse {
         return yearTaxInfo;
     }
 
-    public void setMonthTaxList(MontTax[] monthTaxList) {
+    public void setMonthTaxList(MonthTax[] monthTaxList) {
         this.monthTaxList = monthTaxList;
     }
 
-    public MontTax[] getMonthTaxList() {
+    public MonthTax[] getMonthTaxList() {
         return monthTaxList;
     }
 

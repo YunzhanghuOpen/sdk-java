@@ -45,7 +45,7 @@ public class BizlicGxV2H5Api {
 			response = client.gxV2H5APIPreCollectBizlicMsg(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
-			    GxV2H5APIPreCollectBizlicMsgResponse data = response.getData();
+				GxV2H5APIPreCollectBizlicMsgResponse data = response.getData();
 				System.out.println("操作成功：" + data);
 			} else {
 				// 失败返回
@@ -77,7 +77,7 @@ public class BizlicGxV2H5Api {
 			response = client.gxV2H5APIGetStartUrl(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
-			    GxV2H5APIGetStartUrlResponse data = response.getData();
+				GxV2H5APIGetStartUrlResponse data = response.getData();
 				System.out.println("操作成功：" + data);
 			} else {
 				// 失败返回
@@ -107,7 +107,7 @@ public class BizlicGxV2H5Api {
 			response = client.gxV2H5APIGetAicStatus(YzhRequest.build(BaseUtil.getRandomStr("requestId"), request));
 			if (response.isSuccess()) {
 				// 操作成功
-			    GxV2H5APIGetAicStatusResponse data = response.getData();
+				GxV2H5APIGetAicStatusResponse data = response.getData();
 				System.out.println("操作成功：" + data);
 			} else {
 				// 失败返回

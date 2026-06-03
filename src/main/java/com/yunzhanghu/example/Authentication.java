@@ -182,8 +182,8 @@ public class Authentication {
 	// 上传非居民身份证验证名单信息
 	private static void userExemptedInfo() {
 		String imgFile = "xxxxx/xxx.jpeg";
-		String[] imgarr = new String[1];
-		imgarr[0] = getImgStr(imgFile);
+		String[] imgArr = new String[1];
+		imgArr[0] = getImgStr(imgFile);
 		String imgUrl = "https://www.example.com/image01.png";
 		String[] imgUrls = new String[1];
 		imgUrls[0] = imgUrl;
@@ -196,7 +196,7 @@ public class Authentication {
 		request.setCommentApply("一条记录");
 		request.setBrokerId(config.getBrokerId());
 		request.setDealerId(config.getDealerId());
-		request.setUserImages(imgarr);
+		request.setUserImages(imgArr);
 		request.setImageUrls(imgUrls);
 		request.setCountry("CHN");
 		request.setBirthday("20010809");

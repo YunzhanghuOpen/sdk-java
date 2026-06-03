@@ -1,6 +1,5 @@
 package com.yunzhanghu.sdk.realname.domain;
 
-
 public class CollectRealNameInfoRequest {
 
     // 综合服务主体 ID

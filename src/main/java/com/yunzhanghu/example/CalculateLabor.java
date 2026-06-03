@@ -8,7 +8,7 @@ import com.yunzhanghu.sdk.base.YzhResponse;
 import com.yunzhanghu.sdk.calculatelabor.domain.*;
 import com.yunzhanghu.sdk.calculatelabor.CalculateLaborServiceClient;
 
-//  连续劳务税费试算
+// 连续劳务税费试算
 public class CalculateLabor {
 
     private static YzhConfig config = Config.getYzhConfig();
@@ -62,10 +62,10 @@ public class CalculateLabor {
         info2.setMonth(2);
         info2.setMonthPreTaxAmount("10.00");
 
-        MonthSettlement[] infoArry = new MonthSettlement[2];
-        infoArry[0] = info1;
-        infoArry[1] = info2;
-        return infoArry;
+        MonthSettlement[] infoArr = new MonthSettlement[2];
+        infoArr[0] = info1;
+        infoArr[1] = info2;
+        return infoArr;
     }
 
     // 订单税费试算
@@ -76,8 +76,8 @@ public class CalculateLabor {
         request.setRealName("张三");
         request.setIdCard("11010519491231002X");
         request.setPay("99");
-        request.setTaxType("after_tax");
-        request.setBeforeTaxAmountType("max");
+        request.setTaxType("before_tax");
+        request.setBeforeTaxAmountType("");
         request.setIncludeRecoveryAmount(1);
         request.setIncludeUserServiceFee(1);
         YzhResponse<CalcTaxResponse> response = null;

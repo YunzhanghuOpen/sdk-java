@@ -2,144 +2,147 @@ package com.yunzhanghu.sdk.payment.domain;
 
 // 查询劳务模式单笔订单信息返回
 public class GetOrderLxlwResponse {
-
+    
     // 平台企业订单号
     private String orderId;
-
+    
     // 订单金额
     private String pay;
-
+    
     // 综合服务主体 ID
     private String brokerId;
-
+    
     // 平台企业 ID
     private String dealerId;
-
+    
     // 姓名
     private String realName;
-
+    
     // 收款人账号
     private String cardNo;
-
+    
     // 身份证号码
     private String idCard;
-
+    
     // 手机号
     private String phoneNo;
-
+    
     // 订单状态码
     private String status;
-
+    
     // 订单详细状态码
     private String statusDetail;
-
+    
     // 订单状态码描述
     private String statusMessage;
-
+    
     // 订单详情状态码描述
     private String statusDetailMessage;
-
+    
     // 订单状态补充信息
     private String supplementalDetailMessage;
-
+    
     // 综合服务主体支付金额
     private String brokerAmount;
-
+    
     // 综合服务平台流水号
     private String ref;
-
+    
     // 支付交易流水号
     private String brokerBankBill;
-
+    
     // 支付路径
     private String withdrawPlatform;
-
+    
     // 订单接收时间，精确到秒
     private String createdAt;
-
+    
     // 订单完成时间，精确到秒
     private String finishedTime;
-
+    
     // 应收综合服务主体加成服务费金额
     private String brokerFee;
-
+    
     // 应收余额账户支出加成服务费金额
     private String brokerRealFee;
-
+    
     // 应收加成服务费抵扣金额
     private String brokerDeductFee;
-
+    
     // 应收劳动者加成服务费金额
     private String userFee;
-
+    
     // 实收综合服务主体加成服务费金额
     private String receivedBrokerFee;
-
+    
     // 实收余额账户支出加成服务费金额
     private String receivedBrokerRealFee;
-
+    
     // 实收加成服务费抵扣金额
     private String receivedBrokerDeductFee;
-
+    
     // 实收劳动者加成服务费金额
     private String receivedUserFee;
-
+    
     // 订单备注
     private String payRemark;
-
+    
     // 银行名称
     private String bankName;
-
+    
     // 业务线标识
     private String projectId;
-
+    
     // 新就业形态劳动者 ID，该字段已废弃
     private String anchorId;
-
+    
     // 描述信息，该字段已废弃
     private String notes;
-
+    
     // 系统支付金额，该字段已废弃
     private String sysAmount;
-
+    
     // 预扣税费总额
     private String tax;
-
+    
     // 系统支付费用，该字段已废弃
     private String sysFee;
-
+    
     // 劳动者实收金额
     private String userRealAmount;
-
+    
     // 缴税明细
     private TaxDetail taxDetail;
-
+    
     // 实缴税费总额
     private String receivedTaxAmount;
-
+    
     // 互联网平台名称
     private String dealerPlatformName;
-
+    
     // 劳动者名称/昵称
     private String dealerUserNickname;
-
+    
     // 劳动者唯一标识码
     private String dealerUserId;
-
+    
     // 劳动者应收金额（追缴退回前）
     private String userRealExcludingVatAmount;
-
+    
     // 追缴增附税
     private String userRecoverTaxAmount;
-
+    
     // 预扣个税税率
     private String personalTaxRate;
-
+    
     // 预扣个税速算扣除数
     private String deductTax;
-
+    
     // 追缴个税
     private String userRecoverPersonalTaxAmount;
+    
+    // 支付宝转账备注
+    private String orderTitle;
 
     public void setOrderId(String orderId) {
         this.orderId = orderId;
@@ -509,55 +512,64 @@ public class GetOrderLxlwResponse {
         return userRecoverPersonalTaxAmount;
     }
 
+    public void setOrderTitle(String orderTitle) {
+        this.orderTitle = orderTitle;
+    }
+
+    public String getOrderTitle() {
+        return orderTitle;
+    }
+
     @Override
     public String toString() {
         return "GetOrderLxlwResponse{" +
-                " orderId='" + orderId + '\'' +
-                ", pay='" + pay + '\'' +
-                ", brokerId='" + brokerId + '\'' +
-                ", dealerId='" + dealerId + '\'' +
-                ", realName='" + realName + '\'' +
-                ", cardNo='" + cardNo + '\'' +
-                ", idCard='" + idCard + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", status='" + status + '\'' +
-                ", statusDetail='" + statusDetail + '\'' +
-                ", statusMessage='" + statusMessage + '\'' +
-                ", statusDetailMessage='" + statusDetailMessage + '\'' +
-                ", supplementalDetailMessage='" + supplementalDetailMessage + '\'' +
-                ", brokerAmount='" + brokerAmount + '\'' +
-                ", ref='" + ref + '\'' +
-                ", brokerBankBill='" + brokerBankBill + '\'' +
-                ", withdrawPlatform='" + withdrawPlatform + '\'' +
-                ", createdAt='" + createdAt + '\'' +
-                ", finishedTime='" + finishedTime + '\'' +
-                ", brokerFee='" + brokerFee + '\'' +
-                ", brokerRealFee='" + brokerRealFee + '\'' +
-                ", brokerDeductFee='" + brokerDeductFee + '\'' +
-                ", userFee='" + userFee + '\'' +
-                ", receivedBrokerFee='" + receivedBrokerFee + '\'' +
-                ", receivedBrokerRealFee='" + receivedBrokerRealFee + '\'' +
-                ", receivedBrokerDeductFee='" + receivedBrokerDeductFee + '\'' +
-                ", receivedUserFee='" + receivedUserFee + '\'' +
-                ", payRemark='" + payRemark + '\'' +
-                ", bankName='" + bankName + '\'' +
-                ", projectId='" + projectId + '\'' +
-                ", anchorId='" + anchorId + '\'' +
-                ", notes='" + notes + '\'' +
-                ", sysAmount='" + sysAmount + '\'' +
-                ", tax='" + tax + '\'' +
-                ", sysFee='" + sysFee + '\'' +
-                ", userRealAmount='" + userRealAmount + '\'' +
-                ", taxDetail='" + taxDetail + '\'' +
-                ", receivedTaxAmount='" + receivedTaxAmount + '\'' +
-                ", dealerPlatformName='" + dealerPlatformName + '\'' +
-                ", dealerUserNickname='" + dealerUserNickname + '\'' +
-                ", dealerUserId='" + dealerUserId + '\'' +
-                ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' +
-                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
-                ", personalTaxRate='" + personalTaxRate + '\'' +
-                ", deductTax='" + deductTax + '\'' +
-                ", userRecoverPersonalTaxAmount='" + userRecoverPersonalTaxAmount + '\'' +
-                "}";
+                " orderId='" + orderId + '\'' + 
+                ", pay='" + pay + '\'' + 
+                ", brokerId='" + brokerId + '\'' + 
+                ", dealerId='" + dealerId + '\'' + 
+                ", realName='" + realName + '\'' + 
+                ", cardNo='" + cardNo + '\'' + 
+                ", idCard='" + idCard + '\'' + 
+                ", phoneNo='" + phoneNo + '\'' + 
+                ", status='" + status + '\'' + 
+                ", statusDetail='" + statusDetail + '\'' + 
+                ", statusMessage='" + statusMessage + '\'' + 
+                ", statusDetailMessage='" + statusDetailMessage + '\'' + 
+                ", supplementalDetailMessage='" + supplementalDetailMessage + '\'' + 
+                ", brokerAmount='" + brokerAmount + '\'' + 
+                ", ref='" + ref + '\'' + 
+                ", brokerBankBill='" + brokerBankBill + '\'' + 
+                ", withdrawPlatform='" + withdrawPlatform + '\'' + 
+                ", createdAt='" + createdAt + '\'' + 
+                ", finishedTime='" + finishedTime + '\'' + 
+                ", brokerFee='" + brokerFee + '\'' + 
+                ", brokerRealFee='" + brokerRealFee + '\'' + 
+                ", brokerDeductFee='" + brokerDeductFee + '\'' + 
+                ", userFee='" + userFee + '\'' + 
+                ", receivedBrokerFee='" + receivedBrokerFee + '\'' + 
+                ", receivedBrokerRealFee='" + receivedBrokerRealFee + '\'' + 
+                ", receivedBrokerDeductFee='" + receivedBrokerDeductFee + '\'' + 
+                ", receivedUserFee='" + receivedUserFee + '\'' + 
+                ", payRemark='" + payRemark + '\'' + 
+                ", bankName='" + bankName + '\'' + 
+                ", projectId='" + projectId + '\'' + 
+                ", anchorId='" + anchorId + '\'' + 
+                ", notes='" + notes + '\'' + 
+                ", sysAmount='" + sysAmount + '\'' + 
+                ", tax='" + tax + '\'' + 
+                ", sysFee='" + sysFee + '\'' + 
+                ", userRealAmount='" + userRealAmount + '\'' + 
+                ", taxDetail='" + taxDetail + '\'' + 
+                ", receivedTaxAmount='" + receivedTaxAmount + '\'' + 
+                ", dealerPlatformName='" + dealerPlatformName + '\'' + 
+                ", dealerUserNickname='" + dealerUserNickname + '\'' + 
+                ", dealerUserId='" + dealerUserId + '\'' + 
+                ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' + 
+                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' + 
+                ", personalTaxRate='" + personalTaxRate + '\'' + 
+                ", deductTax='" + deductTax + '\'' + 
+                ", userRecoverPersonalTaxAmount='" + userRecoverPersonalTaxAmount + '\'' + 
+                ", orderTitle='" + orderTitle + '\'' + 
+               "}";
     }
 }

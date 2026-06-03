@@ -1,6 +1,5 @@
 package com.yunzhanghu.sdk.realname.domain;
 
-
 public class QueryRealNameInfoResponse {
     
     // 实名认证结果

@@ -6,6 +6,7 @@ import com.yunzhanghu.sdk.base.YzhConfig;
 import com.yunzhanghu.sdk.bizlicgxv2h5.domain.NotifyGxV2H5AicRequest;
 import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.NotifyGxV2H5APIAicRequest;
 import com.yunzhanghu.sdk.bizlicxjjh5.domain.NotifyH5EcoCityAicRequest;
+import com.yunzhanghu.sdk.faceauth.domain.NotifyFaceAuthRequest;
 import com.yunzhanghu.sdk.h5usersign.domain.NotifyH5UserSignRequest;
 import com.yunzhanghu.sdk.invoice.domain.NotifyInvoiceDoneRequest;
 import com.yunzhanghu.sdk.notify.*;
@@ -65,7 +66,7 @@ public class Notify {
 //			NotifyInvoiceDoneRequest notifyRequest = response.getData();
 
 			// 签约成功状态回调通知
-//			NotifyResponse<NotifyUploadUserSignRequest> response = client.notifyDecoder(request, NotifyOrderRequest.class);
+//			NotifyResponse<NotifyUploadUserSignRequest> response = client.notifyDecoder(request, NotifyUploadUserSignRequest.class);
 //			NotifyUploadUserSignRequest notifyRequest = response.getData();
 			
 			// 收集手机号码结果回调通知
@@ -83,6 +84,10 @@ public class Notify {
             // 税费退补完成通知
 //          NotifyResponse<NotifyRefundTaxDoneRequest> response = client.notifyDecoder(request, NotifyRefundTaxDoneRequest.class);
 //          NotifyRefundTaxDoneRequest notifyRequest = response.getData();
+
+			// 人脸识别实名核验结果回调通知
+//			NotifyResponse<NotifyFaceAuthRequest> response = client.notifyDecoder(request, NotifyFaceAuthRequest.class);
+//			NotifyFaceAuthRequest notifyRequest = response.getData();
 
 			System.out.println("签名验证结果：" + response.getSignRes());
 			System.out.println("数据解密结果：" + response.getDescryptRes());

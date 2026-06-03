@@ -55,7 +55,7 @@ public class ApiUserSignServiceClient extends YzhClient {
         }
     }
 
-    // 用户解约（测试账号专用接口）
+    // 用户解约
     public YzhResponse<ApiUserSignReleaseResponse> apiUserSignRelease(YzhRequest<ApiUserSignReleaseRequest> req) throws YzhException {
         try {
             return post(req, "/api/sign/v1/user/release", new TypeToken<YzhResponse<ApiUserSignReleaseResponse>>(){});
