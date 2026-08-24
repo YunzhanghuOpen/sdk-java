@@ -6,6 +6,9 @@ public class H5UserSignResponse {
     // H5 签约页面 URL
     private String url;
 
+    // 微信签约小程序码 URL
+    private String wxMpCodeUrl;
+
     public void setUrl(String url) {
         this.url = url;
     }
@@ -14,10 +17,19 @@ public class H5UserSignResponse {
         return url;
     }
 
+    public void setWxMpCodeUrl(String wxMpCodeUrl) {
+        this.wxMpCodeUrl = wxMpCodeUrl;
+    }
+
+    public String getWxMpCodeUrl() {
+        return wxMpCodeUrl;
+    }
+
     @Override
     public String toString() {
         return "H5UserSignResponse{" +
-                " url='" + url + '\'' + 
+                " url='" + url + '\'' +
+                " wxMpCodeUrl='" + wxMpCodeUrl + '\'' +
                "}";
     }
 }

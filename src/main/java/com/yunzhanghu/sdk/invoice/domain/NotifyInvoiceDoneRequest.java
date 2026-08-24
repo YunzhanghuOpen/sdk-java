@@ -25,7 +25,7 @@ public class NotifyInvoiceDoneRequest {
     private String taxAmount;
     
     // 发票类型
-    private String invoiceType;
+    private int invoiceType;
     
     // 购方名称
     private String customerName;
@@ -113,11 +113,11 @@ public class NotifyInvoiceDoneRequest {
         return taxAmount;
     }
 
-    public void setInvoiceType(String invoiceType) {
+    public void setInvoiceType(int invoiceType) {
         this.invoiceType = invoiceType;
     }
 
-    public String getInvoiceType() {
+    public int getInvoiceType() {
         return invoiceType;
     }
 

@@ -3,9 +3,6 @@ package com.yunzhanghu.example;
 import com.yunzhanghu.example.config.Config;
 import com.yunzhanghu.sdk.authentication.domain.NotifyUserExemptedInfoRequest;
 import com.yunzhanghu.sdk.base.YzhConfig;
-import com.yunzhanghu.sdk.bizlicgxv2h5.domain.NotifyGxV2H5AicRequest;
-import com.yunzhanghu.sdk.bizlicgxv2h5api.domain.NotifyGxV2H5APIAicRequest;
-import com.yunzhanghu.sdk.bizlicxjjh5.domain.NotifyH5EcoCityAicRequest;
 import com.yunzhanghu.sdk.faceauth.domain.NotifyFaceAuthRequest;
 import com.yunzhanghu.sdk.h5usersign.domain.NotifyH5UserSignRequest;
 import com.yunzhanghu.sdk.invoice.domain.NotifyInvoiceDoneRequest;
@@ -36,10 +33,10 @@ public class Notify {
 		request.setSign("");
 		request.setTimestamp("");
 		try {
-			// 订单支付状态回调通知
-			NotifyResponse<NotifyOrderRequest> response = client.notifyDecoder(request, NotifyOrderRequest.class);
-			NotifyOrderRequest notifyRequest = response.getData();
-			NotifyOrderData data = notifyRequest.getData();
+			// 劳务模式订单支付状态回调通知
+            NotifyResponse<NotifyOrderLxlwRequest> response = client.notifyDecoder(request, NotifyOrderLxlwRequest.class);
+            NotifyOrderLxlwRequest notifyRequest = response.getData();
+            NotifyOrderLxlwData data = notifyRequest.getData();
 
 			// H5 签约回调
 //			NotifyResponse<NotifyH5UserSignRequest> response = client.notifyDecoder(request, NotifyH5UserSignRequest.class);
@@ -48,18 +45,6 @@ public class Notify {
 			// 非居民身份证验证名单审核结果回调通知
 //			NotifyResponse<NotifyUserExemptedInfoRequest> response = client.notifyDecoder(request, NotifyUserExemptedInfoRequest.class);
 //			NotifyUserExemptedInfoRequest notifyRequest = response.getData();
-
-			// 新经济个体工商户注册结果回调
-//			NotifyResponse<NotifyH5EcoCityAicRequest> response = client.notifyDecoder(request, NotifyH5EcoCityAicRequest.class);
-//			NotifyH5EcoCityAicRequest notifyRequest = response.getData();
-			
-			// 共享大额（H5）个体工商户注册/注销结果回调
-//			NotifyResponse<NotifyGxV2H5AicRequest> response = client.notifyDecoder(request, NotifyGxV2H5AicRequest.class);
-//			NotifyGxV2H5AicRequest notifyRequest = response.getData();
-			
-			// 共享大额（H5+API）个体工商户注册/注销结果回调
-//			NotifyResponse<NotifyGxV2H5APIAicRequest> response = client.notifyDecoder(request, NotifyGxV2H5APIAicRequest.class);
-//			NotifyGxV2H5APIAicRequest notifyRequest = response.getData();
 
 			// 发票开具完成通知
 //			NotifyResponse<NotifyInvoiceDoneRequest> response = client.notifyDecoder(request, NotifyInvoiceDoneRequest.class);
@@ -73,9 +58,9 @@ public class Notify {
 //			NotifyResponse<NotifyUserCollectPhoneRequest> response = client.notifyDecoder(request, NotifyUserCollectPhoneRequest.class);
 //			NotifyUserCollectPhoneRequest notifyRequest = response.getData();
 
-			// 劳务模式订单支付状态回调通知
-//			NotifyResponse<NotifyOrderLxlwRequest> response = client.notifyDecoder(request, NotifyOrderLxlwRequest.class);
-//			NotifyOrderLxlwRequest notifyRequest = response.getData();
+			// 劳动者退款订单回调通知
+//			NotifyResponse<NotifyLaborRefundOrderRequest> response = client.notifyDecoder(request, NotifyLaborRefundOrderRequest.class);
+//			NotifyLaborRefundOrderRequest notifyRequest = response.getData();
 
             // 税费清缴完成通知
 //			NotifyResponse<NotifyClearTaxDoneRequest> response = client.notifyDecoder(request, NotifyClearTaxDoneRequest.class);

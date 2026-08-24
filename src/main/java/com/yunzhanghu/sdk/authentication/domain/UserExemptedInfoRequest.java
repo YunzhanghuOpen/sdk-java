@@ -45,6 +45,9 @@ public class UserExemptedInfoRequest {
     // 外籍人员类型
     private String residentType;
 
+    // 证件有效期
+    private String expiryDate;
+
     // 港澳台通行证号码
     private String permitCard;
 
@@ -160,6 +163,14 @@ public class UserExemptedInfoRequest {
         return residentType;
     }
 
+    public void setExpiryDate(String expiryDate) {
+        this.expiryDate = expiryDate;
+    }
+
+    public String getExpiryDate() {
+        return expiryDate;
+    }
+
     public void setPermitCard(String permitCard) {
         this.permitCard = permitCard;
     }
@@ -185,6 +196,7 @@ public class UserExemptedInfoRequest {
                 ", ref='" + ref + '\'' +
                 ", imageUrls='" + imageUrls + '\'' +
                 ", residentType='" + residentType + '\'' +
+                ", expiryDate='" + expiryDate + '\'' +
                 ", permitCard='" + permitCard + '\'' +
                 "}";
     }

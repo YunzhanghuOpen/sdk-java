@@ -3,15 +3,18 @@ package com.yunzhanghu.sdk.h5usersign.domain;
 // 申请签约请求
 public class H5UserSignRequest {
     
-    // H5 签约 token
+    // 签约 token
     private String token;
-    
-    // H5 页面主题颜色
+
+    // 主题颜色
     private String color;
-    
-    // 回调 URL 地址
+
+    // 签约完成回调地址
     private String url;
-    
+
+    // 签约事件状态回调地址
+    private String eventCallbackUrl;
+
     // 跳转 URL
     private String redirectUrl;
 
@@ -39,6 +42,14 @@ public class H5UserSignRequest {
         return url;
     }
 
+    public void setEventCallbackUrl(String eventCallbackUrl) {
+        this.eventCallbackUrl = eventCallbackUrl;
+    }
+
+    public String getEventCallbackUrl() {
+        return eventCallbackUrl;
+    }
+
     public void setRedirectUrl(String redirectUrl) {
         this.redirectUrl = redirectUrl;
     }
@@ -50,10 +61,11 @@ public class H5UserSignRequest {
     @Override
     public String toString() {
         return "H5UserSignRequest{" +
-                " token='" + token + '\'' + 
-                ", color='" + color + '\'' + 
-                ", url='" + url + '\'' + 
-                ", redirectUrl='" + redirectUrl + '\'' + 
+                " token='" + token + '\'' +
+                ", color='" + color + '\'' +
+                ", url='" + url + '\'' +
+                ", eventCallbackUrl='" + eventCallbackUrl + '\'' +
+                ", redirectUrl='" + redirectUrl + '\'' +
                "}";
     }
 }

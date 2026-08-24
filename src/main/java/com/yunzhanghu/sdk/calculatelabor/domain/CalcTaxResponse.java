@@ -30,6 +30,9 @@ public class CalcTaxResponse {
     // 劳动者服务费
     private String userFee;
 
+    // 是否使用基本减除费用
+    private String basicDeducted;
+
     // 结果
     private String status;
 
@@ -139,6 +142,14 @@ public class CalcTaxResponse {
 
     public String getUserFee() {
         return userFee;
+    }
+
+    public void setBasicDeducted(String basicDeducted) {
+        this.basicDeducted = basicDeducted;
+    }
+
+    public String getBasicDeducted() {
+        return basicDeducted;
     }
 
     public void setStatus(String status) {
@@ -257,6 +268,7 @@ public class CalcTaxResponse {
                 ", dealerTax='" + dealerTax + '\'' +
                 ", brokerTax='" + brokerTax + '\'' +
                 ", userFee='" + userFee + '\'' +
+                ", basicDeducted='" + basicDeducted + '\'' +
                 ", status='" + status + '\'' +
                 ", statusDetail='" + statusDetail + '\'' +
                 ", statusMessage='" + statusMessage + '\'' +

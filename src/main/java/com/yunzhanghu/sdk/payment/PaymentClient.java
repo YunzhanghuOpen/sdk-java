@@ -174,4 +174,14 @@ public class PaymentClient extends YzhClient {
             throw new YzhException("msg", e);
         }
     }
+
+    // 查询劳动者退款订单信息
+    public YzhResponse<GetLaborRefundOrderResponse> getLaborRefundOrder(YzhRequest<GetLaborRefundOrderRequest> req) throws YzhException {
+        try {
+            return get(req, "/api/payment/v1/query-labor-refund-order", false, new TypeToken<YzhResponse<GetLaborRefundOrderResponse>>(){});
+        } catch (Exception e){
+            handleError(req, e);
+            throw new YzhException("msg", e);
+        }
+    }
 }

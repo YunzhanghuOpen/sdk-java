@@ -122,16 +122,25 @@ public class NotifyOrderData {
     
     // 追缴增附税
     private String userRecoverTaxAmount;
-    
+
+    // 劳动者还未缴清的个税
+    private String userRemainingRepaymentPersonalAmount;
+
     // 预扣个税税率
     private String personalTaxRate;
     
     // 预扣个税速算扣除数
     private String deductTax;
-    
+
+    // 是否使用基本减除费用
+    private String basicDeducted;
+
     // 追缴个税
     private String userRecoverPersonalTaxAmount;
-    
+
+    // 待追缴个税总金额
+    private String userTotalRecoverPersonalTaxAmount;
+
     // 支付宝转账备注
     private String orderTitle;
 
@@ -455,6 +464,14 @@ public class NotifyOrderData {
         return userRecoverTaxAmount;
     }
 
+    public void setUserRemainingRepaymentPersonalAmount(String userRemainingRepaymentPersonalAmount) {
+        this.userRemainingRepaymentPersonalAmount = userRemainingRepaymentPersonalAmount;
+    }
+
+    public String getUserRemainingRepaymentPersonalAmount() {
+        return userRemainingRepaymentPersonalAmount;
+    }
+
     public void setPersonalTaxRate(String personalTaxRate) {
         this.personalTaxRate = personalTaxRate;
     }
@@ -471,12 +488,28 @@ public class NotifyOrderData {
         return deductTax;
     }
 
+    public void setBasicDeducted(String basicDeducted) {
+        this.basicDeducted = basicDeducted;
+    }
+
+    public String getBasicDeducted() {
+        return basicDeducted;
+    }
+
     public void setUserRecoverPersonalTaxAmount(String userRecoverPersonalTaxAmount) {
         this.userRecoverPersonalTaxAmount = userRecoverPersonalTaxAmount;
     }
 
     public String getUserRecoverPersonalTaxAmount() {
         return userRecoverPersonalTaxAmount;
+    }
+
+    public void setUserTotalRecoverPersonalTaxAmount(String userTotalRecoverPersonalTaxAmount) {
+        this.userTotalRecoverPersonalTaxAmount = userTotalRecoverPersonalTaxAmount;
+    }
+
+    public String getUserTotalRecoverPersonalTaxAmount() {
+        return userTotalRecoverPersonalTaxAmount;
     }
 
     public void setOrderTitle(String orderTitle) {
@@ -529,10 +562,13 @@ public class NotifyOrderData {
                 ", tax='" + tax + '\'' + 
                 ", receivedTaxAmount='" + receivedTaxAmount + '\'' + 
                 ", userRealExcludingVatAmount='" + userRealExcludingVatAmount + '\'' + 
-                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' + 
-                ", personalTaxRate='" + personalTaxRate + '\'' + 
-                ", deductTax='" + deductTax + '\'' + 
-                ", userRecoverPersonalTaxAmount='" + userRecoverPersonalTaxAmount + '\'' + 
+                ", userRecoverTaxAmount='" + userRecoverTaxAmount + '\'' +
+                ", userRemainingRepaymentPersonalAmount='" + userRemainingRepaymentPersonalAmount + '\'' +
+                ", personalTaxRate='" + personalTaxRate + '\'' +
+                ", deductTax='" + deductTax + '\'' +
+                ", basicDeducted='" + basicDeducted + '\'' +
+                ", userRecoverPersonalTaxAmount='" + userRecoverPersonalTaxAmount + '\'' +
+                ", userTotalRecoverPersonalTaxAmount='" + userTotalRecoverPersonalTaxAmount + '\'' +
                 ", orderTitle='" + orderTitle + '\'' + 
                "}";
     }
