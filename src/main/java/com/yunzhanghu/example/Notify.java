@@ -14,6 +14,10 @@ import com.yunzhanghu.sdk.taxclearrefund.domain.NotifyClearTaxDoneRequest;
 import com.yunzhanghu.sdk.taxclearrefund.domain.NotifyRefundTaxDoneRequest;
 import com.yunzhanghu.sdk.uploadusersign.domain.NotifyUploadUserSignRequest;
 import com.yunzhanghu.sdk.usercollect.domain.NotifyUserCollectPhoneRequest;
+import com.yunzhanghu.sdk.walletbalancechange.domain.NotifyWalletBalanceChangeRequest;
+import com.yunzhanghu.sdk.walletdeduct.domain.NotifyWalletDeductRequest;
+import com.yunzhanghu.sdk.walletincome.domain.NotifyWalletIncomeRequest;
+import com.yunzhanghu.sdk.walletwithdraw.domain.NotifyWalletWithdrawRequest;
 
 // 异步通知
 public class Notify {
@@ -73,6 +77,22 @@ public class Notify {
 			// 人脸识别实名核验结果回调通知
 //			NotifyResponse<NotifyFaceAuthRequest> response = client.notifyDecoder(request, NotifyFaceAuthRequest.class);
 //			NotifyFaceAuthRequest notifyRequest = response.getData();
+
+			// 钱包余额入账结果回调通知
+//			NotifyResponse<NotifyWalletIncomeRequest> response = client.notifyDecoder(request, NotifyWalletIncomeRequest.class);
+//			NotifyWalletIncomeRequest notifyRequest = response.getData();
+
+			// 钱包余额变更结果回调通知
+//			NotifyResponse<NotifyWalletBalanceChangeRequest> response = client.notifyDecoder(request, NotifyWalletBalanceChangeRequest.class);
+//			NotifyWalletBalanceChangeRequest notifyRequest = response.getData();
+
+			// 钱包余额扣减申请结果回调通知
+//			NotifyResponse<NotifyWalletDeductRequest> response = client.notifyDecoder(request, NotifyWalletDeductRequest.class);
+//			NotifyWalletDeductRequest notifyRequest = response.getData();
+
+			// 钱包余额提现结果回调通知
+//			NotifyResponse<NotifyWalletWithdrawRequest> response = client.notifyDecoder(request, NotifyWalletWithdrawRequest.class);
+//			NotifyWalletWithdrawRequest notifyRequest = response.getData();
 
 			System.out.println("签名验证结果：" + response.getSignRes());
 			System.out.println("数据解密结果：" + response.getDescryptRes());
